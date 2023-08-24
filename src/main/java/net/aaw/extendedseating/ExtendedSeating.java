@@ -1,6 +1,9 @@
 package net.aaw.extendedseating;
 
 import com.mojang.logging.LogUtils;
+import net.aaw.extendedseating.block.ModBlocks;
+import net.aaw.extendedseating.item.ModCreativeModeTabs;
+import net.aaw.extendedseating.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -21,11 +24,15 @@ public class ExtendedSeating {
 
     public ExtendedSeating() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
