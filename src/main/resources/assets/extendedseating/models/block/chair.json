@@ -1,13 +1,13 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "extendedseating:seat_variants/bottom",
-		"2": "extendedseating:seat_variants/top/top_magenta",
-		"4": "extendedseating:seat_variants/side_top/side_top_magenta",
-		"5": "extendedseating:seat_variants/foot",
-		"6": "extendedseating:seat_variants/side/side_magenta",
-		"7": "extendedseating:seat_variants/back",
-		"particle": "extendedseating:seat_variants/bottom"
+		"0": "extendedseating:block/bottom",
+		"2": "extendedseating:block/top/top_magenta",
+		"4": "extendedseating:block/side_top/side_top_magenta",
+		"5": "extendedseating:block/foot",
+		"6": "extendedseating:block/side/side_magenta",
+		"7": "extendedseating:block/back",
+		"particle": "extendedseating:block/bottom"
 	},
 	"elements": [
 		{

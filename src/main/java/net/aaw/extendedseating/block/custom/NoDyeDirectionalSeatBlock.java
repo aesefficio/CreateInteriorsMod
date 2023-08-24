@@ -201,5 +201,4 @@ public class NoDyeDirectionalSeatBlock extends Block {
     public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType type) {
         return false;
     }
-
 }

@@ -27,8 +27,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> KELP_SEAT = registerBlock("kelp_seat",
             () -> new NoDyeDirectionalSeatBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
 
-    public static final RegistryObject<Block> KELP_CHAIR = registerBlock("kelp_chair",
-            () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
+    // public static final RegistryObject<Block> KELP_CHAIR = registerBlock("kelp_chair",
+    //        () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     };

@@ -1,15 +1,15 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "extendedseating:seat_variants/bottom",
-		"2": "extendedseating:seat_variants/kelp/top_kelp",
-		"4": "extendedseating:seat_variants/kelp/side_top_kelp_one",
-		"5": "extendedseating:seat_variants/foot",
-		"6": "extendedseating:seat_variants/kelp/side_kelp_one",
-		"7": "extendedseating:seat_variants/back",
-		"8": "extendedseating:seat_variants/kelp/side_kelp_two",
-		"9": "extendedseating:seat_variants/kelp/side_top_kelp_two",
-		"particle": "extendedseating:seat_variants/bottom"
+		"0": "extendedseating:block/bottom",
+		"2": "extendedseating:block/kelp/top_kelp",
+		"4": "extendedseating:block/kelp/side_top_kelp_one",
+		"5": "extendedseating:block/foot",
+		"6": "extendedseating:block/kelp/side_kelp_one",
+		"7": "extendedseating:block/back",
+		"8": "extendedseating:block/kelp/side_kelp_two",
+		"9": "extendedseating:block/kelp/side_top_kelp_two",
+		"particle": "extendedseating:block/bottom"
 	},
 	"elements": [
 		{
