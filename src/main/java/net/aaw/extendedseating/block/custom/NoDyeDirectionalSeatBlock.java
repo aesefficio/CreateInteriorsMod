@@ -49,10 +49,9 @@ import java.util.List;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class NoDyeDirectionalSeatBlock extends Block implements ProperWaterloggedBlock {
+public class NoDyeDirectionalSeatBlock extends Block {
     public NoDyeDirectionalSeatBlock(Properties pProperties) {
         super(pProperties);
-        registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
     }
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -83,20 +82,13 @@ public class NoDyeDirectionalSeatBlock extends Block implements ProperWaterlogge
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        super.createBlockStateDefinition(pBuilder.add(WATERLOGGED));
         pBuilder.add(FACING);
     }
 
     @Override
     public BlockState updateShape(BlockState pState, Direction pDirection, BlockState pNeighborState,
                                   LevelAccessor pLevel, BlockPos pCurrentPos, BlockPos pNeighborPos) {
-        updateWater(pLevel, pState, pCurrentPos);
         return pState;
-    }
-
-    @Override
-    public FluidState getFluidState(BlockState pState) {
-        return fluidState(pState);
     }
 
     @Override
