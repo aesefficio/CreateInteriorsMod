@@ -4,10 +4,10 @@
 	"render_type" : "cutout",
 	"textures": {
 		"0": ".assets:seat/bottom",
-		"2": "extendedseating:seat_variants/top/top_magenta",
-		"4": "extendedseating:seat_variants/side_top/side_top_magenta",
+		"2": "extendedseating:seat_variants/top/top_red",
+		"4": "extendedseating:seat_variants/side_top/side_top_red",
 		"5": ".assets:seat/foot",
-		"6": "extendedseating:seat_variants/side/side_magenta",
+		"6": "extendedseating:seat_variants/side/side_red",
 		"7": "extendedseating:seat_variants/back",
 		"particle": ".assets:seat/bottom"
 	},

@@ -2,18 +2,27 @@ package net.aaw.extendedseating.block.custom;
 
 import com.google.common.base.Optional;
 import com.simibubi.create.AllBlocks;
+import com.simibubi.create.AllItems;
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.AllTags;
+import com.simibubi.create.content.contraptions.ITransformableBlock;
+import com.simibubi.create.content.contraptions.StructureTransform;
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
 import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
+import com.simibubi.create.content.fluids.FluidTransportBehaviour;
+import com.simibubi.create.content.fluids.pipes.GlassFluidPipeBlock;
+import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.BlockHelper;
+import com.simibubi.create.foundation.utility.Iterate;
+import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
 import net.aaw.extendedseating.BigSeatEntity;
 import net.aaw.extendedseating.block.ModBlocks;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -25,6 +34,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -33,8 +43,7 @@ import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.pathfinder.PathComputationType;
@@ -47,12 +56,22 @@ import net.minecraftforge.common.extensions.IForgeBlockState;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterloggedBlock {
     protected final DyeColor color;
+    public enum ArmrestConfigurations implements StringRepresentable  {
+        NONE, LEFT, RIGHT, BOTH;
+
+        @Override
+        public String getSerializedName() {
+            return Lang.asId(name());
+        }
+    }
+    public static final EnumProperty<ArmrestConfigurations> ARMRESTS = EnumProperty.create("armrests", ArmrestConfigurations.class);
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -80,11 +99,15 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(WATERLOGGED);
         pBuilder.add(FACING);
+        pBuilder.add(ARMRESTS);
     }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState()
+                .setValue(FACING, pContext.getHorizontalDirection().getOpposite())
+                .setValue(WATERLOGGED, false)
+                .setValue(ARMRESTS, ArmrestConfigurations.BOTH);
     }
 
     private static final VoxelShape SHAPE = Shapes.join(
@@ -116,6 +139,9 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
             return InteractionResult.PASS;
 
         ItemStack heldItem = player.getItemInHand(hand);
+        if (heldItem == AllItems.WRENCH.asStack()) {
+            return InteractionResult.PASS;
+        }
         DyeColor color = DyeColor.getColor(heldItem);
         if (color != null && color != this.color) {
             if (world.isClientSide)
@@ -208,5 +234,14 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
                 return rotateShape(Direction.NORTH, Direction.SOUTH, SHAPE_BACK);
         }
     }
+    public InteractionResult onWrenched(BlockState state, Level level, BlockPos blockPos, UseOnContext context) {
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        Direction clickedFace = context.getClickedFace();
 
+        if (!world.isClientSide) {
+            level.setBlock(blockPos, state.cycle(ARMRESTS),3);
+        }
+        return InteractionResult.SUCCESS;
+    }
 }

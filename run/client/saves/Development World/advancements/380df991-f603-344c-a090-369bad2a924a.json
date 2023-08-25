@@ -778,27 +778,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/gray_bed": {
-    "criteria": {
-      "has_gray_wool": "2023-08-25 18:24:16 +0200"
-    },
-    "done": true
-  },
-  "create:encased_fan": {
-    "criteria": {
-      "0": "2023-08-25 18:27:04 +0200"
-    },
-    "done": true
-  },
   "create:recipes/misc/smelting/glass_pane_from_framed_glass_pane": {
     "criteria": {
       "has_item": "2023-08-25 18:22:28 +0200"
     },
     "done": true
   },
-  "create:recipes/misc/crafting/kinetics/gearbox": {
+  "minecraft:recipes/decorations/gray_bed": {
     "criteria": {
-      "has_item": "2023-08-25 18:27:03 +0200"
+      "has_gray_wool": "2023-08-25 18:24:16 +0200"
     },
     "done": true
   },
@@ -817,6 +805,18 @@
   "create:recipes/misc/crafting/kinetics/nozzle": {
     "criteria": {
       "has_item": "2023-08-25 18:26:15 +0200"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/kinetics/gearbox": {
+    "criteria": {
+      "has_item": "2023-08-25 18:27:03 +0200"
+    },
+    "done": true
+  },
+  "create:encased_fan": {
+    "criteria": {
+      "0": "2023-08-25 18:27:04 +0200"
     },
     "done": true
   },
