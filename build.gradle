@@ -153,7 +153,7 @@ tasks.withType(ProcessResources).configureEach {
         expand replaceProperties + [project: project]
     }
 }
-
+jarJar.enable()
 // Example for how to get properties into the manifest for reading at runtime.
 tasks.named('jar', Jar).configure {
     manifest {
@@ -176,7 +176,11 @@ tasks.named('jar', Jar).configure {
 // tasks.named('publish').configure {
 //     dependsOn 'reobfJar'
 // }
+reobf {
+    jarJar { }
+}
 
+tasks.jarJar.finalizedBy('reobfJarJar')
 // Example configuration to allow publishing using the maven-publish plugin
 publishing {
     publications {

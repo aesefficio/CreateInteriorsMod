@@ -1,6 +1,8 @@
 package net.aaw.extendedseating;
 
+import com.jozufozu.flywheel.util.NonNullSupplier;
 import com.mojang.logging.LogUtils;
+import com.tterrag.registrate.Registrate;
 import net.aaw.extendedseating.block.ModBlocks;
 import net.aaw.extendedseating.item.ModCreativeModeTabs;
 import net.aaw.extendedseating.item.ModItems;
@@ -20,13 +22,14 @@ import org.slf4j.Logger;
 @Mod(net.aaw.extendedseating.ExtendedSeating.MOD_ID)
 public class ExtendedSeating {
     public static final String MOD_ID = "extendedseating";
-    public static final Logger LOGGER = LogUtils.getLogger();
+    public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
 
+    public static final Logger LOGGER = LogUtils.getLogger();
     public ExtendedSeating() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);

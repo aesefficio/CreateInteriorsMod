@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "extendedseating:block/blue_chair",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "extendedseating:block/blue_chair"
+    },
+    "facing=south": {
+      "model": "extendedseating:block/blue_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extendedseating:block/blue_chair",
+      "y": 270
+    }
+  }
+}
