@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "extendedseating:block/seat_kelp",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "extendedseating:block/seat_kelp"
+    },
+    "facing=south": {
+      "model": "extendedseating:block/seat_kelp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "extendedseating:block/seat_kelp",
+      "y": 270
+    }
+  }
+}
