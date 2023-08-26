@@ -3,6 +3,7 @@
   "creativetab.extended_seating": "Create: Extended Seating",
   "block.extendedseating.kelp_seat": "Kelp Seat",
   "block.extendedseating.kelp_chair": "Kelp Chair",
+  "block.extendedseating.seatwood_planks": "Seatwood Planks",
 
   "block.extendedseating.white_chair": "White Chair",
   "block.extendedseating.light_gray_chair": "Light Gray Chair",
@@ -19,5 +20,15 @@
   "block.extendedseating.blue_chair": "Blue Chair",
   "block.extendedseating.purple_chair": "Purple Chair",
   "block.extendedseating.magenta_chair": "Magenta Chair",
-  "block.extendedseating.pink_chair": "Pink Chair"
+  "block.extendedseating.pink_chair": "Pink Chair",
+
+  "block.extendedseating.chair.tooltip": "CHAIR",
+  "block.extendedseating.chair.tooltip.summary": "Sit yourself down and enjoy the ride just a little more! Will anchor a player onto a moving _contraption_. An appealing option for static furniture too! Comes in a variety of colours.",
+  "block.extendedseating.chair.tooltip.condition1": "Right click on Chair",
+  "block.extendedseating.chair.tooltip.behaviour1": "Sits the player on the _Chair_. Press L-shift to leave the _Chair_.",
+  "block.extendedseating.chair.tooltip.condition2": "Use Wrench on Chair",
+  "block.extendedseating.chair.tooltip.behaviour2": "Cycles _Chair_ armrest configurations.",
+  "block.extendedseating.seatwood_planks.tooltip": "SEATWOOD_PLANKS",
+  "block.extendedseating.seatwood_planks.tooltip.summary": "Not a very useful block on its own, but useful together with _Copycat_ blocks."
+
 }

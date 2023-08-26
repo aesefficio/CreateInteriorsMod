@@ -9,8 +9,11 @@ import com.simibubi.create.content.contraptions.ITransformableBlock;
 import com.simibubi.create.content.contraptions.StructureTransform;
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
 import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
+import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.content.fluids.FluidTransportBehaviour;
 import com.simibubi.create.content.fluids.pipes.GlassFluidPipeBlock;
+import com.simibubi.create.content.kinetics.base.GeneratingKineticBlockEntity;
+import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.BlockHelper;
@@ -22,6 +25,7 @@ import net.aaw.extendedseating.block.ModBlocks;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -41,6 +45,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -61,8 +66,9 @@ import java.util.stream.Stream;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterloggedBlock {
+public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterloggedBlock, IWrenchable {
     protected final DyeColor color;
+
     public enum ArmrestConfigurations implements StringRepresentable  {
         NONE, LEFT, RIGHT, BOTH;
 
@@ -107,7 +113,7 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         return this.defaultBlockState()
                 .setValue(FACING, pContext.getHorizontalDirection().getOpposite())
                 .setValue(WATERLOGGED, false)
-                .setValue(ARMRESTS, ArmrestConfigurations.BOTH);
+                .setValue(ARMRESTS, ArmrestConfigurations.NONE);
     }
 
     private static final VoxelShape SHAPE = Shapes.join(
@@ -135,18 +141,21 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
                                  BlockHitResult p_225533_6_) {
-        if (player.isShiftKeyDown())
-            return InteractionResult.PASS;
-
         ItemStack heldItem = player.getItemInHand(hand);
-        if (heldItem == AllItems.WRENCH.asStack()) {
+        if (heldItem == AllItems.WRENCH.asStack(1)) {
             return InteractionResult.PASS;
         }
+        else if (heldItem.is(AllItems.WRENCH.asItem())) {
+            return InteractionResult.PASS;
+        }
+
+        if (player.isShiftKeyDown())
+            return InteractionResult.PASS;
         DyeColor color = DyeColor.getColor(heldItem);
         if (color != null && color != this.color) {
             if (world.isClientSide)
                 return InteractionResult.SUCCESS;
-            BlockState newState = BlockHelper.copyProperties(state, AllBlocks.SEATS.get(color)
+            BlockState newState = BlockHelper.copyProperties(state, ModBlocks.CHAIRS.get(color)
                     .getDefaultState());
             world.setBlockAndUpdate(pos, newState);
             return InteractionResult.SUCCESS;
@@ -194,6 +203,28 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         sitDown(entity.level(), pos, entity);
     }
 
+    @Override
+    public InteractionResult onWrenched(BlockState state, UseOnContext context) {
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        if (!world.isClientSide) {
+            world.setBlock(pos, state.cycle(ARMRESTS), 3);
+        }
+        return InteractionResult.SUCCESS;
+    }
+    @Override
+    public InteractionResult onSneakWrenched(BlockState state, UseOnContext context) {
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        if (!world.isClientSide) {
+            world.setBlock(pos, state.cycle(ARMRESTS), 3);
+        }
+        return InteractionResult.SUCCESS;
+    }
+    @Override
+    public BlockState updateAfterWrenched(BlockState newState, UseOnContext context) {
+        return Block.updateFromNeighbourShapes(newState, context.getLevel(), context.getClickedPos());
+    }
     public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
         VoxelShape[] buffer = new VoxelShape[]{shape, Shapes.empty()};
 
@@ -222,7 +253,7 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
     }
     @Override
     public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        switch ((Direction)pState.getValue(FACING)) {
+        switch ((Direction) pState.getValue(FACING)) {
             case NORTH:
                 return SHAPE_BACK;
             case SOUTH:
@@ -233,15 +264,5 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
             default:
                 return rotateShape(Direction.NORTH, Direction.SOUTH, SHAPE_BACK);
         }
-    }
-    public InteractionResult onWrenched(BlockState state, Level level, BlockPos blockPos, UseOnContext context) {
-        Level world = context.getLevel();
-        BlockPos pos = context.getClickedPos();
-        Direction clickedFace = context.getClickedFace();
-
-        if (!world.isClientSide) {
-            level.setBlock(blockPos, state.cycle(ARMRESTS),3);
-        }
-        return InteractionResult.SUCCESS;
     }
 }

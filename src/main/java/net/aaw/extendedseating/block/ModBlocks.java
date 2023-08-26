@@ -68,10 +68,10 @@ public class ModBlocks {
                         .unlockedBy("has_wooden_slabs", RegistrateRecipeProvider.has(ItemTags.WOODEN_SLABS))
                         .save(p, Create.asResource("crafting/kinetics/" + c.getName()));
             })
-            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.extendedseating.kelp_seat"))
             .defaultLoot()
             .defaultLang()
             .simpleItem()
+            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
             .register();
     // public static final RegistryObject<Block> KELP_CHAIR = registerBlock("kelp_chair",
     //        () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
@@ -121,7 +121,8 @@ public class ModBlocks {
                 .register();
     });
 
-
+    public static final RegistryObject<Block> SEATWOOD_PLANKS = registerBlock("seatwood_planks",
+    () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     };
