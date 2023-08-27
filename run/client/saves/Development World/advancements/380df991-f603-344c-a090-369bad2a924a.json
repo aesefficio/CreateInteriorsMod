@@ -862,5 +862,11 @@
     },
     "done": true
   },
+  "create:recipes/misc/crafting/appliances/clipboard_clear": {
+    "criteria": {
+      "has_item": "2023-08-27 11:36:16 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

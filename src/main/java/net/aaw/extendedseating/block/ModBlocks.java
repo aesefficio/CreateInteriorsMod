@@ -19,11 +19,11 @@ import com.simibubi.create.Create;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.utility.DyeHelper;
-import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.aaw.extendedseating.ExtendedSeating;
 import net.aaw.extendedseating.block.custom.*;
+import net.aaw.extendedseating.block.util.ItemDescriptionsCreate;
 import net.aaw.extendedseating.block.util.ModTags;
 import net.aaw.extendedseating.item.ModItems;
 import net.minecraft.core.registries.Registries;
@@ -68,10 +68,10 @@ public class ModBlocks {
                         .unlockedBy("has_wooden_slabs", RegistrateRecipeProvider.has(ItemTags.WOODEN_SLABS))
                         .save(p, Create.asResource("crafting/kinetics/" + c.getName()));
             })
+            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
             .defaultLoot()
             .defaultLang()
             .simpleItem()
-            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
             .register();
     // public static final RegistryObject<Block> KELP_CHAIR = registerBlock("kelp_chair",
     //        () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
