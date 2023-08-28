@@ -15,12 +15,12 @@
 <ul>
 
 
-   <li>Colored Chairs
+   <li>Chair Blocks
       <ul>
          <li>Come in all 16 Minecraft Dye Colors</li>
          <li>Right-click with a wrench to cycle armrest state (None, Left Only, Right Only, or Both Armrests)</li>
          <li>Can be crafted either from 1 Colored Wool and 2 Wooden Slabs OR from 1 Colored Seat and 1 Wooden Slab</li>
-         <li>Can be sat on, both as a part of contraptions and standalone.</li>
+         <li>Can be sat on, both as a part of contraptions and standalone</li>
          <li>Can pick up entities just like Seat blocks</li>
          <li>Bouncy!</li>
       </ul>
@@ -29,7 +29,7 @@
    </li>
    <li>Kelp Chair
      <ul>
-      <li>Cheaper & easier-to-farm alternative to colored chairs</li>
+      <li>Cheaper & easier-to-farm alternative to wool chairs</li>
       <li>Can be crafted either from 1 Dried Kelp and 2 Wooden Slabs OR from 1 Kelp Seat block and 1 Wooden Slab</li>
       <li>Work exactly the same as colored chairs</li>
    </ul><br>
@@ -37,10 +37,9 @@
    </li>
   <li>Kelp Seat
   <ul>
-      <li>Cheaper & easier-to-farm alternative to colored seats</li>
+      <li>Cheaper & easier-to-farm alternative to wool seats</li>
       <li>Can be crafted from 1 Dried Kelp item and 1 Wooden Slab</li>
       <li>Work exactly like Create's seat blocks</li>
-      <li>Can be crafted or made in a stonecutter</li>
    </ul><br>
    ⠀⠀⠀⠀<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/7c00abef-12eb-4fe5-a304-03dc4f2629d9" width="90"><br><br>
 
