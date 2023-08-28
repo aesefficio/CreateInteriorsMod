@@ -39,13 +39,13 @@ public class ExtendedSeating {
     protected Function<Item, TooltipModifier> currentTooltipModifierFactory;
 
     public static final String MOD_ID = "extendedseating";
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
-    static {
-        REGISTRATE.setTooltipModifierFactory(item -> {
-            return new ItemDescription.Modifier(item, TooltipHelper.Palette.STANDARD_CREATE)
-                    .andThen(TooltipModifier.mapNull(KineticStats.create(item)));
-       });
-   }
+    public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
+    //static {
+    //    REGISTRATE.setTooltipModifierFactory(item -> {
+    //        return new ItemDescription.Modifier(item, TooltipHelper.Palette.STANDARD_CREATE)
+    //                .andThen(TooltipModifier.mapNull(KineticStats.create(item)));
+    //   });
+   //}
     public static final Logger LOGGER = LogUtils.getLogger();
     public ExtendedSeating() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

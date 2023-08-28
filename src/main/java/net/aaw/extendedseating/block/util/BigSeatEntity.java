@@ -7,8 +7,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 
 public class BigSeatEntity extends SeatEntity {
-    public BigSeatEntity(EntityType<?> p_i48580_1_, Level p_i48580_2_) {
-        super(p_i48580_1_, p_i48580_2_);
+
+    public BigSeatEntity(EntityType<?> p_i48580_1_, Level world, BlockPos pos) {
+        super(world, pos);
     }
 
     @Override
@@ -18,5 +19,4 @@ public class BigSeatEntity extends SeatEntity {
         double d0 = this.getY() + 0.3 + this.getPassengersRidingOffset() + pEntity.getMyRidingOffset();
         pCallback.accept(pEntity, this.getX(), d0 + getCustomEntitySeatOffset(pEntity), this.getZ());
     }
-
 }

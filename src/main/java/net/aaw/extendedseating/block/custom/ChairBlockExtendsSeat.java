@@ -161,15 +161,15 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
             return InteractionResult.SUCCESS;
         }
 
-        List<SeatEntity> seats = world.getEntitiesOfClass(SeatEntity.class, new AABB(pos));
+        List<BigSeatEntity> seats = world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos));
         if (!seats.isEmpty()) {
-            SeatEntity seatEntity = seats.get(0);
-            List<Entity> passengers = seatEntity.getPassengers();
+            BigSeatEntity BigSeatEntity = seats.get(0);
+            List<Entity> passengers = BigSeatEntity.getPassengers();
             if (!passengers.isEmpty() && passengers.get(0) instanceof Player)
                 return InteractionResult.PASS;
             if (!world.isClientSide) {
-                seatEntity.ejectPassengers();
-                player.startRiding(seatEntity);
+                BigSeatEntity.ejectPassengers();
+                player.startRiding(BigSeatEntity);
             }
             return InteractionResult.SUCCESS;
         }
