@@ -2,10 +2,13 @@
 <h1 align="center">Create: Extended Seating
 
 <div align="center">
-   <!--<a href="https://legacy.curseforge.com/minecraft/mc-mods/bellsandwhistles"><img src="https://cf.way2muchnoise.eu/905040.svg" alt="curseforge"></a>
-   <a href="https://modrinth.com/mod/bellsandwhistles"><img src="https://img.shields.io/modrinth/dt/gJ5afkVv?logo=modrinth&label=&suffix=%20&style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a><br>
-   <img src="https://wakatime.com/badge/user/d3e71387-5f47-4f39-81e8-9b14b9457c4b/project/af4286ec-a411-416b-bfdf-cffd14a99214.svg" alt="wakatime">-->
-   <img src="https://img.shields.io/github/license/alexandsr/ExtendedSeatingMod" alt="license">
+   <img src="https://img.shields.io/badge/available%20for-1.20%2F1.20.1-992333" alt="versions 1.20/1.20.1">
+   <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged-992333" alt="modloaders forge/neoforged">
+   <img src="https://img.shields.io/badge/license-MIT-65d326" alt="license MIT">
+   
+   <a href="https://curseforge.com/minecraft/mc-mods/bellsandwhistles"><img src="https://cf.way2muchnoise.eu/906239.svg" alt="curseforge"></a>
+   <!--<a href="https://modrinth.com/mod/bellsandwhistles"><img src="https://img.shields.io/modrinth/dt/r4Knci2k?logo=modrinth&label=&suffix= &style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a>
+   <img src="https://wakatime.com/badge/user/d3e71387-5f47-4f39-81e8-9b14b9457c4b/project/b9a80971-7eb4-4059-b3d4-9a2d202a06bb.svg" alt="wakatime">-->
 </div></h1>
 <div align="center">
 <h3>Create: Extended Seating is an addon for Create that extends Create's seating options.<br></h3>
