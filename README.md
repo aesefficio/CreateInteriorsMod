@@ -8,11 +8,12 @@
    <img src="https://img.shields.io/github/license/alexandsr/ExtendedSeatingMod" alt="license">
 </div></h1>
 <div align="center">
-<h3>Create: Extended Seating is an addon for Create that extends Create's seating options,<br>adding 16 colored 'Chair' Blocks, an alternative to Create's Seat Blocks.</h3><br>
+<h3>Create: Extended Seating is an addon for Create that extends Create's seating options.<br></h3>
    </div>
-<img src="">
+<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/c59437d1-001b-4eee-8f08-ae44f482f605">
 <h3>Current list of features:</h3> 
 <ul>
+
    <li>Colored Chairs
       <ul>
          <li>Come in all 16 Minecraft Dye Colors</li>
