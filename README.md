@@ -10,9 +10,10 @@
 <div align="center">
 <h3>Create: Extended Seating is an addon for Create that extends Create's seating options.<br></h3>
    </div>
-<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/c59437d1-001b-4eee-8f08-ae44f482f605">
+<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/05a2803a-806a-41d6-9fef-6b8730012ea8">
 <h3>Current list of features:</h3> 
 <ul>
+
 
    <li>Colored Chairs
       <ul>
