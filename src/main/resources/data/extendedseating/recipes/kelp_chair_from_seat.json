@@ -1,19 +1,16 @@
 {
     "type": "minecraft:crafting_shapeless",
-    "group": "create_mod_chairs",
+    "group": "create_kelp_chair",
     "ingredients": [
       {
-        "item": "minecraft:dark_gray_wool"
-      },
-      {
-        "tag": "minecraft:wooden_slabs"
+        "tag": "extendedseating:kelp_seat"
       },
       {
         "tag": "minecraft:wooden_slabs"
       }
     ],
     "result": {
-      "item": "extendedseating:dark_gray_chair",
+      "item": "extendedseating:kelp_chair",
       "count": 1
     }
   }

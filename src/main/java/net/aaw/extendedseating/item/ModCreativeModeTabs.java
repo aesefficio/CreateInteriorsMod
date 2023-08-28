@@ -44,7 +44,7 @@ public class ModCreativeModeTabs {
            () -> CreativeModeTab.builder()
                     .title(Component.translatable("creativetab.extended_seating"))
                      //.withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
-                     .icon(() -> new ItemStack(ModBlocks.KELP_SEAT.get()))
+                     .icon(() -> new ItemStack(ModBlocks.KELP_CHAIR.get()))
                      .displayItems(new ModCreativeModeTabs.RegistrateDisplayItemsGenerator(false))
                     .build());
 

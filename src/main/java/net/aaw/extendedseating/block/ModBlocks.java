@@ -54,25 +54,6 @@ public class ModBlocks {
     // public static final RegistryObject<Block> KELP_SEAT = registerBlock("kelp_seat",
     //      () -> new DirectionalSeatBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
 
-    public static final RegistryEntry<DirectionalSeatBlock> KELP_SEAT = REGISTRATE.block("kelp_seat", p -> new DirectionalSeatBlock(p, DyeColor.BLACK))
-            .initialProperties(SharedProperties::wooden)
-            .properties(p -> p.mapColor(DyeColor.BLACK))
-            .transform(axeOnly())
-            .onRegister(movementBehaviour(new SeatMovementBehaviour()))
-            .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-            .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
-            .recipe((c, p) -> {
-                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-                        .requires(Items.DRIED_KELP_BLOCK)
-                        .requires(ItemTags.WOODEN_SLABS)
-                        .unlockedBy("has_wooden_slabs", RegistrateRecipeProvider.has(ItemTags.WOODEN_SLABS))
-                        .save(p, Create.asResource("crafting/kinetics/" + c.getName()));
-            })
-            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
-            .defaultLoot()
-            .defaultLang()
-            .simpleItem()
-            .register();
     // public static final RegistryObject<Block> KELP_CHAIR = registerBlock("kelp_chair",
     //        () -> new ChairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
 
@@ -90,30 +71,7 @@ public class ModBlocks {
                 .onRegister(movementBehaviour(movementBehaviour))
                 .onRegister(interactionBehaviour(interactionBehaviour))
                 .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
-                .blockstate((c, p) -> {
-                    p.simpleBlock(c.get(), p.models()
-                            .withExistingParent(colourName + "_chair", p.modLoc("block/chair"))
-                            .texture("2", p.modLoc("block/top/top_" + colourName))
-                            .texture("4", p.modLoc("block/side_top/side_top_" + colourName))
-                            .texture("6", p.modLoc("block/side/side_" + colourName)));
-                })
-                .recipe((c, p) -> {
-                    ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-                            .requires(DyeHelper.getWoolOfDye(colour))
-                            .requires(DyeHelper.getWoolOfDye(colour))
-                            .requires(ItemTags.WOODEN_SLABS)
-                            .requires(ItemTags.WOODEN_SLABS)
-                            .unlockedBy("has_wool", RegistrateRecipeProvider.has(ItemTags.WOOL))
-                            .save(p, Create.asResource("crafting/kinetics/" + c.getName() + "_from_materials"));
-                    ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-                            .requires(colour.getTag())
-                            .requires(ModTags.Items.CHAIRS)
-                            .unlockedBy("has_chair", RegistrateRecipeProvider.has(ModTags.Items.CHAIRS))
-                            .save(p, Create.asResource("crafting/kinetics/" + c.getName() + "_from_other_chair"));
-                })
                 .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.extendedseating.chair"))
-                .defaultLoot()
-                .defaultLang()
                 .tag(ModTags.Blocks.CHAIRS)
                 .item()
                 .tag(ModTags.Items.CHAIRS)
@@ -121,8 +79,34 @@ public class ModBlocks {
                 .register();
     });
 
-    public static final RegistryObject<Block> SEATWOOD_PLANKS = registerBlock("seatwood_planks",
-    () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryEntry<ChairBlockExtendsSeat> KELP_CHAIR = REGISTRATE.block("kelp_chair", p -> new ChairBlockExtendsSeat(p, DyeColor.BLACK))
+            .initialProperties(SharedProperties::wooden)
+            .properties(p -> p.mapColor(DyeColor.BLACK))
+            .transform(axeOnly())
+            .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
+            .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
+            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.extendedseating.chair"))
+            .simpleItem()
+            .register();
+
+    public static final RegistryEntry<DirectionalSeatBlock> KELP_SEAT = REGISTRATE.block("kelp_seat", p -> new DirectionalSeatBlock(p, DyeColor.BLACK))
+            .initialProperties(SharedProperties::wooden)
+            .properties(p -> p.mapColor(DyeColor.BLACK))
+            .transform(axeOnly())
+            .onRegister(movementBehaviour(new SeatMovementBehaviour()))
+            .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
+            .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
+            .simpleItem()
+            .register();
+
+    public static final RegistryEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", p -> new Block(p))
+            .initialProperties(SharedProperties::wooden)
+            .properties(p -> p.mapColor(DyeColor.ORANGE))
+            .transform(axeOnly())
+            .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.extendedseating.seatwood_planks"))
+            .simpleItem()
+            .register();
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     };

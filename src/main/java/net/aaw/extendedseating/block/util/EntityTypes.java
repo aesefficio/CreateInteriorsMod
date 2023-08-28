@@ -17,8 +17,6 @@ import net.minecraft.world.entity.EntityType.EntityFactory;
 import net.minecraft.world.entity.MobCategory;
 
 public class EntityTypes {
-public static final EntityEntry<BigSeatEntity> TALL_SEAT = register("tall_seat", BigSeatEntity::new, () -> BigSeatEntity.Render::new,
-        MobCategory.MISC, 5, Integer.MAX_VALUE, false, true, BigSeatEntity::build).register();
 
 //
 private static <T extends Entity> CreateEntityBuilder<T, ?> register(String name, EntityFactory<T> factory,

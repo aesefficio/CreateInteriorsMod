@@ -26,28 +26,4 @@ public class BigSeatInteractionBehaviour extends SeatInteractionBehaviour {
             return;
         contraptionEntity.addSittingPassenger(entity, index);
     }
-
-    public void addSittingPassenger(Entity passenger, int seatIndex) {
-        for (Entity entity : getPassengers()) {
-            BlockPos seatOf = contraption.getSeatOf(entity.getUUID());
-            if (seatOf != null && seatOf.equals(contraption.getSeats()
-                    .get(seatIndex))) {
-                if (entity instanceof Player)
-                    return;
-                if (!(passenger instanceof Player))
-                    return;
-                entity.stopRiding();
-            }
-        }
-        passenger.startRiding(this, true);
-        if (passenger instanceof TamableAnimal ta)
-            ta.setInSittingPose(true);
-        if (level().isClientSide)
-            return;
-        contraption.getSeatMapping()
-                .put(passenger.getUUID(), seatIndex);
-        AllPackets.getChannel().send(PacketDistributor.TRACKING_ENTITY.with(() -> this),
-                new ContraptionSeatMappingPacket(getId(), contraption.getSeatMapping()));
-    }
-
 }
