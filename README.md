@@ -60,8 +60,20 @@
 
 </ul> 
 
+# Contributing
+
+### Bug reports, suggestions, and ideas
+
+All of the above are incredibly useful and much appreciated. A GitHub issue or dm on discord (@alexandsr) are both good ways to get in contact.
+
+### Translating
+
+Translation help is really appreciated. The best way to do so is to make a Git pull request with the translated lang file.
+
+**Thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Extended Seating to Korean.**
 
 ---
+
 
 <div align="center">
    
