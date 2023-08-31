@@ -11,7 +11,7 @@
    <!--<img src="https://wakatime.com/badge/user/d3e71387-5f47-4f39-81e8-9b14b9457c4b/project/b9a80971-7eb4-4059-b3d4-9a2d202a06bb.svg" alt="wakatime">-->
 </div></h1>
 <div align="center">
-<h3>Create: Interiors is an addon for Create that extends Create's seating options.<br></h3>
+<h3>Create: Interiors is an addon for Create that extends Create's furnishing options.<br></h3>
    </div>
 <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/05a2803a-806a-41d6-9fef-6b8730012ea8">
 <h3>Current list of features:</h3> 
