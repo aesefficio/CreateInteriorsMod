@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/d6a4a7fd-f0e3-4f2a-9d6c-5ee3be5bf7df" alt="Create: Interiors Logo" width="140"></p>
+<p align="center"><img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/d6a4a7fd-f0e3-4f2a-9d6c-5ee3be5bf7df" alt="Create: Interiors Logo" width="141"></p>
 <h1 align="center">Create: Interiors
 
 <div align="center">
