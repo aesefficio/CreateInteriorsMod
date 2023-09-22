@@ -84,8 +84,8 @@ java.lang.RuntimeException: null
 	Caused by: java.lang.IllegalArgumentException: Cannot set property BooleanProperty{name=waterlogged, clazz=class java.lang.Boolean, values=[true, false]} as it does not exist in Block{minecraft:air}
 		at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:111) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading,re:mixin}
 		at com.simibubi.create.content.contraptions.actors.seat.SeatBlock.<init>(SeatBlock.java:55) ~[create-1.20.1-0.5.1.d-9_mapped_parchment_2023.06.26-1.20.1-slim.jar:0.5.1.d-9] {re:classloading}
-		at net.aaw.extendedseating.block.custom.ChairBlockExtendsSeat.<init>(ChairBlockExtendsSeat.java:60) ~[main/:?] {re:classloading}
-		at net.aaw.extendedseating.block.ModBlocks.lambda$static$0(ModBlocks.java:58) ~[main/:?] {re:classloading}
+		at net.alexander.interiors.block.custom.ChairBlockExtendsSeat.<init>(ChairBlockExtendsSeat.java:60) ~[main/:?] {re:classloading}
+		at net.alexander.interiors.block.ModBlocks.lambda$static$0(ModBlocks.java:58) ~[main/:?] {re:classloading}
 		at com.tterrag.registrate.builders.BlockBuilder.createEntry(BlockBuilder.java:375) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 		at com.tterrag.registrate.builders.BlockBuilder.createEntry(BlockBuilder.java:62) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 		at net.minecraftforge.common.util.Lazy$Fast.get(Lazy.java:55) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}

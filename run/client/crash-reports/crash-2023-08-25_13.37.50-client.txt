@@ -77,11 +77,11 @@ java.lang.RuntimeException: null
 		at net.minecraft.world.level.block.state.StateDefinition$Builder.validateProperty(StateDefinition.java:143) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading}
 		at net.minecraft.world.level.block.state.StateDefinition$Builder.add(StateDefinition.java:119) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading}
 		at com.simibubi.create.content.contraptions.actors.seat.SeatBlock.createBlockStateDefinition(SeatBlock.java:60) ~[create-1.20.1-0.5.1.d-9_mapped_parchment_2023.06.26-1.20.1-slim.jar%23198!/:0.5.1.d-9] {re:classloading}
-		at net.aaw.extendedseating.block.custom.DirectionalSeatBlock.createBlockStateDefinition(DirectionalSeatBlock.java:43) ~[%23196!/:?] {re:classloading}
+		at net.alexander.interiors.block.custom.DirectionalSeatBlock.createBlockStateDefinition(DirectionalSeatBlock.java:43) ~[%23196!/:?] {re:classloading}
 		at net.minecraft.world.level.block.Block.<init>(Block.java:180) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
 		at com.simibubi.create.content.contraptions.actors.seat.SeatBlock.<init>(SeatBlock.java:53) ~[create-1.20.1-0.5.1.d-9_mapped_parchment_2023.06.26-1.20.1-slim.jar%23198!/:0.5.1.d-9] {re:classloading}
-		at net.aaw.extendedseating.block.custom.DirectionalSeatBlock.<init>(DirectionalSeatBlock.java:21) ~[%23196!/:?] {re:classloading}
-		at net.aaw.extendedseating.block.ModBlocks.lambda$static$0(ModBlocks.java:50) ~[%23196!/:?] {re:classloading}
+		at net.alexander.interiors.block.custom.DirectionalSeatBlock.<init>(DirectionalSeatBlock.java:21) ~[%23196!/:?] {re:classloading}
+		at net.alexander.interiors.block.ModBlocks.lambda$static$0(ModBlocks.java:50) ~[%23196!/:?] {re:classloading}
 		at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
 		at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading,pl:eventbus:A}
 		at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
@@ -133,7 +133,7 @@ java.lang.RuntimeException: null
 	Caused by: java.lang.NullPointerException: Registry Object not present: extendedseating:kelp_seat
 		at java.util.Objects.requireNonNull(Objects.java:336) ~[?:?] {}
 		at net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:204) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
-		at net.aaw.extendedseating.block.ModBlocks.lambda$registerBlockItem$7(ModBlocks.java:93) ~[%23196!/:?] {re:classloading}
+		at net.alexander.interiors.block.ModBlocks.lambda$registerBlockItem$7(ModBlocks.java:93) ~[%23196!/:?] {re:classloading}
 		at net.minecraftforge.registries.DeferredRegister.lambda$addEntries$1(DeferredRegister.java:386) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
 		at net.minecraftforge.registries.RegisterEvent.register(RegisterEvent.java:59) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading,pl:eventbus:A}
 		at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:386) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}

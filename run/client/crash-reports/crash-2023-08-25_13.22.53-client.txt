@@ -6,7 +6,7 @@ Description: Unexpected error
 
 java.lang.IllegalArgumentException: Cannot set property DirectionProperty{name=facing, clazz=class net.minecraft.core.Direction, values=[north, south, west, east]} as it does not exist in Block{extendedseating:kelp_seat}
 	at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:111) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading,re:mixin}
-	at net.aaw.extendedseating.block.custom.NoDyeDirectionalSeatBlock.getStateForPlacement(NoDyeDirectionalSeatBlock.java:69) ~[main/:?] {re:classloading}
+	at net.alexander.interiors.block.custom.NoDyeDirectionalSeatBlock.getStateForPlacement(NoDyeDirectionalSeatBlock.java:69) ~[main/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.getPlacementState(BlockItem.java:122) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.place(BlockItem.java:68) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.useOn(BlockItem.java:49) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
@@ -48,7 +48,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Stacktrace:
 	at net.minecraft.world.level.block.state.StateHolder.setValue(StateHolder.java:111) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading,re:mixin}
-	at net.aaw.extendedseating.block.custom.NoDyeDirectionalSeatBlock.getStateForPlacement(NoDyeDirectionalSeatBlock.java:69) ~[%23196!/:?] {re:classloading}
+	at net.alexander.interiors.block.custom.NoDyeDirectionalSeatBlock.getStateForPlacement(NoDyeDirectionalSeatBlock.java:69) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.getPlacementState(BlockItem.java:122) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.place(BlockItem.java:68) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading}
 	at net.minecraft.world.item.BlockItem.useOn(BlockItem.java:49) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading}

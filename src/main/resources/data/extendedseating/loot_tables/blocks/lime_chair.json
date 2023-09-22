@@ -7,7 +7,7 @@
         "entries": [
           {
             "type": "minecraft:item",
-            "name": "extendedseating:lime_chair"
+            "name": "interiors:lime_chair"
           }
         ],
         "conditions": [
@@ -17,6 +17,6 @@
         ]
       }
     ],
-    "random_sequence": "extendedseating:lime_chair"
+    "random_sequence": "interiors:lime_chair"
   }
   

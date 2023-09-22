@@ -7,7 +7,7 @@
         "entries": [
           {
             "type": "minecraft:item",
-            "name": "extendedseating:light_gray_chair"
+            "name": "interiors:light_gray_chair"
           }
         ],
         "conditions": [
@@ -17,6 +17,6 @@
         ]
       }
     ],
-    "random_sequence": "extendedseating:light_gray_chair"
+    "random_sequence": "interiors:light_gray_chair"
   }
   

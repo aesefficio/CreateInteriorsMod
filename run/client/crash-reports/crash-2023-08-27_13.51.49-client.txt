@@ -7,8 +7,8 @@ Description: Unexpected error
 java.lang.NullPointerException: Registry entry not present: extendedseating:kelp_seat
 	at java.util.Objects.requireNonNull(Objects.java:336) ~[?:?] {}
 	at com.tterrag.registrate.util.entry.RegistryEntry.get(RegistryEntry.java:114) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:mixin,re:classloading}
-	at net.aaw.extendedseating.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.collectBlocks(ModCreativeModeTabs.java:61) ~[main/:?] {re:classloading}
-	at net.aaw.extendedseating.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.accept(ModCreativeModeTabs.java:114) ~[main/:?] {re:classloading}
+	at net.alexander.interiors.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.collectBlocks(ModCreativeModeTabs.java:61) ~[main/:?] {re:classloading}
+	at net.alexander.interiors.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.accept(ModCreativeModeTabs.java:114) ~[main/:?] {re:classloading}
 	at net.minecraftforge.client.ForgeHooksClient.onCreativeModeTabBuildContents(ForgeHooksClient.java:1206) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
 	at net.minecraft.world.item.CreativeModeTab.buildContents(CreativeModeTab.java:129) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
 	at net.minecraft.world.item.CreativeModeTabs.lambda$buildAllTabContents$50(CreativeModeTabs.java:1696) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
@@ -59,8 +59,8 @@ Thread: Render thread
 Stacktrace:
 	at java.util.Objects.requireNonNull(Objects.java:336) ~[?:?] {}
 	at com.tterrag.registrate.util.entry.RegistryEntry.get(RegistryEntry.java:114) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar%23202!/:?] {re:mixin,re:classloading}
-	at net.aaw.extendedseating.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.collectBlocks(ModCreativeModeTabs.java:61) ~[%23196!/:?] {re:classloading}
-	at net.aaw.extendedseating.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.accept(ModCreativeModeTabs.java:114) ~[%23196!/:?] {re:classloading}
+	at net.alexander.interiors.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.collectBlocks(ModCreativeModeTabs.java:61) ~[%23196!/:?] {re:classloading}
+	at net.alexander.interiors.item.ModCreativeModeTabs$RegistrateDisplayItemsGenerator.accept(ModCreativeModeTabs.java:114) ~[%23196!/:?] {re:classloading}
 	at net.minecraftforge.client.ForgeHooksClient.onCreativeModeTabBuildContents(ForgeHooksClient.java:1206) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
 	at net.minecraft.world.item.CreativeModeTab.buildContents(CreativeModeTab.java:129) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
 	at net.minecraft.world.item.CreativeModeTabs.lambda$buildAllTabContents$50(CreativeModeTabs.java:1696) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}

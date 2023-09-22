@@ -74,7 +74,7 @@ java.lang.RuntimeException: null
 		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.10.jar:?] {}
 		at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?] {}
 	Caused by: java.lang.ExceptionInInitializerError
-		at net.aaw.extendedseating.block.ModBlocks.lambda$static$4(ModBlocks.java:86) ~[main/:?] {re:classloading}
+		at net.alexander.interiors.block.ModBlocks.lambda$static$4(ModBlocks.java:86) ~[main/:?] {re:classloading}
 		at com.tterrag.registrate.builders.BlockBuilder.createEntry(BlockBuilder.java:375) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 		at com.tterrag.registrate.builders.BlockBuilder.createEntry(BlockBuilder.java:62) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 		at net.minecraftforge.common.util.Lazy$Fast.get(Lazy.java:55) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
@@ -91,8 +91,8 @@ java.lang.RuntimeException: null
 		at net.minecraft.world.level.block.state.properties.EnumProperty.create(EnumProperty.java:93) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
 		at net.minecraft.world.level.block.state.properties.EnumProperty.create(EnumProperty.java:79) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
 		at net.minecraft.world.level.block.state.properties.EnumProperty.create(EnumProperty.java:70) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
-		at net.aaw.extendedseating.block.custom.ChairBlockExtendsSeat.<clinit>(ChairBlockExtendsSeat.java:73) ~[main/:?] {re:classloading}
-		at net.aaw.extendedseating.block.ModBlocks.lambda$static$4(ModBlocks.java:86) ~[main/:?] {re:classloading}
+		at net.alexander.interiors.block.custom.ChairBlockExtendsSeat.<clinit>(ChairBlockExtendsSeat.java:73) ~[main/:?] {re:classloading}
+		at net.alexander.interiors.block.ModBlocks.lambda$static$4(ModBlocks.java:86) ~[main/:?] {re:classloading}
 		at com.tterrag.registrate.builders.BlockBuilder.createEntry(BlockBuilder.java:375) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 		at com.tterrag.registrate.builders.BlockBuilder.createEntry(BlockBuilder.java:62) ~[Registrate-MC1.20-1.3.3_mapped_parchment_2023.06.26-1.20.1.jar:?] {re:classloading}
 		at net.minecraftforge.common.util.Lazy$Fast.get(Lazy.java:55) ~[forge-1.20.1-47.1.65_mapped_parchment_2023.06.26-1.20.1-recomp.jar:?] {re:classloading}
