@@ -2,7 +2,7 @@
 <h1 align="center">Create: Interiors
 
 <div align="center">
-   <img src="https://img.shields.io/badge/available%20for-1.20%2F1.20.1-992333" alt="versions 1.20/1.20.1">
+   <img src="https://img.shields.io/badge/available%20for-1.20‒1.20.2-992333" alt="available for 1.20-1.20.2">
    <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged-992333" alt="modloaders forge/neoforged">
    <img src="https://img.shields.io/badge/license-MIT-65d326" alt="license MIT">
    <br>
