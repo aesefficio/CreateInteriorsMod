@@ -54,7 +54,6 @@ public class BigSeatEntity extends Entity implements IEntityAdditionalSpawnData 
         setBoundingBox(bb.move(diff));
     }
 
-    @Override
     protected void positionRider(Entity pEntity, Entity.MoveFunction pCallback) {
         if (!this.hasPassenger(pEntity))
             return;
@@ -85,9 +84,9 @@ public class BigSeatEntity extends Entity implements IEntityAdditionalSpawnData 
 
     @Override
     public void tick() {
-        if (level().isClientSide)
+        if (level.isClientSide)
             return;
-        boolean blockPresent = level().getBlockState(blockPosition())
+        boolean blockPresent = level.getBlockState(blockPosition())
                 .getBlock() instanceof SeatBlock;
         if (isVehicle() && blockPresent)
             return;
@@ -124,7 +123,7 @@ public class BigSeatEntity extends Entity implements IEntityAdditionalSpawnData 
 
     @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
+        return (Packet<ClientGamePacketListener>) NetworkHooks.getEntitySpawningPacket(this);
     }
 
     public static class Render extends EntityRenderer<com.simibubi.create.content.contraptions.actors.seat.SeatEntity> {

@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: interiors
-Specification-Vendor: Alexander Akira Weimer
-Specification-Version: 1
-Implementation-Title: CreateInteriorsMod-1.19.2
-Implementation-Version: 0.2-1.20.2
-Implementation-Vendor: Alexander Akira Weimer
-Implementation-Timestamp: 2023-09-22T10:35:18-0500
-
