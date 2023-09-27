@@ -1,0 +1,34 @@
+{
+  "creativetab.extended_seating_tab": "Create: Interiors",
+  "creativetab.extended_seating": "Create: Interiors",
+  "block.interiors.kelp_seat": "Kelpsitz",
+  "block.interiors.kelp_chair": "Kelpstuhl",
+  "block.interiors.seatwood_planks": "Stuhlbretter",
+
+  "block.interiors.white_chair": "Weißer stuhl",
+  "block.interiors.light_gray_chair": "Hellgrauer stuhl",
+  "block.interiors.gray_chair": "Grauer stuhl",
+  "block.interiors.black_chair": "Schwarzer stuhl",
+  "block.interiors.brown_chair": "Brauner stuhl",
+  "block.interiors.red_chair": "Roter stuhl",
+  "block.interiors.orange_chair": "Orange stuhl",
+  "block.interiors.yellow_chair": "Gelber stuhl",
+  "block.interiors.lime_chair": "Lime stuhl",
+  "block.interiors.green_chair": "Grüner stuhl",
+  "block.interiors.cyan_chair": "Cyan stuhl",
+  "block.interiors.light_blue_chair": "Hellblauer stuhl",
+  "block.interiors.blue_chair": "Blauer stuhl",
+  "block.interiors.purple_chair": "Lila stuhl",
+  "block.interiors.magenta_chair": "Magenta stuhl",
+  "block.interiors.pink_chair": "Rosa stuhl",
+
+  "block.interiors.chair.tooltip": "CHAIR",
+  "block.interiors.chair.tooltip.summary": "Sit yourself down and enjoy the ride just a little more! Will anchor a player onto a moving _contraption_. An appealing option for static furniture too! Comes in a variety of colours.",
+  "block.interiors.chair.tooltip.condition1": "Right click on stuhl",
+  "block.interiors.chair.tooltip.behaviour1": "Sits the player on the _Chair_. Press L-shift to leave the _Chair_.",
+  "block.interiors.chair.tooltip.condition2": "Use Wrench on stuhl",
+  "block.interiors.chair.tooltip.behaviour2": "Cycles _Chair_ armrest configurations.",
+  "block.interiors.seatwood_planks.tooltip": "SEATWOOD_PLANKS",
+  "block.interiors.seatwood_planks.tooltip.summary": "Not a very useful block on its own, but useful together with _Copycat_ blocks."
+
+}
