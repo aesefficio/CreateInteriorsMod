@@ -4,14 +4,18 @@
     <facet type="minecraft" name="Minecraft">
       <configuration>
         <autoDetectTypes>
-          <platformType>MCP</platformType>
-          <platformType>MIXIN</platformType>
           <platformType>FORGE</platformType>
+          <platformType>MIXIN</platformType>
+          <platformType>MCP</platformType>
         </autoDetectTypes>
       </configuration>
     </facet>
   </component>
   <component name="McpModuleSettings">
-    <option name="srgType" value="SRG" />
+    <option name="mappingFile" value="C:\GitRepos\CreateInteriorsMod-1.19.2\build\createMcpToSrg\output.tsrg" />
+    <option name="mcpVersion" value="parchment_2022.08.14-1.19.2" />
+    <option name="minecraftVersion" value="1.19.2" />
+    <option name="platformVersion" value="43.2.3" />
+    <option name="srgType" value="TSRG" />
   </component>
 </module>

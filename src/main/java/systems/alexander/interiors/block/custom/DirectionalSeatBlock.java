@@ -12,10 +12,12 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
 public class DirectionalSeatBlock extends SeatBlock {
-    public DirectionalSeatBlock(Properties properties, DyeColor color) {
-        super(properties, color);
-    }
+
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+
+    public DirectionalSeatBlock(Properties properties, DyeColor color, boolean inCreativeTab) {
+        super(properties, color, inCreativeTab);
+    }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {

@@ -1,13 +1,15 @@
 package systems.alexander.interiors.block.custom;
 
+import com.google.common.base.Optional;
 import com.simibubi.create.AllItems;
+import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
+import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.BlockHelper;
 import com.simibubi.create.foundation.utility.Lang;
-import systems.alexander.interiors.BigSeatEntity;
-import systems.alexander.interiors.block.ModBlocks;
+import com.simibubi.create.infrastructure.config.AllConfigs;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,7 +18,9 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.monster.Shulker;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -29,12 +33,19 @@ import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.*;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.extensions.IForgeBlockState;
+import systems.alexander.interiors.BigSeatEntity;
+import systems.alexander.interiors.block.ModBlocks;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
@@ -43,7 +54,16 @@ import java.util.stream.Stream;
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterloggedBlock, IWrenchable {
+
     protected final DyeColor color;
+
+    public ChairBlockExtendsSeat(Properties properties, DyeColor color, boolean inCreativeTab) {
+        super(properties, color, inCreativeTab);
+        this.color = color;
+        this.inCreativeTab = inCreativeTab;
+        registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
+    }
+
 
     public enum ArmrestConfigurations implements StringRepresentable  {
         NONE, LEFT, RIGHT, BOTH;
@@ -56,12 +76,11 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
     public static final EnumProperty<ArmrestConfigurations> ARMRESTS = EnumProperty.create("armrests", ArmrestConfigurations.class);
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    protected final boolean inCreativeTab;
 
-    public ChairBlockExtendsSeat(Properties properties, DyeColor color) {
-        super(properties, color);
-        this.color = color;
-        registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
-    }
+
+
+
 
     @Override
     public BlockState rotate(BlockState pState, Rotation pRotation) {
@@ -121,7 +140,7 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         if (heldItem == AllItems.WRENCH.asStack(1)) {
             return InteractionResult.PASS;
         }
-        else if (heldItem.is(AllItems.WRENCH.asItem())) {
+        else if (heldItem.is(AllItems.WRENCH.get().asItem())) {
             return InteractionResult.PASS;
         }
 
@@ -155,11 +174,40 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         sitDown(world, pos, getLeashed(world, player).or(player));
         return InteractionResult.SUCCESS;
     }
+
+    public static Optional<Entity> getLeashed(Level level, Player player) {
+        List<Entity> entities = player.level.getEntities((Entity) null, player.getBoundingBox()
+                .inflate(10), e -> true);
+        for (Entity e : entities)
+            if (e instanceof Mob mob && mob.getLeashHolder() == player && SeatBlock.canBePickedUp(e))
+                return Optional.of(mob);
+        return Optional.absent();
+    }
+    public static boolean canBePickedUp(Entity passenger) {
+        if (passenger instanceof Shulker)
+            return false;
+        if (passenger instanceof Player)
+            return false;
+        if (AllTags.AllEntityTags.IGNORE_SEAT.matches(passenger))
+            return false;
+        if (!AllConfigs.server().logistics.seatHostileMobs.get() && !passenger.getType()
+                .getCategory()
+                .isFriendly())
+            return false;
+        return passenger instanceof LivingEntity;
+    }
+
+    public static boolean isSeatOccupied(Level world, BlockPos pos) {
+        return !world.getEntitiesOfClass(SeatEntity.class, new AABB(pos))
+                .isEmpty();
+    }
+
+
     @Override
     public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
         BlockPos pos = entity.blockPosition();
         if (entity instanceof Player || !(entity instanceof LivingEntity) || !canBePickedUp(entity)
-                || isSeatOccupied(entity.level(), pos)) {
+                || isSeatOccupied(entity.level, pos)) {
             if (entity.isSuppressingBounce()) {
                 super.updateEntityAfterFallOn(reader, entity);
                 return;
@@ -176,7 +224,7 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         if (reader.getBlockState(pos)
                 .getBlock() != this)
             return;
-        sitDown(entity.level(), pos, entity);
+        sitDown(entity.level, pos, entity);
     }
 
     @Override
