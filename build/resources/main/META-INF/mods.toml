@@ -1,0 +1,44 @@
+modLoader="javafml" #mandatory
+loaderVersion="[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="MIT"
+# A URL to refer people to when problems occur with this mod
+issueTrackerURL="https://github.com/alexandsr/BellsAndWhistlesMod/issues"
+[[mods]] #mandatory
+# The modid of the mod
+modId="interiors" #mandatory
+version="0.2" #mandatory
+displayName="Create: Interiors" #mandatory
+displayURL="https://alexandsr.github.io/BellsAndWhistlesMod/"
+# A file name (in the root of the mod JAR) containing a logo for display
+authors="Alexander Akira Weimer" #optional
+
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+Create: Interiors adds new furniture meant for use with Create
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.interiors]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[43,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.interiors]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.interiors]]
+modId="create"
+mandatory=true
+versionRange="[0.5.1.c,)"
+ordering="NONE"
+side="BOTH"
