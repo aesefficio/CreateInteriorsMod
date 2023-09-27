@@ -1,13 +1,13 @@
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.+'
-     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = 'v0.4'
-group = 'bla.bla.interiors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'bla'
+version = 'v0.2'
+group = 'systems.alexander.interiors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'interiors'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -109,17 +109,30 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven {
-        name = 'tterrag maven'
-        url = 'https://maven.tterrag.com/'
+    repositories {
+        maven {
+            name = 'tterrag maven'
+            url = 'https://maven.tterrag.com/'
+        }
+        maven {
+            // location of the maven that hosts JEI files since January 2023
+            name = "Jared's maven"
+            url = "https://maven.blamejared.com/"
+        }
     }
 }
 
+
 dependencies {
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.3'
+
     implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
     implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
     implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -153,7 +166,6 @@ publishing {
         maven {
             url "file://${project.projectDir}/mcmodsrepo"
         }
-
     }
 }
 
