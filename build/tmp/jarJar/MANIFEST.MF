@@ -3,7 +3,7 @@ Specification-Title: interiors
 Specification-Vendor: Alexander Weimer
 Specification-Version: 1
 Implementation-Title: CreateInteriorsMod-1.19.2
-Implementation-Version: 0.3-1.20.2
+Implementation-Version: 0.3.1-1.20.2
 Implementation-Vendor: Alexander Weimer
-Implementation-Timestamp: 2023-09-27T19:36:43-0500
+Implementation-Timestamp: 2023-09-27T19:51:47-0500
 
