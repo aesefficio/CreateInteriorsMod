@@ -1,6 +1,8 @@
 {
   "creativetab.extended_seating_tab": "Create: Interiors",
   "creativetab.extended_seating": "Create: Interiors",
+  "itemGroup.create_interiors_tab": "Create: Interiors",
+
   "block.interiors.kelp_seat": "켈프 좌석",
   "block.interiors.kelp_chair": "켈프 의자",
   "block.interiors.seatwood_planks": "좌석목재 판자",

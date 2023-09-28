@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "create_kelp_chair",
+    "ingredients": [
+      {
+        "item": "interiors:kelp_seat"
+      },
+      {
+        "tag": "minecraft:wooden_slabs"
+      }
+    ],
+    "result": {
+      "item": "interiors:kelp_chair",
+      "count": 1
+    }
+  }
+  

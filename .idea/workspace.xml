@@ -4,14 +4,195 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="">
+    <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="Fix broken recipes">
+      <change afterPath="$PROJECT_DIR$/run/logs/2023-09-27-1.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2023-09-27-2.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2023-09-27-3.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2023-09-27-4.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/kelp_seat.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/ModBlocks.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/ModBlocks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/item/ModCreativeModeTabs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/item/ModCreativeModeTabs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/de_de.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/de_de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/ko_kr.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/ko_kr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/sv_se.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/sv_se.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/black_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/blue_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/brown_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/cyan_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/gray_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/green_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_blue_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/light_gray_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/lime_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/magenta_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/orange_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/pink_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/purple_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/red_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/white_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/chair/yellow_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_both.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_left.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_right.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/black_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/blue_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/brown_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/cyan_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/gray_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/green_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/kelp_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/light_blue_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/light_gray_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/lime_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/magenta_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/orange_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/pink_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/purple_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/red_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/seatwood_planks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/white_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/loot_tables/blocks/yellow_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/black_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/black_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/blue_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/blue_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/brown_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/brown_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/cyan_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/cyan_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/gray_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/gray_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/green_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/green_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/kelp_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/kelp_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/light_blue_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/light_blue_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/light_gray_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/light_gray_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/lime_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/lime_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/magenta_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/magenta_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/orange_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/orange_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/pink_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/pink_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/purple_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/purple_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/red_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/red_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/seatwood_planks_arr_one.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/seatwood_planks_arr_two.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/white_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/white_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/yellow_chair.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/extendedseating/recipes/yellow_chair_from_seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/jei/ingredient-list-mod-sort-order.ini" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/jei/ingredient-list-mod-sort-order.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/DIM-1/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/data/create_tracks.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/data/create_tracks.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/entities/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/entities/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/entities/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/Test World/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/Test World/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/ModCreativeModeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/ModCreativeModeTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/de_de.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/de_de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/ko_kr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/ko_kr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/sv_se.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/sv_se.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/chair/black_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/chair/black_chair.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/chair/black_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/chair/black_chair_both.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/chair/black_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/chair/black_chair_left.json" afterDir="false" />
@@ -84,8 +265,60 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/kelp_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/kelp_chair_both.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/kelp_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/kelp_chair_left.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/kelp_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/kelp_chair_right.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/red_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/red_chair.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/textures/block/foot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/textures/block/foot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/black_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/black_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/blue_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/blue_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/brown_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/brown_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/cyan_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/cyan_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/gray_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/gray_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/green_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/green_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/kelp_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/kelp_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/light_blue_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/light_blue_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/light_gray_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/light_gray_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/lime_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/lime_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/magenta_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/magenta_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/orange_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/orange_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/pink_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/pink_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/purple_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/purple_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/red_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/red_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/seatwood_planks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/seatwood_planks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/white_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/white_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/loot_tables/blocks/yellow_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/yellow_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/black_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/black_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/black_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/black_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/blue_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/blue_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/blue_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/blue_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/brown_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/brown_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/brown_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/brown_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/cyan_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/cyan_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/cyan_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/cyan_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/gray_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/gray_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/gray_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/gray_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/green_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/green_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/green_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/green_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/kelp_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/kelp_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/kelp_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/kelp_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/light_blue_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/light_blue_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/light_blue_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/light_blue_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/light_gray_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/light_gray_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/light_gray_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/light_gray_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/lime_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/lime_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/lime_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/lime_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/magenta_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/magenta_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/magenta_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/magenta_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/orange_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/orange_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/orange_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/orange_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/pink_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/pink_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/pink_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/pink_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/purple_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/purple_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/purple_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/purple_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/red_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/red_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/red_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/red_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/seatwood_planks_arr_one.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/seatwood_planks_arr_one.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/seatwood_planks_arr_two.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/seatwood_planks_arr_two.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/white_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/white_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/white_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/white_chair_from_seat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/yellow_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/yellow_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/extendedseating/recipes/yellow_chair_from_seat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/recipes/yellow_chair_from_seat.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,25 +379,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;1.19.2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GitRepos/CreateInteriorsMod-1.19.2/src/main/resources/assets/interiors/models/item&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "1.19.2",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/GitRepos/CreateInteriorsMod-1.19.2/src/main/resources/data/interiors/loot_tables/blocks",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\data\interiors\loot_tables\blocks" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\assets\interiors\models\item" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\assets\interiors\blockstates" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2" />
@@ -290,10 +524,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [runClient]" />
+        <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [build]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [genIntellijRuns]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [testClasses]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [clean]" />
-        <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +546,7 @@
       <workItem from="1695834435451" duration="3731000" />
       <workItem from="1695838484657" duration="826000" />
       <workItem from="1695840809071" duration="1944000" />
-      <workItem from="1695842968747" duration="1027000" />
+      <workItem from="1695842968747" duration="6268000" />
     </task>
     <task id="LOCAL-00001" summary="Create v0.5.e support, finish renaming mod">
       <option name="closed" value="true" />
@@ -370,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695843329949</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="balls">
+      <option name="closed" value="true" />
+      <created>1695844355171</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695844355171</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +632,9 @@
     <MESSAGE value="Try to fix" />
     <MESSAGE value="Change MDK" />
     <MESSAGE value="Complete MDK Change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete MDK Change" />
+    <MESSAGE value="balls" />
+    <MESSAGE value="Fix broken recipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix broken recipes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

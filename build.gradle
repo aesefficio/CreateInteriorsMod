@@ -5,7 +5,7 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = 'v0.2'
+version = 'v0.3'
 group = 'systems.alexander.interiors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'interiors'
 
@@ -42,10 +42,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'interiors'
 
             mods {
-                examplemod {
+                interiors {
                     source sourceSets.main
                 }
             }
@@ -58,10 +58,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'interiors'
 
             mods {
-                examplemod {
+                interiors {
                     source sourceSets.main
                 }
             }

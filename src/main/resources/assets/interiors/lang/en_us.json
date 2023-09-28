@@ -1,6 +1,8 @@
 {
   "creativetab.extended_seating_tab": "Create: Interiors",
   "creativetab.extended_seating": "Create: Interiors",
+  "itemGroup.create_interiors_tab": "Create: Interiors",
+
   "block.interiors.kelp_seat": "Kelp Seat",
   "block.interiors.kelp_chair": "Kelp Chair",
   "block.interiors.seatwood_planks": "Seatwood Planks",
