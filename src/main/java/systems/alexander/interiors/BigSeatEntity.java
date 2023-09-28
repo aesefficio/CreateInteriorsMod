@@ -18,7 +18,6 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.animal.Cat;
 import net.minecraft.world.entity.animal.Parrot;
 import net.minecraft.world.entity.animal.Wolf;
-import net.minecraft.world.entity.animal.frog.Frog;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.Slime;
@@ -74,8 +73,6 @@ public class BigSeatEntity extends Entity implements IEntityAdditionalSpawnData 
             return 1 / 8f;
         if (entity instanceof Wolf)
             return 1 / 16f;
-        if (entity instanceof Frog)
-            return 1 / 8f + 1 / 64f;
         return 0;
     }
 
