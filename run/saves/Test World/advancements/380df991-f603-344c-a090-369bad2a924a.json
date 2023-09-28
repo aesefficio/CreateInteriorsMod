@@ -767,6 +767,12 @@
     },
     "done": true
   },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2023-09-27 19:19:17 -0500"
+    },
+    "done": true
+  },
   "create:recipes/create.base/crafting/kinetics/track_observer_from_other_plates": {
     "criteria": {
       "has_item": "2023-09-24 17:33:08 -0500"
@@ -820,6 +826,12 @@
       "has_item": "2023-09-10 18:06:46 -0500"
     },
     "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:zombie": "2023-09-27 19:19:17 -0500"
+    },
+    "done": false
   },
   "create:recipes/create.base/crafting/kinetics/wooden_bracket": {
     "criteria": {
@@ -1538,6 +1550,12 @@
   "create:recipes/create.base/crafting/appliances/crafting_blueprint": {
     "criteria": {
       "has_item": "2023-09-10 15:59:26 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:zombie": "2023-09-27 19:19:17 -0500"
     },
     "done": true
   },

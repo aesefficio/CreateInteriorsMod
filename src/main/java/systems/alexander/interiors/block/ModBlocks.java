@@ -34,6 +34,9 @@ import static com.simibubi.create.foundation.data.TagGen.axeOnly;
 import static systems.alexander.interiors.Interiors.REGISTRATE;
 
 public class ModBlocks {
+    static {
+        Interiors.REGISTRATE.creativeModeTab(() -> ModCreativeModeTabs.INTERIORS_TAB);
+    }
     public static final DyedBlockList<ChairBlockExtendsSeat> CHAIRS = new DyedBlockList<>(colour -> {
         String colourName = colour.getSerializedName();
         BigSeatMovementBehaviour movementBehaviour = new BigSeatMovementBehaviour();
@@ -90,9 +93,7 @@ public class ModBlocks {
             .loot((lt, block) -> lt.dropSelf(block))
             .register();
 
-    static {
-        Interiors.REGISTRATE.creativeModeTab(() -> ModCreativeModeTabs.INTERIORS_TAB);
-    }
+
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     };
