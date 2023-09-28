@@ -6,7 +6,7 @@ issueTrackerURL = "https://github.com/alexandsr/CreateInteriorsMod/issues"
 [[mods]] #mandatory
 # The modid of the mod
 modId="interiors" #mandatory
-version = "0.3" #mandatory
+version = "0.3.1" #mandatory
 displayName="Create: Interiors" #mandatory
 displayURL = "https://alexandsr.github.io/CreateInteriorsMod/"
 # A file name (in the root of the mod JAR) containing a logo for display
