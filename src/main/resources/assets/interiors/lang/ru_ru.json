@@ -1,0 +1,36 @@
+{
+  "creativetab.extended_seating_tab": "Create: Interiors",
+  "creativetab.extended_seating": "Create: Interiors",
+  "itemGroup.create_interiors_tab": "Create: Interiors",
+
+  "block.interiors.kelp_seat": "Сиденье из водорослей",
+  "block.interiors.kelp_chair": "Кресло из водорослей",
+  "block.interiors.seatwood_planks": "Доски для мебели",
+
+  "block.interiors.white_chair": "Белое кресло",
+  "block.interiors.light_gray_chair": "Светло-серое кресло",
+  "block.interiors.gray_chair": "Серое кресло",
+  "block.interiors.black_chair": "Черное кресло",
+  "block.interiors.brown_chair": "Коричневое кресло",
+  "block.interiors.red_chair": "Красное кресло",
+  "block.interiors.orange_chair": "Оранжевое кресло",
+  "block.interiors.yellow_chair": "Желтое кресло",
+  "block.interiors.lime_chair": "Лаймовое кресло",
+  "block.interiors.green_chair": "Зеленое кресло",
+  "block.interiors.cyan_chair": "Кислотно-голубое кресло",
+  "block.interiors.light_blue_chair": "Голубое кресло",
+  "block.interiors.blue_chair": "Синее кресло",
+  "block.interiors.purple_chair": "Фиолетовое кресло",
+  "block.interiors.magenta_chair": "Пурпурное кресло",
+  "block.interiors.pink_chair": "Розовое кресло",
+
+  "block.interiors.chair.tooltip": "КРЕСЛО",
+  "block.interiors.chair.tooltip.summary": "Сядьте и наслаждайтесь поездкой еще больше! Прикрепит вас к движущемся _штуковинам_. Хороший вариант и для статичной мебели! Поставляется в различных цветах.",
+  "block.interiors.chair.tooltip.condition1": "ПКМ по креслу",
+  "block.interiors.chair.tooltip.behaviour1": "Сажает игрока на _кресло_. Нажмите _кнопку_ _приседания_, чтобы слезть (Shift по умолчанию).",
+  "block.interiors.chair.tooltip.condition2": "Используйте гаечный ключ на кресле",
+  "block.interiors.chair.tooltip.behaviour2": "Выберите конфигурацию подлокотников кресла.",
+  "block.interiors.seatwood_planks.tooltip": "ДОСКИ_ДЛЯ_МЕБЕЛИ",
+  "block.interiors.seatwood_planks.tooltip.summary": "Не очень полезный блок сам по себе, но полезен вместе с _заполняемыми блоками_."
+
+}
