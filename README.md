@@ -60,17 +60,17 @@
 
 </ul> 
 
+---
+
 # Contributing
 
-### Translating
+### Translating 🥳
 
-Translations are awesome and I really appreciate them.
+**Many thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.** 🎉
 
-**Thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.**
+**Further thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.** 🎉
 
-**Thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.**
-
-I have translated Create: Interiors into German & Swedish.
+Create: Interiors is currently available in English, German, Swedish, Russian and Korean. If you don't see your language and want to help, please do feel free! Again, it's much appreciated.
 
 ### Bug reports, suggestions and ideas
 
