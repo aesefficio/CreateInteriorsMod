@@ -62,15 +62,19 @@
 
 # Contributing
 
-### Bug reports, suggestions, and ideas
-
-All of the above are incredibly useful and much appreciated. A GitHub issue or dm on discord (@alexandsr) are both good ways to get in contact.
-
 ### Translating
 
-Translation help is really appreciated. The best way to do so is to make a Git pull request with the translated lang file.
+Translations are awesome and I really appreciate them.
 
 **Thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.**
+
+**Thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.**
+
+I have translated Create: Interiors into German & Swedish.
+
+### Bug reports, suggestions and ideas
+
+Bug reports, suggestions and ideas are incredibly useful and much appreciated. A GitHub issue or an email are both great ways to get in contact.
 
 ---
 
