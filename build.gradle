@@ -5,8 +5,8 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = 'v0.3.1'
-group = 'systems.alexander.interiors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = '0.4'
+group = 'com.sudolev.interiors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'interiors'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.

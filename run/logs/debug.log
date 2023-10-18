@@ -308,7 +308,7 @@
 [27Sep2023 20:03:25.505] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5641
 [27Sep2023 20:03:25.536] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 8 threads for parallel mod-loading
 [27Sep2023 20:03:25.553] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@136965e3 - got cpw.mods.cl.ModuleClassLoader@4b6ac111
-[27Sep2023 20:03:25.553] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for systems.alexander.interiors.Interiors
+[27Sep2023 20:03:25.553] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for interiors.com.sudolev.Interiors
 [27Sep2023 20:03:25.563] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@136965e3 - got cpw.mods.cl.ModuleClassLoader@4b6ac111
 [27Sep2023 20:03:25.565] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
 [27Sep2023 20:03:25.568] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@136965e3 - got cpw.mods.cl.ModuleClassLoader@4b6ac111
@@ -474,7 +474,7 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 [27Sep2023 20:03:25.957] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry andesite_encased_shaft of type minecraft:block
 [27Sep2023 20:03:25.958] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for interiors
 [27Sep2023 20:03:25.958] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry brass_encased_shaft of type minecraft:item
-[27Sep2023 20:03:25.958] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing systems.alexander.interiors.Interiors$ClientModEvents to MOD
+[27Sep2023 20:03:25.958] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing interiors.com.sudolev.Interiors$ClientModEvents to MOD
 [27Sep2023 20:03:25.958] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry brass_encased_shaft of type minecraft:block
 [27Sep2023 20:03:25.968] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
 [27Sep2023 20:03:25.969] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
