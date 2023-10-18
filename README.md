@@ -84,5 +84,5 @@ Bug reports, suggestions and ideas are incredibly useful and much appreciated. A
    <h3>Find Create: Interiors on <a href="https://modrinth.com/mod/interiors"><span style="margin-top:6px"><img src="https://raw.githubusercontent.com/alexandsr/BellsAndWhistlesMod/main/.assets/modrinth.webp" width="16"></span> Modrinth</a> or <a href="https://legacy.curseforge.com/minecraft/mc-mods/interiors"><span style="padding:5px"><img src="https://raw.githubusercontent.com/alexandsr/BellsAndWhistlesMod/9f44e0cb812b00da5d1c60eb691efb9f69761cb3/.assets/curseforge.svg" width="18"></span> CurseForge</a>
 <br><br>
    
-Report Issues <a href="https://github.com/alexandsr/CreateInteriorsMod/issues">here</a></h3>
+Report Issues <a href="https://github.com/sudolev/CreateInteriorsMod/issues">here</a></h3>
 </div>
