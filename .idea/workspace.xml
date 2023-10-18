@@ -4,151 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/run/logs/2023-10-18-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/black_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/blue_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/brown_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/cyan_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/gray_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/green_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/light_blue_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/light_gray_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/lime_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/magenta_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/orange_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/pink_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/purple_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/red_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/white_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/both/yellow_chair_both.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/black_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/blue_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/brown_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/cyan_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/gray_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/green_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/light_blue_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/light_gray_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/lime_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/magenta_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/orange_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/pink_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/purple_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/red_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/white_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/left/yellow_chair_left.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/black_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/blue_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/brown_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/cyan_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/gray_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/green_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/light_blue_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/light_gray_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/lime_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/magenta_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/orange_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/pink_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/purple_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/red_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/white_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/none/yellow_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/black_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/blue_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/brown_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/cyan_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/gray_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/green_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/light_blue_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/light_gray_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/lime_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/magenta_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/orange_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/pink_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/purple_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/red_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/white_chair_right.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/models/block/floor_chair/right/yellow_chair_right.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/AllTags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/BigSeatEntity$Render.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/BigSeatEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/Interiors$ClientModEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/Interiors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/ModBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/custom/BigSeatInteractionBehaviour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/custom/BigSeatMovementBehaviour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/custom/ChairBlockExtendsSeat$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/custom/ChairBlockExtendsSeat$ArmrestConfigurations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/custom/ChairBlockExtendsSeat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/custom/DirectionalSeatBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/util/EntityTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/util/ModTags$Blocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/util/ModTags$Items.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/block/util/ModTags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/item/CreativeTabStuff.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/item/ModCreativeModeTabs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/systems/alexander/interiors/item/ModItems.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runData_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runData_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runGameTestServer_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runGameTestServer_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/de_de.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/de_de.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/ko_kr.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/lang/ko_kr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_both.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_both.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_left.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_left.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_right.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/models/block/kelp_chair_right.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/blocks/mineable/axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/blocks/mineable/axe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/forge-client.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/forge-client.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/forge-common.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/forge-common.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/poi/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/poi/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/serverconfig/create-server.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/serverconfig/create-server.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/serverconfig/forge-server.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/serverconfig/forge-server.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/FloorChairBlockExtendsSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/FloorChairBlockExtendsSeat.java" afterDir="false" />
-    </list>
+    <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -389,7 +245,7 @@
       <workItem from="1696076865622" duration="61000" />
       <workItem from="1696371966297" duration="66000" />
       <workItem from="1697646209867" duration="6212000" />
-      <workItem from="1697666280723" duration="979000" />
+      <workItem from="1697666280723" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="Create v0.5.e support, finish renaming mod">
       <option name="closed" value="true" />
@@ -567,7 +423,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697651687646</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Colored Low Chair Block Models">
+      <option name="closed" value="true" />
+      <created>1697667482363</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697667482363</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fix duplicate cubes in armchair-enabled low-chair models.">
+      <option name="closed" value="true" />
+      <created>1697667574912</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697667574912</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +475,9 @@
     <MESSAGE value="Localization to Russian" />
     <MESSAGE value="Kelp floor chair models" />
     <MESSAGE value="Floor chair item models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Floor chair item models" />
+    <MESSAGE value="Colored Low Chair Block Models" />
+    <MESSAGE value="Fix duplicate cubes in armchair-enabled low-chair models." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix duplicate cubes in armchair-enabled low-chair models." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
