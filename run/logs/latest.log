@@ -1,336 +1,511 @@
-[27Sep2023 20:03:12.091] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.19, --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 43.2.3, --fml.mcVersion, 1.19.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220805.130853]
-[27Sep2023 20:03:12.094] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.6 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[27Sep2023 20:03:12.307] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/alexs/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23126!/ Service=ModLauncher Env=CLIENT
-[27Sep2023 20:03:12.816] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.19.2-43.2.3\45687785dd2c4c0a44768b7d49d78a7d0d95a074\javafmllanguage-1.19.2-43.2.3.jar is missing mods.toml file
-[27Sep2023 20:03:12.818] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.19.2-43.2.3\a277cdb1c183feb61bfc17268fa67689c1c111dc\lowcodelanguage-1.19.2-43.2.3.jar is missing mods.toml file
-[27Sep2023 20:03:12.821] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.19.2-43.2.3\4397f2bd6f775ca187878e0ae5917fed0436e0d9\mclanguage-1.19.2-43.2.3.jar is missing mods.toml file
-[27Sep2023 20:03:12.824] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.19.2-43.2.3\afe360ce5e3041882fcd8bbf1550fa822619a7b8\fmlcore-1.19.2-43.2.3.jar is missing mods.toml file
-[27Sep2023 20:03:12.924] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[27Sep2023 20:03:14.978] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[27Sep2023 20:03:14.989] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --assetIndex, 1.19]
-[27Sep2023 20:03:16.092] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
-[27Sep2023 20:03:16.104] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
-[27Sep2023 20:03:17.299] [main/WARN] [mixin/]: Error loading class: me/jellysquid/mods/sodium/client/render/chunk/data/ChunkRenderData$Builder (java.lang.ClassNotFoundException: me.jellysquid.mods.sodium.client.render.chunk.data.ChunkRenderData$Builder)
-[27Sep2023 20:03:17.299] [main/WARN] [mixin/]: @Mixin target me.jellysquid.mods.sodium.client.render.chunk.data.ChunkRenderData$Builder was not found flywheel.mixins.json:instancemanage.SodiumChunkRenderDataMixin
-[27Sep2023 20:03:22.106] [pool-3-thread-1/INFO] [net.minecraft.util.datafix.DataFixers/]: Building unoptimized datafixer
-[27Sep2023 20:03:24.968] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2/forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/assets/.mcassetsroot' uses unexpected schema
-[27Sep2023 20:03:24.968] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2/forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/data/.mcassetsroot' uses unexpected schema
-[27Sep2023 20:03:24.981] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[27Sep2023 20:03:24.985] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[27Sep2023 20:03:25.096] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[27Sep2023 20:03:25.635] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 43.2.3, for MC 1.19.2 with MCP 20220805.130853
-[27Sep2023 20:03:25.635] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v43.2.3 Initialized
-[27Sep2023 20:03:25.638] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
-[27Sep2023 20:03:29.383] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [interiors]
-[27Sep2023 20:03:29.951] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[27Sep2023 20:03:30.525] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[27Sep2023 20:03:31.225] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 43.2.3 Target: 43.3.0
-[27Sep2023 20:03:31.225] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
-[27Sep2023 20:03:31.466] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: AHEAD Current: 0.6.9-18 Target: null
-[27Sep2023 20:03:35.231] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=east,armrests=none': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.231] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=west,armrests=right': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.231] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=north,armrests=both': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.231] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=west,armrests=left': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.231] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=west,armrests=both': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.231] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=north,armrests=left': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=east,armrests=both': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=east,armrests=left': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=north,armrests=none': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=east,armrests=right': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=south,armrests=left': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=south,armrests=right': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=west,armrests=none': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=south,armrests=none': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.232] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=south,armrests=both': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.233] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' in resourcepack: 'Mod Resources' for variant: 'facing=north,armrests=right': Unknown blockstate property: 'facing'
-[27Sep2023 20:03:35.233] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/red_chair_icon.json' missing model for variant: 'interiors:red_chair_icon#'
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_both
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_left
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/magenta_chair
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_both
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_both
-[27Sep2023 20:03:38.118] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_left
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_both
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_right
-[27Sep2023 20:03:38.119] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_both
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/orange_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_both
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_both
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_both
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/black_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_gray_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_left
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair_icon
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_both
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/blue_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_right
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/brown_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/pink_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/yellow_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/green_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/white_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/kelp_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_blue_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/gray_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/lime_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/cyan_chair
-[27Sep2023 20:03:38.120] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/purple_chair
-[27Sep2023 20:03:39.308] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
-[27Sep2023 20:03:41.672] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[27Sep2023 20:03:41.672] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[27Sep2023 20:03:41.736] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Headphones (Realtek USB2.0 Audio)
-[27Sep2023 20:03:41.737] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[27Sep2023 20:03:41.943] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[27Sep2023 20:03:42.059] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[27Sep2023 20:03:42.060] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[27Sep2023 20:03:42.064] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[27Sep2023 20:03:42.068] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[27Sep2023 20:03:42.070] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[27Sep2023 20:03:42.071] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[27Sep2023 20:03:44.506] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[27Sep2023 20:03:45.679] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[27Sep2023 20:03:45.695] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[27Sep2023 20:03:45.698] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[27Sep2023 20:03:45.703] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[27Sep2023 20:03:46.088] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[27Sep2023 20:03:52.369] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 22 recipes
-[27Sep2023 20:03:53.288] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2138 advancements
-[27Sep2023 20:03:54.517] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.19.2
-[27Sep2023 20:03:54.518] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[27Sep2023 20:03:55.001] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.838] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.840] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.840] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.840] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:00.840] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[27Sep2023 20:04:01.063] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 10%
-[27Sep2023 20:04:01.543] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 28%
-[27Sep2023 20:04:02.034] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 83%
-[27Sep2023 20:04:02.166] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[27Sep2023 20:04:02.190] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 7172 ms
-[27Sep2023 20:04:02.499] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[27Sep2023 20:04:02.503] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[27Sep2023 20:04:02.607] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[27Sep2023 20:04:02.799] [Server thread/INFO] [BatchExecutor/]: Started 2 worker threads
-[27Sep2023 20:04:03.444] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[27Sep2023 20:04:03.516] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@d766a64
-[27Sep2023 20:04:03.545] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:c3c060b4] logged in with entity id 182 at (95.6365520585197, 63.0, 145.42151947995035)
-[27Sep2023 20:04:03.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[27Sep2023 20:04:07.936] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
-[27Sep2023 20:04:07.937] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
-[27Sep2023 20:04:08.219] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
-[27Sep2023 20:04:08.516] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
-[27Sep2023 20:04:08.516] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
-[27Sep2023 20:04:08.517] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Starting JEI...
-[27Sep2023 20:04:08.530] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:minecraft ...
-[27Sep2023 20:04:08.533] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:minecraft took 2.149 ms
-[27Sep2023 20:04:08.533] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: create:jei_plugin ...
-[27Sep2023 20:04:08.533] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: create:jei_plugin took 12.30 ?s
-[27Sep2023 20:04:08.534] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:debug ...
-[27Sep2023 20:04:08.535] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:debug took 44.70 ?s
-[27Sep2023 20:04:08.535] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:forge ...
-[27Sep2023 20:04:08.536] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:forge took 59.00 ?s
-[27Sep2023 20:04:08.536] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:internal ...
-[27Sep2023 20:04:08.536] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:internal took 15.80 ?s
-[27Sep2023 20:04:08.536] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:minecraft ...
-[27Sep2023 20:04:08.537] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:minecraft took 32.10 ?s
-[27Sep2023 20:04:08.537] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: create:jei_plugin ...
-[27Sep2023 20:04:08.538] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: create:jei_plugin took 1.800 ms
-[27Sep2023 20:04:08.540] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:debug ...
-[27Sep2023 20:04:08.541] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:debug took 627.9 ?s
-[27Sep2023 20:04:08.541] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:forge ...
-[27Sep2023 20:04:08.541] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:forge took 11.80 ?s
-[27Sep2023 20:04:08.541] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:internal ...
-[27Sep2023 20:04:08.541] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:internal took 10.30 ?s
-[27Sep2023 20:04:08.543] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:minecraft ...
-[27Sep2023 20:04:08.605] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:minecraft took 61.78 ms
-[27Sep2023 20:04:08.605] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: create:jei_plugin ...
-[27Sep2023 20:04:08.605] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: create:jei_plugin took 13.80 ?s
-[27Sep2023 20:04:08.605] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:debug ...
-[27Sep2023 20:04:08.607] [Render thread/INFO] [mezz.jei.common.config.file.ConfigSerializer/]: Loading config file: C:\GitRepos\CreateInteriorsMod-1.19.2\run\config\jei\jei-client.ini
-[27Sep2023 20:04:08.611] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:debug took 4.819 ms
-[27Sep2023 20:04:08.611] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:forge ...
-[27Sep2023 20:04:08.611] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:forge took 10.40 ?s
-[27Sep2023 20:04:08.611] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:internal ...
-[27Sep2023 20:04:08.611] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:internal took 10.90 ?s
-[27Sep2023 20:04:08.615] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient list...
-[27Sep2023 20:04:08.623] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient list took 8.005 ms
-[27Sep2023 20:04:08.623] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient filter...
-[27Sep2023 20:04:08.650] [Render thread/INFO] [mezz.jei.common.ingredients.IngredientFilter/]: Adding 2022 ingredients
-[27Sep2023 20:04:08.940] [Render thread/INFO] [mezz.jei.common.ingredients.IngredientFilter/]: Added 2022 ingredients
-[27Sep2023 20:04:08.941] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient filter took 318.0 ms
-[27Sep2023 20:04:08.946] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building bookmarks...
-[27Sep2023 20:04:08.953] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building bookmarks took 6.331 ms
-[27Sep2023 20:04:08.954] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:minecraft ...
-[27Sep2023 20:04:08.974] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:minecraft took 19.54 ms
-[27Sep2023 20:04:08.974] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: create:jei_plugin ...
-[27Sep2023 20:04:09.020] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: create:jei_plugin took 46.68 ms
-[27Sep2023 20:04:09.020] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:debug ...
-[27Sep2023 20:04:09.021] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:debug took 19.70 ?s
-[27Sep2023 20:04:09.021] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:forge ...
-[27Sep2023 20:04:09.021] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:forge took 8.400 ?s
-[27Sep2023 20:04:09.021] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:internal ...
-[27Sep2023 20:04:09.022] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:internal took 1.498 ms
-[27Sep2023 20:04:09.023] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:minecraft ...
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:minecraft took 2.234 ms
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: create:jei_plugin ...
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: create:jei_plugin took 13.80 ?s
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:debug ...
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:debug took 7.700 ?s
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:forge ...
-[27Sep2023 20:04:09.026] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:forge took 5.800 ?s
-[27Sep2023 20:04:09.027] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:internal ...
-[27Sep2023 20:04:09.027] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:internal took 7.100 ?s
-[27Sep2023 20:04:09.029] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:minecraft ...
-[27Sep2023 20:04:09.030] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:minecraft took 390.2 ?s
-[27Sep2023 20:04:09.030] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: create:jei_plugin ...
-[27Sep2023 20:04:09.032] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: create:jei_plugin took 1.900 ms
-[27Sep2023 20:04:09.032] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:debug ...
-[27Sep2023 20:04:09.032] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:debug took 16.00 ?s
-[27Sep2023 20:04:09.032] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:forge ...
-[27Sep2023 20:04:09.032] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:forge took 8.800 ?s
-[27Sep2023 20:04:09.033] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:internal ...
-[27Sep2023 20:04:09.033] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:internal took 7.400 ?s
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:minecraft ...
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:minecraft took 25.90 ?s
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: create:jei_plugin ...
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: create:jei_plugin took 12.10 ?s
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:debug ...
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:debug took 6.600 ?s
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:forge ...
-[27Sep2023 20:04:09.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:forge took 6.800 ?s
-[27Sep2023 20:04:09.036] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:internal ...
-[27Sep2023 20:04:09.036] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:internal took 6.300 ?s
-[27Sep2023 20:04:09.036] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building recipe registry...
-[27Sep2023 20:04:09.046] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building recipe registry took 10.46 ms
-[27Sep2023 20:04:09.048] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:minecraft ...
-[27Sep2023 20:04:09.274] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:minecraft took 225.7 ms
-[27Sep2023 20:04:09.275] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: create:jei_plugin ...
-[27Sep2023 20:04:09.459] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: create:jei_plugin took 184.0 ms
-[27Sep2023 20:04:09.460] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:debug ...
-[27Sep2023 20:04:09.460] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:debug took 28.70 ?s
-[27Sep2023 20:04:09.460] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:forge ...
-[27Sep2023 20:04:09.537] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:forge took 76.88 ms
-[27Sep2023 20:04:09.537] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:internal ...
-[27Sep2023 20:04:09.537] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:internal took 14.50 ?s
-[27Sep2023 20:04:09.541] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:minecraft ...
-[27Sep2023 20:04:09.544] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:minecraft took 3.341 ms
-[27Sep2023 20:04:09.544] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: create:jei_plugin ...
-[27Sep2023 20:04:09.545] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: create:jei_plugin took 515.1 ?s
-[27Sep2023 20:04:09.545] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:debug ...
-[27Sep2023 20:04:09.545] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:debug took 9.400 ?s
-[27Sep2023 20:04:09.545] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:forge ...
-[27Sep2023 20:04:09.545] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:forge took 5.100 ?s
-[27Sep2023 20:04:09.546] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:internal ...
-[27Sep2023 20:04:09.546] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:internal took 9.800 ?s
-[27Sep2023 20:04:09.551] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building runtime...
-[27Sep2023 20:04:09.557] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:minecraft ...
-[27Sep2023 20:04:09.560] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:minecraft took 2.224 ms
-[27Sep2023 20:04:09.560] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: create:jei_plugin ...
-[27Sep2023 20:04:09.561] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: create:jei_plugin took 969.7 ?s
-[27Sep2023 20:04:09.561] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:debug ...
-[27Sep2023 20:04:09.561] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:debug took 16.70 ?s
-[27Sep2023 20:04:09.561] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:forge ...
-[27Sep2023 20:04:09.561] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:forge took 7.400 ?s
-[27Sep2023 20:04:09.561] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:internal ...
-[27Sep2023 20:04:09.567] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:internal took 5.745 ms
-[27Sep2023 20:04:09.596] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building runtime took 45.29 ms
-[27Sep2023 20:04:09.597] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:minecraft ...
-[27Sep2023 20:04:09.597] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:minecraft took 27.60 ?s
-[27Sep2023 20:04:09.597] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: create:jei_plugin ...
-[27Sep2023 20:04:09.597] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: create:jei_plugin took 6.800 ?s
-[27Sep2023 20:04:09.597] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:debug ...
-[27Sep2023 20:04:09.597] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:debug took 13.10 ?s
-[27Sep2023 20:04:09.598] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:forge ...
-[27Sep2023 20:04:09.598] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:forge took 7.100 ?s
-[27Sep2023 20:04:09.598] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:internal ...
-[27Sep2023 20:04:09.598] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:internal took 5.500 ?s
-[27Sep2023 20:04:09.633] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Starting JEI took 1.116 s
-[27Sep2023 20:04:09.774] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 415 advancements
-[27Sep2023 20:04:13.567] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[27Sep2023 20:04:13.636] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:overworld
-[27Sep2023 20:04:13.668] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_end
-[27Sep2023 20:04:13.670] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_nether
-[27Sep2023 20:04:17.518] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[27Sep2023 20:04:17.533] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:overworld
-[27Sep2023 20:04:17.550] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_end
-[27Sep2023 20:04:17.551] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_nether
-[27Sep2023 20:04:18.406] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[27Sep2023 20:04:18.408] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
-[27Sep2023 20:04:18.408] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
-[27Sep2023 20:04:18.408] [Render thread/INFO] [mezz.jei.forge.startup.ClientLifecycleHandler/]: Stopping JEI
-[27Sep2023 20:04:18.490] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[27Sep2023 20:04:18.490] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[27Sep2023 20:04:18.509] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[27Sep2023 20:04:18.553] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[27Sep2023 20:04:18.553] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[27Sep2023 20:04:18.554] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[27Sep2023 20:04:20.156] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:overworld
-[27Sep2023 20:04:20.255] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_end
-[27Sep2023 20:04:20.257] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_nether
-[27Sep2023 20:04:20.286] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test World): All chunks are saved
-[27Sep2023 20:04:20.286] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[27Sep2023 20:04:20.286] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[27Sep2023 20:04:20.286] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[18Oct2023 18:52:14.288] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.19, --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 43.2.3, --fml.mcVersion, 1.19.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220805.130853]
+[18Oct2023 18:52:14.293] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.6 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[18Oct2023 18:52:14.427] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/alexs/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23126!/ Service=ModLauncher Env=CLIENT
+[18Oct2023 18:52:14.731] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.19.2-43.2.3\45687785dd2c4c0a44768b7d49d78a7d0d95a074\javafmllanguage-1.19.2-43.2.3.jar is missing mods.toml file
+[18Oct2023 18:52:14.734] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.19.2-43.2.3\a277cdb1c183feb61bfc17268fa67689c1c111dc\lowcodelanguage-1.19.2-43.2.3.jar is missing mods.toml file
+[18Oct2023 18:52:14.737] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.19.2-43.2.3\4397f2bd6f775ca187878e0ae5917fed0436e0d9\mclanguage-1.19.2-43.2.3.jar is missing mods.toml file
+[18Oct2023 18:52:14.742] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.19.2-43.2.3\afe360ce5e3041882fcd8bbf1550fa822619a7b8\fmlcore-1.19.2-43.2.3.jar is missing mods.toml file
+[18Oct2023 18:52:14.885] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[18Oct2023 18:52:16.650] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[18Oct2023 18:52:16.659] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --assetIndex, 1.19]
+[18Oct2023 18:52:17.087] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
+[18Oct2023 18:52:17.089] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
+[18Oct2023 18:52:17.310] [main/WARN] [mixin/]: Error loading class: me/jellysquid/mods/sodium/client/render/chunk/data/ChunkRenderData$Builder (java.lang.ClassNotFoundException: me.jellysquid.mods.sodium.client.render.chunk.data.ChunkRenderData$Builder)
+[18Oct2023 18:52:17.311] [main/WARN] [mixin/]: @Mixin target me.jellysquid.mods.sodium.client.render.chunk.data.ChunkRenderData$Builder was not found flywheel.mixins.json:instancemanage.SodiumChunkRenderDataMixin
+[18Oct2023 18:52:21.093] [pool-3-thread-1/INFO] [net.minecraft.util.datafix.DataFixers/]: Building unoptimized datafixer
+[18Oct2023 18:52:22.817] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2/forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/assets/.mcassetsroot' uses unexpected schema
+[18Oct2023 18:52:22.817] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2/forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/data/.mcassetsroot' uses unexpected schema
+[18Oct2023 18:52:22.830] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18Oct2023 18:52:22.834] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[18Oct2023 18:52:22.918] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[18Oct2023 18:52:23.432] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 43.2.3, for MC 1.19.2 with MCP 20220805.130853
+[18Oct2023 18:52:23.432] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v43.2.3 Initialized
+[18Oct2023 18:52:23.437] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
+[18Oct2023 18:52:28.061] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [interiors]
+[18Oct2023 18:52:28.629] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[18Oct2023 18:52:29.816] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[18Oct2023 18:52:30.368] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 43.2.3 Target: 43.3.0
+[18Oct2023 18:52:30.368] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
+[18Oct2023 18:52:30.684] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: AHEAD Current: 0.6.9-18 Target: null
+[18Oct2023 18:52:33.965] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'interiors:block/chair/yelfloor_chair' referenced from: interiors:yellow_chair#armrests=none,facing=north,waterlogged=true: java.io.FileNotFoundException: interiors:models/block/chair/yelfloor_chair.json
+[18Oct2023 18:52:33.967] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'interiors:block/chair/yelfloor_chair_both' referenced from: interiors:yellow_chair#armrests=none,facing=north,waterlogged=true: java.io.FileNotFoundException: interiors:models/block/chair/yelfloor_chair_both.json
+[18Oct2023 18:52:33.967] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'interiors:block/chair/yelfloor_chair_left' referenced from: interiors:yellow_chair#armrests=none,facing=north,waterlogged=true: java.io.FileNotFoundException: interiors:models/block/chair/yelfloor_chair_left.json
+[18Oct2023 18:52:33.967] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'interiors:block/chair/yelfloor_chair_right' referenced from: interiors:yellow_chair#armrests=none,facing=north,waterlogged=true: java.io.FileNotFoundException: interiors:models/block/chair/yelfloor_chair_right.json
+[18Oct2023 18:52:34.103] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=east,waterlogged=true'
+[18Oct2023 18:52:34.103] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=north,waterlogged=true'
+[18Oct2023 18:52:34.103] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=west,waterlogged=true'
+[18Oct2023 18:52:34.103] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=north,waterlogged=true'
+[18Oct2023 18:52:34.103] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=north,waterlogged=false'
+[18Oct2023 18:52:34.103] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=east,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=south,waterlogged=true'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=west,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=west,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=south,waterlogged=true'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=west,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=south,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=east,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=north,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=west,waterlogged=true'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=east,waterlogged=true'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=east,waterlogged=false'
+[18Oct2023 18:52:34.104] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=south,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=north,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=west,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=south,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=east,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=north,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=west,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=south,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=south,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=west,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=east,waterlogged=true'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=north,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=south,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=north,waterlogged=false'
+[18Oct2023 18:52:34.105] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=east,waterlogged=true'
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/brown_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_left
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_blue_chair_left
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/magenta_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_gray_chair_right
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/red_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/blue_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_left
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/orange_chair
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/yellow_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_left
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_right
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/red_chair_both
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/gray_chair_right
+[18Oct2023 18:52:36.623] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/yellow_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/red_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/lime_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/pink_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/white_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/green_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/blue_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/brown_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/gray_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/lime_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/white_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/purple_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/black_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/green_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_blue_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/yellow_chair_left
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/green_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/orange_chair_right
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/brown_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/orange_chair_both
+[18Oct2023 18:52:36.624] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/magenta_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/cyan_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/black_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/blue_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_floor_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/lime_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/white_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/gray_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/red_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/lime_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_blue_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/purple_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/orange_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/blue_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/black_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_gray_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/gray_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/orange_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/pink_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_blue_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/purple_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/magenta_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/pink_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_left
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/cyan_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/pink_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_both
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_right
+[18Oct2023 18:52:36.625] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/brown_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/cyan_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/black_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/magenta_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_gray_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/yellow_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/magenta_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/green_chair_both
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/lime_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/cyan_chair_both
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/light_gray_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/black_chair_both
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/gray_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/cyan_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/white_chair_both
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/black_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/floor_chair/purple_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/green_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/magenta_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/white_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_gray_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_left
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/purple_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair_icon
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_both
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/blue_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_right
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/brown_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/pink_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/yellow_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/blue_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/green_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/orange_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/white_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/kelp_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/yellow_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_gray_floor_chair
+[18Oct2023 18:52:36.626] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/brown_floor_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_blue_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/kelp_floor_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/gray_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/lime_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/cyan_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/pink_floor_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/purple_chair
+[18Oct2023 18:52:36.627] [Worker-Main-2/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_blue_floor_chair
+[18Oct2023 18:52:37.732] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
+[18Oct2023 18:52:39.733] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[18Oct2023 18:52:39.733] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[18Oct2023 18:52:40.150] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[18Oct2023 18:52:40.151] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[18Oct2023 18:52:40.267] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[18Oct2023 18:52:40.335] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18Oct2023 18:52:40.336] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18Oct2023 18:52:40.338] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18Oct2023 18:52:40.340] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18Oct2023 18:52:40.341] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18Oct2023 18:52:40.342] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18Oct2023 18:52:41.885] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[18Oct2023 18:52:42.779] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[18Oct2023 18:52:42.794] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18Oct2023 18:52:42.796] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18Oct2023 18:52:42.802] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[18Oct2023 18:52:43.126] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[18Oct2023 18:53:03.270] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 22 recipes
+[18Oct2023 18:53:03.372] [Render thread/ERROR] [net.minecraft.world.level.storage.loot.LootTables/]: Couldn't parse loot table interiors:blocks/cyan_floor_chair
+com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'interiors:cyan_floor_floor_chair'
+	at net.minecraft.util.GsonHelper.lambda$convertToItem$0(GsonHelper.java:134) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at net.minecraft.util.GsonHelper.convertToItem(GsonHelper.java:133) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.GsonHelper.getAsItem(GsonHelper.java:143) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:59) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.entries.LootItem$Serializer.deserialize(LootItem.java:47) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:165) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Serializer.deserializeCustom(LootPoolSingletonContainer.java:145) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:94) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Serializer.deserialize(LootPoolEntryContainer.java:77) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.GsonAdapterFactory$JsonAdapter.deserialize(GsonAdapterFactory.java:113) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:963) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.9.jar%23154!/:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:459) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:467) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:199) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.LootPool$Serializer.deserialize(LootPool.java:196) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:41) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.internal.bind.ArrayTypeAdapter.read(ArrayTypeAdapter.java:72) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:963) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl.deserialize(TreeTypeAdapter.java:162) ~[gson-2.8.9.jar%23154!/:?]
+	at net.minecraft.util.GsonHelper.convertToObject(GsonHelper.java:459) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.GsonHelper.getAsObject(GsonHelper.java:476) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:281) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.LootTable$Serializer.deserialize(LootTable.java:278) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at com.google.gson.internal.bind.TreeTypeAdapter.read(TreeTypeAdapter.java:69) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:963) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.8.9.jar%23154!/:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1006) ~[gson-2.8.9.jar%23154!/:?]
+	at net.minecraftforge.common.ForgeHooks.loadLootTable(ForgeHooks.java:929) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23187%23194!/:?]
+	at net.minecraft.world.level.storage.loot.LootTables.lambda$apply$0(LootTables.java:49) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at java.util.HashMap.forEach(HashMap.java:1421) ~[?:?]
+	at net.minecraft.world.level.storage.loot.LootTables.apply(LootTables.java:46) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.world.level.storage.loot.LootTables.apply(LootTables.java:21) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:12) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:65) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:146) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:116) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:129) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:130) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:109) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:148) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:136) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadLevel(WorldOpenFlows.java:58) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.loadWorld(WorldSelectionList.java:586) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:448) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:378) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:336) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:31) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:93) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:522) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:90) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:195) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:90) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:194) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.1.jar%23168!/:build 7]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.1.jar%23174!/:build 7]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3403) ~[lwjgl-glfw-3.3.1.jar%23168!/:build 7]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:168) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:341) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1169) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:705) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.2.3_mapped_parchment_2022.08.14-1.19.2-recomp.jar%23188!/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.2.3.jar%23101!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.9.jar%23114!/:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?]
+[18Oct2023 18:53:04.328] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2138 advancements
+[18Oct2023 18:53:05.805] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.19.2
+[18Oct2023 18:53:05.805] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[18Oct2023 18:53:06.333] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[18Oct2023 18:53:11.308] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.308] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.308] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.308] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.308] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.309] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.309] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.349] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.349] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.349] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.390] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 18:53:11.895] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[18Oct2023 18:53:12.363] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 20%
+[18Oct2023 18:53:12.880] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 67%
+[18Oct2023 18:53:13.257] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[18Oct2023 18:53:13.259] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 6907 ms
+[18Oct2023 18:53:13.473] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[18Oct2023 18:53:13.479] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[18Oct2023 18:53:13.622] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[18Oct2023 18:53:13.931] [Server thread/INFO] [BatchExecutor/]: Started 2 worker threads
+[18Oct2023 18:53:14.418] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[18Oct2023 18:53:14.509] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@3609f6c8
+[18Oct2023 18:53:14.535] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:6f7afee2] logged in with entity id 196 at (94.91145084998978, 63.0, 141.05748287103995)
+[18Oct2023 18:53:14.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[18Oct2023 18:53:16.578] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
+[18Oct2023 18:53:16.578] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
+[18Oct2023 18:53:16.836] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
+[18Oct2023 18:53:17.014] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
+[18Oct2023 18:53:17.014] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
+[18Oct2023 18:53:17.015] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Starting JEI...
+[18Oct2023 18:53:17.030] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:minecraft ...
+[18Oct2023 18:53:17.034] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:minecraft took 4.838 ms
+[18Oct2023 18:53:17.034] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: create:jei_plugin ...
+[18Oct2023 18:53:17.035] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: create:jei_plugin took 12.80 ?s
+[18Oct2023 18:53:17.037] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:debug ...
+[18Oct2023 18:53:17.037] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:debug took 38.80 ?s
+[18Oct2023 18:53:17.038] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:forge ...
+[18Oct2023 18:53:17.038] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:forge took 18.80 ?s
+[18Oct2023 18:53:17.038] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:internal ...
+[18Oct2023 18:53:17.038] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering item subtypes: jei:internal took 13.20 ?s
+[18Oct2023 18:53:17.039] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:minecraft ...
+[18Oct2023 18:53:17.039] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:minecraft took 29.30 ?s
+[18Oct2023 18:53:17.039] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: create:jei_plugin ...
+[18Oct2023 18:53:17.041] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: create:jei_plugin took 1.674 ms
+[18Oct2023 18:53:17.041] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:debug ...
+[18Oct2023 18:53:17.042] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:debug took 515.0 ?s
+[18Oct2023 18:53:17.042] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:forge ...
+[18Oct2023 18:53:17.042] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:forge took 13.10 ?s
+[18Oct2023 18:53:17.042] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:internal ...
+[18Oct2023 18:53:17.042] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering fluid subtypes: jei:internal took 8.400 ?s
+[18Oct2023 18:53:17.046] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:minecraft ...
+[18Oct2023 18:53:17.110] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:minecraft took 63.81 ms
+[18Oct2023 18:53:17.110] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: create:jei_plugin ...
+[18Oct2023 18:53:17.110] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: create:jei_plugin took 23.80 ?s
+[18Oct2023 18:53:17.110] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:debug ...
+[18Oct2023 18:53:17.112] [Render thread/INFO] [mezz.jei.common.config.file.ConfigSerializer/]: Loading config file: C:\GitRepos\CreateInteriorsMod-1.19.2\run\config\jei\jei-client.ini
+[18Oct2023 18:53:17.116] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:debug took 5.304 ms
+[18Oct2023 18:53:17.116] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:forge ...
+[18Oct2023 18:53:17.117] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:forge took 16.50 ?s
+[18Oct2023 18:53:17.117] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:internal ...
+[18Oct2023 18:53:17.117] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering ingredients: jei:internal took 8.500 ?s
+[18Oct2023 18:53:17.120] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient list...
+[18Oct2023 18:53:17.130] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient list took 9.991 ms
+[18Oct2023 18:53:17.130] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient filter...
+[18Oct2023 18:53:17.158] [Render thread/INFO] [mezz.jei.common.ingredients.IngredientFilter/]: Adding 2039 ingredients
+[18Oct2023 18:53:17.499] [Render thread/INFO] [mezz.jei.common.ingredients.IngredientFilter/]: Added 2039 ingredients
+[18Oct2023 18:53:17.500] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient filter took 369.1 ms
+[18Oct2023 18:53:17.505] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building bookmarks...
+[18Oct2023 18:53:17.515] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building bookmarks took 9.916 ms
+[18Oct2023 18:53:17.517] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:minecraft ...
+[18Oct2023 18:53:17.554] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:minecraft took 36.45 ms
+[18Oct2023 18:53:17.554] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: create:jei_plugin ...
+[18Oct2023 18:53:17.627] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: create:jei_plugin took 73.18 ms
+[18Oct2023 18:53:17.628] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:debug ...
+[18Oct2023 18:53:17.628] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:debug took 21.10 ?s
+[18Oct2023 18:53:17.628] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:forge ...
+[18Oct2023 18:53:17.628] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:forge took 8.500 ?s
+[18Oct2023 18:53:17.628] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:internal ...
+[18Oct2023 18:53:17.630] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering categories: jei:internal took 1.473 ms
+[18Oct2023 18:53:17.631] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:minecraft ...
+[18Oct2023 18:53:17.635] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:minecraft took 3.154 ms
+[18Oct2023 18:53:17.635] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: create:jei_plugin ...
+[18Oct2023 18:53:17.635] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: create:jei_plugin took 15.60 ?s
+[18Oct2023 18:53:17.635] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:debug ...
+[18Oct2023 18:53:17.636] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:debug took 6.300 ?s
+[18Oct2023 18:53:17.636] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:forge ...
+[18Oct2023 18:53:17.636] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:forge took 5.500 ?s
+[18Oct2023 18:53:17.636] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:internal ...
+[18Oct2023 18:53:17.636] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering vanilla category extensions: jei:internal took 5.200 ?s
+[18Oct2023 18:53:17.638] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:minecraft ...
+[18Oct2023 18:53:17.638] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:minecraft took 400.9 ?s
+[18Oct2023 18:53:17.639] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: create:jei_plugin ...
+[18Oct2023 18:53:17.640] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: create:jei_plugin took 1.562 ms
+[18Oct2023 18:53:17.641] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:debug ...
+[18Oct2023 18:53:17.641] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:debug took 21.30 ?s
+[18Oct2023 18:53:17.641] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:forge ...
+[18Oct2023 18:53:17.641] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:forge took 9.200 ?s
+[18Oct2023 18:53:17.641] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:internal ...
+[18Oct2023 18:53:17.641] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipe catalysts: jei:internal took 7.000 ?s
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:minecraft ...
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:minecraft took 20.90 ?s
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: create:jei_plugin ...
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: create:jei_plugin took 6.700 ?s
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:debug ...
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:debug took 5.700 ?s
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:forge ...
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:forge took 5.200 ?s
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:internal ...
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering advanced plugins: jei:internal took 5.300 ?s
+[18Oct2023 18:53:17.643] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building recipe registry...
+[18Oct2023 18:53:17.661] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building recipe registry took 17.89 ms
+[18Oct2023 18:53:17.664] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:minecraft ...
+[18Oct2023 18:53:17.916] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:minecraft took 251.9 ms
+[18Oct2023 18:53:17.917] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: create:jei_plugin ...
+[18Oct2023 18:53:18.140] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: create:jei_plugin took 223.4 ms
+[18Oct2023 18:53:18.140] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:debug ...
+[18Oct2023 18:53:18.140] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:debug took 29.50 ?s
+[18Oct2023 18:53:18.140] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:forge ...
+[18Oct2023 18:53:18.226] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:forge took 85.00 ms
+[18Oct2023 18:53:18.226] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:internal ...
+[18Oct2023 18:53:18.226] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes: jei:internal took 13.80 ?s
+[18Oct2023 18:53:18.233] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:minecraft ...
+[18Oct2023 18:53:18.237] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:minecraft took 4.222 ms
+[18Oct2023 18:53:18.237] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: create:jei_plugin ...
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: create:jei_plugin took 575.5 ?s
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:debug ...
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:debug took 9.300 ?s
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:forge ...
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:forge took 5.800 ?s
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:internal ...
+[18Oct2023 18:53:18.239] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering recipes transfer handlers: jei:internal took 7.000 ?s
+[18Oct2023 18:53:18.244] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building runtime...
+[18Oct2023 18:53:18.250] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:minecraft ...
+[18Oct2023 18:53:18.253] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:minecraft took 2.704 ms
+[18Oct2023 18:53:18.254] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: create:jei_plugin ...
+[18Oct2023 18:53:18.255] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: create:jei_plugin took 945.9 ?s
+[18Oct2023 18:53:18.255] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:debug ...
+[18Oct2023 18:53:18.255] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:debug took 13.80 ?s
+[18Oct2023 18:53:18.255] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:forge ...
+[18Oct2023 18:53:18.255] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:forge took 6.900 ?s
+[18Oct2023 18:53:18.255] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:internal ...
+[18Oct2023 18:53:18.261] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Registering gui handlers: jei:internal took 5.350 ms
+[18Oct2023 18:53:18.296] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building runtime took 51.88 ms
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:minecraft ...
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:minecraft took 25.90 ?s
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: create:jei_plugin ...
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: create:jei_plugin took 10.70 ?s
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:debug ...
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:debug took 15.10 ?s
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:forge ...
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:forge took 4.800 ?s
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:internal ...
+[18Oct2023 18:53:18.297] [Render thread/INFO] [mezz.jei.common.load.PluginCaller/]: Sending Runtime: jei:internal took 4.900 ?s
+[18Oct2023 18:53:18.338] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Starting JEI took 1.323 s
+[18Oct2023 18:53:18.478] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 415 advancements
+[18Oct2023 18:56:20.154] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[18Oct2023 18:56:20.156] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
+[18Oct2023 18:56:20.156] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
+[18Oct2023 18:56:20.156] [Render thread/INFO] [mezz.jei.forge.startup.ClientLifecycleHandler/]: Stopping JEI
+[18Oct2023 18:56:20.169] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[18Oct2023 18:56:20.169] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[18Oct2023 18:56:20.197] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[18Oct2023 18:56:20.217] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[18Oct2023 18:56:20.218] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[18Oct2023 18:56:20.218] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[18Oct2023 18:56:21.508] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:overworld
+[18Oct2023 18:56:21.580] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_nether
+[18Oct2023 18:56:21.583] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test World]'/minecraft:the_end
+[18Oct2023 18:56:21.603] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test World): All chunks are saved
+[18Oct2023 18:56:21.603] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18Oct2023 18:56:21.603] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18Oct2023 18:56:21.603] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
