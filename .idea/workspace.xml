@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/run/logs/2023-10-18-5.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/black_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/blue_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/brown_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/cyan_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/gray_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/green_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/kelp_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/light_blue_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/light_gray_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/lime_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/magenta_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/orange_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/pink_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/purple_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/red_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/white_floor_chair.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/floor_chair/yellow_floor_chair.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2023-10-18-6.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
@@ -32,13 +15,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/blockstates/yellow_chair.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/blockstates/yellow_chair.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/forge-client.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/forge-client.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/config/forge-common.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/forge-common.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2023-10-18-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-10-18-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2023-10-18-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-10-18-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2023-10-18-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-10-18-3.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/2023-10-18-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-10-18-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2023-10-18-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2023-10-18-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -65,23 +49,6 @@
       <change beforePath="$PROJECT_DIR$/run/saves/New World/serverconfig/forge-server.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/serverconfig/forge-server.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/black_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/blue_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/brown_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/cyan_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/gray_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/green_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/kelp_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/light_blue_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/light_gray_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/lime_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/magenta_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/orange_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/pink_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/purple_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/red_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/white_floor_chair.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/interiors/loot_tables/blocks/yellow_floor_chair.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +143,7 @@
       <recent name="systems.alexander.interiors.block.custom" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CreateInteriorsMod-1.19.2 [runClient]">
+  <component name="RunManager" selected="Gradle.CreateInteriorsMod-1.19.2 [build]">
     <configuration name="CreateInteriorsMod-1.19.2 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -289,8 +256,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [runClient]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [build]" />
+        <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [runClient]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [genIntellijRuns]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [testClasses]" />
         <item itemvalue="Gradle.CreateInteriorsMod-1.19.2 [runClient]" />
@@ -323,7 +290,7 @@
       <workItem from="1696076865622" duration="61000" />
       <workItem from="1696371966297" duration="66000" />
       <workItem from="1697646209867" duration="6212000" />
-      <workItem from="1697666280723" duration="3413000" />
+      <workItem from="1697666280723" duration="4725000" />
     </task>
     <task id="LOCAL-00001" summary="Create v0.5.e support, finish renaming mod">
       <option name="closed" value="true" />
@@ -541,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697669451039</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update item models">
+      <option name="closed" value="true" />
+      <created>1697669893667</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1697669893667</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +530,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Try to fix" />
     <MESSAGE value="Change MDK" />
     <MESSAGE value="Complete MDK Change" />
     <MESSAGE value="balls" />
@@ -580,7 +554,8 @@
     <MESSAGE value="Item IDs, seat height fixes." />
     <MESSAGE value="F" />
     <MESSAGE value="Reorganize models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganize models" />
+    <MESSAGE value="Update item models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update item models" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
