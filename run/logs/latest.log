@@ -1,133 +1,223 @@
-[28Sep2023 14:23:09.058] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.2.4, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914]
-[28Sep2023 14:23:09.067] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.6 by Oracle Corporation
-[28Sep2023 14:23:09.270] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/alexs/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2324!/ Service=ModLauncher Env=CLIENT
-[28Sep2023 14:23:09.724] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.2.4\dd2723015e3b0d1d6c33f986d6cf98824bbb372a\javafmllanguage-1.18.2-40.2.4.jar is missing mods.toml file
-[28Sep2023 14:23:09.729] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.2.4\7ecb20630530ebce24946c706d8c15f1480635cc\lowcodelanguage-1.18.2-40.2.4.jar is missing mods.toml file
-[28Sep2023 14:23:09.734] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.2.4\431b6408b6ca27db2075732b87b0cadb3ae25a9e\mclanguage-1.18.2-40.2.4.jar is missing mods.toml file
-[28Sep2023 14:23:09.741] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.2.4\c0135b3621fe2cb83600c3c489579a607009d87d\fmlcore-1.18.2-40.2.4.jar is missing mods.toml file
-[28Sep2023 14:23:09.932] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[28Sep2023 14:23:11.753] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[28Sep2023 14:23:11.761] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
-[28Sep2023 14:23:12.164] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
-[28Sep2023 14:23:12.177] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
-[28Sep2023 14:23:12.181] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
-[28Sep2023 14:23:22.600] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2/forge-1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2.jar%2380!/assets/.mcassetsroot' uses unexpected schema
-[28Sep2023 14:23:22.603] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2/forge-1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2.jar%2380!/data/.mcassetsroot' uses unexpected schema
-[28Sep2023 14:23:22.648] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[28Sep2023 14:23:22.664] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[28Sep2023 14:23:23.063] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
-[28Sep2023 14:23:24.758] [modloading-worker-0/INFO] [com.tterrag.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
-[28Sep2023 14:23:24.827] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.2.4, for MC 1.18.2 with MCP 20220404.173914
-[28Sep2023 14:23:24.836] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.2.4 Initialized
-[28Sep2023 14:23:24.951] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
-[28Sep2023 14:23:25.017] [modloading-worker-0/INFO] [com.tterrag.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
-[28Sep2023 14:23:32.304] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
-[28Sep2023 14:23:32.305] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `flowing_milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
-[28Sep2023 14:23:34.097] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[28Sep2023 14:23:34.162] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [interiors]
-[28Sep2023 14:23:35.899] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[28Sep2023 14:23:37.995] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[28Sep2023 14:23:40.070] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 40.2.4 Target: 40.2.10
-[28Sep2023 14:23:40.072] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
-[28Sep2023 14:23:40.622] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: AHEAD Current: 0.6.10-105 Target: null
-[28Sep2023 14:23:59.790] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_both
-[28Sep2023 14:23:59.790] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair
-[28Sep2023 14:23:59.790] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair
-[28Sep2023 14:23:59.790] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_left
-[28Sep2023 14:23:59.791] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair
-[28Sep2023 14:23:59.791] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/magenta_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_left
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_left
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_right
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_right
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_left
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_right
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_left
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_left
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_left
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_both
-[28Sep2023 14:23:59.792] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_right
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_right
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_right
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_right
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_right
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_left
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_right
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/orange_chair
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_left
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_left
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_both
-[28Sep2023 14:23:59.796] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_right
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_left
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_right
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_both
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_right
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_left
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/black_chair
-[28Sep2023 14:23:59.798] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_left
-[28Sep2023 14:23:59.799] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_right
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_right
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_left
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_left
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_right
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_left
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_right
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_gray_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_left
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair_icon
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_both
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/blue_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_right
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/brown_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/pink_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/yellow_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/green_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/white_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/kelp_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_blue_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/gray_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/lime_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/cyan_chair
-[28Sep2023 14:23:59.800] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/purple_chair
-[28Sep2023 14:24:03.336] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
-[28Sep2023 14:24:11.705] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
-[28Sep2023 14:24:11.705] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[28Sep2023 14:24:11.974] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[28Sep2023 14:24:12.093] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[28Sep2023 14:24:12.095] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[28Sep2023 14:24:12.098] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[28Sep2023 14:24:12.102] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[28Sep2023 14:24:12.103] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[28Sep2023 14:24:12.106] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[28Sep2023 14:24:16.101] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[28Sep2023 14:24:16.117] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[28Sep2023 14:24:16.120] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[28Sep2023 14:24:16.799] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[28Sep2023 14:24:57.576] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[18Oct2023 11:43:14.821] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.2.4, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914]
+[18Oct2023 11:43:14.849] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.6 by Oracle Corporation
+[18Oct2023 11:43:15.076] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/alexs/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2324!/ Service=ModLauncher Env=CLIENT
+[18Oct2023 11:43:15.739] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.2.4\dd2723015e3b0d1d6c33f986d6cf98824bbb372a\javafmllanguage-1.18.2-40.2.4.jar is missing mods.toml file
+[18Oct2023 11:43:15.755] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.2.4\7ecb20630530ebce24946c706d8c15f1480635cc\lowcodelanguage-1.18.2-40.2.4.jar is missing mods.toml file
+[18Oct2023 11:43:15.755] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.2.4\431b6408b6ca27db2075732b87b0cadb3ae25a9e\mclanguage-1.18.2-40.2.4.jar is missing mods.toml file
+[18Oct2023 11:43:15.772] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\alexs\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.2.4\c0135b3621fe2cb83600c3c489579a607009d87d\fmlcore-1.18.2-40.2.4.jar is missing mods.toml file
+[18Oct2023 11:43:16.040] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[18Oct2023 11:43:18.288] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[18Oct2023 11:43:18.295] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\alexs\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[18Oct2023 11:43:18.790] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
+[18Oct2023 11:43:18.798] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
+[18Oct2023 11:43:18.806] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\GitRepos\CreateInteriorsMod-1.19.2/build/createSrgToMcp/output.srg
+[18Oct2023 11:43:33.583] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2/forge-1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2-recomp.jar%2380!/assets/.mcassetsroot' uses unexpected schema
+[18Oct2023 11:43:33.583] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/alexs/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2/forge-1.18.2-40.2.4_mapped_parchment_2022.08.07-1.18.2-recomp.jar%2380!/data/.mcassetsroot' uses unexpected schema
+[18Oct2023 11:43:33.651] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18Oct2023 11:43:33.666] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[18Oct2023 11:43:33.996] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[18Oct2023 11:43:35.867] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.2.4, for MC 1.18.2 with MCP 20220404.173914
+[18Oct2023 11:43:35.867] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.2.4 Initialized
+[18Oct2023 11:43:35.889] [modloading-worker-0/INFO] [com.tterrag.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
+[18Oct2023 11:43:35.924] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
+[18Oct2023 11:43:36.757] [modloading-worker-0/INFO] [com.tterrag.registrate.AbstractRegistrate/]: Detected new forge version, registering events reflectively.
+[18Oct2023 11:43:46.003] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
+[18Oct2023 11:43:46.003] [Render thread/INFO] [net.minecraftforge.registries.GameData/]: Potentially Dangerous alternative prefix `minecraft` for name `flowing_milk`, expected `forge`. This could be a intended override, but in most cases indicates a broken mod.
+[18Oct2023 11:43:48.869] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[18Oct2023 11:43:49.007] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [interiors]
+[18Oct2023 11:43:50.921] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[18Oct2023 11:43:53.367] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[18Oct2023 11:43:55.745] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 40.2.4 Target: 40.2.10
+[18Oct2023 11:43:55.745] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
+[18Oct2023 11:43:56.425] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: AHEAD Current: 0.6.10-105 Target: null
+[18Oct2023 11:44:06.165] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: interiors:blockstates/kelp_floor_chair.json: java.io.FileNotFoundException: interiors:blockstates/kelp_floor_chair.json
+[18Oct2023 11:44:06.166] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=east,waterlogged=true'
+[18Oct2023 11:44:06.166] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=north,waterlogged=true'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=west,waterlogged=true'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=north,waterlogged=true'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=north,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=east,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=south,waterlogged=true'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=west,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=west,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=south,waterlogged=true'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=west,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=south,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=east,waterlogged=false'
+[18Oct2023 11:44:06.167] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=north,waterlogged=false'
+[18Oct2023 11:44:06.168] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=west,waterlogged=true'
+[18Oct2023 11:44:06.168] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=east,waterlogged=true'
+[18Oct2023 11:44:06.168] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=east,waterlogged=false'
+[18Oct2023 11:44:06.168] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=south,waterlogged=true'
+[18Oct2023 11:44:06.168] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=north,waterlogged=true'
+[18Oct2023 11:44:06.168] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=west,waterlogged=true'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=south,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=right,facing=east,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=north,waterlogged=true'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=west,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=south,waterlogged=true'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=south,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=west,waterlogged=true'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=east,waterlogged=true'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=both,facing=north,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=left,facing=south,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=north,waterlogged=false'
+[18Oct2023 11:44:06.169] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'interiors:blockstates/kelp_floor_chair.json' missing model for variant: 'interiors:kelp_floor_chair#armrests=none,facing=east,waterlogged=true'
+[18Oct2023 11:44:12.376] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'interiors:kelp_floor_chair#inventory' referenced from: interiors:kelp_floor_chair#inventory: java.io.FileNotFoundException: interiors:models/item/kelp_floor_chair.json
+[18Oct2023 11:44:15.231] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_both
+[18Oct2023 11:44:15.231] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair
+[18Oct2023 11:44:15.231] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair
+[18Oct2023 11:44:15.231] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_left
+[18Oct2023 11:44:15.232] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair
+[18Oct2023 11:44:15.233] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/magenta_chair
+[18Oct2023 11:44:15.233] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_both
+[18Oct2023 11:44:15.233] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_both
+[18Oct2023 11:44:15.233] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair
+[18Oct2023 11:44:15.233] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_both
+[18Oct2023 11:44:15.234] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_both
+[18Oct2023 11:44:15.234] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_left
+[18Oct2023 11:44:15.234] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_left
+[18Oct2023 11:44:15.234] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_right
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_right
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_left
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_right
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_both
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_left
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_left
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_left
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_both
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_both
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_right
+[18Oct2023 11:44:15.235] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/orange_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_left
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_blue_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/orange_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/green_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_left
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_left
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/purple_chair_left
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/black_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/pink_chair_both
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/brown_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/blue_chair_left
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/black_chair
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/magenta_chair_left
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_right
+[18Oct2023 11:44:15.236] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair_left
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/white_chair_left
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair_right
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/cyan_chair_left
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/light_gray_chair_right
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/gray_chair
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/yellow_chair
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_gray_chair
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/kelp_chair_left
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/red_chair_icon
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/lime_chair_both
+[18Oct2023 11:44:15.237] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/blue_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:block/chair/red_chair_right
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/brown_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/pink_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/yellow_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/green_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/white_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/kelp_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/light_blue_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/gray_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/lime_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/cyan_chair
+[18Oct2023 11:44:15.238] [Worker-Main-15/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to resolve texture reference: #missing in interiors:item/purple_chair
+[18Oct2023 11:44:19.747] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
+[18Oct2023 11:44:27.336] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[18Oct2023 11:44:27.338] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[18Oct2023 11:44:27.652] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[18Oct2023 11:44:27.793] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18Oct2023 11:44:27.794] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18Oct2023 11:44:27.802] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18Oct2023 11:44:27.809] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18Oct2023 11:44:27.811] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18Oct2023 11:44:27.815] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18Oct2023 11:44:32.006] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[18Oct2023 11:44:32.023] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18Oct2023 11:44:32.027] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18Oct2023 11:44:32.445] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[18Oct2023 11:44:47.642] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:block: Object did not get ID it asked for. Name: interiors:kelp_floor_chair Expected: 915 Got: 1502
+[18Oct2023 11:44:47.643] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:item: Object did not get ID it asked for. Name: interiors:kelp_floor_chair Expected: 1118 Got: 1737
+[18Oct2023 11:44:50.615] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18Oct2023 11:44:50.617] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18Oct2023 11:44:50.620] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Oct2023 11:44:50.621] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Oct2023 11:44:50.622] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18Oct2023 11:44:50.624] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [create, coupling, add, cart1] and [create, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Oct2023 11:44:50.625] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [create, coupling, add, carts] and [create, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Oct2023 11:44:50.626] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [create, coupling, add, cart1] and [create, coupling, add, carts] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Oct2023 11:44:50.628] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [create, coupling, add, carts] and [create, coupling, add, cart1] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Oct2023 11:44:57.408] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 22 recipes
+[18Oct2023 11:44:59.040] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2098 advancements
+[18Oct2023 11:45:00.458] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18Oct2023 11:45:00.496] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
+[18Oct2023 11:45:00.496] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[18Oct2023 11:45:00.826] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[18Oct2023 11:45:01.769] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 11:45:01.769] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 11:45:01.870] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 11:45:02.353] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 11:45:02.853] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18Oct2023 11:45:03.371] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 4%
+[18Oct2023 11:45:03.869] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 8%
+[18Oct2023 11:45:04.370] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 9%
+[18Oct2023 11:45:04.869] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 35%
+[18Oct2023 11:45:05.540] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[18Oct2023 11:45:05.554] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4717 ms
+[18Oct2023 11:45:05.698] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[18Oct2023 11:45:05.702] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[18Oct2023 11:45:05.882] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[18Oct2023 11:45:06.608] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[18Oct2023 11:45:06.681] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@9cb755c
+[18Oct2023 11:45:06.706] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:77906a79] logged in with entity id 229 at (0.04090531459093801, 74.8125, 3.970910481745331)
+[18Oct2023 11:45:06.754] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[18Oct2023 11:45:07.155] [Render thread/INFO] [BatchExecutor/]: Started 2 worker threads
+[18Oct2023 11:45:07.625] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 28 advancements
+[18Oct2023 11:45:25.337] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Gave 1 [block.interiors.kelp_floor_chair] to Dev]
+[18Oct2023 11:45:25.342] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Gave 1 [block.interiors.kelp_floor_chair] to Dev
+[18Oct2023 11:45:49.841] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[18Oct2023 11:45:49.866] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[18Oct2023 11:45:49.896] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[18Oct2023 11:45:49.897] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[18Oct2023 11:45:51.005] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[18Oct2023 11:45:51.056] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[18Oct2023 11:45:51.056] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[18Oct2023 11:45:51.065] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[18Oct2023 11:45:51.116] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[18Oct2023 11:45:51.116] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[18Oct2023 11:45:51.116] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[18Oct2023 11:45:52.180] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[18Oct2023 11:45:52.392] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[18Oct2023 11:45:52.392] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[18Oct2023 11:45:52.416] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[18Oct2023 11:45:52.417] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18Oct2023 11:45:52.417] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18Oct2023 11:45:52.417] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

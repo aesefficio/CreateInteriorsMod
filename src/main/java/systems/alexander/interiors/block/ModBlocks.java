@@ -21,6 +21,7 @@ import systems.alexander.interiors.Interiors;
 import systems.alexander.interiors.block.custom.BigSeatMovementBehaviour;
 import systems.alexander.interiors.block.custom.ChairBlockExtendsSeat;
 import systems.alexander.interiors.block.custom.DirectionalSeatBlock;
+import systems.alexander.interiors.block.custom.FloorChairBlockExtendsSeat;
 import systems.alexander.interiors.block.util.ModTags;
 import systems.alexander.interiors.item.ModCreativeModeTabs;
 import systems.alexander.interiors.item.ModItems;
@@ -66,6 +67,27 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RED_CHAIR_ICON = registerBlock("red_chair_icon",
                      () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()));
+
+    public static final DyedBlockList<FloorChairBlockExtendsSeat> FLOOR_CHAIRS = new DyedBlockList<>(colour -> {
+        String colourName = colour.getSerializedName();
+        SeatMovementBehaviour movementBehaviour = new SeatMovementBehaviour();
+        SeatInteractionBehaviour interactionBehaviour = new SeatInteractionBehaviour();
+        return REGISTRATE.block(colourName + "_chair", p -> new FloorChairBlockExtendsSeat(p, colour, true))
+                .initialProperties(SharedProperties::wooden)
+                .properties(p -> p.color(colour.getMaterialColor()))
+                .transform(axeOnly())
+                .onRegister(movementBehaviour(movementBehaviour))
+                .onRegister(interactionBehaviour(interactionBehaviour))
+                .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+                .tag(ModTags.Blocks.FLOOR_CHAIRS)
+                .item()
+                .tag(ModTags.Items.FLOOR_CHAIRS)
+                .build()
+                .loot((lt, block) -> lt.dropSelf(block))
+                .register();
+    });
+
+
     public static final RegistryEntry<ChairBlockExtendsSeat> KELP_CHAIR = REGISTRATE.block("kelp_chair", p -> new ChairBlockExtendsSeat(p, DyeColor.BLACK, true))
             .initialProperties(SharedProperties::wooden)
             .properties(p -> p.color(MaterialColor.TERRACOTTA_BLACK))
@@ -75,6 +97,17 @@ public class ModBlocks {
             .simpleItem()
             .loot((lt, block) -> lt.dropSelf(block))
             .register();
+
+    public static final RegistryEntry<FloorChairBlockExtendsSeat> KELP_FLOOR_CHAIR = REGISTRATE.block("kelp_floor_chair", p -> new FloorChairBlockExtendsSeat(p, DyeColor.BLACK, true))
+            .initialProperties(SharedProperties::wooden)
+            .properties(p -> p.color(MaterialColor.TERRACOTTA_BLACK))
+            .transform(axeOnly())
+            .onRegister(movementBehaviour(new SeatMovementBehaviour()))
+            .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
+            .simpleItem()
+            .loot((lt, block) -> lt.dropSelf(block))
+            .register();
+
     public static final RegistryEntry<DirectionalSeatBlock> KELP_SEAT = REGISTRATE.block("kelp_seat", p -> new DirectionalSeatBlock(p, DyeColor.BLACK, true))
             .initialProperties(SharedProperties::wooden)
             .properties(p -> p.color(MaterialColor.TERRACOTTA_BLACK))

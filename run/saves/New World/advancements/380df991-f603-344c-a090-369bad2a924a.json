@@ -119,17 +119,17 @@
     },
     "done": true
   },
-  "create:recipes/create.palettes/crafting/kinetics/light_gray_seat_from_other_seat": {
-    "criteria": {
-      "has_seat": "2023-09-28 14:22:23 -0500"
-    },
-    "done": true
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:dark_forest": "2023-09-28 14:21:09 -0500"
     },
     "done": false
+  },
+  "create:recipes/create.palettes/crafting/kinetics/light_gray_seat_from_other_seat": {
+    "criteria": {
+      "has_seat": "2023-09-28 14:22:23 -0500"
+    },
+    "done": true
   },
   "DataVersion": 2975
 }
