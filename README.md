@@ -21,14 +21,21 @@
    <li>Chair Blocks
       <ul>
          <li>Come in all 16 Minecraft Dye Colors</li>
-         <li>Right-click with a wrench to cycle armrest state (None, Left Only, Right Only, or Both Armrests)</li>
-         <li>Can be crafted either from 1 Colored Wool and 2 Wooden Slabs OR from 1 Colored Seat and 1 Wooden Slab</li>
+         <li><b>Right-click with a wrench to cycle armrest state</b> (None, Left Only, Right Only, or Both Armrests)</li>
+         <li>Can be crafted either from 1 Colored Wool, 1 Wooden Plank and 1 Wooden Slab OR from 1 Colored Seat and 1 Wooden Plank</li>
          <li>Can be sat on, both as a part of contraptions and standalone</li>
          <li>Can pick up entities just like Seat blocks</li>
          <li>Bouncy!</li>
       </ul>
       <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/5df96470-97e6-4d3e-bd5c-ea18b20f902d" width="150">
       <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/14ce4207-df3e-4ad7-970f-4c9135a2ed08" width="150"><br><br>
+   </li>
+      <li>Low Chair Blocks
+      <ul>
+         <li>Similar to the Chair blocks, but without legs (in response to demand for such)</li>
+         <li>Can be crafted either from 1 Colored Wool and 2 Wooden Slabs OR from 1 Colored Seat and 1 Wooden Slab</li>
+         <img src="https://github.com/sudolev/CreateInteriorsMod/assets/61996958/bebf4021-b9e4-4cac-813d-f365b46dd276" width="105"><br><br>
+      </ul>
    </li>
    <li>Kelp Chair
      <ul>
