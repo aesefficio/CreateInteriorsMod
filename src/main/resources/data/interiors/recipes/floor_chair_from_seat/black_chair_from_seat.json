@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "create_mod_floor_chairs",
+  "ingredients": [
+    {
+      "item": "create:black_seat"
+    },
+    {
+      "tag": "minecraft:wooden_slabs"
+    }
+  ],
+  "result": {
+    "item": "interiors:black_floor_chair",
+    "count": 1
+  }
+}
+  
