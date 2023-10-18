@@ -37,6 +37,13 @@
          <img src="https://github.com/sudolev/CreateInteriorsMod/assets/61996958/bebf4021-b9e4-4cac-813d-f365b46dd276" width="105"><br><br>
       </ul>
    </li>
+  <li>Kelp Seat
+  <ul>
+      <li>Cheaper & easier-to-farm alternative to wool seats</li>
+      <li>Can be crafted from 1 Dried Kelp item and 1 Wooden Slab</li>
+      <li>Work exactly like Create's seat blocks</li>
+   </ul><br>
+   ⠀⠀⠀⠀<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/7c00abef-12eb-4fe5-a304-03dc4f2629d9" width="90"><br><br>
    <li>Kelp Chair
      <ul>
       <li>Cheaper & easier-to-farm alternative to wool chairs</li>
@@ -45,13 +52,8 @@
    </ul><br>
    ⠀⠀⠀<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/53210a6f-6343-41b9-944b-f9addc3937ce" width="100"><br><br>
    </li>
-  <li>Kelp Seat
-  <ul>
-      <li>Cheaper & easier-to-farm alternative to wool seats</li>
-      <li>Can be crafted from 1 Dried Kelp item and 1 Wooden Slab</li>
-      <li>Work exactly like Create's seat blocks</li>
-   </ul><br>
-   ⠀⠀⠀⠀<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/7c00abef-12eb-4fe5-a304-03dc4f2629d9" width="90"><br><br>
+   <li>Kelp Low Chair
+   </li>
 
   </li>
    <li>Seatwood Planks
