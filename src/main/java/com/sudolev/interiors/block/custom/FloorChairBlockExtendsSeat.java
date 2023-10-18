@@ -80,7 +80,7 @@ public class FloorChairBlockExtendsSeat extends SeatBlock implements ProperWater
         if (world.isClientSide)
             return;
         SeatEntity seat = new SeatEntity(world, pos);
-        seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
+        seat.setPos(pos.getX() + .5f, pos.getY(), pos.getZ() + .5f);
         world.addFreshEntity(seat);
         entity.startRiding(seat, true);
         if (entity instanceof TamableAnimal ta)

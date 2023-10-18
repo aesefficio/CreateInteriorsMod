@@ -1,63 +1,63 @@
 {
   "variants": {
     "facing=east,armrests=none": {
-      "model": "interiors:block/low_chair/brown_chair",
+      "model": "interiors:block/floor_chair/brown_chair",
       "y": 90
     },
     "facing=north,armrests=none": {
-      "model": "interiors:block/low_chair/brown_chair"
+      "model": "interiors:block/floor_chair/brown_chair"
     },
     "facing=south,armrests=none": {
-      "model": "interiors:block/low_chair/brown_chair",
+      "model": "interiors:block/floor_chair/brown_chair",
       "y": 180
     },
     "facing=west,armrests=none": {
-      "model": "interiors:block/low_chair/brown_chair",
+      "model": "interiors:block/floor_chair/brown_chair",
       "y": 270
     },
     "facing=east,armrests=left": {
-      "model": "interiors:block/low_chair/brown_chair_left",
+      "model": "interiors:block/floor_chair/brown_chair_left",
       "y": 90
     },
     "facing=north,armrests=left": {
-      "model": "interiors:block/low_chair/brown_chair_left"
+      "model": "interiors:block/floor_chair/brown_chair_left"
     },
     "facing=south,armrests=left": {
-      "model": "interiors:block/low_chair/brown_chair_left",
+      "model": "interiors:block/floor_chair/brown_chair_left",
       "y": 180
     },
     "facing=west,armrests=left": {
-      "model": "interiors:block/low_chair/brown_chair_left",
+      "model": "interiors:block/floor_chair/brown_chair_left",
       "y": 270
     },
     "facing=east,armrests=right": {
-      "model": "interiors:block/low_chair/brown_chair_right",
+      "model": "interiors:block/floor_chair/brown_chair_right",
       "y": 90
     },
     "facing=north,armrests=right": {
-      "model": "interiors:block/low_chair/brown_chair_right"
+      "model": "interiors:block/floor_chair/brown_chair_right"
     },
     "facing=south,armrests=right": {
-      "model": "interiors:block/low_chair/brown_chair_right",
+      "model": "interiors:block/floor_chair/brown_chair_right",
       "y": 180
     },
     "facing=west,armrests=right": {
-      "model": "interiors:block/low_chair/brown_chair_right",
+      "model": "interiors:block/floor_chair/brown_chair_right",
       "y": 270
     },
     "facing=east,armrests=both": {
-      "model": "interiors:block/low_chair/brown_chair_both",
+      "model": "interiors:block/floor_chair/brown_chair_both",
       "y": 90
     },
     "facing=north,armrests=both": {
-      "model": "interiors:block/low_chair/brown_chair_both"
+      "model": "interiors:block/floor_chair/brown_chair_both"
     },
     "facing=south,armrests=both": {
-      "model": "interiors:block/low_chair/brown_chair_both",
+      "model": "interiors:block/floor_chair/brown_chair_both",
       "y": 180
     },
     "facing=west,armrests=both": {
-      "model": "interiors:block/low_chair/brown_chair_both",
+      "model": "interiors:block/floor_chair/brown_chair_both",
       "y": 270
     }
   }
