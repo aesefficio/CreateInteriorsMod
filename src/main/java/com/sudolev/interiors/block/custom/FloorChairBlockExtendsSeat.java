@@ -10,7 +10,6 @@ import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.BlockHelper;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
-import com.sudolev.interiors.BigSeatEntity;
 import com.sudolev.interiors.block.ModBlocks;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -80,7 +79,7 @@ public class FloorChairBlockExtendsSeat extends SeatBlock implements ProperWater
     public static void sitDown(Level world, BlockPos pos, Entity entity) {
         if (world.isClientSide)
             return;
-        BigSeatEntity seat = new BigSeatEntity(world, pos);
+        SeatEntity seat = new SeatEntity(world, pos);
         seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
         world.addFreshEntity(seat);
         entity.startRiding(seat, true);
@@ -184,15 +183,15 @@ public class FloorChairBlockExtendsSeat extends SeatBlock implements ProperWater
             return InteractionResult.SUCCESS;
         }
 
-        List<BigSeatEntity> seats = world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos));
+        List<SeatEntity> seats = world.getEntitiesOfClass(SeatEntity.class, new AABB(pos));
         if (!seats.isEmpty()) {
-            BigSeatEntity BigSeatEntity = seats.get(0);
-            List<Entity> passengers = BigSeatEntity.getPassengers();
+            SeatEntity SeatEntity = seats.get(0);
+            List<Entity> passengers = SeatEntity.getPassengers();
             if (!passengers.isEmpty() && passengers.get(0) instanceof Player)
                 return InteractionResult.PASS;
             if (!world.isClientSide) {
-                BigSeatEntity.ejectPassengers();
-                player.startRiding(BigSeatEntity);
+                SeatEntity.ejectPassengers();
+                player.startRiding(SeatEntity);
             }
             return InteractionResult.SUCCESS;
         }

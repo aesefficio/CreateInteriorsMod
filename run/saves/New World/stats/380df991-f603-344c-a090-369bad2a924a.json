@@ -1,22 +1,28 @@
 {
   "stats": {
-    "minecraft:custom": {
-      "minecraft:jump": 12,
-      "minecraft:time_since_rest": 3389,
-      "minecraft:crouch_one_cm": 1037,
-      "minecraft:leave_game": 3,
-      "minecraft:play_time": 3389,
-      "minecraft:time_since_death": 3389,
-      "minecraft:walk_one_cm": 3290,
-      "minecraft:sneak_time": 368,
-      "minecraft:total_world_time": 4367,
-      "minecraft:interact_with_crafting_table": 1
-    },
     "minecraft:used": {
+      "interiors:kelp_chair": 1,
+      "interiors:kelp_seat": 1,
+      "interiors:gray_chair": 1,
+      "minecraft:dark_oak_leaves": 12,
       "create:blue_seat": 1,
-      "interiors:kelp_floor_chair": 3,
+      "interiors:kelp_floor_chair": 4,
       "minecraft:crafting_table": 1,
       "interiors:blue_chair": 1
+    },
+    "minecraft:custom": {
+      "minecraft:jump": 53,
+      "minecraft:time_since_rest": 4800,
+      "minecraft:crouch_one_cm": 1041,
+      "minecraft:sprint_one_cm": 1178,
+      "minecraft:leave_game": 4,
+      "minecraft:play_time": 4800,
+      "minecraft:time_since_death": 4800,
+      "minecraft:walk_one_cm": 4835,
+      "minecraft:sneak_time": 375,
+      "minecraft:total_world_time": 5817,
+      "minecraft:interact_with_crafting_table": 1,
+      "minecraft:fly_one_cm": 3980
     }
   },
   "DataVersion": 2975

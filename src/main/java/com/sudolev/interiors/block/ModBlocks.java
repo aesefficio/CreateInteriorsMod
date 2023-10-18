@@ -71,7 +71,7 @@ public class ModBlocks {
         String colourName = colour.getSerializedName();
         SeatMovementBehaviour movementBehaviour = new SeatMovementBehaviour();
         SeatInteractionBehaviour interactionBehaviour = new SeatInteractionBehaviour();
-        return Interiors.REGISTRATE.block(colourName + "_chair", p -> new FloorChairBlockExtendsSeat(p, colour, true))
+        return Interiors.REGISTRATE.block(colourName + "_floor_chair", p -> new FloorChairBlockExtendsSeat(p, colour, true))
                 .initialProperties(SharedProperties::wooden)
                 .properties(p -> p.color(colour.getMaterialColor()))
                 .transform(axeOnly())
