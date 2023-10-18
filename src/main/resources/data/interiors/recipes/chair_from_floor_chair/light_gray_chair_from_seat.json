@@ -3,7 +3,7 @@
   "group": "create_mod_chairs",
   "ingredients": [
     {
-      "item": "create:light_gray_seat"
+      "item": "interiors:light_gray_floor_chair"
     },
     {
       "tag": "minecraft:wooden_slabs"

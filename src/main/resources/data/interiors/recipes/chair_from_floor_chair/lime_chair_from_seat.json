@@ -3,7 +3,7 @@
   "group": "create_mod_chairs",
   "ingredients": [
     {
-      "item": "create:lime_seat"
+      "item": "interiors:lime_floor_chair"
     },
     {
       "tag": "minecraft:wooden_slabs"

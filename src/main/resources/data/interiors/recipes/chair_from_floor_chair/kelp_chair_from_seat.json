@@ -3,7 +3,7 @@
   "group": "create_kelp_chair",
   "ingredients": [
     {
-      "item": "interiors:kelp_seat"
+      "item": "interiors:kelp_floor_chair"
     },
     {
       "tag": "minecraft:wooden_slabs"

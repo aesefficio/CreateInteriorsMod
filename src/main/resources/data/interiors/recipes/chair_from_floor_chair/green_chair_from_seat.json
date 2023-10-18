@@ -3,7 +3,7 @@
   "group": "create_mod_chairs",
   "ingredients": [
     {
-      "item": "create:green_seat"
+      "item": "interiors:green_floor_chair"
     },
     {
       "tag": "minecraft:wooden_slabs"
