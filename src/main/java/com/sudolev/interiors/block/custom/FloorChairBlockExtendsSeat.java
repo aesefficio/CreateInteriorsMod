@@ -58,12 +58,12 @@ public class FloorChairBlockExtendsSeat extends SeatBlock implements ProperWater
     public static final EnumProperty<ArmrestConfigurations> ARMRESTS = EnumProperty.create("armrests", ArmrestConfigurations.class);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private static final VoxelShape SHAPE = Shapes.join(
-            Block.box(0, 0, 0, 16, 6, 16),
+            Block.box(0, 0, 0, 16, 8, 16),
             Block.box(0, 6, 12, 16, 13, 16),
             BooleanOp.OR
     );
     private static final VoxelShape SHAPE_BACK = Stream.of(
-            Block.box(0, 0, 0, 16, 6, 16),
+            Block.box(0, 0, 0, 16, 8, 16),
             Block.box(0, 6, 12, 16, 13, 16)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     protected final DyeColor color;
