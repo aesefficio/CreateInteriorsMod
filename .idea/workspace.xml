@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/ko_kr.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/interiors/lang/ko_kr.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +246,7 @@
       <workItem from="1695927997640" duration="2039000" />
       <workItem from="1696076865622" duration="61000" />
       <workItem from="1696371966297" duration="66000" />
-      <workItem from="1697646209867" duration="3744000" />
+      <workItem from="1697646209867" duration="3908000" />
     </task>
     <task id="LOCAL-00001" summary="Create v0.5.e support, finish renaming mod">
       <option name="closed" value="true" />
@@ -385,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697649636568</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update Lang">
+      <option name="closed" value="true" />
+      <created>1697650253493</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697650253493</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +423,8 @@
     <MESSAGE value="Floor Chair Recipe" />
     <MESSAGE value="Chair recipes from floor chairs" />
     <MESSAGE value="Floor chair loot tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Floor chair loot tables" />
+    <MESSAGE value="Update Lang" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Lang" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
