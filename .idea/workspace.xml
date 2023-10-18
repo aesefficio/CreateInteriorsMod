@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/createMcpToSrg/output.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/build/createMcpToSrg/output.tsrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extractSrg/output.srg" beforeDir="false" afterPath="$PROJECT_DIR$/build/extractSrg/output.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/AllTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/AllTags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/BigSeatEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/BigSeatEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/Interiors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/Interiors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/BigSeatInteractionBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/BigSeatInteractionBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/BigSeatMovementBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/BigSeatMovementBehaviour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/ChairBlockExtendsSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/ChairBlockExtendsSeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/DirectionalSeatBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/DirectionalSeatBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/util/EntityTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/util/EntityTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/util/ModTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/util/ModTags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/CreativeTabStuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/item/CreativeTabStuff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/ModCreativeModeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/item/ModCreativeModeTabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/item/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/ModBlocks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,34 +66,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;1.19.2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GitRepos/CreateInteriorsMod-1.19.2/src/main/resources/data/interiors/loot_tables/blocks&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "1.19.2",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/GitRepos/CreateInteriorsMod-1.19.2/src/main/resources/data/interiors",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\data\interiors" />
+      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\assets" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\data\interiors\loot_tables\blocks" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\assets\interiors\models\item" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\assets\interiors\blockstates" />
-      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2" />
-      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\assets\interiors\lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\META-INF" />
+      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\data\minecraft\tags\blocks\mineable" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources" />
+      <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2\src\main\resources\META-INF" />
       <recent name="C:\GitRepos\CreateInteriorsMod-1.19.2" />
     </key>
   </component>
@@ -334,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695859384779</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor to sudolev, copy over v0.4 assets.">
+      <option name="closed" value="true" />
+      <created>1697672068784</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697672068784</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +340,8 @@
     <MESSAGE value="balls" />
     <MESSAGE value="Fix broken recipes" />
     <MESSAGE value="Fix broken loot tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix broken loot tables" />
+    <MESSAGE value="Refactor to sudolev, copy over v0.4 assets." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor to sudolev, copy over v0.4 assets." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
