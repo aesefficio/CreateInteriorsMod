@@ -1,12 +1,11 @@
-package systems.alexander.interiors.block.util;
+package com.sudolev.interiors.block.util;
 
 import com.simibubi.create.foundation.data.CreateEntityBuilder;
+import com.simibubi.create.foundation.utility.Lang;
+import com.sudolev.interiors.Interiors;
 import com.tterrag.registrate.util.nullness.NonNullConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
-import com.simibubi.create.foundation.utility.Lang;
-
-import systems.alexander.interiors.Interiors;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.world.entity.Entity;

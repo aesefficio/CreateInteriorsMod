@@ -1,8 +1,8 @@
-package systems.alexander.interiors.item;
+package com.sudolev.interiors.item;
 
+import com.sudolev.interiors.block.ModBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import systems.alexander.interiors.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final CreativeModeTab INTERIORS_TAB = new CreativeModeTab("create_interiors_tab") {

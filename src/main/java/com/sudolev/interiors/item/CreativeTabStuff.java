@@ -1,8 +1,8 @@
-package systems.alexander.interiors.item;
+package com.sudolev.interiors.item;
 
 import com.simibubi.create.infrastructure.item.CreateCreativeModeTab;
+import com.sudolev.interiors.block.ModBlocks;
 import net.minecraft.world.item.ItemStack;
-import systems.alexander.interiors.block.ModBlocks;
 
 public class CreativeTabStuff extends CreateCreativeModeTab {
 

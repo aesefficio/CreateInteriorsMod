@@ -1,6 +1,6 @@
-package systems.alexander.interiors.item;
+package com.sudolev.interiors.item;
 
-import systems.alexander.interiors.Interiors;
+import com.sudolev.interiors.Interiors;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

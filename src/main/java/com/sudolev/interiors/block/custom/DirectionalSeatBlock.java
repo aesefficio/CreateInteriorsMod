@@ -1,4 +1,4 @@
-package systems.alexander.interiors.block.custom;
+package com.sudolev.interiors.block.custom;
 
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
 import net.minecraft.world.item.DyeColor;

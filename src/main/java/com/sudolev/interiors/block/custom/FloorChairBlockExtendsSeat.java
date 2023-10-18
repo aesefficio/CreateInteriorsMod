@@ -1,4 +1,4 @@
-package systems.alexander.interiors.block.custom;
+package com.sudolev.interiors.block.custom;
 
 import com.google.common.base.Optional;
 import com.simibubi.create.AllItems;
@@ -10,6 +10,8 @@ import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.BlockHelper;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
+import com.sudolev.interiors.BigSeatEntity;
+import com.sudolev.interiors.block.ModBlocks;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -44,8 +46,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.extensions.IForgeBlockState;
-import systems.alexander.interiors.BigSeatEntity;
-import systems.alexander.interiors.block.ModBlocks;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
@@ -53,49 +53,100 @@ import java.util.stream.Stream;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterloggedBlock, IWrenchable {
+public class FloorChairBlockExtendsSeat extends SeatBlock implements ProperWaterloggedBlock, IWrenchable {
 
+    public static final EnumProperty<ArmrestConfigurations> ARMRESTS = EnumProperty.create("armrests", ArmrestConfigurations.class);
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    private static final VoxelShape SHAPE = Shapes.join(
+            Block.box(0, 0, 0, 16, 6, 16),
+            Block.box(0, 6, 12, 16, 13, 16),
+            BooleanOp.OR
+    );
+    private static final VoxelShape SHAPE_BACK = Stream.of(
+            Block.box(0, 0, 0, 16, 6, 16),
+            Block.box(0, 6, 12, 16, 13, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     protected final DyeColor color;
+    protected final boolean inCreativeTab;
 
-    public ChairBlockExtendsSeat(Properties properties, DyeColor color, boolean inCreativeTab) {
+
+    public FloorChairBlockExtendsSeat(Properties properties, DyeColor color, boolean inCreativeTab) {
         super(properties, color, inCreativeTab);
         this.color = color;
         this.inCreativeTab = inCreativeTab;
         registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));
     }
 
-
-    public enum ArmrestConfigurations implements StringRepresentable  {
-        NONE, LEFT, RIGHT, BOTH;
-
-        @Override
-        public String getSerializedName() {
-            return Lang.asId(name());
-        }
+    public static void sitDown(Level world, BlockPos pos, Entity entity) {
+        if (world.isClientSide)
+            return;
+        BigSeatEntity seat = new BigSeatEntity(world, pos);
+        seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
+        world.addFreshEntity(seat);
+        entity.startRiding(seat, true);
+        if (entity instanceof TamableAnimal ta)
+            ta.setInSittingPose(true);
     }
-    public static final EnumProperty<ArmrestConfigurations> ARMRESTS = EnumProperty.create("armrests", ArmrestConfigurations.class);
 
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    protected final boolean inCreativeTab;
+    public static Optional<Entity> getLeashed(Level level, Player player) {
+        List<Entity> entities = player.level.getEntities((Entity) null, player.getBoundingBox()
+                .inflate(10), e -> true);
+        for (Entity e : entities)
+            if (e instanceof Mob mob && mob.getLeashHolder() == player && SeatBlock.canBePickedUp(e))
+                return Optional.of(mob);
+        return Optional.absent();
+    }
 
+    public static boolean canBePickedUp(Entity passenger) {
+        if (passenger instanceof Shulker)
+            return false;
+        if (passenger instanceof Player)
+            return false;
+        if (AllTags.AllEntityTags.IGNORE_SEAT.matches(passenger))
+            return false;
+        if (!AllConfigs.server().logistics.seatHostileMobs.get() && !passenger.getType()
+                .getCategory()
+                .isFriendly())
+            return false;
+        return passenger instanceof LivingEntity;
+    }
 
+    public static boolean isSeatOccupied(Level world, BlockPos pos) {
+        return !world.getEntitiesOfClass(SeatEntity.class, new AABB(pos))
+                .isEmpty();
+    }
 
+    public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
+        VoxelShape[] buffer = new VoxelShape[]{shape, Shapes.empty()};
 
+        int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
+        for (int i = 0; i < times; i++) {
+            buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = Shapes.or(buffer[1], Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
+            buffer[0] = buffer[1];
+            buffer[1] = Shapes.empty();
+        }
+
+        return buffer[0];
+    }
 
     @Override
     public BlockState rotate(BlockState pState, Rotation pRotation) {
         return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
     }
-    public boolean isNormalCube(IForgeBlockState state){
+
+    public boolean isNormalCube(IForgeBlockState state) {
         return false;
     }
-    public boolean isOpaqueCube(IForgeBlockState state){
+
+    public boolean isOpaqueCube(IForgeBlockState state) {
         return false;
     }
+
     @Override
     public BlockState mirror(BlockState pState, Mirror pMirror) {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(WATERLOGGED);
@@ -111,36 +162,13 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
                 .setValue(ARMRESTS, ArmrestConfigurations.NONE);
     }
 
-    private static final VoxelShape SHAPE = Shapes.join(
-            Block.box(0, 5, 0, 16, 13, 16),
-            Block.box(0, 0, 4, 16, 5, 12),
-            BooleanOp.OR
-    );
-
-    private static final VoxelShape SHAPE_BACK = Stream.of(
-            Block.box(0, 0, 4, 16, 7, 12),
-            Block.box(0, 7, 0, 16, 13, 16),
-            Block.box(0, 13, 12, 16, 20, 16)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-
-    public static void sitDown(Level world, BlockPos pos, Entity entity) {
-        if (world.isClientSide)
-            return;
-        BigSeatEntity seat = new BigSeatEntity(world, pos);
-        seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
-        world.addFreshEntity(seat);
-        entity.startRiding(seat, true);
-        if (entity instanceof TamableAnimal ta)
-            ta.setInSittingPose(true);
-    }
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
                                  BlockHitResult p_225533_6_) {
         ItemStack heldItem = player.getItemInHand(hand);
         if (heldItem == AllItems.WRENCH.asStack(1)) {
             return InteractionResult.PASS;
-        }
-        else if (heldItem.is(AllItems.WRENCH.get().asItem())) {
+        } else if (heldItem.is(AllItems.WRENCH.get().asItem())) {
             return InteractionResult.PASS;
         }
 
@@ -175,34 +203,6 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         return InteractionResult.SUCCESS;
     }
 
-    public static Optional<Entity> getLeashed(Level level, Player player) {
-        List<Entity> entities = player.level.getEntities((Entity) null, player.getBoundingBox()
-                .inflate(10), e -> true);
-        for (Entity e : entities)
-            if (e instanceof Mob mob && mob.getLeashHolder() == player && SeatBlock.canBePickedUp(e))
-                return Optional.of(mob);
-        return Optional.absent();
-    }
-    public static boolean canBePickedUp(Entity passenger) {
-        if (passenger instanceof Shulker)
-            return false;
-        if (passenger instanceof Player)
-            return false;
-        if (AllTags.AllEntityTags.IGNORE_SEAT.matches(passenger))
-            return false;
-        if (!AllConfigs.server().logistics.seatHostileMobs.get() && !passenger.getType()
-                .getCategory()
-                .isFriendly())
-            return false;
-        return passenger instanceof LivingEntity;
-    }
-
-    public static boolean isSeatOccupied(Level world, BlockPos pos) {
-        return !world.getEntitiesOfClass(SeatEntity.class, new AABB(pos))
-                .isEmpty();
-    }
-
-
     @Override
     public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
         BlockPos pos = entity.blockPosition();
@@ -236,6 +236,7 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         }
         return InteractionResult.SUCCESS;
     }
+
     @Override
     public InteractionResult onSneakWrenched(BlockState state, UseOnContext context) {
         Level world = context.getLevel();
@@ -245,25 +246,15 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
         }
         return InteractionResult.SUCCESS;
     }
+
     @Override
     public BlockState updateAfterWrenched(BlockState newState, UseOnContext context) {
         return Block.updateFromNeighbourShapes(newState, context.getLevel(), context.getClickedPos());
     }
-    public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
-        VoxelShape[] buffer = new VoxelShape[]{shape, Shapes.empty()};
 
-        int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
-        for (int i = 0; i < times; i++) {
-            buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = Shapes.or(buffer[1], Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
-            buffer[0] = buffer[1];
-            buffer[1] = Shapes.empty();
-        }
-
-        return buffer[0];
-    }
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        switch ((Direction)pState.getValue(FACING)) {
+        switch ((Direction) pState.getValue(FACING)) {
             case NORTH:
                 return SHAPE;
             case SOUTH:
@@ -275,6 +266,7 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
                 return rotateShape(Direction.NORTH, Direction.SOUTH, SHAPE);
         }
     }
+
     @Override
     public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         switch ((Direction) pState.getValue(FACING)) {
@@ -287,6 +279,15 @@ public class ChairBlockExtendsSeat extends SeatBlock implements ProperWaterlogge
             case EAST:
             default:
                 return rotateShape(Direction.NORTH, Direction.SOUTH, SHAPE_BACK);
+        }
+    }
+
+    public enum ArmrestConfigurations implements StringRepresentable {
+        NONE, LEFT, RIGHT, BOTH;
+
+        @Override
+        public String getSerializedName() {
+            return Lang.asId(name());
         }
     }
 }

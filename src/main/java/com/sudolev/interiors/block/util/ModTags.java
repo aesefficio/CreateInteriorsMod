@@ -1,12 +1,12 @@
-package systems.alexander.interiors.block.util;
+package com.sudolev.interiors.block.util;
 
+import com.sudolev.interiors.Interiors;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import systems.alexander.interiors.Interiors;
 
 public class ModTags {
     public static class Blocks {

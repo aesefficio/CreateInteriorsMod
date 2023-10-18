@@ -1,7 +1,9 @@
-package systems.alexander.interiors;
+package com.sudolev.interiors;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.sudolev.interiors.block.ModBlocks;
+import com.sudolev.interiors.item.ModItems;
 import com.tterrag.registrate.Registrate;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,8 +17,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
-import systems.alexander.interiors.block.ModBlocks;
-import systems.alexander.interiors.item.ModItems;
 
 import java.util.function.Function;
 

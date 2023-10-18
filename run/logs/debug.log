@@ -277,7 +277,7 @@
 [18Oct2023 11:43:35.451] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5364
 [18Oct2023 11:43:35.510] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 8 threads for parallel mod-loading
 [18Oct2023 11:43:35.556] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@53cf9c99 - got cpw.mods.cl.ModuleClassLoader@60e949e1
-[18Oct2023 11:43:35.558] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for systems.alexander.interiors.Interiors
+[18Oct2023 11:43:35.558] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for interiors.com.sudolev.Interiors
 [18Oct2023 11:43:35.570] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@53cf9c99 - got cpw.mods.cl.ModuleClassLoader@60e949e1
 [18Oct2023 11:43:35.570] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
 [18Oct2023 11:43:35.572] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@53cf9c99 - got cpw.mods.cl.ModuleClassLoader@60e949e1
@@ -473,7 +473,7 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 [18Oct2023 11:43:37.948] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry seatwood_planks of type minecraft:item
 [18Oct2023 11:43:37.948] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry seatwood_planks of type minecraft:block
 [18Oct2023 11:43:37.953] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for interiors
-[18Oct2023 11:43:37.953] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing systems.alexander.interiors.Interiors$ClientModEvents to MOD
+[18Oct2023 11:43:37.953] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing interiors.com.sudolev.Interiors$ClientModEvents to MOD
 [18Oct2023 11:43:37.969] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry shaft of type minecraft:item
 [18Oct2023 11:43:37.969] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry shaft of type minecraft:block
 [18Oct2023 11:43:37.977] [modloading-worker-0/DEBUG] [com.tterrag.registrate.AbstractRegistrate/REGISTRATE.REGISTER]: Captured registration for entry cogwheel of type minecraft:item

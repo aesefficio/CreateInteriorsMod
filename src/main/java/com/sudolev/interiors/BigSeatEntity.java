@@ -1,4 +1,4 @@
-package systems.alexander.interiors;
+package com.sudolev.interiors;
 
 import com.simibubi.create.AllEntityTypes;
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;

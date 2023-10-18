@@ -5,22 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29b234e3-d36d-458e-b861-e1d0a81a3453" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/FloorChairBlockExtendsSeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/interiors/blockstates/red_chair_icon.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/interiors/blockstates/red_chair_icon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/util/ModTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/util/ModTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/AllTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/AllTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/BigSeatEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/BigSeatEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/Interiors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/Interiors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/BigSeatInteractionBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/BigSeatInteractionBehaviour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/BigSeatMovementBehaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/BigSeatMovementBehaviour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/ChairBlockExtendsSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/ChairBlockExtendsSeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/DirectionalSeatBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/DirectionalSeatBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/custom/FloorChairBlockExtendsSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/custom/FloorChairBlockExtendsSeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/util/EntityTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/util/EntityTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/block/util/ModTags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/block/util/ModTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/CreativeTabStuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/item/CreativeTabStuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/ModCreativeModeTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/item/ModCreativeModeTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/systems/alexander/interiors/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sudolev/interiors/item/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/mineable/axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/mineable/axe.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +264,7 @@
       <workItem from="1695927997640" duration="2039000" />
       <workItem from="1696076865622" duration="61000" />
       <workItem from="1696371966297" duration="66000" />
-      <workItem from="1697646209867" duration="1079000" />
+      <workItem from="1697646209867" duration="2369000" />
     </task>
     <task id="LOCAL-00001" summary="Create v0.5.e support, finish renaming mod">
       <option name="closed" value="true" />
@@ -359,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695929819438</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Floor chair block">
+      <option name="closed" value="true" />
+      <created>1697647761154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697647761154</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +396,8 @@
     <MESSAGE value="Fix chair UV maps" />
     <MESSAGE value="Change to 1.18.2 MDK" />
     <MESSAGE value="Finish 1.18.2 initial release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish 1.18.2 initial release" />
+    <MESSAGE value="Floor chair block" />
+    <option name="LAST_COMMIT_MESSAGE" value="Floor chair block" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

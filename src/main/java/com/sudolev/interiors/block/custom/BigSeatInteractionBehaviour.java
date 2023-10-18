@@ -1,4 +1,4 @@
-package systems.alexander.interiors.block.custom;
+package com.sudolev.interiors.block.custom;
 
 import com.simibubi.create.content.contraptions.AbstractContraptionEntity;
 import com.simibubi.create.content.contraptions.Contraption;
