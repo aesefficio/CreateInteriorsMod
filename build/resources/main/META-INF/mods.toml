@@ -6,7 +6,7 @@ issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
 [[mods]] #mandatory
 # The modid of the mod
 modId="interiors" #mandatory
-version = "0.4" #mandatory
+version = "0.4.1" #mandatory
 displayName="Create: Interiors" #mandatory
 displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
 # A file name (in the root of the mod JAR) containing a logo for display

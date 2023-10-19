@@ -5,7 +5,7 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '0.4'
+version = '0.4.1'
 group = 'com.sudolev.interiors' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'interiors'
 
