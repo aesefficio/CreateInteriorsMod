@@ -6,7 +6,7 @@ import static com.simibubi.create.content.redstone.displayLink.AllDisplayBehavio
 import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
 import static com.simibubi.create.foundation.data.ModelGen.customItemModel;
 import static com.simibubi.create.foundation.data.TagGen.axeOnly;
-import static systems.alexander.interiors.Interiors.REGISTRATE;
+import static systems.alexander.interiors.CreateInteriors.REGISTRATE;
 
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
 import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
@@ -16,7 +16,7 @@ import com.simibubi.create.foundation.block.DyedBlockList;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.tterrag.registrate.util.entry.RegistryEntry;
-import systems.alexander.interiors.Interiors;
+import systems.alexander.interiors.CreateInteriors;
 import systems.alexander.interiors.block.custom.BigSeatMovementBehaviour;
 import systems.alexander.interiors.block.custom.ChairBlockExtendsSeat;
 import systems.alexander.interiors.block.custom.DirectionalSeatBlock;
@@ -38,7 +38,7 @@ public class ModBlocks {
 
 
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, Interiors.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, CreateInteriors.ID);
     // public static final RegistryObject<Block> KELP_SEAT = registerBlock("kelp_seat",
     //      () -> new DirectionalSeatBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), DyeColor.BLACK));
 

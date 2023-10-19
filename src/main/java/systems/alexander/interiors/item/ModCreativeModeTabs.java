@@ -3,7 +3,7 @@ package systems.alexander.interiors.item;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import it.unimi.dsi.fastutil.objects.*;
-import systems.alexander.interiors.Interiors;
+import systems.alexander.interiors.CreateInteriors;
 import systems.alexander.interiors.block.ModBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.ItemRenderer;
@@ -22,7 +22,7 @@ import java.util.function.Function;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Interiors.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateInteriors.ID);
     public static final RegistryObject<CreativeModeTab> EXTENDED_SEATING = CREATIVE_MODE_TABS.register("extended_seating",
            () -> CreativeModeTab.builder()
                     .title(Component.translatable("creativetab.extended_seating"))
@@ -40,7 +40,7 @@ public class ModCreativeModeTabs {
 
         private List<Item> collectBlocks(RegistryObject<CreativeModeTab> tab) {
             List<Item> items = new ReferenceArrayList<>();
-            for (RegistryEntry<Block> entry : Interiors.REGISTRATE.getAll(Registries.BLOCK)) {
+            for (RegistryEntry<Block> entry : CreateInteriors.REGISTRATE.getAll(Registries.BLOCK)) {
                 Item item = entry.get()
                         .asItem();
                 items.add(item);

@@ -6,7 +6,7 @@ import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import com.simibubi.create.foundation.utility.Lang;
 
-import systems.alexander.interiors.Interiors;
+import systems.alexander.interiors.CreateInteriors;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.world.entity.Entity;
@@ -22,7 +22,7 @@ private static <T extends Entity> CreateEntityBuilder<T, ?> register(String name
         MobCategory group, int range, int updateFrequency, boolean sendVelocity, boolean immuneToFire,
         NonNullConsumer<EntityType.Builder<T>> propertyBuilder) {
         String id = Lang.asId(name);
-        return (CreateEntityBuilder<T, ?>) Interiors.REGISTRATE
+        return (CreateEntityBuilder<T, ?>) CreateInteriors.REGISTRATE
         .entity(id, factory, group)
         .properties(b -> b.setTrackingRange(range)
         .setUpdateInterval(updateFrequency)

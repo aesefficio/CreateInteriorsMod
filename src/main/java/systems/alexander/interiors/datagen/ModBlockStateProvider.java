@@ -1,6 +1,6 @@
 package systems.alexander.interiors.datagen;
 
-import systems.alexander.interiors.Interiors;
+import systems.alexander.interiors.CreateInteriors;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, Interiors.MOD_ID, exFileHelper);
+        super(output, CreateInteriors.ID, exFileHelper);
     }
 
     @Override
