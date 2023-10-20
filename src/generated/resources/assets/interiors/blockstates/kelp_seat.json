@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "model": "interiors:block/kelp_seat_east"
+    },
+    "facing=east,waterlogged=true": {
+      "model": "interiors:block/kelp_seat_east"
+    },
+    "facing=north,waterlogged=false": {
+      "model": "interiors:block/kelp_seat_north"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "interiors:block/kelp_seat_north"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "interiors:block/kelp_seat_south"
+    },
+    "facing=south,waterlogged=true": {
+      "model": "interiors:block/kelp_seat_south"
+    },
+    "facing=west,waterlogged=false": {
+      "model": "interiors:block/kelp_seat_west"
+    },
+    "facing=west,waterlogged=true": {
+      "model": "interiors:block/kelp_seat_west"
+    }
+  }
+}

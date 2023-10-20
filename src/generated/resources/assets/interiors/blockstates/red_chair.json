@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "armrests=both,facing=east,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_both_east"
+    },
+    "armrests=both,facing=east,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_both_east"
+    },
+    "armrests=both,facing=north,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_both_north"
+    },
+    "armrests=both,facing=north,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_both_north"
+    },
+    "armrests=both,facing=south,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_both_south"
+    },
+    "armrests=both,facing=south,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_both_south"
+    },
+    "armrests=both,facing=west,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_both_west"
+    },
+    "armrests=both,facing=west,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_both_west"
+    },
+    "armrests=left,facing=east,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_left_east"
+    },
+    "armrests=left,facing=east,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_left_east"
+    },
+    "armrests=left,facing=north,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_left_north"
+    },
+    "armrests=left,facing=north,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_left_north"
+    },
+    "armrests=left,facing=south,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_left_south"
+    },
+    "armrests=left,facing=south,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_left_south"
+    },
+    "armrests=left,facing=west,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_left_west"
+    },
+    "armrests=left,facing=west,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_left_west"
+    },
+    "armrests=none,facing=east,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_none_east"
+    },
+    "armrests=none,facing=east,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_none_east"
+    },
+    "armrests=none,facing=north,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_none_north"
+    },
+    "armrests=none,facing=north,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_none_north"
+    },
+    "armrests=none,facing=south,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_none_south"
+    },
+    "armrests=none,facing=south,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_none_south"
+    },
+    "armrests=none,facing=west,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_none_west"
+    },
+    "armrests=none,facing=west,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_none_west"
+    },
+    "armrests=right,facing=east,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_right_east"
+    },
+    "armrests=right,facing=east,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_right_east"
+    },
+    "armrests=right,facing=north,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_right_north"
+    },
+    "armrests=right,facing=north,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_right_north"
+    },
+    "armrests=right,facing=south,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_right_south"
+    },
+    "armrests=right,facing=south,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_right_south"
+    },
+    "armrests=right,facing=west,waterlogged=false": {
+      "model": "interiors:block/chair/red_chair_right_west"
+    },
+    "armrests=right,facing=west,waterlogged=true": {
+      "model": "interiors:block/chair/red_chair_right_west"
+    }
+  }
+}
