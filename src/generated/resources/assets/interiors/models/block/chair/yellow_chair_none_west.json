@@ -1,8 +1,0 @@
-{
-  "parent": "interiors:block/chair/chair_none",
-  "textures": {
-    "2": "interiors:block/top/top_yellow",
-    "4": "interiors:block/side_top/side_top_yellow",
-    "6": "interiors:block/side/side_yellow"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "interiors:block/chair/chair_left",
-  "textures": {
-    "2": "interiors:block/top/top_magenta",
-    "4": "interiors:block/side_top/side_top_magenta",
-    "6": "interiors:block/side/side_magenta"
-  }
-}

@@ -14,6 +14,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forgespi.language.IModInfo;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.item.ItemDescription.Modifier;
+import com.simibubi.create.foundation.item.TooltipHelper.Palette;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +27,10 @@ public class CreateInteriors {
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
     public static final String VERSION = getModProperty(IModInfo::getVersion);
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
+
+    static {
+        REGISTRATE.setTooltipModifierFactory(item -> new Modifier(item, Palette.STANDARD_CREATE));
+    }
 
     public CreateInteriors() {
         final IEventBus forge = MinecraftForge.EVENT_BUS,

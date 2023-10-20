@@ -1,3 +1,4 @@
+//file:noinspection GroovyAssignabilityCheck
 plugins {
     id 'dev.architectury.loom' version "${loom_version}"
     id 'io.github.juuxel.loom-vineflower' version "${vineflower_version}"
@@ -32,8 +33,9 @@ loom {
             data()
             programArgs '--mod', 'interiors'
             programArg '--all'
-            programArgs '--output', file('src/generated/resources/').absolutePath
+            programArgs '--output', generatedResources.absolutePath
             programArgs '--existing', file('src/main/resources/').absolutePath
+            programArgs '--existing-mod', 'create'
         }
     }
 }

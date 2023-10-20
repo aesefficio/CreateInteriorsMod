@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "create:block/seat/bottom",
-		"2": "interiors:block/kelp/top_kelp",
-		"6": "interiors:block/kelp/side_kelp_one",
-		"8": "interiors:block/kelp/side_kelp_two",
+		"2": "interiors:block/top/top_kelp",
+		"6": "interiors:block/side/side_kelp_one",
+		"8": "interiors:block/side/side_kelp_two",
 		"particle": "create:block/seat/bottom"
 	},
 	"elements": [

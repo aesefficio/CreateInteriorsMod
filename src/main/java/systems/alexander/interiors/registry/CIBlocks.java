@@ -12,6 +12,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.AllTags.AllItemTags;
+import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
 import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
 import com.simibubi.create.content.redstone.displayLink.source.EntityNameDisplaySource;
@@ -64,13 +65,15 @@ public class CIBlocks {
                                 default -> 0;
                             };
 
+                            //TODO add the correct keys for the textures
                             return ConfiguredModel.builder()
                                     .modelFile(provider.models()
                                             .withExistingParent("block/chair/" + colorName + "_chair_" + armrest + "_" + facing,
                                                     provider.modLoc("block/chair/chair_" + armrest))
-                                            .texture("2", provider.modLoc("block/top/top_" + colorName))
-                                            .texture("4", provider.modLoc("block/side_top/side_top_" + colorName))
-                                            .texture("6", provider.modLoc("block/side/side_" + colorName)))
+                                            .texture("AAAAAAAA", Create.asResource("block/seat/top_" + colorName))
+                                            .texture("AAAAAAAA", provider.modLoc("block/side_top/side_top_" + colorName))
+                                            .texture("AAAAAAAA", Create.asResource("block/seat/side_" + colorName))
+                                            .texture("AAAAAAAA", Create.asResource("block/seat/side_" + colorName)))
                                     .rotationY(rotation)
                                     .build();
 
@@ -108,7 +111,7 @@ public class CIBlocks {
                         return ConfiguredModel.builder()
                                 .modelFile(provider.models()
                                                    .withExistingParent("block/chair/kelp_chair_" + armrest + "_" + facing,
-                                                           provider.modLoc("block/chair/kelp_chair_" + armrest)))
+                                                           provider.modLoc("block/chair/chair_" + armrest)))
                                 .rotationY(rotation)
                                 .build();
                     }, WATERLOGGED))
@@ -118,7 +121,7 @@ public class CIBlocks {
             .tag(CITags.Blocks.CHAIRS)
             .item()
             .tag(CITags.Items.CHAIRS)
-            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_both"))
+            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_both_north"))
             .build()
             .register();
 
