@@ -14,9 +14,9 @@ public class CITab {
 	private static final DeferredRegister<CreativeModeTab> REGISTER =
 			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateInteriors.ID);
 
-	public static final RegistryObject<CreativeModeTab> TAB = REGISTER.register("interiors",
+	public static final RegistryObject<CreativeModeTab> TAB = REGISTER.register("main",
 			() -> CreativeModeTab.builder()
-					.title(Components.translatable("itemGroup.interiors"))
+					.title(Components.translatable("itemGroup.interiors.main"))
 					.icon(() -> CIBlocks.CHAIRS.get(DyeColor.RED).asItem().getDefaultInstance())
 					.build());
 

@@ -48,8 +48,13 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock, IWrenchable {
     protected final DyeColor color;
 
-    public enum ArmrestConfigurations implements StringRepresentable  {
-        NONE, LEFT, RIGHT, BOTH;
+    public enum ArmrestConfiguration implements StringRepresentable {
+        /**
+         * {@code BOTH} MUST be first in order for datagen to run.
+         */
+        BOTH, NONE, LEFT, RIGHT;
+
+        public static final ArmrestConfiguration DEFAULT = BOTH;
 
         @Override
         public String getSerializedName() {
@@ -57,7 +62,7 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
         }
     }
 
-    public static final EnumProperty<ArmrestConfigurations> ARMRESTS = EnumProperty.create("armrests", ArmrestConfigurations.class);
+    public static final EnumProperty<ArmrestConfiguration> ARMRESTS = EnumProperty.create("armrests", ArmrestConfiguration.class);
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -66,7 +71,7 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
         this.color = color;
         registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(ARMRESTS, ArmrestConfigurations.BOTH));
+                .setValue(ARMRESTS, ArmrestConfiguration.DEFAULT));
     }
 
     @Override
@@ -81,7 +86,7 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
         return this.defaultBlockState()
                 .setValue(FACING, pContext.getHorizontalDirection().getOpposite())
                 .setValue(WATERLOGGED, false)
-                .setValue(ARMRESTS, ArmrestConfigurations.NONE);
+                .setValue(ARMRESTS, ArmrestConfiguration.DEFAULT);
     }
 
     private static final VoxelShape SHAPE = Shapes.join(

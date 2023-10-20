@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.function.Function;
 import systems.alexander.interiors.data.CIDatagen;
 import systems.alexander.interiors.registry.CIBlocks;
-import systems.alexander.interiors.registry.CITab;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,7 +36,6 @@ public class CreateInteriors {
         forge.register(this);
         mod.addListener(EventPriority.LOWEST, CIDatagen::gatherData);
         REGISTRATE.registerEventListeners(mod);
-        REGISTRATE.setCreativeTab(CITab.TAB);
     }
 
     private static String getModProperty(Function<IModInfo, ?> f) {

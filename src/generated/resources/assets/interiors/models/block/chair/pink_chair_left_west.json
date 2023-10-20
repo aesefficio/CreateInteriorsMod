@@ -2,7 +2,7 @@
   "parent": "interiors:block/chair/chair_left",
   "textures": {
     "2": "interiors:block/top/top_pink",
-    "3": "interiors:block/side_top/side_top_pink",
+    "4": "interiors:block/side_top/side_top_pink",
     "6": "interiors:block/side/side_pink"
   }
 }

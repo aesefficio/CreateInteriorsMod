@@ -24,11 +24,16 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
 import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
 import static com.simibubi.create.content.redstone.displayLink.AllDisplayBehaviours.assignDataBehaviour;
+import static com.simibubi.create.foundation.block.ProperWaterloggedBlock.WATERLOGGED;
 import static com.simibubi.create.foundation.data.TagGen.axeOnly;
 import static systems.alexander.interiors.CreateInteriors.REGISTRATE;
 
 @SuppressWarnings("unused")
 public class CIBlocks {
+
+    static {
+        REGISTRATE.setCreativeTab(CITab.TAB);
+    }
 
     public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE
             .block("seatwood_planks", Block::new)
@@ -50,16 +55,26 @@ public class CIBlocks {
                                                        .forAllStatesExcept(state -> {
                             String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
                             String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+
+                            int rotation = switch(state.getValue(ChairBlock.FACING)) {
+								case NORTH -> 0;
+                                case EAST -> 90;
+                                case SOUTH -> 180;
+                                case WEST -> 270;
+                                default -> 0;
+                            };
+
                             return ConfiguredModel.builder()
                                     .modelFile(provider.models()
                                             .withExistingParent("block/chair/" + colorName + "_chair_" + armrest + "_" + facing,
                                                     provider.modLoc("block/chair/chair_" + armrest))
                                             .texture("2", provider.modLoc("block/top/top_" + colorName))
-                                            .texture("3", provider.modLoc("block/side_top/side_top_" + colorName))
-                                            .texture("6", provider.modLoc("block/side/side_" + colorName))
-                                    )
+                                            .texture("4", provider.modLoc("block/side_top/side_top_" + colorName))
+                                            .texture("6", provider.modLoc("block/side/side_" + colorName)))
+                                    .rotationY(rotation)
                                     .build();
-                        }))
+
+                        }, WATERLOGGED))
                 .onRegister(movementBehaviour(movementBehaviour))
                 .onRegister(interactionBehaviour(interactionBehaviour))
                 .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
@@ -67,7 +82,7 @@ public class CIBlocks {
                 .tag(CITags.Blocks.CHAIRS)
                 .item()
                 .tag(CITags.Items.CHAIRS)
-                .model(AssetLookup.customBlockItemModel("chair/" + colorName + "_chair_both_north"))
+                .model(AssetLookup.customBlockItemModel("chair", colorName + "_chair_both_north"))
                 .build()
                 .register();
     });
@@ -81,19 +96,29 @@ public class CIBlocks {
                                                    .forAllStatesExcept(state -> {
                         String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
                         String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+
+                        int rotation = switch(state.getValue(ChairBlock.FACING)) {
+                            case NORTH -> 0;
+                            case EAST -> 90;
+                            case SOUTH -> 180;
+                            case WEST -> 270;
+                            default -> 0;
+                        };
+
                         return ConfiguredModel.builder()
                                 .modelFile(provider.models()
                                                    .withExistingParent("block/chair/kelp_chair_" + armrest + "_" + facing,
                                                            provider.modLoc("block/chair/kelp_chair_" + armrest)))
+                                .rotationY(rotation)
                                 .build();
-                    }))
+                    }, WATERLOGGED))
             .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
             .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
             .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
             .tag(CITags.Blocks.CHAIRS)
             .item()
             .tag(CITags.Items.CHAIRS)
-            .model(AssetLookup.customBlockItemModel("chair/kelp_chair_both"))
+            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_both"))
             .build()
             .register();
 
@@ -105,12 +130,22 @@ public class CIBlocks {
             .blockstate((context, provider) -> provider.getVariantBuilder(context.get())
                                                    .forAllStatesExcept(state -> {
                         String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+
+                        int rotation = switch(state.getValue(ChairBlock.FACING)) {
+                            case NORTH -> 0;
+                            case EAST -> 90;
+                            case SOUTH -> 180;
+                            case WEST -> 270;
+                            default -> 0;
+                        };
+
                         return ConfiguredModel.builder()
                                               .modelFile(provider.models()
                                                                  .withExistingParent("kelp_seat_" + facing,
                                                                          provider.modLoc("block/kelp_seat")))
-                                              .build();
-                    }))
+                                              .rotationY(rotation)
+                                .build();
+                    }, WATERLOGGED))
             .onRegister(movementBehaviour(new SeatMovementBehaviour()))
             .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
             .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
