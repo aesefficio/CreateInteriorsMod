@@ -1,6 +1,6 @@
 {
     "type": "minecraft:crafting_shapeless",
-    "group": "create_kelp_chair",
+    "group": "building",
     "ingredients": [
       {
         "item": "interiors:kelp_seat"

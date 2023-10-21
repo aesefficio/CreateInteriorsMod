@@ -6,11 +6,15 @@ import systems.alexander.interiors.block.seat.ChairBlock;
 import systems.alexander.interiors.block.seat.DirectionalSeatBlock;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 
+import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.AllTags.AllItemTags;
 import com.simibubi.create.Create;
@@ -21,8 +25,10 @@ import com.simibubi.create.foundation.block.DyedBlockList;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.simibubi.create.foundation.item.ItemDescription;
+import com.simibubi.create.foundation.utility.DyeHelper;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 
@@ -57,6 +63,24 @@ public class CIBlocks {
                 .properties(p -> p.mapColor(color))
                 .transform(axeOnly())
                 .blockstate(chairBlockstates(colorName))
+                .recipe((c, p) -> {
+                    ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
+                            .requires(ItemTags.WOODEN_SLABS)
+                            .requires(ItemTags.WOODEN_SLABS)
+                            .requires(DyeHelper.getWoolOfDye(color))
+                            .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
+                            .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName()));
+                    ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
+                            .requires(ItemTags.WOODEN_SLABS)
+                            .requires(AllBlocks.SEATS.get(color))
+                            .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
+                            .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
+                    ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
+                            .requires(CITags.Items.CHAIRS)
+                            .requires(color.getTag())
+                            .unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
+                            .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
+                })
                 .onRegister(movementBehaviour(movementBehaviour))
                 .onRegister(interactionBehaviour(interactionBehaviour))
                 .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
@@ -91,7 +115,7 @@ public class CIBlocks {
             .properties(p -> p.mapColor(DyeColor.BLACK))
             .transform(axeOnly())
             .blockstate((context, provider) -> provider.getVariantBuilder(context.get())
-                                                   .forAllStatesExcept(state -> {
+                    .forAllStatesExcept(state -> {
                         String facing = state.getValue(ChairBlock.FACING).getSerializedName();
 
                         int rotation = switch(state.getValue(ChairBlock.FACING)) {
