@@ -13,7 +13,6 @@ import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags.AllItemTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
-import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
 import com.simibubi.create.content.redstone.displayLink.source.EntityNameDisplaySource;
 import com.simibubi.create.foundation.block.DyedBlockList;
 import com.simibubi.create.foundation.data.AssetLookup;
@@ -54,8 +53,6 @@ public class CIBlocks {
 
     public static final DyedBlockList<ChairBlock> CHAIRS = new DyedBlockList<>(color -> {
         String colorName = color.getSerializedName();
-        BigSeatMovementBehaviour movementBehaviour = new BigSeatMovementBehaviour();
-        SeatInteractionBehaviour interactionBehaviour = new SeatInteractionBehaviour();
         return REGISTRATE.block(colorName + "_chair", p -> new ChairBlock(p, color))
                 .initialProperties(SharedProperties::wooden)
                 .properties(p -> p.mapColor(color))
@@ -79,8 +76,8 @@ public class CIBlocks {
                             .unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
                             .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
                 })
-                .onRegister(movementBehaviour(movementBehaviour))
-                .onRegister(interactionBehaviour(interactionBehaviour))
+                .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
+                .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
                 .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
                 .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
                 .tag(CITags.Blocks.CHAIRS)
@@ -127,7 +124,7 @@ public class CIBlocks {
                                               .rotationY(rotation)
                                 .build();
                     }, WATERLOGGED))
-            .onRegister(movementBehaviour(new SeatMovementBehaviour()))
+            .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
             .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
             .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
             .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))

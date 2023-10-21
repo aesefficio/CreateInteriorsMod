@@ -1,18 +1,13 @@
 package com.sudolev.interiors.data;
 
-import java.util.Map.Entry;
-
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import com.google.common.base.Preconditions;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.utility.FilesHelper;
 import com.sudolev.interiors.CreateInteriors;
-import com.tterrag.registrate.AbstractRegistrate;
 
 public class CIDatagen {
 
@@ -24,20 +19,15 @@ public class CIDatagen {
 	}
 
 	private static void genLang() {
-		CreateRegistrate r = CreateInteriors.REGISTRATE;
-
-		provideDefaultLang("tooltips", r);
-		r.addRawLang("itemGroup.interiors", "Create: Interiors");
+		provideDefaultLang("tooltips");
 	}
 
-	private static void provideDefaultLang(String fileName, AbstractRegistrate<?> r) {
+	private static void provideDefaultLang(String fileName) {
 		String path = "assets/" + CreateInteriors.ID +  "/lang/default/" + fileName + ".json";
 
 		JsonObject jsonObject = Preconditions.checkNotNull(FilesHelper.loadJsonResource(path),
 													 "Could not find default lang file: %s", path)
 											 .getAsJsonObject();
-		for (Entry<String, JsonElement> entry : jsonObject.entrySet()) {
-			r.addRawLang(entry.getKey(), entry.getValue().getAsString());
-		}
+		jsonObject.entrySet().forEach(entry -> CreateInteriors.REGISTRATE.addRawLang(entry.getKey(), entry.getValue().getAsString()));
 	}
 }

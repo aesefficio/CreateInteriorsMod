@@ -16,11 +16,8 @@ import com.simibubi.create.content.contraptions.behaviour.MovementContext;
 import com.simibubi.create.foundation.utility.VecHelper;
 
 public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
-
     @Override
     public void visitNewPosition(MovementContext context, BlockPos pos) {
-        super.visitNewPosition(context, pos);
-
         AbstractContraptionEntity contraptionEntity = context.contraption.entity;
         if (contraptionEntity == null)
             return;
@@ -58,5 +55,4 @@ public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
         toDismount.getPersistentData()
                 .remove("ContraptionDismountLocation");
     }
-
 }

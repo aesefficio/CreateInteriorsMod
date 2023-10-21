@@ -1,10 +1,8 @@
 package com.sudolev.interiors.registry;
 
 import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityType.Builder;
 import net.minecraft.world.entity.EntityType.EntityFactory;
 import net.minecraft.world.entity.MobCategory;
@@ -18,11 +16,13 @@ import com.tterrag.registrate.util.nullness.NonNullConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 
+@SuppressWarnings("unused")
 public class CIEntities {
 	public static final EntityEntry<BigSeatEntity> BIG_SEAT = CIEntities.<BigSeatEntity>register("big_seat", BigSeatEntity::new, () -> BigSeatEntity.Render::new,
 			MobCategory.MISC, 5, Integer.MAX_VALUE, false, true, BigSeatEntity::build)
 			.register();
 
+	@SuppressWarnings("SameParameterValue")
 	private static <T extends Entity> CreateEntityBuilder<T, ?> register(String name, EntityFactory<T> factory,
 																		 NonNullSupplier<NonNullFunction<Context, EntityRenderer<? super T>>> renderer,
 																		 MobCategory group, int range, int updateFrequency, boolean sendVelocity, boolean immuneToFire,
