@@ -3,6 +3,7 @@ package systems.alexander.interiors.registry;
 import systems.alexander.interiors.CreateInteriors;
 import systems.alexander.interiors.block.seat.BigSeatMovementBehaviour;
 import systems.alexander.interiors.block.seat.ChairBlock;
+import systems.alexander.interiors.block.seat.ChairBlock.ArmrestConfiguration;
 import systems.alexander.interiors.block.seat.DirectionalSeatBlock;
 
 import net.minecraft.core.registries.Registries;
@@ -15,7 +16,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 import com.simibubi.create.AllBlocks;
-import com.simibubi.create.AllTags.AllBlockTags;
 import com.simibubi.create.AllTags.AllItemTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
@@ -88,7 +88,7 @@ public class CIBlocks {
                 .tag(CITags.Blocks.CHAIRS)
                 .item()
                 .tag(CITags.Items.CHAIRS)
-                .model(AssetLookup.customBlockItemModel("chair", colorName + "_chair_both"))
+                .model(AssetLookup.customBlockItemModel("chair", colorName + "_chair_" + ArmrestConfiguration.DEFAULT.getSerializedName()))
                 .build()
                 .register();
     });
@@ -102,10 +102,8 @@ public class CIBlocks {
             .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
             .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
             .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
-            .tag(CITags.Blocks.CHAIRS)
             .item()
-            .tag(CITags.Items.CHAIRS)
-            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_both"))
+            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_" + ArmrestConfiguration.DEFAULT.getSerializedName()))
             .build()
             .register();
 
@@ -135,9 +133,7 @@ public class CIBlocks {
             .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
             .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
             .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
-            .tag(AllBlockTags.SEATS.tag)
             .item()
-            .tag(AllItemTags.SEATS.tag)
             .build()
             .register();
 

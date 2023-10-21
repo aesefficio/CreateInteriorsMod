@@ -1,7 +1,5 @@
 {
-  "creativetab.extended_seating_tab": "Create: Interiors",
-  "creativetab.extended_seating": "Create: Interiors",
-  "itemGroup.create_interiors_tab": "Create: Interiors",
+  "itemGroup.interiors": "Create: Interiors",
 
   "block.interiors.kelp_seat": "Сиденье из водорослей",
   "block.interiors.kelp_chair": "Кресло из водорослей",
@@ -29,8 +27,5 @@
   "block.interiors.chair.tooltip.condition1": "ПКМ по креслу",
   "block.interiors.chair.tooltip.behaviour1": "Сажает игрока на _кресло_. Нажмите _кнопку_ _приседания_, чтобы слезть (Shift по умолчанию).",
   "block.interiors.chair.tooltip.condition2": "Используйте гаечный ключ на кресле",
-  "block.interiors.chair.tooltip.behaviour2": "Выберите конфигурацию подлокотников кресла.",
-  "block.interiors.seatwood_planks.tooltip": "ДОСКИ_ДЛЯ_МЕБЕЛИ",
-  "block.interiors.seatwood_planks.tooltip.summary": "Не очень полезный блок сам по себе, но полезен вместе с _заполняемыми блоками_."
-
+  "block.interiors.chair.tooltip.behaviour2": "Выберите конфигурацию подлокотников кресла."
 }

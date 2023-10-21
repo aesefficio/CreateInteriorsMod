@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-21T10:16:13.302639	Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2023-10-21T14:28:00.76222	Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 e14da8f05843d1739f29eb24ef0cd5caa893ed45 assets/interiors/blockstates/black_chair.json
 e1ca5b6101f89f90ef6bd997bf3303f3ec1e0c44 assets/interiors/blockstates/blue_chair.json
 270fbb8ca58588fdc3ff7a58f667de9389cc62ec assets/interiors/blockstates/brown_chair.json
@@ -18,8 +18,8 @@ b410a661febba9e7ba5149d6dfe0f15daf822f58 assets/interiors/blockstates/red_chair.
 b98b8b83997e55f1313fdc8664108538b4d75c32 assets/interiors/blockstates/seatwood_planks.json
 2e9147ef49bcf8ef277932083753f6cd07d026ce assets/interiors/blockstates/white_chair.json
 b445dc434f3e52d38b6c67ff71f94821e53c6326 assets/interiors/blockstates/yellow_chair.json
-d9a42f418e339c95b3b5020d81b5b7d448f47c65 assets/interiors/lang/en_ud.json
-d0c8435d2205dc092b23b852ee1b03f4b812a088 assets/interiors/lang/en_us.json
+acb7af312fd8ffe5892237d8889d00d7a92d5ce4 assets/interiors/lang/en_ud.json
+3b3180055e64e000e1818cda94aca2583e37ec40 assets/interiors/lang/en_us.json
 096f5c494a2d0a4ae4b8ccc364045e47ca55c32a assets/interiors/models/block/chair/black_chair_both.json
 bca97b1684802ae917f58913ee5f7b153dd8f39e assets/interiors/models/block/chair/black_chair_left.json
 40b135497b4d783fb218ceb44f8a2f937ddb5d8a assets/interiors/models/block/chair/black_chair_none.json
@@ -108,8 +108,6 @@ d99b5f35cfa274777c0a39fec9941a49a68340b6 assets/interiors/models/item/red_chair.
 2145cd5d4d88116d14eaf04ac1b6299f2972aba0 assets/interiors/models/item/seatwood_planks.json
 4c35d8d738e5d1ad1f399a4375b10c4df35f028a assets/interiors/models/item/white_chair.json
 bbd1b62664bddcae11dd7f5b1ad7d3a9cf93ef22 assets/interiors/models/item/yellow_chair.json
-3eda4a113cc632df6995bde4bb414c02143f9b07 data/create/tags/blocks/seats.json
-3eda4a113cc632df6995bde4bb414c02143f9b07 data/create/tags/items/seats.json
 abb1c8012e075cf370833100aaf819fedba3bb9a data/interiors/advancements/recipes/building_blocks/crafting/chair/black_chair.json
 93876c38c7f5b055238f0a7f3e9a93722a2d369c data/interiors/advancements/recipes/building_blocks/crafting/chair/black_chair_from_other_chair.json
 061204f2306cd2d767208f62e6e5721728d1d6df data/interiors/advancements/recipes/building_blocks/crafting/chair/black_chair_from_seat.json
@@ -225,6 +223,6 @@ d1eb90b74ae1db291ad1b2f57dec0da02f14ea4c data/interiors/recipes/crafting/chair/w
 646f453753858b4023c4250073b8ed8ca41d0ccc data/interiors/recipes/crafting/chair/yellow_chair.json
 8f703aa6786b7ecc433cc6869622fcaa6aac42ca data/interiors/recipes/crafting/chair/yellow_chair_from_other_chair.json
 f2bdf33b72ad02d8df7ef18ceeaae2fdb6291931 data/interiors/recipes/crafting/chair/yellow_chair_from_seat.json
-0f5fb483d6de2b8d8a1456a48b1fa5bb748ede53 data/interiors/tags/blocks/chairs.json
-0f5fb483d6de2b8d8a1456a48b1fa5bb748ede53 data/interiors/tags/items/chairs.json
+498005f0a5be03ce5d106b8a9c08e0b7ab15196b data/interiors/tags/blocks/chairs.json
+498005f0a5be03ce5d106b8a9c08e0b7ab15196b data/interiors/tags/items/chairs.json
 7f4aa2dc9daa67fb4c2afb1c79c455749d1c0a14 data/minecraft/tags/blocks/mineable/axe.json

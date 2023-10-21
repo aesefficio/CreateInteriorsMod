@@ -1,10 +1,8 @@
 {
-  "creativetab.extended_seating_tab": "Create: Interiors",
-  "creativetab.extended_seating": "Create: Interiors",
   "block.interiors.kelp_seat": "Kelpsitz",
   "block.interiors.kelp_chair": "Kelpstuhl",
   "block.interiors.seatwood_planks": "Stuhlbretter",
-  "itemGroup.create_interiors_tab": "Create: Interiors",
+  "itemGroup.interiors": "Create: Interiors",
   "block.interiors.white_chair": "Weißer stuhl",
   "block.interiors.light_gray_chair": "Hellgrauer stuhl",
   "block.interiors.gray_chair": "Grauer stuhl",
@@ -27,8 +25,6 @@
   "block.interiors.chair.tooltip.condition1": "Right click on stuhl",
   "block.interiors.chair.tooltip.behaviour1": "Sits the player on the _Chair_. Press L-shift to leave the _Chair_.",
   "block.interiors.chair.tooltip.condition2": "Use Wrench on stuhl",
-  "block.interiors.chair.tooltip.behaviour2": "Cycles _Chair_ armrest configurations.",
-  "block.interiors.seatwood_planks.tooltip": "SEATWOOD_PLANKS",
-  "block.interiors.seatwood_planks.tooltip.summary": "Not a very useful block on its own, but useful together with _Copycat_ blocks."
+  "block.interiors.chair.tooltip.behaviour2": "Cycles _Chair_ armrest configurations."
 
 }

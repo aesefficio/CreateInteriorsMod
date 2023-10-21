@@ -43,6 +43,8 @@ import com.simibubi.create.foundation.utility.Lang;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import static systems.alexander.interiors.block.seat.ChairBlock.ArmrestConfiguration.*;
+
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock, IWrenchable {
@@ -68,20 +70,18 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
         this.color = color;
         registerDefaultState(defaultBlockState()
                 .setValue(WATERLOGGED, false)
-                .setValue(ARMRESTS, ArmrestConfiguration.DEFAULT));
+                .setValue(ARMRESTS, DEFAULT));
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(WATERLOGGED);
-        pBuilder.add(FACING);
-        pBuilder.add(ARMRESTS);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(WATERLOGGED).add(FACING).add(ARMRESTS);
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState()
-                .setValue(FACING, pContext.getHorizontalDirection().getOpposite());
+                .setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     private static final VoxelShape SHAPE = Shapes.join(
@@ -175,19 +175,54 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
     public InteractionResult onWrenched(BlockState state, UseOnContext context) {
         Level world = context.getLevel();
         BlockPos pos = context.getClickedPos();
-        if (!world.isClientSide) {
-            world.setBlock(pos, state.cycle(ARMRESTS), 3);
+
+        Vec3 clickPos = pos.getCenter().subtract(context.getClickLocation());
+
+        state = switch(state.getValue(FACING)) {
+            case NORTH -> clickPos.x > 0 ? toggleLeft(state) : toggleRight(state);
+            case SOUTH -> clickPos.x < 0 ? toggleLeft(state) : toggleRight(state);
+            case WEST -> clickPos.z < 0 ? toggleLeft(state) : toggleRight(state);
+            case EAST -> clickPos.z > 0 ? toggleLeft(state) : toggleRight(state);
+            default -> state;
+        };
+
+        if(!world.isClientSide) {
+            world.setBlock(pos, state, 3);
         }
+
         return InteractionResult.SUCCESS;
+    }
+
+    private BlockState toggleLeft(BlockState state) {
+        return state.setValue(ARMRESTS, switch(state.getValue(ARMRESTS)) {
+            case BOTH -> RIGHT;
+            case NONE -> LEFT;
+            case LEFT -> NONE;
+            case RIGHT -> BOTH;
+        });
+    }
+
+    private BlockState toggleRight(BlockState state) {
+        return state.setValue(ARMRESTS, switch(state.getValue(ARMRESTS)) {
+            case BOTH -> LEFT;
+            case NONE -> RIGHT;
+            case LEFT -> BOTH;
+            case RIGHT -> NONE;
+        });
     }
 
     @Override
     public InteractionResult onSneakWrenched(BlockState state, UseOnContext context) {
         Level world = context.getLevel();
         BlockPos pos = context.getClickedPos();
-        if (!world.isClientSide) {
-            world.setBlock(pos, state.cycle(ARMRESTS), 3);
+
+        if(!world.isClientSide) {
+            world.setBlock(pos, state.setValue(ARMRESTS, switch(state.getValue(ARMRESTS)) {
+                case BOTH, LEFT, RIGHT -> NONE;
+                case NONE -> BOTH;
+            }), 3);
         }
+
         return InteractionResult.SUCCESS;
     }
 
@@ -205,8 +240,8 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-		return switch(pState.getValue(FACING)) {
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+		return switch(state.getValue(FACING)) {
 			case NORTH -> SHAPE;
 			case SOUTH -> rotateShape(Direction.NORTH, Direction.WEST, SHAPE);
 			case WEST -> rotateShape(Direction.NORTH, Direction.EAST, SHAPE);
@@ -215,7 +250,7 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-		return getShape(pState, pLevel, pPos, pContext);
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+		return getShape(state, level, pos, context);
     }
 }
