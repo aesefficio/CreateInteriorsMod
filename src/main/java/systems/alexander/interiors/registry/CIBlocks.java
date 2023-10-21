@@ -6,6 +6,7 @@ import systems.alexander.interiors.block.seat.ChairBlock;
 import systems.alexander.interiors.block.seat.DirectionalSeatBlock;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -20,7 +21,10 @@ import com.simibubi.create.foundation.block.DyedBlockList;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.simibubi.create.foundation.item.ItemDescription;
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.nullness.NonNullBiConsumer;
 
 import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
 import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
@@ -52,32 +56,7 @@ public class CIBlocks {
                 .initialProperties(SharedProperties::wooden)
                 .properties(p -> p.mapColor(color))
                 .transform(axeOnly())
-                .blockstate((context, provider) -> provider.getVariantBuilder(context.get())
-                                                       .forAllStatesExcept(state -> {
-                            String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
-                            String facing = state.getValue(ChairBlock.FACING).getSerializedName();
-
-                            int rotation = switch(state.getValue(ChairBlock.FACING)) {
-								case NORTH -> 0;
-                                case EAST -> 90;
-                                case SOUTH -> 180;
-                                case WEST -> 270;
-                                default -> 0;
-                            };
-
-                            //TODO add the correct keys for the textures
-                            return ConfiguredModel.builder()
-                                    .modelFile(provider.models()
-                                            .withExistingParent("block/chair/" + colorName + "_chair_" + armrest + "_" + facing,
-                                                    provider.modLoc("block/chair/chair_" + armrest))
-                                            .texture("AAAAAAAA", Create.asResource("block/seat/top_" + colorName))
-                                            .texture("AAAAAAAA", provider.modLoc("block/side_top/side_top_" + colorName))
-                                            .texture("AAAAAAAA", Create.asResource("block/seat/side_" + colorName))
-                                            .texture("AAAAAAAA", Create.asResource("block/seat/side_" + colorName)))
-                                    .rotationY(rotation)
-                                    .build();
-
-                        }, WATERLOGGED))
+                .blockstate(chairBlockstates(colorName))
                 .onRegister(movementBehaviour(movementBehaviour))
                 .onRegister(interactionBehaviour(interactionBehaviour))
                 .onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
@@ -85,7 +64,7 @@ public class CIBlocks {
                 .tag(CITags.Blocks.CHAIRS)
                 .item()
                 .tag(CITags.Items.CHAIRS)
-                .model(AssetLookup.customBlockItemModel("chair", colorName + "_chair_both_north"))
+                .model(AssetLookup.customBlockItemModel("chair", colorName + "_chair_both"))
                 .build()
                 .register();
     });
@@ -95,33 +74,14 @@ public class CIBlocks {
             .initialProperties(SharedProperties::wooden)
             .properties(p -> p.mapColor(DyeColor.BLACK))
             .transform(axeOnly())
-            .blockstate((context, provider) -> provider.getVariantBuilder(context.get())
-                                                   .forAllStatesExcept(state -> {
-                        String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
-                        String facing = state.getValue(ChairBlock.FACING).getSerializedName();
-
-                        int rotation = switch(state.getValue(ChairBlock.FACING)) {
-                            case NORTH -> 0;
-                            case EAST -> 90;
-                            case SOUTH -> 180;
-                            case WEST -> 270;
-                            default -> 0;
-                        };
-
-                        return ConfiguredModel.builder()
-                                .modelFile(provider.models()
-                                                   .withExistingParent("block/chair/kelp_chair_" + armrest + "_" + facing,
-                                                           provider.modLoc("block/chair/chair_" + armrest)))
-                                .rotationY(rotation)
-                                .build();
-                    }, WATERLOGGED))
+            .blockstate(chairBlockstates("kelp"))
             .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
             .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
             .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
             .tag(CITags.Blocks.CHAIRS)
             .item()
             .tag(CITags.Items.CHAIRS)
-            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_both_north"))
+            .model(AssetLookup.customBlockItemModel("chair", "kelp_chair_both"))
             .build()
             .register();
 
@@ -143,9 +103,7 @@ public class CIBlocks {
                         };
 
                         return ConfiguredModel.builder()
-                                              .modelFile(provider.models()
-                                                                 .withExistingParent("kelp_seat_" + facing,
-                                                                         provider.modLoc("block/kelp_seat")))
+                                              .modelFile(provider.models().getExistingFile(provider.modLoc("block/kelp_seat")))
                                               .rotationY(rotation)
                                 .build();
                     }, WATERLOGGED))
@@ -161,5 +119,48 @@ public class CIBlocks {
 
     public static void register() {
         CreateInteriors.LOGGER.info("Registering blocks!");
+    }
+
+    private static NonNullBiConsumer<DataGenContext<Block, ChairBlock>, RegistrateBlockstateProvider> chairBlockstates(String color) {
+        return (context, provider) ->
+                provider.getVariantBuilder(context.get())
+                        .forAllStatesExcept(state -> {
+                            String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+                            String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+
+                            int rotation = switch(state.getValue(ChairBlock.FACING)) {
+                                case NORTH -> 0;
+                                case EAST -> 90;
+                                case SOUTH -> 180;
+                                case WEST -> 270;
+                                default -> 0;
+                            };
+
+                            ResourceLocation top;
+                            ResourceLocation sideTop = provider.modLoc("block/chair/side_top/side_top_" + color);
+                            ResourceLocation side;
+                            ResourceLocation sideFront;
+							if(color.equals("kelp")) {
+                                top = Create.asResource("block/belt_offset");
+                                side = provider.modLoc("block/chair/side/side_kelp_side");
+                                sideFront = provider.modLoc("block/chair/side/side_kelp_front");
+                            } else {
+                                top = Create.asResource("block/seat/top_" + color);
+                                side = Create.asResource("block/seat/side_" + color);
+                                sideFront = side;
+							}
+
+
+							return ConfiguredModel.builder()
+                                                  .modelFile(provider.models()
+                                                                     .withExistingParent("block/chair/" + color + "_chair_" + armrest,
+                                                                             provider.modLoc("block/chair/chair_" + armrest))
+                                                                     .texture("top", top)
+                                                                     .texture("side_top", sideTop)
+                                                                     .texture("side", side)
+                                                                     .texture("side_front", sideFront))
+                                                  .rotationY(rotation)
+                                                  .build();
+                            }, WATERLOGGED);
     }
 }

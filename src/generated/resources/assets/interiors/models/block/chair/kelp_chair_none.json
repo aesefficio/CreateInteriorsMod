@@ -1,0 +1,9 @@
+{
+  "parent": "interiors:block/chair/chair_none",
+  "textures": {
+    "side": "interiors:block/chair/side/side_kelp_side",
+    "side_front": "interiors:block/chair/side/side_kelp_front",
+    "side_top": "interiors:block/chair/side_top/side_top_kelp",
+    "top": "create:block/belt_offset"
+  }
+}

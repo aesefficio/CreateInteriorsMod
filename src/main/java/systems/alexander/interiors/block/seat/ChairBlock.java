@@ -49,9 +49,6 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
     protected final DyeColor color;
 
     public enum ArmrestConfiguration implements StringRepresentable {
-        /**
-         * {@code BOTH} MUST be first in order for datagen to run.
-         */
         BOTH, NONE, LEFT, RIGHT;
 
         public static final ArmrestConfiguration DEFAULT = BOTH;
@@ -84,9 +81,7 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState()
-                .setValue(FACING, pContext.getHorizontalDirection().getOpposite())
-                .setValue(WATERLOGGED, false)
-                .setValue(ARMRESTS, ArmrestConfiguration.DEFAULT);
+                .setValue(FACING, pContext.getHorizontalDirection().getOpposite());
     }
 
     private static final VoxelShape SHAPE = Shapes.join(
