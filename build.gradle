@@ -11,13 +11,13 @@ sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 group = project.maven_group
 archivesBaseName = project.archives_base_name
 String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
-version = "${mod_version}${ buildNumber != null ? "-${buildNumber}" : "" }+mc${minecraft_version}"
+version = "${mod_version}${ buildNumber != null ? "-${buildNumber}" : ''}+mc${minecraft_version}"
 
-def generatedResources = file("src/generated/resources")
+def generatedResources = file('src/generated/resources')
 
 sourceSets.main.resources {
     srcDir(generatedResources)
-    exclude ".cache/"
+    exclude '.cache/'
 }
 
 loom {
@@ -62,7 +62,7 @@ repositories {
     }
     maven {
         url 'https://www.cursemaven.com'
-        content { includeGroup "curse.maven" }
+        content { includeGroup 'curse.maven' }
     }
 }
 
@@ -95,8 +95,8 @@ dependencies {
     modLocalRuntime("mezz.jei:jei-${minecraft_version}-forge:${jei_version}") { transitive = false }
 
     // Dev QOL
-    modLocalRuntime "curse.maven:better-mods-button-541584:4665757"
-    modLocalRuntime "curse.maven:ferritecore-429235:4574361"
+    modLocalRuntime 'curse.maven:better-mods-button-541584:4665757'
+    modLocalRuntime 'curse.maven:ferritecore-429235:4574361'
     modLocalRuntime "curse.maven:catalogue-459701:4766090"
 }
 
@@ -109,21 +109,25 @@ processResources {
     ]
     inputs.properties props
 
-    filesMatching("META-INF/mods.toml") {
+    filesMatching('META-INF/mods.toml') {
         expand props
     }
+
+    //don't include create's stuff in the jar in case they are there
+    exclude 'assets/create.zip'
+    exclude 'assets/create'
 }
 
 // disable machete locally for faster builds
 machete { enabled = buildNumber != null }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.encoding = "UTF-8"
+    it.options.encoding = 'UTF-8'
     it.options.release.set 17
 }
 
 java { withSourcesJar() }
 
 remapJar {
-    archiveClassifier = 'dev'
+    archiveClassifier.set('dev')
 }

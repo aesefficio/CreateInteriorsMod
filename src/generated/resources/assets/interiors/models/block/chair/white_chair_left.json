@@ -1,9 +1,9 @@
 {
-  "parent": "interiors:block/chair/chair_left",
+  "parent": "interiors:block/chair/left",
   "textures": {
     "side": "create:block/seat/side_white",
     "side_front": "create:block/seat/side_white",
-    "side_top": "interiors:block/chair/side_top/side_top_white",
+    "side_top": "interiors:block/chair/side_top_white",
     "top": "create:block/seat/top_white"
   }
 }

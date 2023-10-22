@@ -1,19 +1,14 @@
 package com.sudolev.interiors.block.seat;
 
-import java.util.List;
-
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
@@ -24,33 +19,22 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import com.simibubi.create.AllItems;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
-import com.simibubi.create.foundation.utility.BlockHelper;
 import com.simibubi.create.foundation.utility.Lang;
-import com.sudolev.interiors.entity.BigSeatEntity;
-import com.sudolev.interiors.registry.CIBlocks;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.BOTH;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.DEFAULT;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.LEFT;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.NONE;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.RIGHT;
+import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.*;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock, IWrenchable {
+public abstract class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock, IWrenchable {
     protected final DyeColor color;
 
     public enum ArmrestConfiguration implements StringRepresentable {
@@ -87,62 +71,11 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
                 .setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-    private static final VoxelShape SHAPE = Shapes.join(
-            Block.box(0, 5, 0, 16, 13, 16),
-            Block.box(0, 0, 4, 16, 5, 12),
-            BooleanOp.OR
-    );
+    public abstract VoxelShape shape();
 
-    public static void sitDown(Level world, BlockPos pos, Entity entity) {
-        if (world.isClientSide)
-            return;
-        BigSeatEntity seat = new BigSeatEntity(world, pos);
-        seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
-        world.addFreshEntity(seat);
-        entity.startRiding(seat, true);
-        if (entity instanceof TamableAnimal ta)
-            ta.setInSittingPose(true);
+    public void doSitDown(Level world, BlockPos pos, Entity entity) {
+        sitDown(world, pos, entity);
     }
-
-    @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
-                                 BlockHitResult result) {
-        ItemStack heldItem = player.getItemInHand(hand);
-
-		if(heldItem == AllItems.WRENCH.asStack(1)
-           || heldItem.is(AllItems.WRENCH.asItem())
-           || player.isShiftKeyDown()) {
-			return InteractionResult.PASS;
-		}
-
-		DyeColor color = DyeColor.getColor(heldItem);
-
-        if (color != null && color != this.color) {
-            if (world.isClientSide)
-                return InteractionResult.SUCCESS;
-            BlockState newState = BlockHelper.copyProperties(state, CIBlocks.CHAIRS.get(color).getDefaultState());
-            world.setBlockAndUpdate(pos, newState);
-            return InteractionResult.SUCCESS;
-        }
-
-        List<BigSeatEntity> seats = world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos));
-        if (!seats.isEmpty()) {
-            BigSeatEntity BigSeatEntity = seats.get(0);
-            List<Entity> passengers = BigSeatEntity.getPassengers();
-            if (!passengers.isEmpty() && passengers.get(0) instanceof Player)
-                return InteractionResult.PASS;
-            if (!world.isClientSide) {
-                BigSeatEntity.ejectPassengers();
-                player.startRiding(BigSeatEntity);
-            }
-            return InteractionResult.SUCCESS;
-        }
-
-		if(!world.isClientSide) {
-			sitDown(world, pos, getLeashed(world, player).or(player));
-		}
-		return InteractionResult.SUCCESS;
-	}
 
     @Override
     public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
@@ -164,7 +97,7 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
         }
         if (reader.getBlockState(pos).getBlock() != this)
             return;
-        sitDown(entity.level(), pos, entity);
+        doSitDown(entity.level(), pos, entity);
     }
 
     @Override
@@ -238,10 +171,10 @@ public class ChairBlock extends DirectionalSeatBlock implements ProperWaterlogge
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return switch(state.getValue(FACING)) {
-			case NORTH -> SHAPE;
-			case SOUTH -> rotateShape(Direction.NORTH, Direction.WEST, SHAPE);
-			case WEST -> rotateShape(Direction.NORTH, Direction.EAST, SHAPE);
-			default -> rotateShape(Direction.NORTH, Direction.SOUTH, SHAPE);
+			case NORTH -> shape();
+			case SOUTH -> rotateShape(Direction.NORTH, Direction.WEST, shape());
+			case WEST -> rotateShape(Direction.NORTH, Direction.EAST, shape());
+			default -> rotateShape(Direction.NORTH, Direction.SOUTH, shape());
 		};
     }
 

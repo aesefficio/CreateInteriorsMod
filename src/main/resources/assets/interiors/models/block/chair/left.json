@@ -1,0 +1,117 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"0": "create:block/seat/bottom",
+		"1": "interiors:block/chair/foot",
+		"particle": "create:block/seat/bottom",
+		"top": "create:block/belt_offset",
+		"side_top": "interiors:block/chair/side_top_kelp",
+		"side": "interiors:block/chair/side_kelp_side",
+		"side_front": "interiors:block/chair/side_kelp_front"
+	},
+	"elements": [
+		{
+			"name": "seat",
+			"from": [-0.002, 5, 0.001],
+			"to": [16.002, 13, 16.003],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#side_front"},
+				"east": {"uv": [0, 8, 16, 16], "texture": "#side"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#side_front"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "leg",
+			"from": [-0.002, 0, 4],
+			"to": [16.002, 5, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
+			"faces": {
+				"north": {"uv": [0, 11, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 3, 8, 8], "texture": "#1"},
+				"south": {"uv": [0, 11, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 3, 8, 8], "texture": "#1"},
+				"up": {"uv": [6, 15, 7, 16], "rotation": 270, "texture": "#missing"},
+				"down": {"uv": [4, 0, 12, 16], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "armrest_left",
+			"from": [-3.001, 11.001, 2],
+			"to": [1.999, 16.001, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [18.5, 13.5, 7.5]},
+			"faces": {
+				"north": {"uv": [5, 8, 11, 13], "texture": "#side_front"},
+				"east": {"uv": [2, 8, 14, 13], "texture": "#side"},
+				"south": {"uv": [5, 8, 11, 13], "texture": "#side_front"},
+				"west": {"uv": [2, 8, 14, 13], "texture": "#side"},
+				"up": {"uv": [5, 2, 11, 14], "texture": "#top"},
+				"down": {"uv": [2, 10, 14, 16], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "Back",
+			"from": [-0.001, 8.6, 9.5],
+			"to": [16.001, 24.6, 17.5],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 13, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#top"},
+				"east": {"uv": [0, 8, 16, 0], "rotation": 270, "texture": "#side_top"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 8, 16, 0], "rotation": 90, "texture": "#side_top"},
+				"up": {"uv": [0, 8, 16, 16], "texture": "#side_top"},
+				"down": {"uv": [0, 0, 16, 8], "texture": "#missing"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [31, 135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [31, 135, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0.25, 0.25, -1.25],
+			"scale": [0.35, 0.35, 0.35]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0.25, 0.25, -1.25],
+			"scale": [0.35, 0.35, 0.35]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"translation": [1, -2.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"rotation": [1, 0, 0],
+			"translation": [0, 4.75, 0]
+		},
+		"fixed": {
+			"rotation": [0, 90, 0],
+			"translation": [-1.25, -3.5, 0.5],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	},
+	"groups": [
+		{
+			"name": "Chair",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

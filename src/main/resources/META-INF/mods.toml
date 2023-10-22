@@ -10,12 +10,12 @@ displayName="Create: Interiors"
 #updateJSONURL="https://change.me.example.invalid/updates.json"
 displayURL="https://sudolev.github.io/CreateInteriorsMod/"
 logoFile="icon.png"
-credits=""
-authors="Alexander Weimer"
-
+credits="rdh"
+authors="sudolev"
 description='''
 Complementing Create with Functional Furnishings
 '''
+
 [[dependencies.interiors]]
     modId="forge"
     mandatory=true
@@ -34,3 +34,6 @@ Complementing Create with Functional Furnishings
     versionRange="[${create_version},)"
     ordering="NONE"
     side="BOTH"
+
+[modproperties.interiors]
+    catalogueImageIcon="icon.png"
