@@ -27,14 +27,11 @@ import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("NullableProblems")
 public class BigChairBlock extends ChairBlock {
+	private static final VoxelShape SHAPE = Shapes.or(Block.box(0, 5, 0, 16, 13, 16), Block.box(0, 0, 4, 16, 5, 12));
+
 	public BigChairBlock(Properties properties, DyeColor color) {
 		super(properties, color);
 	}
-
-	private static final VoxelShape SHAPE = Shapes.or(
-			Block.box(0, 5, 0, 16, 13, 16),
-			Block.box(0, 0, 4, 16, 5, 12)
-	);
 
 	@Override
 	public VoxelShape shape() {
@@ -43,19 +40,17 @@ public class BigChairBlock extends ChairBlock {
 
 	@Override
 	public void doSitDown(@NotNull Level world, @NotNull BlockPos pos, @NotNull Entity entity) {
-		if (world.isClientSide)
-			return;
+		if(world.isClientSide) return;
 		BigSeatEntity seat = new BigSeatEntity(world, pos);
 		seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
 		world.addFreshEntity(seat);
 		entity.startRiding(seat, true);
-		if (entity instanceof TamableAnimal ta)
+		if(entity instanceof TamableAnimal ta)
 			ta.setInSittingPose(true);
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
-								 BlockHitResult result) {
+	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
 		ItemStack heldItem = player.getItemInHand(hand);
 
 		if(heldItem == AllItems.WRENCH.asStack(1)
@@ -65,21 +60,19 @@ public class BigChairBlock extends ChairBlock {
 
 		DyeColor color = DyeColor.getColor(heldItem);
 
-		if (color != null && color != this.color) {
-			if (world.isClientSide)
-				return InteractionResult.SUCCESS;
+		if(color != null && color != this.color) {
+			if(world.isClientSide) return InteractionResult.SUCCESS;
 			BlockState newState = BlockHelper.copyProperties(state, CIBlocks.CHAIRS.get(color).getDefaultState());
 			world.setBlockAndUpdate(pos, newState);
 			return InteractionResult.SUCCESS;
 		}
 
 		List<BigSeatEntity> seats = world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos));
-		if (!seats.isEmpty()) {
+		if(!seats.isEmpty()) {
 			BigSeatEntity BigSeatEntity = seats.get(0);
 			List<Entity> passengers = BigSeatEntity.getPassengers();
-			if (!passengers.isEmpty() && passengers.get(0) instanceof Player)
-				return InteractionResult.PASS;
-			if (!world.isClientSide) {
+			if(!passengers.isEmpty() && passengers.get(0) instanceof Player) return InteractionResult.PASS;
+			if(!world.isClientSide) {
 				BigSeatEntity.ejectPassengers();
 				player.startRiding(BigSeatEntity);
 			}

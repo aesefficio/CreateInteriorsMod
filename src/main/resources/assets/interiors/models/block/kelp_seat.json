@@ -1,66 +1,89 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "create:block/seat/bottom",
-		"particle": "create:block/seat/bottom",
-		"top": "create:block/belt_offset",
-		"side": "interiors:block/chair/side/side_kelp_side",
-		"side_front": "interiors:block/chair/side/side_kelp_front"
-	},
-	"elements": [
-		{
-			"name": "Seat",
-			"from": [0, 0, 0],
-			"to": [16, 8, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
-			"faces": {
-				"north": {"uv": [0, 8, 16, 16], "texture": "#side_front"},
-				"east": {"uv": [0, 8, 16, 16], "texture": "#side"},
-				"south": {"uv": [0, 8, 16, 16], "texture": "#side_front"},
-				"west": {"uv": [0, 8, 16, 16], "texture": "#side"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
-				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#0"}
-			}
-		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
-			"scale": [0.375, 0.375, 0.375]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
-			"scale": [0.375, 0.375, 0.375]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, 45, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_lefthand": {
-			"rotation": [0, 225, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"ground": {
-			"translation": [0, 3, 0],
-			"scale": [0.25, 0.25, 0.25]
-		},
-		"gui": {
-			"rotation": [30, 225, 0],
-			"translation": [0, 2, 0],
-			"scale": [0.625, 0.625, 0.625]
-		},
-		"fixed": {
-			"scale": [0.5, 0.5, 0.5]
-		}
-	},
-	"groups": [
-		{
-			"name": "Chair",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [0]
-		}
-	]
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "create:block/seat/bottom",
+    "particle": "create:block/seat/bottom",
+    "top": "create:block/belt_offset",
+    "side": "interiors:block/chair/side/side_kelp_side",
+    "side_front": "interiors:block/chair/side/side_kelp_front"
+  },
+  "elements": [
+    {
+      "name": "Seat",
+      "from": [0, 0, 0],
+      "to": [16, 8, 16],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [0, 0, 16]
+      },
+      "faces": {
+        "north": {
+          "uv": [0, 8, 16, 16],
+          "texture": "#side_front"
+        },
+        "east": {
+          "uv": [0, 8, 16, 16],
+          "texture": "#side"
+        },
+        "south": {
+          "uv": [0, 8, 16, 16],
+          "texture": "#side_front"
+        },
+        "west": {
+          "uv": [0, 8, 16, 16],
+          "texture": "#side"
+        },
+        "up": {
+          "uv": [0, 0, 16, 16],
+          "texture": "#top"
+        },
+        "down": {
+          "uv": [0, 0, 16, 16],
+          "rotation": 90,
+          "texture": "#0"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 45, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 225, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "ground": {
+      "translation": [0, 3, 0],
+      "scale": [0.25, 0.25, 0.25]
+    },
+    "gui": {
+      "rotation": [30, 225, 0],
+      "translation": [0, 2, 0],
+      "scale": [0.625, 0.625, 0.625]
+    },
+    "fixed": {
+      "scale": [0.5, 0.5, 0.5]
+    }
+  },
+  "groups": [
+    {
+      "name": "Chair",
+      "origin": [8, 8, 8],
+      "color": 0,
+      "children": [0]
+    }
+  ]
 }

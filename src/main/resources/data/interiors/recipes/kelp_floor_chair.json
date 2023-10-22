@@ -1,19 +1,18 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "building",
+  "category": "building",
   "ingredients": [
     {
-      "item": "minecraft:dried_kelp"
+      "tag": "minecraft:wooden_slabs"
     },
     {
       "tag": "minecraft:wooden_slabs"
     },
     {
-      "tag": "minecraft:planks"
+      "item": "minecraft:dried_kelp"
     }
   ],
   "result": {
-    "item": "interiors:kelp_chair",
-    "count": 1
+    "item": "interiors:kelp_floor_chair"
   }
 }

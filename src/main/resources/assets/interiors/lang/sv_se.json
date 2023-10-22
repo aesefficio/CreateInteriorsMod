@@ -1,10 +1,8 @@
 {
   "itemGroup.interiors": "Create: Interiors",
-
   "block.interiors.kelp_seat": "Kelpsäte",
   "block.interiors.kelp_chair": "Kelpstol",
   "block.interiors.seatwood_planks": "Stolträ",
-
   "block.interiors.white_chair": "Vit stol",
   "block.interiors.light_gray_chair": "Ljusgrå stol",
   "block.interiors.gray_chair": "Grå stol",
@@ -21,7 +19,6 @@
   "block.interiors.purple_chair": "Lila stol",
   "block.interiors.magenta_chair": "Magenta stol",
   "block.interiors.pink_chair": "Rosa stol",
-
   "block.interiors.chair.tooltip": "CHAIR",
   "block.interiors.chair.tooltip.summary": "Sit yourself down and enjoy the ride just a little more! Will anchor a player onto a moving _contraption_. An appealing option for static furniture too! Comes in a variety of colours.",
   "block.interiors.chair.tooltip.condition1": "Right click on stol",

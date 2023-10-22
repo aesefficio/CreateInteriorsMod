@@ -1,12 +1,8 @@
 {
-  "itemGroup.interiors": "Create: Interiors",
-
   "block.interiors.kelp_seat": "Сиденье из водорослей",
   "block.interiors.kelp_chair": "Кресло из водорослей",
   "block.interiors.kelp_floor_chair": "Напольное кресло из водорослей",
-
   "block.interiors.seatwood_planks": "Доски для мебели",
-
   "block.interiors.white_chair": "Белое кресло",
   "block.interiors.light_gray_chair": "Светло-серое кресло",
   "block.interiors.gray_chair": "Серое кресло",
@@ -39,7 +35,6 @@
   "block.interiors.purple_floor_chair": "Фиолетовое напольное кресло",
   "block.interiors.magenta_floor_chair": "Пурпурное напольное кресло",
   "block.interiors.pink_floor_chair": "Розовое напольное кресло",
-
   "block.interiors.chair.tooltip": "КРЕСЛО",
   "block.interiors.chair.tooltip.summary": "Сядьте и наслаждайтесь поездкой еще больше! Прикрепит вас к движущемся _штуковинам_. Хороший вариант и для статичной мебели! Поставляется в различных цветах.",
   "block.interiors.chair.tooltip.condition1": "ПКМ по креслу",

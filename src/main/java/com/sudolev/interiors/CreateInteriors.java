@@ -2,12 +2,16 @@ package com.sudolev.interiors;
 
 import java.util.List;
 import java.util.function.Function;
-import com.sudolev.interiors.data.CIDatagen;
-import com.sudolev.interiors.registry.CIBlocks;
-import com.sudolev.interiors.registry.CIEntities;
-import com.sudolev.interiors.registry.CITab;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.item.ItemDescription.Modifier;
+import com.simibubi.create.foundation.item.TooltipHelper.Palette;
 
 import net.minecraft.resources.ResourceLocation;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,52 +19,50 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forgespi.language.IModInfo;
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.item.ItemDescription.Modifier;
-import com.simibubi.create.foundation.item.TooltipHelper.Palette;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.sudolev.interiors.data.CIDatagen;
+import com.sudolev.interiors.registry.CIBlocks;
+import com.sudolev.interiors.registry.CIEntities;
+import com.sudolev.interiors.registry.CITab;
 
 @Mod(CreateInteriors.ID)
-public class CreateInteriors {
-    public static final String ID = "interiors";
-    public static final String NAME = getModProperty(IModInfo::getDisplayName);
-    public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
-    public static final String VERSION = getModProperty(IModInfo::getVersion);
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
+public final class CreateInteriors {
+	public static final String ID = "interiors";
+	public static final String NAME = getModProperty(IModInfo::getDisplayName);
+	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
+	public static final String VERSION = getModProperty(IModInfo::getVersion);
 
-    static {
-        REGISTRATE.setTooltipModifierFactory(item -> new Modifier(item, Palette.STANDARD_CREATE));
-    }
+	public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
 
-    public CreateInteriors() {
-        final IEventBus forge = MinecraftForge.EVENT_BUS,
-                mod = REGISTRATE.getModEventBus();
+	static {
+		REGISTRATE.setTooltipModifierFactory(item -> new Modifier(item, Palette.STANDARD_CREATE));
+	}
 
-        LOGGER.info("{} v{} initializing", NAME, VERSION);
-        CITab.register(mod);
-        CIBlocks.register();
-        CIEntities.register();
+	public CreateInteriors() {
+		final IEventBus forge = MinecraftForge.EVENT_BUS, mod = REGISTRATE.getModEventBus();
 
-        forge.register(this);
-        mod.addListener(EventPriority.LOWEST, CIDatagen::gatherData);
-        REGISTRATE.registerEventListeners(mod);
-    }
+		LOGGER.info("{} v{} initializing", NAME, VERSION);
+		CITab.register(mod);
+		CIBlocks.register();
+		CIEntities.register();
 
-    private static String getModProperty(Function<IModInfo, ?> f) {
-        List<IModInfo> infoList = ModList.get().getModFileById(ID).getMods();
-        if (infoList.size() > 1 && LOGGER != null) {
-            LOGGER.error("Multiple mods for ID: " + ID);
-        }
+		forge.register(this);
+		mod.addListener(EventPriority.LOWEST, CIDatagen::gatherData);
+		REGISTRATE.registerEventListeners(mod);
+	}
 
-        for (IModInfo info : infoList) {
-            if (info.getModId().equals(ID)) {
-                return f.apply(info).toString();
-            }
-        }
-        return "UNKNOWN";
-    }
+	private static String getModProperty(Function<IModInfo, ?> f) {
+		List<IModInfo> infoList = ModList.get().getModFileById(ID).getMods();
+		if(infoList.size() > 1 && LOGGER != null) {
+			LOGGER.error("Multiple mods for ID: " + ID);
+		}
+
+		for(IModInfo info : infoList) {
+			if(info.getModId().equals(ID)) {
+				return f.apply(info).toString();
+			}
+		}
+		return "UNKNOWN";
+	}
 
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(ID, path);

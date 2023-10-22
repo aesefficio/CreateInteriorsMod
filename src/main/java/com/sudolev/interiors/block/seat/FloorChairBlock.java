@@ -26,12 +26,10 @@ public class FloorChairBlock extends ChairBlock {
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
-								   BlockHitResult result) {
+	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
 		ItemStack heldItem = player.getItemInHand(hand);
 
-		if(heldItem == AllItems.WRENCH.asStack(1)
-		   || heldItem.is(AllItems.WRENCH.asItem())) {
+		if(heldItem == AllItems.WRENCH.asStack(1) || heldItem.is(AllItems.WRENCH.asItem())) {
 			return InteractionResult.PASS;
 		}
 

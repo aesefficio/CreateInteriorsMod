@@ -1,39 +1,42 @@
-modLoader="javafml"
-loaderVersion="[${neo_version},)"
-license="MIT"
-issueTrackerURL="https://github.com/sudolev/CreateInteriorsMod/issues"
+modLoader = "javafml"
+loaderVersion = "[${neo_version},)"
+license = "MIT"
+issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+
 [[mods]]
-modId="interiors"
-version="${version}"
-displayName="Create: Interiors"
+modId = "interiors"
+version = "${version}"
+displayName = "Create: Interiors"
 # https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json"
-displayURL="https://sudolev.github.io/CreateInteriorsMod/"
-logoFile="icon.png"
-credits="rdh"
-authors="sudolev"
-description='''
+displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
+logoFile = "icon.png"
+credits = "rdh"
+authors = "sudolev"
+description = '''
 Complementing Create with Functional Furnishings
 '''
 
 [[dependencies.interiors]]
-    modId="forge"
-    mandatory=true
-    versionRange="[${neo_version},)"
-    ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "[${neo_version},)"
+ordering = "NONE"
+side = "BOTH"
+
 [[dependencies.interiors]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="${minecraft_version}"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version}"
+ordering = "NONE"
+side = "BOTH"
+
 [[dependencies.interiors]]
-    modId="create"
-    mandatory=true
-    versionRange="[${create_version},)"
-    ordering="NONE"
-    side="BOTH"
+modId = "create"
+mandatory = true
+versionRange = "[${create_version},)"
+ordering = "NONE"
+side = "BOTH"
 
 [modproperties.interiors]
-    catalogueImageIcon="icon.png"
+catalogueImageIcon = "icon.png"
