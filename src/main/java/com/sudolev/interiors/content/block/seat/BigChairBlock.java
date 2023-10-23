@@ -2,6 +2,11 @@ package com.sudolev.interiors.content.block.seat;
 
 import java.util.List;
 
+import org.jetbrains.annotations.NotNull;
+
+import com.simibubi.create.AllItems;
+import com.simibubi.create.foundation.utility.BlockHelper;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -18,12 +23,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import com.simibubi.create.AllItems;
-import com.simibubi.create.foundation.utility.BlockHelper;
 import com.sudolev.interiors.content.entity.BigSeatEntity;
 import com.sudolev.interiors.content.registry.CIBlocks;
-
-import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("NullableProblems")
 public class BigChairBlock extends ChairBlock {
@@ -38,8 +39,7 @@ public class BigChairBlock extends ChairBlock {
 		return SHAPE;
 	}
 
-	@Override
-	public void doSitDown(@NotNull Level world, @NotNull BlockPos pos, @NotNull Entity entity) {
+	public static void sitDown(@NotNull Level world, @NotNull BlockPos pos, @NotNull Entity entity) {
 		if(world.isClientSide) return;
 		BigSeatEntity seat = new BigSeatEntity(world, pos);
 		seat.setPos(pos.getX() + .5f, pos.getY() + .34f, pos.getZ() + .5f);
@@ -47,6 +47,16 @@ public class BigChairBlock extends ChairBlock {
 		entity.startRiding(seat, true);
 		if(entity instanceof TamableAnimal ta)
 			ta.setInSittingPose(true);
+	}
+
+	public static boolean isSeatOccupied(Level world, BlockPos pos) {
+		return !world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos))
+					 .isEmpty();
+	}
+
+	@Override
+	public void doSitDown(Level world, BlockPos pos, Entity entity) {
+		sitDown(world, pos, entity);
 	}
 
 	@Override

@@ -4,9 +4,7 @@
   "package": "com.sudolev.interiors.foundation.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [],
-  "mixins": [
-
-  ],
+  "mixins": ["AbstractContraptionEntityMixin", "ContraptionMixin"],
   "injectors": {
     "defaultRequire": 1
   }
