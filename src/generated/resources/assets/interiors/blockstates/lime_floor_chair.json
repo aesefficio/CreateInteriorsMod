@@ -1,63 +1,123 @@
 {
   "variants": {
-    "armrests=both,facing=east": {
+    "armrests=both,cropped_back=false,facing=east": {
       "model": "interiors:block/floor_chair/lime_floor_chair_both",
       "y": 90
     },
-    "armrests=both,facing=north": {
+    "armrests=both,cropped_back=false,facing=north": {
       "model": "interiors:block/floor_chair/lime_floor_chair_both"
     },
-    "armrests=both,facing=south": {
+    "armrests=both,cropped_back=false,facing=south": {
       "model": "interiors:block/floor_chair/lime_floor_chair_both",
       "y": 180
     },
-    "armrests=both,facing=west": {
+    "armrests=both,cropped_back=false,facing=west": {
       "model": "interiors:block/floor_chair/lime_floor_chair_both",
       "y": 270
     },
-    "armrests=left,facing=east": {
+    "armrests=both,cropped_back=true,facing=east": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_both_cropped",
+      "y": 90
+    },
+    "armrests=both,cropped_back=true,facing=north": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_both_cropped"
+    },
+    "armrests=both,cropped_back=true,facing=south": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_both_cropped",
+      "y": 180
+    },
+    "armrests=both,cropped_back=true,facing=west": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_both_cropped",
+      "y": 270
+    },
+    "armrests=left,cropped_back=false,facing=east": {
       "model": "interiors:block/floor_chair/lime_floor_chair_left",
       "y": 90
     },
-    "armrests=left,facing=north": {
+    "armrests=left,cropped_back=false,facing=north": {
       "model": "interiors:block/floor_chair/lime_floor_chair_left"
     },
-    "armrests=left,facing=south": {
+    "armrests=left,cropped_back=false,facing=south": {
       "model": "interiors:block/floor_chair/lime_floor_chair_left",
       "y": 180
     },
-    "armrests=left,facing=west": {
+    "armrests=left,cropped_back=false,facing=west": {
       "model": "interiors:block/floor_chair/lime_floor_chair_left",
       "y": 270
     },
-    "armrests=none,facing=east": {
+    "armrests=left,cropped_back=true,facing=east": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_left_cropped",
+      "y": 90
+    },
+    "armrests=left,cropped_back=true,facing=north": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_left_cropped"
+    },
+    "armrests=left,cropped_back=true,facing=south": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_left_cropped",
+      "y": 180
+    },
+    "armrests=left,cropped_back=true,facing=west": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_left_cropped",
+      "y": 270
+    },
+    "armrests=none,cropped_back=false,facing=east": {
       "model": "interiors:block/floor_chair/lime_floor_chair_none",
       "y": 90
     },
-    "armrests=none,facing=north": {
+    "armrests=none,cropped_back=false,facing=north": {
       "model": "interiors:block/floor_chair/lime_floor_chair_none"
     },
-    "armrests=none,facing=south": {
+    "armrests=none,cropped_back=false,facing=south": {
       "model": "interiors:block/floor_chair/lime_floor_chair_none",
       "y": 180
     },
-    "armrests=none,facing=west": {
+    "armrests=none,cropped_back=false,facing=west": {
       "model": "interiors:block/floor_chair/lime_floor_chair_none",
       "y": 270
     },
-    "armrests=right,facing=east": {
+    "armrests=none,cropped_back=true,facing=east": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_none_cropped",
+      "y": 90
+    },
+    "armrests=none,cropped_back=true,facing=north": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_none_cropped"
+    },
+    "armrests=none,cropped_back=true,facing=south": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_none_cropped",
+      "y": 180
+    },
+    "armrests=none,cropped_back=true,facing=west": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_none_cropped",
+      "y": 270
+    },
+    "armrests=right,cropped_back=false,facing=east": {
       "model": "interiors:block/floor_chair/lime_floor_chair_right",
       "y": 90
     },
-    "armrests=right,facing=north": {
+    "armrests=right,cropped_back=false,facing=north": {
       "model": "interiors:block/floor_chair/lime_floor_chair_right"
     },
-    "armrests=right,facing=south": {
+    "armrests=right,cropped_back=false,facing=south": {
       "model": "interiors:block/floor_chair/lime_floor_chair_right",
       "y": 180
     },
-    "armrests=right,facing=west": {
+    "armrests=right,cropped_back=false,facing=west": {
       "model": "interiors:block/floor_chair/lime_floor_chair_right",
+      "y": 270
+    },
+    "armrests=right,cropped_back=true,facing=east": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_right_cropped",
+      "y": 90
+    },
+    "armrests=right,cropped_back=true,facing=north": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_right_cropped"
+    },
+    "armrests=right,cropped_back=true,facing=south": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_right_cropped",
+      "y": 180
+    },
+    "armrests=right,cropped_back=true,facing=west": {
+      "model": "interiors:block/floor_chair/lime_floor_chair_right_cropped",
       "y": 270
     }
   }

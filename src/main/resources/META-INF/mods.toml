@@ -10,11 +10,12 @@ displayName = "Create: Interiors"
 # https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json"
 displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
-logoFile = "icon.png"
+issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+logoFile="mod_banner.png"
 credits = "rdh"
 authors = "sudolev"
 description = '''
-Complementing Create with Functional Furnishings
+Create: Interiors is a new take on furniture, adding functional blocks that mesh seamlessly with the aesthetic and principles of the Create mod.
 '''
 
 [[dependencies.interiors]]
@@ -37,6 +38,26 @@ mandatory = true
 versionRange = "[${create_version},)"
 ordering = "NONE"
 side = "BOTH"
+[[dependencies.interiors]]
+modId="jei"
+mandatory=false
+versionRange="[0.0.0,)"
+ordering="NONE"
+side="CLIENT"
+[[dependencies.interiors]]
+modId="configured"
+mandatory=false
+versionRange="[0.0.0,)"
+ordering="NONE"
+side="CLIENT"
+[[dependencies.interiors]]
+modId="catalogue"
+mandatory=false
+versionRange="[0.0.0,)"
+ordering="NONE"
+side="CLIENT"
 
 [modproperties.interiors]
-catalogueImageIcon = "icon.png"
+catalogueImageIcon="icon.png"
+catalogueBackground="background.png"
+configuredBackground="create:textures/block/seat/top_red.png"

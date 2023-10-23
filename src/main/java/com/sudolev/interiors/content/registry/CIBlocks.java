@@ -67,6 +67,8 @@ public final class CIBlocks {
 				.forAllStatesExcept(state -> {
 					String facing = state.getValue(ChairBlock.FACING).getSerializedName();
 					String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+					String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+
 					int rotation = facing(state);
 
 					ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
@@ -74,8 +76,8 @@ public final class CIBlocks {
 					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
 					return ConfiguredModel.builder().modelFile(p.models()
-																.withExistingParent("block/floor_chair/" + colorName + "_floor_chair_" + armrest,
-																	p.modLoc("block/floor_chair/" + armrest))
+																.withExistingParent("block/floor_chair/" + colorName + "_floor_chair_" + armrest + cropped_state,
+																	p.modLoc("block/floor_chair/" + armrest + cropped_state))
 																.texture("top", top)
 																.texture("side", side)
 																.texture("side_front", side)
@@ -122,6 +124,8 @@ public final class CIBlocks {
 			.blockstate((c, p) -> p.getVariantBuilder(c.get())
 				.forAllStatesExcept(state -> {
 					String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+					String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+
 					int rotation = facing(state);
 
 					ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
@@ -129,8 +133,8 @@ public final class CIBlocks {
 					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
 					return ConfiguredModel.builder().modelFile(p.models()
-																.withExistingParent("block/chair/" + colorName + "_chair_" + armrest,
-																	p.modLoc("block/chair/" + armrest))
+																.withExistingParent("block/chair/" + colorName + "_chair_" + armrest + cropped_state,
+																	p.modLoc("block/chair/" + armrest + cropped_state))
 																.texture("top", top).texture("side_top", sideTop)
 																.texture("side_front", side).texture("side", side))
 													.rotationY(rotation).build();
@@ -179,11 +183,13 @@ public final class CIBlocks {
 		.blockstate((c, p) -> p.getVariantBuilder(c.get())
 			.forAllStatesExcept(state -> {
 				String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+
 				int rotation = facing(state);
 
 				return ConfiguredModel.builder().modelFile(p.models()
-													.withExistingParent("block/chair/kelp_chair_" + armrest,
-														p.modLoc("block/chair/" + armrest)))
+													.withExistingParent("block/chair/kelp_chair_" + armrest + cropped_state,
+														p.modLoc("block/chair/" + armrest + cropped_state)))
 												.rotationY(rotation)
 												.build();
 			}, WATERLOGGED))
@@ -202,11 +208,13 @@ public final class CIBlocks {
 		.blockstate((c, p) -> p.getVariantBuilder(c.get())
 			.forAllStatesExcept(state -> {
 				String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+
 				int rotation = facing(state);
 
 				return ConfiguredModel.builder().modelFile(p.models()
-													.withExistingParent("block/chair/kelp_floor_chair_" + armrest,
-														p.modLoc("block/floor_chair/" + armrest)))
+													.withExistingParent("block/chair/kelp_floor_chair_" + armrest + cropped_state,
+														p.modLoc("block/floor_chair/" + armrest + cropped_state)))
 												.rotationY(rotation)
 												.build();
 			}, WATERLOGGED))
