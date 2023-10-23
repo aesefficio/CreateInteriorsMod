@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "armrests=both,facing=east": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_both",
+      "y": 90
+    },
+    "armrests=both,facing=north": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_both"
+    },
+    "armrests=both,facing=south": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_both",
+      "y": 180
+    },
+    "armrests=both,facing=west": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_both",
+      "y": 270
+    },
+    "armrests=left,facing=east": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_left",
+      "y": 90
+    },
+    "armrests=left,facing=north": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_left"
+    },
+    "armrests=left,facing=south": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_left",
+      "y": 180
+    },
+    "armrests=left,facing=west": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_left",
+      "y": 270
+    },
+    "armrests=none,facing=east": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_none",
+      "y": 90
+    },
+    "armrests=none,facing=north": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_none"
+    },
+    "armrests=none,facing=south": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_none",
+      "y": 180
+    },
+    "armrests=none,facing=west": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_none",
+      "y": 270
+    },
+    "armrests=right,facing=east": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_right",
+      "y": 90
+    },
+    "armrests=right,facing=north": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_right"
+    },
+    "armrests=right,facing=south": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_right",
+      "y": 180
+    },
+    "armrests=right,facing=west": {
+      "model": "interiors:block/floor_chair/purple_floor_chair_right",
+      "y": 270
+    }
+  }
+}

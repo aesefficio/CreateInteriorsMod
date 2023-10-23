@@ -1,44 +1,42 @@
-modLoader="javafml" #mandatory
-loaderVersion = "[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
-license="MIT"
-# A URL to refer people to when problems occur with this mod
+modLoader = "javafml"
+loaderVersion = "[${neo_version},)"
+license = "MIT"
 issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
-[[mods]] #mandatory
-# The modid of the mod
-modId="interiors" #mandatory
-version = "0.4" #mandatory
-displayName="Create: Interiors" #mandatory
-displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
-# A file name (in the root of the mod JAR) containing a logo for display
-authors = "sudolev" #optional
 
-# The description text for the mod (multi line!) (#mandatory)
-description='''
-Create: Interiors is an addon for Create that extends Create's furnishing options.
+[[mods]]
+modId = "interiors"
+version = "${version}"
+displayName = "Create: Interiors"
+# https://docs.neoforged.net/docs/misc/updatechecker/
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
+logoFile = "icon.png"
+credits = "rdh"
+authors = "sudolev"
+description = '''
+Complementing Create with Functional Furnishings
 '''
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.interiors]] #optional
-    # the modid of the dependency
-    modId="forge" #mandatory
-    # Does this dependency have to exist - if not, ordering below must be specified
-    mandatory=true #mandatory
-    # The version range of the dependency
-versionRange="${neo_version_range}" #mandatory
-# An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-    ordering="NONE"
-    # Side this dependency is applied on - BOTH, CLIENT or SERVER
-    side="BOTH"
-# Here's another dependency
+
 [[dependencies.interiors]]
-    modId="minecraft"
-    mandatory=true
-# This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="${minecraft_version_range}"
-ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "[${neo_version},)"
+ordering = "NONE"
+side = "BOTH"
+
 [[dependencies.interiors]]
-    modId="create"
-    mandatory=true
-    versionRange="[0.5.1.c,)"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.interiors]]
+modId = "create"
+mandatory = true
+versionRange = "[${create_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[modproperties.interiors]
+catalogueImageIcon = "icon.png"

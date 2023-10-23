@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: interiors
-Specification-Vendor: sudolev
-Specification-Version: 1
-Implementation-Title: CreateInteriorsMod-1.19.2
-Implementation-Version: 0.4.2
-Implementation-Vendor: sudolev
-Implementation-Timestamp: 2023-10-18T21:39:58-0500
-
