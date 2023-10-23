@@ -49,16 +49,6 @@ public class BigChairBlock extends ChairBlock {
 			ta.setInSittingPose(true);
 	}
 
-	public static boolean isSeatOccupied(Level world, BlockPos pos) {
-		return !world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos))
-					 .isEmpty();
-	}
-
-	@Override
-	public void doSitDown(Level world, BlockPos pos, Entity entity) {
-		sitDown(world, pos, entity);
-	}
-
 	@Override
 	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
 		ItemStack heldItem = player.getItemInHand(hand);
@@ -90,7 +80,7 @@ public class BigChairBlock extends ChairBlock {
 		}
 
 		if(!world.isClientSide) {
-			doSitDown(world, pos, getLeashed(world, player).or(player));
+			sitDown(world, pos, getLeashed(world, player).or(player));
 		}
 		return InteractionResult.SUCCESS;
 	}

@@ -70,10 +70,6 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 
 	public abstract VoxelShape shape();
 
-	public void doSitDown(Level world, BlockPos pos, Entity entity) {
-		sitDown(world, pos, entity);
-	}
-
 	@Override
 	public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
 		BlockPos pos = entity.blockPosition();
@@ -92,7 +88,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 			return;
 		}
 		if(reader.getBlockState(pos).getBlock() != this) return;
-		doSitDown(entity.level(), pos, entity);
+		sitDown(entity.level(), pos, entity);
 	}
 
 	@Override

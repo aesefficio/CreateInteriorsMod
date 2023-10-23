@@ -21,13 +21,18 @@ public class BigSeatEntity extends SeatEntity {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static EntityType.Builder<BigSeatEntity> build(Builder<?> builder) {
-		return ((EntityType.Builder<BigSeatEntity>) builder).sized(0.25f, 0.85f);
+	public static Builder<BigSeatEntity> build(Builder<?> builder) {
+		return ((Builder<BigSeatEntity>) builder).sized(0.25f, 0.85f);
 	}
 
 	@Override
 	public Vec3 getDismountLocationForPassenger(LivingEntity entity) {
 		return super.getDismountLocationForPassenger(entity).add(0, 0.34f, 0);
+	}
+
+	@Override
+	public double getPassengersRidingOffset() {
+		return super.getPassengersRidingOffset() + 0.34;
 	}
 
 	public static class Render extends SeatEntity.Render {
