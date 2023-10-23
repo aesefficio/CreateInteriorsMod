@@ -4,7 +4,7 @@
 <div align="center">
    <img src="https://img.shields.io/badge/available%20for-1.18.2‒1.20.2-992333" alt="available for 1.20-1.20.2">
    <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged-992333" alt="modloaders forge/neoforged">
-   <img src="https://img.shields.io/badge/license-CC%20BY‒NC‒Custom-65d326" alt="license Custom">
+   <!-- <img src="https://img.shields.io/badge/license-CC%20BY‒NC‒Custom-65d326" alt="license Custom"> -->
    <br>
    <a href="https://curseforge.com/minecraft/mc-mods/interiors"><img src="https://cf.way2muchnoise.eu/906239.svg" alt="curseforge"></a>
    <a href="https://modrinth.com/mod/interiors"><img src="https://img.shields.io/modrinth/dt/r4Knci2k?logo=modrinth&label=&suffix= &style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a>
@@ -14,25 +14,27 @@
 <h3>Create: Interiors is an addon for Create that extends Create's furnishing options.<br></h3>
    </div>
 <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/05a2803a-806a-41d6-9fef-6b8730012ea8">
-<h3>Current list of features:</h3> 
+
+<details>
+<summary><h1>Current list of features:</h1></summary>
 <ul>
 
 
    <li>Chair Blocks
       <ul>
          <li>Come in all 16 Minecraft Dye Colors</li>
-         <li><b>Right-click with a wrench to cycle armrest state</b> (None, Left Only, Right Only, or Both Armrests)</li>
+		<li>Right-click back face with a wrench to toggle chair back type</li>
+         <li>Right-click any other face with a wrench to toggle armrests</li>
          <li>Can be crafted either from 1 Colored Wool, 1 Wooden Plank and 1 Wooden Slab OR from 1 Colored Seat and 1 Wooden Plank</li>
          <li>Can be sat on, both as a part of contraptions and standalone</li>
          <li>Can pick up entities just like Seat blocks</li>
-         <li>Bouncy!</li>
       </ul>
       <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/5df96470-97e6-4d3e-bd5c-ea18b20f902d" width="150">
       <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/14ce4207-df3e-4ad7-970f-4c9135a2ed08" width="150"><br><br>
    </li>
       <li>Low Chair Blocks
       <ul>
-         <li>Similar to the Chair blocks, but without legs (in response to demand for such)</li>
+         <li>Have the same functionality as the Chair blocks, but without legs</li>
          <li>Can be crafted either from 1 Colored Wool and 2 Wooden Slabs OR from 1 Colored Seat and 1 Wooden Slab</li>
          <img src="https://github.com/sudolev/CreateInteriorsMod/assets/61996958/bebf4021-b9e4-4cac-813d-f365b46dd276" width="105"><br><br>
       </ul>
@@ -52,8 +54,7 @@
    </ul><br>
    ⠀⠀⠀<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/53210a6f-6343-41b9-944b-f9addc3937ce" width="100"><br><br>
    </li>
-   <li>Kelp Low Chair
-   </li>
+   <li>Kelp Low Chair</li>
 
   </li>
    <li>Seatwood Planks
@@ -68,18 +69,21 @@
 
 
 </ul> 
+</details>
 
 ---
 
-# Contributing
+# Contributions
 
-### Translating 🥳
+### Massive thanks to [rdh](https://github.com/rhysdh540) for all his critical contributions to Create: Interiors.
 
-**Many thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.** 🎉
+## Translating 🥳
 
-**Further thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.** 🎉
+**Thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.** 🎉
 
-Create: Interiors is currently available in English, German, Swedish, Russian and Korean. If you don't see your language and want to help, please do feel free! Again, it's much appreciated.
+**Thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.** 🎉
+
+Create: Interiors is currently available in English, German, Swedish, Russian and Korean. If you don't see your language and want to help, please do feel free! It's much appreciated.
 
 ### Bug reports, suggestions and ideas
 
