@@ -1,4 +1,4 @@
-package com.sudolev.interiors.block.seat;
+package com.sudolev.interiors.content.block.seat;
 
 import java.util.Map;
 import java.util.UUID;

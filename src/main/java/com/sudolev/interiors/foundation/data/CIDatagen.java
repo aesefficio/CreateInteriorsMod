@@ -1,4 +1,4 @@
-package com.sudolev.interiors.data;
+package com.sudolev.interiors.foundation.data;
 
 import com.simibubi.create.foundation.utility.FilesHelper;
 
@@ -29,6 +29,7 @@ public class CIDatagen {
 
 		JsonObject jsonObject = Preconditions.checkNotNull(FilesHelper.loadJsonResource(path),
 			"Could not find default lang file: %s", path).getAsJsonObject();
+
 		jsonObject.entrySet().forEach(entry ->
 			CreateInteriors.REGISTRATE.addRawLang(entry.getKey(), entry.getValue().getAsString())
 		);

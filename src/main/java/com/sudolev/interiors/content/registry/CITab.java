@@ -1,4 +1,4 @@
-package com.sudolev.interiors.registry;
+package com.sudolev.interiors.content.registry;
 
 import com.simibubi.create.foundation.utility.Components;
 

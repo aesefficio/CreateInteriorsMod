@@ -19,10 +19,10 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forgespi.language.IModInfo;
 
-import com.sudolev.interiors.data.CIDatagen;
-import com.sudolev.interiors.registry.CIBlocks;
-import com.sudolev.interiors.registry.CIEntities;
-import com.sudolev.interiors.registry.CITab;
+import com.sudolev.interiors.foundation.data.CIDatagen;
+import com.sudolev.interiors.content.registry.CIBlocks;
+import com.sudolev.interiors.content.registry.CIEntities;
+import com.sudolev.interiors.content.registry.CITab;
 
 @Mod(CreateInteriors.ID)
 public final class CreateInteriors {

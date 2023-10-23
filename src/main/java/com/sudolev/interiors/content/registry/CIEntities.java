@@ -1,4 +1,4 @@
-package com.sudolev.interiors.registry;
+package com.sudolev.interiors.content.registry;
 
 import com.simibubi.create.foundation.data.CreateEntityBuilder;
 import com.simibubi.create.foundation.utility.Lang;
@@ -11,7 +11,7 @@ import net.minecraft.world.entity.EntityType.EntityFactory;
 import net.minecraft.world.entity.MobCategory;
 
 import com.sudolev.interiors.CreateInteriors;
-import com.sudolev.interiors.entity.BigSeatEntity;
+import com.sudolev.interiors.content.entity.BigSeatEntity;
 import com.tterrag.registrate.util.entry.EntityEntry;
 import com.tterrag.registrate.util.nullness.NonNullConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;

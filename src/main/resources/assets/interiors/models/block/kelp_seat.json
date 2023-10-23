@@ -4,8 +4,8 @@
     "0": "create:block/seat/bottom",
     "particle": "create:block/seat/bottom",
     "top": "create:block/belt_offset",
-    "side": "interiors:block/chair/side/side_kelp_side",
-    "side_front": "interiors:block/chair/side/side_kelp_front"
+    "side": "interiors:block/chair/side_kelp_side",
+    "side_front": "interiors:block/chair/side_kelp_front"
   },
   "elements": [
     {

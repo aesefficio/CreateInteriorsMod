@@ -1,4 +1,4 @@
-package com.sudolev.interiors.entity;
+package com.sudolev.interiors.content.entity;
 
 import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 

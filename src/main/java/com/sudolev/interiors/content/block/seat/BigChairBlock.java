@@ -1,4 +1,4 @@
-package com.sudolev.interiors.block.seat;
+package com.sudolev.interiors.content.block.seat;
 
 import java.util.List;
 
@@ -20,8 +20,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.foundation.utility.BlockHelper;
-import com.sudolev.interiors.entity.BigSeatEntity;
-import com.sudolev.interiors.registry.CIBlocks;
+import com.sudolev.interiors.content.entity.BigSeatEntity;
+import com.sudolev.interiors.content.registry.CIBlocks;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -69,12 +69,12 @@ public class BigChairBlock extends ChairBlock {
 
 		List<BigSeatEntity> seats = world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos));
 		if(!seats.isEmpty()) {
-			BigSeatEntity BigSeatEntity = seats.get(0);
-			List<Entity> passengers = BigSeatEntity.getPassengers();
+			BigSeatEntity entity = seats.get(0);
+			List<Entity> passengers = entity.getPassengers();
 			if(!passengers.isEmpty() && passengers.get(0) instanceof Player) return InteractionResult.PASS;
 			if(!world.isClientSide) {
-				BigSeatEntity.ejectPassengers();
-				player.startRiding(BigSeatEntity);
+				entity.ejectPassengers();
+				player.startRiding(entity);
 			}
 			return InteractionResult.SUCCESS;
 		}

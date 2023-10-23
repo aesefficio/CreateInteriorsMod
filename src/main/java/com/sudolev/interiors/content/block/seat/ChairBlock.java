@@ -1,4 +1,4 @@
-package com.sudolev.interiors.block.seat;
+package com.sudolev.interiors.content.block.seat;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -24,21 +24,20 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.Lang;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.BOTH;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.DEFAULT;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.LEFT;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.NONE;
-import static com.sudolev.interiors.block.seat.ChairBlock.ArmrestConfiguration.RIGHT;
+import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.BOTH;
+import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.DEFAULT;
+import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.LEFT;
+import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.NONE;
+import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.RIGHT;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public abstract class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock, IWrenchable {
+public abstract class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock {
 	public static final EnumProperty<ArmrestConfiguration> ARMRESTS = EnumProperty.create("armrests", ArmrestConfiguration.class);
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	protected final DyeColor color;

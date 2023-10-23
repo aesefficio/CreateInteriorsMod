@@ -1,4 +1,4 @@
-package com.sudolev.interiors.registry;
+package com.sudolev.interiors.content.registry;
 
 import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
 import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
@@ -32,11 +32,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 import com.sudolev.interiors.CreateInteriors;
-import com.sudolev.interiors.block.seat.BigChairBlock;
-import com.sudolev.interiors.block.seat.BigSeatMovementBehaviour;
-import com.sudolev.interiors.block.seat.ChairBlock;
-import com.sudolev.interiors.block.seat.DirectionalSeatBlock;
-import com.sudolev.interiors.block.seat.FloorChairBlock;
+import com.sudolev.interiors.content.block.seat.BigChairBlock;
+import com.sudolev.interiors.content.block.seat.BigSeatMovementBehaviour;
+import com.sudolev.interiors.content.block.seat.ChairBlock;
+import com.sudolev.interiors.content.block.seat.DirectionalSeatBlock;
+import com.sudolev.interiors.content.block.seat.FloorChairBlock;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
