@@ -4,7 +4,7 @@
 <div align="center">
    <img src="https://img.shields.io/badge/available%20for-1.18.2‒1.20.2-992333" alt="available for 1.20-1.20.2">
    <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged-992333" alt="modloaders forge/neoforged">
-   <img src="https://img.shields.io/badge/license-CC%20BY‒NC‒Custom-65d326" alt="license Custom">
+   <!-- <img src="https://img.shields.io/badge/license-CC%20BY‒NC‒Custom-65d326" alt="license Custom"> -->
    <br>
    <a href="https://curseforge.com/minecraft/mc-mods/interiors"><img src="https://cf.way2muchnoise.eu/906239.svg" alt="curseforge"></a>
    <a href="https://modrinth.com/mod/interiors"><img src="https://img.shields.io/modrinth/dt/r4Knci2k?logo=modrinth&label=&suffix= &style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a>
@@ -14,7 +14,9 @@
 <h3>Create: Interiors is an addon for Create that extends Create's furnishing options.<br></h3>
    </div>
 <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/05a2803a-806a-41d6-9fef-6b8730012ea8">
-<h3>Current list of features:</h3> 
+
+<details>
+<summary><h1>Current list of features:</h1></summary>
 <ul>
 
 
@@ -68,16 +70,19 @@
 
 
 </ul> 
+</details>
 
 ---
 
-# Contributing
+# Contributions
 
-### Translating 🥳
+### Massive thanks to [rdh](https://github.com/rhysdh540) for all his critical contributions to Create: Interiors.
 
-**Many thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.** 🎉
+## Translating 🥳
 
-**Further thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.** 🎉
+**Thanks to [@AsseyGithub](https://github.com/AsseyGithub) for translating Create: Interiors to Korean.** 🎉
+
+**Thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.** 🎉
 
 Create: Interiors is currently available in English, German, Swedish, Russian and Korean. If you don't see your language and want to help, please do feel free! Again, it's much appreciated.
 
