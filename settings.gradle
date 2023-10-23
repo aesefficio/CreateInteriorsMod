@@ -6,3 +6,6 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+// no colon because gradle
+rootProject.name = "Create Interiors"

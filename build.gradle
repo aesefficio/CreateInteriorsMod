@@ -24,8 +24,7 @@ loom {
     silentMojangMappingsLicense()
 
     forge {
-        //uncomment this line when you want to add mixins
-//        mixinConfig "interiors.mixins.json"
+        mixinConfig "interiors.mixins.json"
     }
 
     runs {
