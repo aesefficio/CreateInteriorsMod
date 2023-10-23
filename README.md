@@ -83,7 +83,7 @@
 
 **Thanks to [@rim4oo](https://github.com/rim4oo) for translating Create: Interiors to Russian.** 🎉
 
-Create: Interiors is currently available in English, German, Swedish, Russian and Korean. If you don't see your language and want to help, please do feel free! Again, it's much appreciated.
+Create: Interiors is currently available in English, German, Swedish, Russian and Korean. If you don't see your language and want to help, please do feel free! It's much appreciated.
 
 ### Bug reports, suggestions and ideas
 
