@@ -97,23 +97,14 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 	public InteractionResult onWrenched(BlockState state, UseOnContext context) {
 		Level world = context.getLevel();
 		BlockPos pos = context.getClickedPos();
-		Direction face = context.getClickedFace();
 
 		Vec3 clickPos = pos.getCenter().subtract(context.getClickLocation());
 
 		state = switch(state.getValue(FACING)) {
-			case NORTH ->
-				face == Direction.SOUTH ? toggleBackCrop(state) :
-				(clickPos.x > 0 ? toggleLeft(state) : toggleRight(state));
-			case SOUTH ->
-				face == Direction.NORTH ? toggleBackCrop(state) :
-					clickPos.x < 0 ? toggleLeft(state) : toggleRight(state);
-			case WEST ->
-				face == Direction.EAST ? toggleBackCrop(state) :
-					clickPos.z < 0 ? toggleLeft(state) : toggleRight(state);
-			case EAST ->
-				face == Direction.WEST ? toggleBackCrop(state) :
-					clickPos.z > 0 ? toggleLeft(state) : toggleRight(state);
+			case NORTH -> clickPos.x > 0 ? toggleLeft(state) : toggleRight(state);
+			case SOUTH -> clickPos.x < 0 ? toggleLeft(state) : toggleRight(state);
+			case WEST -> clickPos.z < 0 ? toggleLeft(state) : toggleRight(state);
+			case EAST -> clickPos.z > 0 ? toggleLeft(state) : toggleRight(state);
 			default -> state;
 		};
 
@@ -153,10 +144,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		BlockPos pos = context.getClickedPos();
 
 		if(!world.isClientSide) {
-			world.setBlock(pos, state.setValue(ARMRESTS, switch(state.getValue(ARMRESTS)) {
-				case BOTH, LEFT, RIGHT -> NONE;
-				case NONE -> BOTH;
-			}), 3);
+			world.setBlock(pos, toggleBackCrop(state), 3);
 		}
 
 		return InteractionResult.SUCCESS;
