@@ -10,9 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-import net.minecraftforge.entity.IEntityAdditionalSpawnData;
-
-public class BigSeatEntity extends SeatEntity implements IEntityAdditionalSpawnData {
+public class BigSeatEntity extends SeatEntity {
 
 	public BigSeatEntity(EntityType<?> type, Level world) {
 		super(type, world);
@@ -23,13 +21,18 @@ public class BigSeatEntity extends SeatEntity implements IEntityAdditionalSpawnD
 	}
 
 	@SuppressWarnings("unchecked")
-	public static EntityType.Builder<BigSeatEntity> build(Builder<?> builder) {
-		return ((EntityType.Builder<BigSeatEntity>) builder).sized(0.25f, 0.85f);
+	public static Builder<BigSeatEntity> build(Builder<?> builder) {
+		return ((Builder<BigSeatEntity>) builder).sized(0.25f, 0.85f);
 	}
 
 	@Override
-	public Vec3 getDismountLocationForPassenger(LivingEntity pLivingEntity) {
-		return super.getDismountLocationForPassenger(pLivingEntity).add(0, 0.34f, 0);
+	public Vec3 getDismountLocationForPassenger(LivingEntity entity) {
+		return super.getDismountLocationForPassenger(entity).add(0, 0.34f, 0);
+	}
+
+	@Override
+	public double getPassengersRidingOffset() {
+		return super.getPassengersRidingOffset() + 0.34;
 	}
 
 	public static class Render extends SeatEntity.Render {

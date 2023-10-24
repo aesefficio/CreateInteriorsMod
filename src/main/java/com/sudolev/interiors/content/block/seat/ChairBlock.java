@@ -1,16 +1,5 @@
 package com.sudolev.interiors.content.block.seat;
 
-import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.BOTH;
-import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.DEFAULT;
-import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.LEFT;
-import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.NONE;
-import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.RIGHT;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
-import com.simibubi.create.foundation.utility.Lang;
-
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -36,6 +25,13 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
+import com.simibubi.create.foundation.utility.Lang;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import static com.sudolev.interiors.content.block.seat.ChairBlock.ArmrestConfiguration.*;
+
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public abstract class ChairBlock extends DirectionalSeatBlock implements ProperWaterloggedBlock {
@@ -55,7 +51,8 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 
 		int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
 		for(int i = 0; i < times; i++) {
-			buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = Shapes.or(buffer[1], Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
+			buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) ->
+				buffer[1] = Shapes.or(buffer[1], Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
 			buffer[0] = buffer[1];
 			buffer[1] = Shapes.empty();
 		}
@@ -75,10 +72,6 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 
 	public abstract VoxelShape shape();
 
-	public void doSitDown(Level world, BlockPos pos, Entity entity) {
-		sitDown(world, pos, entity);
-	}
-
 	@Override
 	public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
 		BlockPos pos = entity.blockPosition();
@@ -97,30 +90,21 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 			return;
 		}
 		if(reader.getBlockState(pos).getBlock() != this) return;
-		doSitDown(entity.level(), pos, entity);
+		sitDown(entity.level(), pos, entity);
 	}
 
 	@Override
 	public InteractionResult onWrenched(BlockState state, UseOnContext context) {
 		Level world = context.getLevel();
 		BlockPos pos = context.getClickedPos();
-		Direction face = context.getClickedFace();
 
 		Vec3 clickPos = pos.getCenter().subtract(context.getClickLocation());
 
 		state = switch(state.getValue(FACING)) {
-			case NORTH ->
-				face == Direction.SOUTH ? toggleBackCrop(state) :
-				(clickPos.x > 0 ? toggleLeft(state) : toggleRight(state));
-			case SOUTH ->
-				face == Direction.NORTH ? toggleBackCrop(state) :
-					clickPos.x < 0 ? toggleLeft(state) : toggleRight(state);
-			case WEST ->
-				face == Direction.EAST ? toggleBackCrop(state) :
-					clickPos.z < 0 ? toggleLeft(state) : toggleRight(state);
-			case EAST ->
-				face == Direction.WEST ? toggleBackCrop(state) :
-					clickPos.z > 0 ? toggleLeft(state) : toggleRight(state);
+			case NORTH -> clickPos.x > 0 ? toggleLeft(state) : toggleRight(state);
+			case SOUTH -> clickPos.x < 0 ? toggleLeft(state) : toggleRight(state);
+			case WEST -> clickPos.z < 0 ? toggleLeft(state) : toggleRight(state);
+			case EAST -> clickPos.z > 0 ? toggleLeft(state) : toggleRight(state);
 			default -> state;
 		};
 
@@ -160,10 +144,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		BlockPos pos = context.getClickedPos();
 
 		if(!world.isClientSide) {
-			world.setBlock(pos, state.setValue(ARMRESTS, switch(state.getValue(ARMRESTS)) {
-				case BOTH, LEFT, RIGHT -> NONE;
-				case NONE -> BOTH;
-			}), 3);
+			world.setBlock(pos, toggleBackCrop(state), 3);
 		}
 
 		return InteractionResult.SUCCESS;

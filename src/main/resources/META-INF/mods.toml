@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[${neo_version},)"
-license = "MIT"
+license = "GPL-3.0"
 issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
 
 [[mods]]
@@ -38,26 +38,8 @@ mandatory = true
 versionRange = "[${create_version},)"
 ordering = "NONE"
 side = "BOTH"
-[[dependencies.interiors]]
-modId="jei"
-mandatory=false
-versionRange="[0.0.0,)"
-ordering="NONE"
-side="CLIENT"
-[[dependencies.interiors]]
-modId="configured"
-mandatory=false
-versionRange="[0.0.0,)"
-ordering="NONE"
-side="CLIENT"
-[[dependencies.interiors]]
-modId="catalogue"
-mandatory=false
-versionRange="[0.0.0,)"
-ordering="NONE"
-side="CLIENT"
 
 [modproperties.interiors]
 catalogueImageIcon="icon.png"
-catalogueBackground="background.png"
+catalogueBackground="mod_banner.png"
 configuredBackground="create:textures/block/seat/top_red.png"
