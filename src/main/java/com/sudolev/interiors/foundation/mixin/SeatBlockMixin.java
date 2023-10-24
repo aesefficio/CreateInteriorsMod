@@ -20,16 +20,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-@Mixin(value = SeatBlock.class, remap = false)
+@Mixin(SeatBlock.class)
 public abstract class SeatBlockMixin {
 
-	@Inject(method = "isSeatOccupied", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "isSeatOccupied", at = @At("HEAD"), cancellable = true, remap = false)
 	private static void sitDown(Level world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
 		if(!world.getEntitiesOfClass(BigSeatEntity.class, new AABB(pos)).isEmpty())
 			cir.setReturnValue(true);
 	}
 
-	@Redirect(method = "sitDown", at = @At(value = "NEW", target = "(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lcom/simibubi/create/content/contraptions/actors/seat/SeatEntity;"))
+	@Redirect(method = "sitDown", at = @At(value = "NEW", target = "(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lcom/simibubi/create/content/contraptions/actors/seat/SeatEntity;"), remap = false)
 	private static SeatEntity createSeatEntity(Level world, BlockPos pos) {
 		return world.getBlockState(pos).getBlock() instanceof BigChairBlock
 			   ? new BigSeatEntity(world, pos)
