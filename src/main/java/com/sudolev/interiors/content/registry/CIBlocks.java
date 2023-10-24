@@ -32,6 +32,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 import com.sudolev.interiors.CreateInteriors;
+import com.sudolev.interiors.content.block.WallMountedTable;
 import com.sudolev.interiors.content.block.seat.BigChairBlock;
 import com.sudolev.interiors.content.block.seat.BigSeatMovementBehaviour;
 import com.sudolev.interiors.content.block.seat.ChairBlock;
@@ -54,6 +55,24 @@ public final class CIBlocks {
 		.tag(BlockTags.PLANKS)
 		.item()
 		.tag(ItemTags.PLANKS)
+		.build()
+		.register();
+
+	public static final BlockEntry<WallMountedTable> WALL_MOUNTED_TABLE = REGISTRATE.block("wall_mounted_table", WallMountedTable::new)
+		.initialProperties(SharedProperties::wooden)
+		.properties(p -> p.mapColor(DyeColor.ORANGE))
+		.transform(axeOnly())
+		.blockstate((context, provider) -> provider.getVariantBuilder(context.get())
+			.forAllStatesExcept(state -> {
+				String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+				int rotation = facing(state);
+
+				return ConfiguredModel.builder()
+					.modelFile(provider.models().getExistingFile(provider.modLoc("block/wall_table"))).rotationY(rotation)
+					.build();
+			}, WATERLOGGED))
+		.item()
+			.model(AssetLookup.customBlockItemModel("wall_table"))
 		.build()
 		.register();
 
