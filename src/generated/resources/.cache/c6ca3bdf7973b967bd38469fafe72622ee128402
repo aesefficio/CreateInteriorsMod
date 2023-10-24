@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-24T10:00:09.566588	Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2023-10-24T07:05:44.866926	Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 dac4dc6c457ea01bd692bf04a477e10b86e9d1fd assets/interiors/blockstates/black_chair.json
 4d399955b93d26635e956647d6485e5724507212 assets/interiors/blockstates/black_floor_chair.json
 03e0323d415b74208d8190dade3d392f8f0c048d assets/interiors/blockstates/blue_chair.json
@@ -31,12 +31,13 @@ e8f78119325719be5b24fad59f8370b964edba38 assets/interiors/blockstates/purple_flo
 dae54bc64e2c0bb0ef2e975c5e0f7ace6fa58981 assets/interiors/blockstates/red_chair.json
 71d8b617e881565a64d4e522193468bd6025d0dd assets/interiors/blockstates/red_floor_chair.json
 b98b8b83997e55f1313fdc8664108538b4d75c32 assets/interiors/blockstates/seatwood_planks.json
+7bb67f393d77052741572e90b68205ff26fc095c assets/interiors/blockstates/wall_mounted_table.json
 1da926a10ecf848e745fa6ecc3c14016c6ed7915 assets/interiors/blockstates/white_chair.json
 1d593b33b68d224e3baef0538c4633f7273a4e12 assets/interiors/blockstates/white_floor_chair.json
 91c806a356c0fc3be084e90b7a32ff4b72a09304 assets/interiors/blockstates/yellow_chair.json
 af0805221514ea68d57dd577898708e254e04ea8 assets/interiors/blockstates/yellow_floor_chair.json
-5ab60dd224ae1c82027bf027df777577330e5689 assets/interiors/lang/en_ud.json
-ac59640e4479ef433bf08771f3c17bc8a860b6f7 assets/interiors/lang/en_us.json
+b46900dc12535cf83efc8fdb5ee37ec95d033123 assets/interiors/lang/en_ud.json
+704a64628b8437f901eb4d645b79d0845b911a2f assets/interiors/lang/en_us.json
 33ca50a314a7e994abc35bf1b06e4dbc731788de assets/interiors/models/block/chair/black_chair_both.json
 3f81247cdd1f036882cd9a9fe9fb98f8a294dada assets/interiors/models/block/chair/black_chair_both_cropped.json
 221c5647c64d557006e282eb285371a2ead3184b assets/interiors/models/block/chair/black_chair_left.json
@@ -342,6 +343,7 @@ afa972860269234fb8c8aafad002f17754bbda7b assets/interiors/models/item/purple_cha
 d99b5f35cfa274777c0a39fec9941a49a68340b6 assets/interiors/models/item/red_chair.json
 639fe8b28ec650880e48d2cb40f642baad12c4fb assets/interiors/models/item/red_floor_chair.json
 2145cd5d4d88116d14eaf04ac1b6299f2972aba0 assets/interiors/models/item/seatwood_planks.json
+02283ca314898eb4a55f4847fbb1ae7d05dde610 assets/interiors/models/item/wall_mounted_table.json
 4c35d8d738e5d1ad1f399a4375b10c4df35f028a assets/interiors/models/item/white_chair.json
 f43b00e93010772c091c29549df8c288deffa22f assets/interiors/models/item/white_floor_chair.json
 bbd1b62664bddcae11dd7f5b1ad7d3a9cf93ef22 assets/interiors/models/item/yellow_chair.json
@@ -490,6 +492,7 @@ a93cab79de18735afaf109d1541dce936798affb data/interiors/loot_tables/blocks/purpl
 ffed89b97ee18bef74dcb160ea8bb7ffec20b76a data/interiors/loot_tables/blocks/red_chair.json
 7cf377a3313848525cbe59a384d5fc93ba980263 data/interiors/loot_tables/blocks/red_floor_chair.json
 371ab396ae664ecb3598f638967b3f8a1cecce68 data/interiors/loot_tables/blocks/seatwood_planks.json
+6327bbedee5ea772359d1897c604a3d62ca98017 data/interiors/loot_tables/blocks/wall_mounted_table.json
 518c097e0e2a31b7d2d911539a2d075929cb5d3a data/interiors/loot_tables/blocks/white_chair.json
 d435e2557857b449d6726c9a84c1cf85f00a69b0 data/interiors/loot_tables/blocks/white_floor_chair.json
 760556cf409e487bdde0d0a25f6dae24fd4ed7ee data/interiors/loot_tables/blocks/yellow_chair.json
@@ -610,6 +613,6 @@ c1cd74c7db25c4f08788105dbd657215fd4c11f0 data/interiors/recipes/crafting/floor_c
 768ea8990a742492106377a0b38c608639dc4990 data/interiors/tags/blocks/floor_chairs.json
 498005f0a5be03ce5d106b8a9c08e0b7ab15196b data/interiors/tags/items/chairs.json
 768ea8990a742492106377a0b38c608639dc4990 data/interiors/tags/items/floor_chairs.json
-c3f5bee71ad070022657f036d365cacb4ecbf696 data/minecraft/tags/blocks/mineable/axe.json
+9d5db4771961863f7976459ae65a058e652c0ad4 data/minecraft/tags/blocks/mineable/axe.json
 99571a331f4c6ea2d1add7bf80ffad851e794cb8 data/minecraft/tags/blocks/planks.json
 99571a331f4c6ea2d1add7bf80ffad851e794cb8 data/minecraft/tags/items/planks.json
