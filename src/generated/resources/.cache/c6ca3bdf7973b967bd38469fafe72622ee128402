@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-23T01:42:08.8452152	Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2023-10-24T10:00:09.566588	Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 dac4dc6c457ea01bd692bf04a477e10b86e9d1fd assets/interiors/blockstates/black_chair.json
 4d399955b93d26635e956647d6485e5724507212 assets/interiors/blockstates/black_floor_chair.json
 03e0323d415b74208d8190dade3d392f8f0c048d assets/interiors/blockstates/blue_chair.json
@@ -35,8 +35,8 @@ b98b8b83997e55f1313fdc8664108538b4d75c32 assets/interiors/blockstates/seatwood_p
 1d593b33b68d224e3baef0538c4633f7273a4e12 assets/interiors/blockstates/white_floor_chair.json
 91c806a356c0fc3be084e90b7a32ff4b72a09304 assets/interiors/blockstates/yellow_chair.json
 af0805221514ea68d57dd577898708e254e04ea8 assets/interiors/blockstates/yellow_floor_chair.json
-b5b48efdf16f0490f11efc98dd59b2c5054606ea assets/interiors/lang/en_ud.json
-a91ea8c816b566f7d0c0c1508e768d4f1d21b80d assets/interiors/lang/en_us.json
+5ab60dd224ae1c82027bf027df777577330e5689 assets/interiors/lang/en_ud.json
+ac59640e4479ef433bf08771f3c17bc8a860b6f7 assets/interiors/lang/en_us.json
 33ca50a314a7e994abc35bf1b06e4dbc731788de assets/interiors/models/block/chair/black_chair_both.json
 3f81247cdd1f036882cd9a9fe9fb98f8a294dada assets/interiors/models/block/chair/black_chair_both_cropped.json
 221c5647c64d557006e282eb285371a2ead3184b assets/interiors/models/block/chair/black_chair_left.json
