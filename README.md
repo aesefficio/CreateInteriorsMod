@@ -2,9 +2,9 @@
 <h1 align="center">Create: Interiors
 
 <div align="center">
-   <img src="https://img.shields.io/badge/available%20for-1.18.2‒1.20.2-992333" alt="available for 1.20-1.20.2">
+   <img src="https://img.shields.io/badge/available%20for-1.18.2‒1.20.1-992333" alt="available for 1.20-1.20.2">
    <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged-992333" alt="modloaders forge/neoforged">
-   <!-- <img src="https://img.shields.io/badge/license-CC%20BY‒NC‒Custom-65d326" alt="license Custom"> -->
+   <img src="https://img.shields.io/badge/license-GPL‒3.0-55b326" alt="license - GPL-3.0">
    <br>
    <a href="https://curseforge.com/minecraft/mc-mods/interiors"><img src="https://cf.way2muchnoise.eu/906239.svg" alt="curseforge"></a>
    <a href="https://modrinth.com/mod/interiors"><img src="https://img.shields.io/modrinth/dt/r4Knci2k?logo=modrinth&label=&suffix= &style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a>
