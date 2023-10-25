@@ -112,13 +112,13 @@ public final class CIBlocks {
 				ShapelessRecipeBuilder.shapeless(c.get())
 									  .requires(ItemTags.WOODEN_SLABS)
 									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires(DyeHelper.getWoolOfDye(color))
+						.requires(DyeHelper.getWoolOfDye(color))
 									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
 									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName()));
 
 				ShapelessRecipeBuilder.shapeless(c.get())
 									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires((ItemLike) AllBlocks.SEATS.get(color))
+									  .requires(AllBlocks.SEATS.get(color).asStack().getItem())
 									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
 									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_seat"));
 
@@ -172,12 +172,12 @@ public final class CIBlocks {
 
 				ShapelessRecipeBuilder.shapeless(c.get())
 									  .requires(ItemTags.PLANKS)
-									  .requires((ItemLike) AllBlocks.SEATS.get(color))
+									  .requires(AllBlocks.SEATS.get(color).asStack().getItem())
 									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
 									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
 				ShapelessRecipeBuilder.shapeless(c.get())
 									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires((ItemLike) FLOOR_CHAIRS.get(color)) // REMOMVE ItemLike if it breaks stuff!
+									  .requires(FLOOR_CHAIRS.get(color).asStack().getItem()) // REMOMVE ItemLike if it breaks stuff!
 									  .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
 									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
 
