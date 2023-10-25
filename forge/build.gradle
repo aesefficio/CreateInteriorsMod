@@ -1,0 +1,45 @@
+apply from: rootProject.file('gradle/platform.gradle')
+
+architectury.forge()
+
+configurations {
+	developmentForge.extendsFrom common
+	forgeRuntimeLibrary.extendsFrom addJar
+}
+
+dependencies {
+	forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge}"
+
+	modImplementation("com.simibubi.create:create-${minecraft_version}:${create_forge}:slim") { transitive = false }
+	modImplementation "com.tterrag.registrate:Registrate:${registrate}"
+	modImplementation "com.jozufozu.flywheel:flywheel-forge-${flywheel_mc}:${flywheel}"
+
+	//include "com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}"
+
+	// Dev Env Optimizations
+	if (rootProject.hasProperty("bmb")) {
+		modRuntimeOnly "curse.maven:better-mods-button-541584:${rootProject.bmb}"
+	}
+	if (rootProject.hasProperty("smoothboot_forge")) {
+		modRuntimeOnly "curse.maven:smoothboot-forge-633412:${rootProject.smoothboot_forge}"
+	}
+	if (rootProject.hasProperty("catalogue")) {
+		modRuntimeOnly "curse.maven:catalogue-459701:${rootProject.catalogue}"
+	}
+	if (rootProject.hasProperty("ferritecore")) {
+		modRuntimeOnly "curse.maven:ferritecore-429235:${rootProject.ferritecore}"
+	}
+}
+
+loom {
+	forge {
+		mixinConfig(
+			'interiors.mixins.json',
+			'interiors-common.mixins.json',
+		)
+	}
+}
+
+shadowJar {
+	exclude 'fabric.mod.json'
+}

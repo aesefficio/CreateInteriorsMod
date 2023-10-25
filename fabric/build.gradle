@@ -1,0 +1,48 @@
+apply from: rootProject.file('gradle/platform.gradle')
+
+architectury.fabric()
+
+configurations {
+	developmentFabric.extendsFrom common
+}
+
+def common = project(':common')
+
+loom {
+	runs {
+		data {
+			client()
+
+			name "Minecraft Data"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${common.file("src/generated/resources")}"
+			vmArg "-Dfabric-api.datagen.modid=interiors"
+			vmArg "-Dporting_lib.datagen.existing_resources=${common.file("src/main/resources")}"
+		}
+	}
+}
+
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric}"
+
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api}+${rootProject.minecraft_version}"
+
+	modImplementation "com.terraformersmc:modmenu:${rootProject.modmenu}"
+
+	modImplementation("com.simibubi.create:create-fabric-${rootProject.minecraft_version}:${rootProject.create_fabric}+mc${rootProject.minecraft_version}")
+
+	// have deprecated modules present at runtime only
+	modLocalRuntime "net.fabricmc.fabric-api:fabric-api-deprecated:${rootProject.fabric_api}+${rootProject.minecraft_version}"
+
+	// Dev Env Optimizations
+	if (rootProject.hasProperty("lazydfu")) {
+		modRuntimeOnly "maven.modrinth:lazydfu:${rootProject.lazydfu}"
+	}
+	if (rootProject.hasProperty("smoothboot_fabric")) {
+		modRuntimeOnly "curse.maven:smoothboot-fabric-415758:${rootProject.smoothboot_fabric}"
+	}
+}
+
+remapJar {
+	injectAccessWidener = true
+}

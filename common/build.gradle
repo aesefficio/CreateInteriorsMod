@@ -1,0 +1,23 @@
+architectury {
+	//noinspection GroovyAssignabilityCheck
+	common {
+		rootProject.subprojects.each {
+			if(it == project(':common')) return
+			add it.name
+		}
+	}
+}
+
+sourceSets.main.resources {
+	srcDir file('src/generated/resources')
+	exclude '.cache/'
+}
+
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric}"
+
+	modCompileOnly "com.simibubi.create:create-fabric-${minecraft_version}:${create_fabric}+mc${rootProject.minecraft_version}"
+
+	//warning! don't use classes from fabric api
+	modCompileOnly "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api}+${rootProject.minecraft_version}"
+}

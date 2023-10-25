@@ -1,0 +1,66 @@
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'dev.architectury.loom'
+
+architectury {
+	platformSetupLoomIde()
+}
+
+loom {
+	runs {
+		remove server
+
+		client {
+			client()
+			name = 'Minecraft Client'
+			ideConfigGenerated = true
+			def baseArgs = '-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3'
+			def memoryArgs = '-Xmx4G -Xms4G'
+			def gcArgs = '-XX:+UseShenandoahGC -XX:ShenandoahGCMode=iu -XX:ShenandoahGuaranteedGCInterval=1000000 -XX:AllocatePrefetchStyle=1'
+
+			def jvmArgs = baseArgs + ' ' + memoryArgs + ' ' + gcArgs
+			vmArgs jvmArgs.split(' ')
+		}
+	}
+}
+
+configurations {
+	common
+	shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
+	compileClasspath.extendsFrom common
+	runtimeClasspath.extendsFrom common
+
+	include.extendsFrom addJar
+}
+
+dependencies {
+	common(project(path: ':common', configuration: 'namedElements')) { transitive false }
+	shadowCommon(project(path: ':common', configuration: "transformProduction${project.name.capitalize()}")) { transitive = false }
+}
+
+shadowJar {
+	exclude 'architectury.common.json'
+	exclude '**/PlatformMethods.class'
+
+	configurations = [project.configurations.shadowCommon, project.configurations.shade]
+	archiveClassifier = 'shadow'
+}
+
+remapJar {
+	inputFile.set shadowJar.archiveFile
+	dependsOn shadowJar
+	archiveClassifier = null
+}
+
+jar.archiveClassifier = 'dev'
+
+sourcesJar {
+	def commonSources = project(':common').sourcesJar
+	dependsOn commonSources
+	from commonSources.archiveFile.map { zipTree(it) }
+}
+
+components.java {
+	withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+		skip()
+	}
+}

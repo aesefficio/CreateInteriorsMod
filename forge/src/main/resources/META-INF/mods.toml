@@ -1,0 +1,45 @@
+modLoader = "javafml"
+loaderVersion = "[${forge},)"
+license = "GPL-3.0"
+issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+
+[[mods]]
+modId = "interiors"
+version = "${version}"
+displayName = "Create: Interiors"
+# https://docs.neoforged.net/docs/misc/updatechecker/
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
+issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+logoFile="icon.png"
+credits = "rdh"
+authors = "sudolev"
+description = '''
+Create: Interiors is a new take on furniture, adding functional blocks that mesh seamlessly with the aesthetic and principles of the Create mod.
+'''
+
+[[dependencies.interiors]]
+modId = "forge"
+mandatory = true
+versionRange = "[${forge},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.interiors]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.interiors]]
+modId = "create"
+mandatory = true
+versionRange = "[${create_forge},)"
+ordering = "NONE"
+side = "BOTH"
+
+[modproperties.interiors]
+catalogueImageIcon="icon.png"
+catalogueBackground="mod_banner.png"
+configuredBackground="create:textures/block/seat/top_red.png"

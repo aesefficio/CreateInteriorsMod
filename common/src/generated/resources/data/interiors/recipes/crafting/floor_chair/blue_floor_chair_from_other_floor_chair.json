@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "interiors:floor_chairs"
+    },
+    {
+      "tag": "c:blue_dyes"
+    }
+  ],
+  "result": {
+    "item": "interiors:blue_floor_chair"
+  }
+}

@@ -9,3 +9,7 @@ pluginManagement {
 
 // no colon because gradle
 rootProject.name = "Create Interiors"
+include 'common'
+include 'fabric'
+include 'forge'
+

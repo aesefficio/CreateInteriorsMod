@@ -1,0 +1,109 @@
+apply plugin: 'dev.architectury.loom'
+apply plugin: 'architectury-plugin'
+
+loom {
+	silentMojangMappingsLicense()
+}
+
+java.withSourcesJar()
+
+configurations {
+	addJar
+	shade
+
+	addJarCompile
+	addJarRuntime
+	addJarEverywhere
+
+	compileOnly.extendsFrom addJarCompile
+	annotationProcessor.extendsFrom addJarCompile
+	implementation.extendsFrom addJarRuntime
+	api.extendsFrom addJarEverywhere
+
+	addJar.extendsFrom addJarRuntime
+	addJar.extendsFrom addJarEverywhere
+
+	implementation.extendsFrom shade
+}
+
+repositories {
+	mavenCentral()
+	maven 'https://maven.parchmentmc.org'
+	maven 'https://maven.quiltmc.org/repository/release'
+	maven 'https://maven.ithundxr.dev/releases'
+	maven 'https://mvn.devos.one/snapshots'
+	maven 'https://maven.cafeteria.dev/releases'
+	maven 'https://maven.jamieswhiteshirt.com/libs-release'
+	maven 'https://maven.theillusivec4.top'
+	maven 'https://maven.terraformersmc.com/releases'
+
+	maven 'https://maven.tterrag.com', [
+	    'com.simibubi.create',
+		'com.jozufozu.flywheel',
+		'com.tterrag.registrate'
+	]
+
+	maven 'https://api.modrinth.com/maven', ['maven.modrinth']
+	maven 'https://cursemaven.com', ['curse.maven']
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+	mappings(loom.layered {
+		it.mappings("org.quiltmc:quilt-mappings:${rootProject.minecraft_version}+build.${rootProject.quilt}:intermediary-v2")
+		it.parchment("org.parchmentmc.data:parchment-${rootProject.minecraft_version}:${rootProject.parchment}@zip")
+		it.officialMojangMappings { nameSyntheticMembers = false }
+	})
+
+	manifold 'preprocessor'
+
+	//annotationProcessor implementation("com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}")
+	//annotationProcessor include("com.github.bawnorton.mixinsquared:mixinsquared-${p.name}:${rootProject.mixin_squared}")
+}
+
+processResources {
+	def properties = [
+		version          : rootProject.modVersion,
+		minecraft_version: minecraft_version,
+		forge            : forge.split("\\.")[0],
+		fabric           : fabric,
+		fabric_api       : fabric_api,
+		create_forge     : create_forge.split("-")[0],
+		create_fabric    : create_fabric,
+	]
+
+	inputs.properties properties
+
+	filesMatching('fabric.mod.json') {
+		expand properties
+	}
+
+	filesMatching('META-INF/mods.toml') {
+		expand properties
+	}
+}
+
+def manifold(String path) {
+	def coords = "systems.manifold:manifold-${path}:${manifold_version}"
+	if(path == 'util')
+		dependencies { addJarEverywhere(coords) }
+	else if(path.endsWith('rt'))
+		dependencies { addJarRuntime(coords) }
+	else
+		dependencies { addJarCompile(coords) }
+}
+
+def maven(String path) {
+	maven(path, [])
+}
+
+def maven(String path, List<String> includes) {
+	repositories.maven {
+		url = path
+		content {
+			includes.each {
+				includeGroup(it)
+			}
+		}
+	}
+}
