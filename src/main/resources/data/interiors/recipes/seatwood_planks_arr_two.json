@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "seatwood_planks",
+  "group": "building",
   "pattern": [
     "X#",
     "#X"
