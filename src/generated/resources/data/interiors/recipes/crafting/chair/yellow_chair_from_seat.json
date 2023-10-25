@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    },
+    {
+      "item": "create:yellow_seat"
+    }
+  ],
+  "result": {
+    "item": "interiors:yellow_chair"
+  }
+}

@@ -1,5 +1,6 @@
 package com.sudolev.interiors.foundation.mixin;
 
+import com.sudolev.interiors.CreateInteriors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;

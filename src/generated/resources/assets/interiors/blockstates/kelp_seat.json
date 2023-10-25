@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "interiors:block/kelp_seat",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "interiors:block/kelp_seat"
+    },
+    "facing=south": {
+      "model": "interiors:block/kelp_seat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "interiors:block/kelp_seat",
+      "y": 270
+    }
+  }
+}

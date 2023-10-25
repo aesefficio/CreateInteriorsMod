@@ -1,0 +1,9 @@
+{
+  "parent": "interiors:block/chair/left_cropped",
+  "textures": {
+    "side": "create:block/seat/side_gray",
+    "side_front": "create:block/seat/side_gray",
+    "side_top": "interiors:block/chair/side_top_gray",
+    "top": "create:block/seat/top_gray"
+  }
+}

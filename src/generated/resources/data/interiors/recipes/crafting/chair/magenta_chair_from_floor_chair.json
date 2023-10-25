@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:wooden_slabs"
+    },
+    {
+      "item": "interiors:magenta_floor_chair"
+    }
+  ],
+  "result": {
+    "item": "interiors:magenta_chair"
+  }
+}

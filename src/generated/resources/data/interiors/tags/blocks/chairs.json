@@ -1,0 +1,20 @@
+{
+  "values": [
+    "interiors:white_chair",
+    "interiors:orange_chair",
+    "interiors:magenta_chair",
+    "interiors:light_blue_chair",
+    "interiors:yellow_chair",
+    "interiors:lime_chair",
+    "interiors:pink_chair",
+    "interiors:gray_chair",
+    "interiors:light_gray_chair",
+    "interiors:cyan_chair",
+    "interiors:purple_chair",
+    "interiors:blue_chair",
+    "interiors:brown_chair",
+    "interiors:green_chair",
+    "interiors:red_chair",
+    "interiors:black_chair"
+  ]
+}

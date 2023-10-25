@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:wooden_slabs"
+    },
+    {
+      "item": "create:cyan_seat"
+    }
+  ],
+  "result": {
+    "item": "interiors:cyan_floor_chair"
+  }
+}
