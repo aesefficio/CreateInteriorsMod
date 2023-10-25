@@ -30,6 +30,17 @@ loom {
     forge {
         mixinConfig "interiors.mixins.json"
     }
+
+    runs {
+        data {
+            data()
+            programArgs '--mod', 'interiors'
+            programArg '--all'
+            programArgs '--output', generatedResources.absolutePath
+            programArgs '--existing', file('src/main/resources/').absolutePath
+            programArgs '--existing-mod', 'create'
+        }
+    }
 }
 
 repositories {
