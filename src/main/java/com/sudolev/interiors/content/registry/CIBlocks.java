@@ -48,7 +48,7 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 public final class CIBlocks {
 
 	static {
-		REGISTRATE.creativeModeTab(CITab.TAB);
+		REGISTRATE.creativeModeTab(() -> CITab.TAB_INTERIORS);
 	}
 
 	public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)

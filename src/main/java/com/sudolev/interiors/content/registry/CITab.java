@@ -1,34 +1,26 @@
 package com.sudolev.interiors.content.registry;
 
+import com.simibubi.create.AllCreativeModeTabs;
 import com.simibubi.create.foundation.utility.Components;
 
+import com.simibubi.create.infrastructure.item.CreateCreativeModeTab;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.*;
 
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 
 import com.sudolev.interiors.CreateInteriors;
 
+import javax.annotation.Nonnull;
+
 public final class CITab {
-
-	private static final DeferredRegister<CreativeModeTab> REGISTER = DeferredRegister.create(ForgeRegistries.CRE, CreateInteriors.ID);
-
-	public static final RegistryObject<CreativeModeTab> TAB = REGISTER.register("main",
-		CreativeModeTab.builder()
-			.title(Components.literal(CreateInteriors.NAME))
-			.icon(() -> CIBlocks.CHAIRS.get(DyeColor.RED).asStack().getItem().getDefaultInstance())
-			.displayItems((parameters, output) -> CreateInteriors.REGISTRATE
-				.getAll(Registries.BLOCK).stream()
-				.map(entry -> entry.get().asItem())
-				.forEach(output::accept))
-			::build);
-	public static void register(IEventBus modEventBus) {
-		REGISTER.register(modEventBus);
-	}
+	public static final CreativeModeTab TAB_INTERIORS = new CreativeModeTab(CreativeModeTab.TABS.length, "interiors") {
+		public ItemStack makeIcon() {
+			return CIBlocks.CHAIRS.get(DyeColor.RED).asStack();
+		};
+};
 }

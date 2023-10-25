@@ -3,6 +3,8 @@ package com.sudolev.interiors;
 import java.util.List;
 import java.util.function.Function;
 
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,12 +40,16 @@ public final class CreateInteriors {
 	}
 
 	public CreateInteriors() {
-		final IEventBus forge = MinecraftForge.EVENT_BUS, mod = REGISTRATE.get().getModEventBus();
+		final IEventBus forge = MinecraftForge.EVENT_BUS;
 
 		LOGGER.info("{} v{} initializing", NAME, VERSION);
-		CITab.register(mod);
 		CIBlocks.register();
 		CIEntities.register();
+		ModLoadingContext modLoadingContext = ModLoadingContext.get();
+
+		IEventBus mod = FMLJavaModLoadingContext.get()
+				.getModEventBus();
+
 
 		forge.register(this);
 		mod.addListener(EventPriority.LOWEST, CIDatagen::gatherData);
