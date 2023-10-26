@@ -15,7 +15,7 @@
    </div>
 <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/05a2803a-806a-41d6-9fef-6b8730012ea8">
 
-<details>
+<details open>
 <summary><h1>Current list of features:</h1></summary>
 <ul>
 
@@ -23,8 +23,8 @@
    <li>Chair Blocks
       <ul>
          <li>Come in all 16 Minecraft Dye Colors</li>
-		<li>Right-click back face with a wrench to toggle chair back type</li>
-         <li>Right-click any other face with a wrench to toggle armrests</li>
+		<li>Right-click with Wrench to switch armrest state</li>
+         <li>Sneak + Right-Click a wrench to toggle back size</li>
          <li>Can be crafted either from 1 Colored Wool, 1 Wooden Plank and 1 Wooden Slab OR from 1 Colored Seat and 1 Wooden Plank</li>
          <li>Can be sat on, both as a part of contraptions and standalone</li>
          <li>Can pick up entities just like Seat blocks</li>
@@ -49,8 +49,6 @@
    <li>Kelp Chair
      <ul>
       <li>Cheaper & easier-to-farm alternative to wool chairs</li>
-      <li>Can be crafted either from 1 Dried Kelp and 2 Wooden Slabs OR from 1 Kelp Seat block and 1 Wooden Slab</li>
-      <li>Work exactly the same as colored chairs</li>
    </ul><br>
    ⠀⠀⠀<img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/53210a6f-6343-41b9-944b-f9addc3937ce" width="100"><br><br>
    </li>
@@ -98,4 +96,8 @@ Bug reports, suggestions and ideas are incredibly useful and much appreciated. A
 <br><br>
    
 Report Issues <a href="https://github.com/sudolev/CreateInteriorsMod/issues">here</a></h3>
+
+<b>This project is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank">GPL-3.0</a>
+
+© 2023 Sudolev</b>
 </div>
