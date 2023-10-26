@@ -2,6 +2,7 @@ package com.sudolev.interiors.foundation.mixin;
 
 import java.util.UUID;
 
+import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,8 +31,8 @@ public abstract class AbstractContraptionEntityMixin {
 	@Inject(method = "getPassengerPosition", at = @At("TAIL"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
 	private void raise(Entity passenger, float partialTicks, CallbackInfoReturnable<Vec3> cir, UUID id, AABB bb, double ySize, BlockPos seat, Vec3 transformedVector) {
 		Vec3 vec3 = cir.getReturnValue();
-		if(contraption.getSeats() instanceof BigChairBlock) { // help
-			cir.setReturnValue(vec3.add(0, 0.34, 0));
+		if(contraption.getBlocks().get(seat).state.getBlock() instanceof BigChairBlock) {
+			cir.setReturnValue(vec3.add(0, 0.84, 0));
 		}
 	}
 }

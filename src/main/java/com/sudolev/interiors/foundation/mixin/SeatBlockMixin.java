@@ -40,7 +40,8 @@ public abstract class SeatBlockMixin {
 	@Inject(method = "sitDown", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;addFreshEntity(Lnet/minecraft/world/entity/Entity;)Z"), locals = LocalCapture.CAPTURE_FAILHARD)
 	private static void getY(Level world, BlockPos pos, Entity entity, CallbackInfo ci, SeatEntity seat) {
 		if(seat instanceof BigSeatEntity) {
-			seat.setPos(seat.getX(), seat.getY() + .34f, seat.getZ());
+			seat.setPos(seat.getX() + .5f, seat.getY() + .34f, seat.getZ() + .5f);
 		}
 	}
+
 }
