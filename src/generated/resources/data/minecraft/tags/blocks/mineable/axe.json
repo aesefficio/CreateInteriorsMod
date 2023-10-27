@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "interiors:seatwood_planks",
     "interiors:wall_mounted_table",

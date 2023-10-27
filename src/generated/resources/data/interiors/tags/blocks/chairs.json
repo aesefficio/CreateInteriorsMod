@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "interiors:white_chair",
     "interiors:orange_chair",

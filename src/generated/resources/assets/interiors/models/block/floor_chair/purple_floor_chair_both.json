@@ -1,9 +1,9 @@
 {
   "parent": "interiors:block/floor_chair/both",
   "textures": {
+    "top": "create:block/seat/top_purple",
     "side": "create:block/seat/side_purple",
     "side_front": "create:block/seat/side_purple",
-    "side_top": "interiors:block/chair/side_top_purple",
-    "top": "create:block/seat/top_purple"
+    "side_top": "interiors:block/chair/side_top_purple"
   }
 }

@@ -1,9 +1,5 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "interiors:block/wall_table",
-      "y": 90
-    },
     "facing=north": {
       "model": "interiors:block/wall_table"
     },
@@ -14,6 +10,10 @@
     "facing=west": {
       "model": "interiors:block/wall_table",
       "y": 270
+    },
+    "facing=east": {
+      "model": "interiors:block/wall_table",
+      "y": 90
     }
   }
 }

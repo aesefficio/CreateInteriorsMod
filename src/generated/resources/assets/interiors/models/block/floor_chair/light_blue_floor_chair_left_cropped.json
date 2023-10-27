@@ -1,9 +1,9 @@
 {
   "parent": "interiors:block/floor_chair/left_cropped",
   "textures": {
+    "top": "create:block/seat/top_light_blue",
     "side": "create:block/seat/side_light_blue",
     "side_front": "create:block/seat/side_light_blue",
-    "side_top": "interiors:block/chair/side_top_light_blue",
-    "top": "create:block/seat/top_light_blue"
+    "side_top": "interiors:block/chair/side_top_light_blue"
   }
 }

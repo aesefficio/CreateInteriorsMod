@@ -37,7 +37,7 @@ import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 @SuppressWarnings("unused")
 public final class CIBlocks {
     static {
-        Create.REGISTRATE.creativeModeTab(() -> CITab.TAB_INTERIORS);
+        CreateInteriors.REGISTRATE.creativeModeTab(() -> CITab.TAB_INTERIORS);
     }
     public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
             .initialProperties(SharedProperties::wooden)

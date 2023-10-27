@@ -1,9 +1,9 @@
 {
   "parent": "interiors:block/chair/none_cropped",
   "textures": {
-    "side": "create:block/seat/side_brown",
-    "side_front": "create:block/seat/side_brown",
+    "top": "create:block/seat/top_brown",
     "side_top": "interiors:block/chair/side_top_brown",
-    "top": "create:block/seat/top_brown"
+    "side_front": "create:block/seat/side_brown",
+    "side": "create:block/seat/side_brown"
   }
 }
