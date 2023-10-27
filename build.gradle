@@ -81,9 +81,9 @@ dependencies {
     modImplementation "com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}"
 
     // JEI
-    modCompileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-    modCompileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
-    modLocalRuntime("mezz.jei:jei-${minecraft_version}-forge:${jei_version}") { transitive = false }
+    // modCompileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    // modCompileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+    // modLocalRuntime("mezz.jei:jei-${minecraft_version}-forge:${jei_version}") { transitive = false }
 }
 
 processResources {

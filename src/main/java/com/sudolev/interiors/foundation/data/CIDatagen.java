@@ -5,8 +5,8 @@ import com.google.gson.JsonObject;
 import com.simibubi.create.foundation.utility.FilesHelper;
 import com.sudolev.interiors.CreateInteriors;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class CIDatagen {
 
