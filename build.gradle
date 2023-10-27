@@ -1,6 +1,8 @@
 plugins {
     id "dev.architectury.loom" version "1.3-SNAPSHOT"
     id "maven-publish"
+    id 'io.github.juuxel.loom-vineflower' version "${vineflower_version}"
+    id 'io.github.p03w.machete' version '2.0.1'
 }
 
 base {
@@ -8,58 +10,80 @@ base {
 }
 
 version = project.mod_version
+archivesBaseName = project.archives_base_name
+String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
 group = project.maven_group
 
-java {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+
+def generatedResources = file('src/generated/resources')
+
+sourceSets.main.resources {
+    srcDir(generatedResources)
+    exclude '.cache/'
 }
+
 
 loom {
     // use this if you are using the official mojang mappings
     // and want loom to stop warning you about their license
     silentMojangMappingsLicense()
-
-    // since loom 0.10, you are **required** to use the
-    // "forge" block to configure forge-specific features,
-    // such as the mixinConfigs array or datagen
     forge {
-        // specify the mixin configs used in this mod
-        // this will be added to the jar manifest as well!
-        mixinConfigs = [
-                "examplemod.mixins.json"
-        ]
-
+        mixinConfig "interiors.mixins.json"
+    }
+    runs {
+        data {
+            data()
+            programArgs '--mod', 'interiors'
+            programArg '--all'
+            programArgs '--output', generatedResources.absolutePath
+            programArgs '--existing', file('src/main/resources/').absolutePath
+            programArgs '--existing-mod', 'create'
+        }
     }
 }
 
 repositories {
+    mavenCentral()
+    mavenLocal()
+    maven { url 'https://maven.parchmentmc.org' }
+    maven { url 'https://maven.quiltmc.org/repository/release' }
+    maven { url 'https://maven.blamejared.com/' }
+    maven { url 'https://maven.neoforged.net/releases/' }
+
+    maven {
+        url 'https://maven.tterrag.com/'
+        content {
+            includeGroup 'com.jozufozu.flywheel'
+            includeGroup 'com.tterrag.registrate'
+            includeGroup 'com.simibubi.create'
+        }
+    }
+    maven {
+        url 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+    maven {
+        url 'https://www.cursemaven.com'
+        content { includeGroup 'curse.maven' }
+    }
 }
 
 dependencies {
-    // to change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
 
     mappings loom.officialMojangMappings()
 
-    // uncomment this if you want to use yarn mappings
-    // mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-
-    // your forge dependency, this is **required** when using Forge Loom in forge mode!
     forge "net.minecraftforge:forge:${project.forge_version}"
 
-    // additional dependencies can be specified using loom's regular format
-    // specifying a "mod" dependency (like modImplementation or modApi)
-    // will cause loom to remap the file to your specified mappings
+    modImplementation "com.tterrag.registrate:Registrate:${registrate_version}"
+    modImplementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
+    modImplementation "com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}"
 
-    // in this example, we'll be adding JEI as a dependency
-    // according to their developer example on GitHub
-    // see: https://github.com/mezz/JustEnoughItems/wiki/Getting-Started
-    // compile against the JEI API but do not include it at runtime
-    // don't worry about loom "not finding a forge mod" here,
-    // JEI's api just doesn't have any class with an @Mod annotation
-    // modCompileOnly "mezz.jei:jei-1.18.2:${jei_version}:api"
-    // at runtime, use the full JEI jar
-    // modRuntimeOnly "mezz.jei:jei-1.18.2:${jei_version}"
+    // JEI
+    modCompileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    modCompileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+    modLocalRuntime("mezz.jei:jei-${minecraft_version}-forge:${jei_version}") { transitive = false }
 }
 
 processResources {
@@ -71,21 +95,18 @@ processResources {
     filesMatching("META-INF/mods.toml") {
         expand "version": project.version
     }
+    exclude 'assets/create.zip'
+    exclude 'assets/create'
 }
 
+machete { enabled = buildNumber != null }
+
 tasks.withType(JavaCompile) {
-    // ensure that the encoding is set to UTF-8, no matter what the system default is
-    // this fixes some edge cases with special characters not displaying correctly
-    // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-    // If Javadoc is generated, this must be specified in that task too.
     options.encoding = "UTF-8"
     options.release = 17
 }
 
 java {
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
     withSourcesJar()
 }
 

@@ -1,0 +1,53 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "GPL-3.0" # Want to make your mod open source? Check out https://choosealicense.com/!
+
+[[mods]]
+modId = "interiors"
+# The version number of the mod - unlike in the Forge MDK,
+# we'll use the processResources task to replace this for us
+version = "${version}"
+displayName = "Create: Interiors"
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
+issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+logoFile = "mod_banner.png"
+credits = "rdh"
+authors = "sudolev"
+description = '''
+Functional furniture that meshes seamlessly with the aesthetic and principles of the Create mod.
+'''
+
+# An (optional) dependency for your mod. Though technically not required,
+# it's always helpful to add these to stop your mod from loading when something is missing
+# rather than erroring out later
+[[dependencies.interiors]]
+modId = "forge"
+mandatory = true # do you **need** this mod to be able to launch?
+# A version range using interval notation.
+# Brackets mean "inclusive" bounds, while parentheses mean "exclusive".
+versionRange = "[40,)" # This essentially means any forge >= 40
+ordering = "NONE" # Use this if you want your mod to be loaded specifically BEFORE or AFTER another mod
+side = "BOTH" # Specify where this mod is required: can be BOTH, CLIENT or SERVER
+
+# And another dependency, use this if you want to require a certain Minecraft version.
+[[dependencies.interiors]]
+modId = "minecraft"
+mandatory = true
+# See above for how to read this notation, this essentially means any
+# version of Minecraft from 1.18.2 (inclusive).
+versionRange = "[1.18.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.interiors]]
+modId = "create"
+mandatory = true
+versionRange = "[0.5.1.a,)"
+ordering = "NONE"
+side = "BOTH"
+
+[modproperties.interiors]
+catalogueImageIcon = "icon.png"
+catalogueBackground = "mod_banner.png"
+configuredBackground = "create:textures/block/seat/top_red.png"
