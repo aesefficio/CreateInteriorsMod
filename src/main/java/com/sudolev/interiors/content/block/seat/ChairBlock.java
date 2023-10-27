@@ -41,6 +41,8 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	protected final DyeColor color;
 
+
+
 	public ChairBlock(Properties properties, DyeColor color) {
 		super(properties, color);
 		this.color = color;
@@ -100,7 +102,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		Level world = context.getLevel();
 		BlockPos pos = context.getClickedPos();
 
-		Vec3 clickPos = context.getClickedPos().getCenter().subtract(context.getClickLocation());
+		Vec3 clickPos = Vec3.atCenterOf(pos).subtract(context.getClickLocation());
 
 		state = switch(state.getValue(FACING)) {
 			case NORTH -> clickPos.x > 0 ? toggleLeft(state) : toggleRight(state);
