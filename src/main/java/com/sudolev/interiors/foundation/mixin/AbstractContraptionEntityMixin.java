@@ -24,15 +24,15 @@ import com.sudolev.interiors.content.block.seat.BigChairBlock;
 
 @Mixin(value = AbstractContraptionEntity.class, remap = false)
 public abstract class AbstractContraptionEntityMixin {
+    @Shadow
+    protected Contraption contraption;
 
-	@Shadow
-	protected Contraption contraption;
+    @Inject(method = "getPassengerPosition", at = @At("TAIL"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
+    private void raise(Entity passenger, float partialTicks, CallbackInfoReturnable<Vec3> cir, UUID id, AABB bb, double ySize, BlockPos seat, Vec3 transformedVector) {
+        Vec3 vec3 = cir.getReturnValue();
+        if(contraption.getBlocks().get(seat).state.getBlock() instanceof BigChairBlock) {
+            cir.setReturnValue(vec3.add(0, 0.34, 0));
+        }
+    }
 
-	@Inject(method = "getPassengerPosition", at = @At("TAIL"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
-	private void raise(Entity passenger, float partialTicks, CallbackInfoReturnable<Vec3> cir, UUID id, AABB bb, double ySize, BlockPos seat, Vec3 transformedVector) {
-		Vec3 vec3 = cir.getReturnValue();
-		if(contraption.getBlocks().get(seat).state.getBlock() instanceof BigChairBlock) {
-			cir.setReturnValue(vec3.add(0, 0.84, 0));
-		}
-	}
 }

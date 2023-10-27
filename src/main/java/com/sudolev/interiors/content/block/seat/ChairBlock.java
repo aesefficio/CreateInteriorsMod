@@ -1,6 +1,7 @@
 package com.sudolev.interiors.content.block.seat;
 
 import com.simibubi.create.foundation.utility.VecHelper;
+import com.sudolev.interiors.CreateInteriors;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -99,7 +100,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		Level world = context.getLevel();
 		BlockPos pos = context.getClickedPos();
 
-		Vec3 clickPos = VecHelper.getCenterOf(pos);
+		Vec3 clickPos = context.getClickedPos().getCenter().subtract(context.getClickLocation());
 
 		state = switch(state.getValue(FACING)) {
 			case NORTH -> clickPos.x > 0 ? toggleLeft(state) : toggleRight(state);
