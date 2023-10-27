@@ -36,7 +36,9 @@ import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 
 @SuppressWarnings("unused")
 public final class CIBlocks {
-
+    static {
+        Create.REGISTRATE.creativeModeTab(() -> CITab.TAB_INTERIORS);
+    }
     public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
             .initialProperties(SharedProperties::wooden)
             .properties(p -> p.color(MaterialColor.TERRACOTTA_ORANGE))
@@ -154,22 +156,6 @@ public final class CIBlocks {
                             .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
                             .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName()));
 
-                    ShapelessRecipeBuilder.shapeless(c.get())
-                            .requires(ItemTags.PLANKS)
-                            .requires(AllBlocks.SEATS.get(color).asStack().getItem())
-                            .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-                            .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
-                    ShapelessRecipeBuilder.shapeless(c.get())
-                            .requires(ItemTags.WOODEN_SLABS)
-                            .requires(FLOOR_CHAIRS.get(color).asStack().getItem()) // REMOMVE ItemLike if it breaks stuff!
-                            .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
-                            .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
-
-                    ShapelessRecipeBuilder.shapeless(c.get())
-                            .requires(CITags.Items.CHAIRS)
-                            .requires(color.getTag())
-                            .unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
-                            .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
                 })
                 .onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
                 .onRegister(interactionBehaviour(new SeatInteractionBehaviour()))

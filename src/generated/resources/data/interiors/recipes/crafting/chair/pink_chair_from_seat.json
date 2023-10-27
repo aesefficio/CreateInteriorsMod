@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    },
+    {
+      "item": "create:pink_seat"
+    }
+  ],
+  "result": {
+    "item": "interiors:pink_chair"
+  }
+}

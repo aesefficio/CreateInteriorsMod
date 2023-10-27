@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:wooden_slabs"
+    },
+    {
+      "item": "create:blue_seat"
+    }
+  ],
+  "result": {
+    "item": "interiors:blue_floor_chair"
+  }
+}
