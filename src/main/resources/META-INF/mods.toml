@@ -15,7 +15,7 @@ logoFile="mod_banner.png"
 credits = "rdh"
 authors = "sudolev"
 description = '''
-Create: Interiors is a new take on furniture, adding functional blocks that mesh seamlessly with the aesthetic and principles of the Create mod.
+Functional furniture that meshes seamlessly with the aesthetic and principles of the Create mod.
 '''
 
 [[dependencies.interiors]]
