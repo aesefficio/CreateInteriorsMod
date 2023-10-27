@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.test.iml" filepath="$PROJECT_DIR$/.idea/modules/CreateInteriorsMod-1.19.2.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Create_Interiors.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Create_Interiors.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Create_Interiors.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Create_Interiors.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/../BellsAndWhistlesMod/.idea/modules/ExtendedSeatingMod.main.iml" filepath="$PROJECT_DIR$/../BellsAndWhistlesMod/.idea/modules/ExtendedSeatingMod.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/../BellsAndWhistlesMod/.idea/modules/ExtendedSeatingMod.test.iml" filepath="$PROJECT_DIR$/../BellsAndWhistlesMod/.idea/modules/ExtendedSeatingMod.test.iml" />
     </modules>
