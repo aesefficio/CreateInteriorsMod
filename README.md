@@ -64,6 +64,12 @@
       <img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/cb8bbd71-91e9-484a-9c68-c6a7190fb681" height=100><br>
       ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<i>Seatwood Tray Tables</i>
    </li>
+   <li>Wall-Attached Table
+     <ul>
+      <li>Small table that works well with the Chair blocks</li>
+   </ul><br>
+   ⠀⠀⠀⠀<img src="https://i.ibb.co/Pz7qYx2/seatwood.png" height=80>⠀
+   </li>
 
 
 </ul> 
