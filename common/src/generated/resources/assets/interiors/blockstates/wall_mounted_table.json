@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "interiors:block/wall_mounted_table",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "interiors:block/wall_mounted_table"
+    },
+    "facing=south": {
+      "model": "interiors:block/wall_mounted_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "interiors:block/wall_mounted_table",
+      "y": 270
+    }
+  }
+}
