@@ -13,7 +13,7 @@
   "block.interiors.yellow_chair": "Желтое кресло",
   "block.interiors.lime_chair": "Лаймовое кресло",
   "block.interiors.green_chair": "Зеленое кресло",
-  "block.interiors.cyan_chair": "Кислотно-голубое кресло",
+  "block.interiors.cyan_chair": "Бирюзовое кресло",
   "block.interiors.light_blue_chair": "Голубое кресло",
   "block.interiors.blue_chair": "Синее кресло",
   "block.interiors.purple_chair": "Фиолетовое кресло",
@@ -29,7 +29,7 @@
   "block.interiors.yellow_floor_chair": "Желтое напольное кресло",
   "block.interiors.lime_floor_chair": "Лаймовое напольное кресло",
   "block.interiors.green_floor_chair": "Зеленое напольное кресло",
-  "block.interiors.cyan_floor_chair": "Кислотно-голубое напольное кресло",
+  "block.interiors.cyan_floor_chair": "Бирюзовое напольное кресло",
   "block.interiors.light_blue_floor_chair": "Голубое напольное кресло",
   "block.interiors.blue_floor_chair": "Синее напольное кресло",
   "block.interiors.purple_floor_chair": "Фиолетовое напольное кресло",
@@ -38,7 +38,7 @@
   "block.interiors.chair.tooltip": "КРЕСЛО",
   "block.interiors.chair.tooltip.summary": "Сядьте и наслаждайтесь поездкой еще больше! Прикрепит вас к движущемся _штуковинам_. Хороший вариант и для статичной мебели! Поставляется в различных цветах.",
   "block.interiors.chair.tooltip.condition1": "ПКМ по креслу",
-  "block.interiors.chair.tooltip.behaviour1": "Сажает игрока на _кресло_. Нажмите _кнопку_ _приседания_, чтобы слезть (Shift по умолчанию).",
+  "block.interiors.chair.tooltip.behaviour1": "Сажает игрока на _кресло_. Нажмите _кнопку_ _присесть_, чтобы слезть (Shift по умолчанию).",
   "block.interiors.chair.tooltip.condition2": "Используйте гаечный ключ на кресле",
   "block.interiors.chair.tooltip.behaviour2": "Выберите конфигурацию подлокотников кресла."
 }
