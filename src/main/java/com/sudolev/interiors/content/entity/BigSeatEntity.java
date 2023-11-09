@@ -1,6 +1,6 @@
 package com.sudolev.interiors.content.entity;
 
-import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
+import com.simibubi.create.content.contraptions.components.actors.SeatEntity;
 
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.BlockPos;

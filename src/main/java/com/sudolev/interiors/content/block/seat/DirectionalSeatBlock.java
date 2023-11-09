@@ -1,8 +1,8 @@
 package com.sudolev.interiors.content.block.seat;
 
 import com.simibubi.create.AllItems;
-import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
-import com.simibubi.create.content.equipment.wrench.IWrenchable;
+import com.simibubi.create.content.contraptions.components.actors.SeatBlock;
+import com.simibubi.create.content.contraptions.wrench.IWrenchable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

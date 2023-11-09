@@ -2,7 +2,6 @@ package com.sudolev.interiors.content.registry;
 
 import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
 import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
-import static com.simibubi.create.content.redstone.displayLink.AllDisplayBehaviours.assignDataBehaviour;
 import static com.simibubi.create.foundation.block.ProperWaterloggedBlock.WATERLOGGED;
 import static com.simibubi.create.foundation.data.TagGen.axeOnly;
 import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
@@ -10,30 +9,15 @@ import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags.AllItemTags;
 import com.simibubi.create.Create;
-import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
-import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
-import com.simibubi.create.content.redstone.displayLink.source.EntityNameDisplaySource;
+import com.simibubi.create.content.contraptions.components.actors.SeatInteractionBehaviour;
+import com.simibubi.create.content.contraptions.components.actors.SeatMovementBehaviour;
+import com.simibubi.create.content.logistics.block.display.AllDisplayBehaviours;
+import com.simibubi.create.content.logistics.block.display.source.EntityNameDisplaySource;
 import com.simibubi.create.foundation.block.DyedBlockList;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.SharedProperties;
-import com.simibubi.create.foundation.item.ItemDescription;
+import com.simibubi.create.foundation.item.TooltipHelper;
 import com.simibubi.create.foundation.utility.DyeHelper;
-
-import mezz.jei.api.recipe.RecipeType;
-import net.minecraft.client.gui.screens.recipebook.RecipeCollection;
-import net.minecraft.core.Registry;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-
 import com.sudolev.interiors.CreateInteriors;
 import com.sudolev.interiors.content.block.WallMountedTable;
 import com.sudolev.interiors.content.block.seat.BigChairBlock;
@@ -43,6 +27,17 @@ import com.sudolev.interiors.content.block.seat.DirectionalSeatBlock;
 import com.sudolev.interiors.content.block.seat.FloorChairBlock;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
+
+import net.minecraft.core.Registry;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 @SuppressWarnings("unused")
 public final class CIBlocks {
@@ -130,9 +125,9 @@ public final class CIBlocks {
 			})
 			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
-			.onRegisterAfter(Registry.ITEM_REGISTRY, v -> ItemDescription.useKey(v, "block.interiors.chair"))
-			.tag(CITags.Blocks.FLOOR_CHAIRS)
+				.onRegister(AllDisplayBehaviours.assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+				.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.interiors.chair"))
+				.tag(ast)
 			.item().tag(CITags.Items.FLOOR_CHAIRS)
 				   .model(AssetLookup.customBlockItemModel("floor_chair", colorName + "_floor_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
 				   .build().register();
@@ -189,8 +184,8 @@ public final class CIBlocks {
 			})
 			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
-			.onRegisterAfter(Registry.ITEM_REGISTRY, v -> ItemDescription.useKey(v, "block.interiors.chair"))
+				.onRegister(AllDisplayBehaviours.assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+				.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.interiors.chair"))
 			.tag(CITags.Blocks.CHAIRS)
 			.item()
 			.tag(CITags.Items.CHAIRS)
@@ -218,7 +213,7 @@ public final class CIBlocks {
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-		.onRegisterAfter(Registry.ITEM_REGISTRY, v -> ItemDescription.useKey(v, "block.interiors.chair"))
+			.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.interiors.chair"))
 		.item()
 		.model(AssetLookup.customBlockItemModel("chair", "kelp_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
 		.build()
@@ -243,7 +238,7 @@ public final class CIBlocks {
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-		.onRegisterAfter(Registry.ITEM_REGISTRY, v -> ItemDescription.useKey(v, "block.interiors.chair"))
+			.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.interiors.chair"))
 		.item()
 		.model(AssetLookup.customBlockItemModel("chair", "kelp_floor_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
 		.build()
@@ -264,8 +259,8 @@ public final class CIBlocks {
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-		.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
-		.onRegisterAfter(Registry.ITEM_REGISTRY, v -> ItemDescription.useKey(v, "block.create.seat"))
+			.onRegister(AllDisplayBehaviours.assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+			.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.create.brown_seat"))
 		.simpleItem()
 		.register();
 

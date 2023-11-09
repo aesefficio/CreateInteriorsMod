@@ -6,7 +6,10 @@ import org.jetbrains.annotations.NotNull;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.foundation.utility.BlockHelper;
+import com.sudolev.interiors.content.entity.BigSeatEntity;
+import com.sudolev.interiors.content.registry.CIBlocks;
 
+import io.github.fabricators_of_create.porting_lib.util.TagUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -22,9 +25,6 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import com.sudolev.interiors.content.entity.BigSeatEntity;
-import com.sudolev.interiors.content.registry.CIBlocks;
 
 @SuppressWarnings("NullableProblems")
 public class BigChairBlock extends ChairBlock {
@@ -58,7 +58,7 @@ public class BigChairBlock extends ChairBlock {
 			return InteractionResult.PASS;
 		}
 
-		DyeColor color = DyeColor.getColor(heldItem);
+		DyeColor color = TagUtil.getColorFromStack(heldItem);
 
 		if(color != null && color != this.color) {
 			if(world.isClientSide) return InteractionResult.SUCCESS;
