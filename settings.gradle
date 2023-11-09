@@ -1,13 +1,9 @@
 pluginManagement {
-    // when using additional gradle plugins like shadow,
-    // add their repositories to this list!
-    repositories {
-        maven { url "https://maven.fabricmc.net/" }
-        maven { url "https://maven.architectury.dev/" }
-        maven { url "https://files.minecraftforge.net/maven/" }
-        gradlePluginPortal()
-    }
+	repositories {
+		maven { url = "https://maven.fabricmc.net/" }
+		maven { url = "https://server.bbkr.space/artifactory/libs-release/" }
+		maven { url = "https://maven.quiltmc.org/repository/release" }
+		mavenCentral()
+		gradlePluginPortal()
+	}
 }
-
-// no colon because gradle
-rootProject.name = "Create Interiors"
