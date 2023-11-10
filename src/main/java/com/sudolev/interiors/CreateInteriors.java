@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.sudolev.interiors.content.registry.CIBlocks;
 import com.sudolev.interiors.content.registry.CIEntities;
+import com.sudolev.interiors.content.registry.CITags;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -29,9 +30,10 @@ public final class CreateInteriors implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("{} v{} initializing", ID, VERSION);
+		CITags.init();
 		CIBlocks.register();
 		CIEntities.register();
-
+		REGISTRATE.register();
 		ModLoadingContext modLoadingContext = new ModLoadingContext();
 
 	}

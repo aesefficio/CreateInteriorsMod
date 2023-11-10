@@ -118,17 +118,18 @@ public final class CIBlocks {
 									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_seat"));
 
 				ShapelessRecipeBuilder.shapeless(c.get())
-									  .requires(CITags.Items.FLOOR_CHAIRS)
+						// .requires(CITags.Items.FLOOR_CHAIRS)
 									  .requires(color.getTag())
-									  .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
+						// .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
 									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
 			})
 			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 				.onRegister(AllDisplayBehaviours.assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 				.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.interiors.chair"))
-				.tag(ast)
-			.item().tag(CITags.Items.FLOOR_CHAIRS)
+				.tag(CITags.BlockTags.FLOOR_CHAIRS.tag)
+				.item()
+				.tag(CITags.ItemTags.FLOOR_CHAIRS.tag)
 				   .model(AssetLookup.customBlockItemModel("floor_chair", colorName + "_floor_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
 				   .build().register();
 	});
@@ -173,22 +174,22 @@ public final class CIBlocks {
 				ShapelessRecipeBuilder.shapeless(c.get())
 									  .requires(ItemTags.WOODEN_SLABS)
 									  .requires(FLOOR_CHAIRS.get(color).asStack().getItem()) // REMOMVE ItemLike if it breaks stuff!
-									  .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
+						// .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
 									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
 
 				ShapelessRecipeBuilder.shapeless(c.get())
-									  .requires(CITags.Items.CHAIRS)
+						// .requires(CITags.ItemTags.CHAIRS.tag)
 									  .requires(color.getTag())
-									  .unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
+						// .unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.ItemTags.CHAIRS.tag))
 									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
 			})
 			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 				.onRegister(AllDisplayBehaviours.assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 				.onRegisterAfter(Registry.ITEM_REGISTRY, v -> TooltipHelper.referTo(v, "block.interiors.chair"))
-			.tag(CITags.Blocks.CHAIRS)
+				.tag(CITags.BlockTags.CHAIRS.tag)
 			.item()
-			.tag(CITags.Items.CHAIRS)
+				.tag(CITags.ItemTags.CHAIRS.tag)
 			.model(AssetLookup.customBlockItemModel("chair", colorName + "_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
 			.build()
 			.register();

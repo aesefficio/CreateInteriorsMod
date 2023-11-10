@@ -3,7 +3,7 @@
   "id": "interiors",
   "version": "${version}",
   "name": "Create: Interiors",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "An add-on mod that extends Create's furnishing possibilities.",
   "authors": [
     "sudolev"
   ],
