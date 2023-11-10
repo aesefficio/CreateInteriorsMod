@@ -63,7 +63,7 @@ public class CITags {
 		return TagGen.tagBlockAndItem(path);
 	}
 
-	public static void init() {
+	public static void register() {
 		BlockTags.init();
 		ItemTags.init();
 	}
