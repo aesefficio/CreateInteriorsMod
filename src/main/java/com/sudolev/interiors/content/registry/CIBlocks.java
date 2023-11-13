@@ -41,6 +41,11 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 
 @SuppressWarnings("unused")
 public final class CIBlocks {
+
+	static {
+		Create.REGISTRATE.creativeModeTab(() -> CITab.INTERIORS_TAB);
+	}
+
 	public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
 		.initialProperties(SharedProperties::wooden)
 		.properties(p -> p.color(MaterialColor.TERRACOTTA_ORANGE))
