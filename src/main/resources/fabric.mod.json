@@ -3,7 +3,7 @@
   "id": "interiors",
   "version": "${version}",
   "name": "Create: Interiors",
-  "description": "An add-on mod that extends Create's furnishing possibilities.",
+  "description": "Extend Create's furnishing possibilities.",
   "authors": [
     "sudolev"
   ],
@@ -22,11 +22,11 @@
   "entrypoints": {
     "main": [
       "com.sudolev.interiors.CreateInteriors"
+    ],
+    "mixins": [
+      "interiors.mixins.json"
     ]
   },
-  "mixins": [
-    "interiors.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
