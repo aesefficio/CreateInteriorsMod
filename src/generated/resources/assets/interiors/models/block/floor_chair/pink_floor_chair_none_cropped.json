@@ -1,9 +1,0 @@
-{
-  "parent": "interiors:block/floor_chair/none_cropped",
-  "textures": {
-    "side": "create:block/seat/side_pink",
-    "side_front": "create:block/seat/side_pink",
-    "side_top": "interiors:block/chair/side_top_pink",
-    "top": "create:block/seat/top_pink"
-  }
-}
