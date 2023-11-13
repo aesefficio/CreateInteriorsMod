@@ -50,6 +50,7 @@ processResources {
 	Map<String, String> properties = new HashMap<>()
 	properties.put("version", version)
 	properties.put("loader_version", loader_version)
+	properties.put("fabric_loader_version", fabric_loader_version)
 	properties.put("fabric_version", fabric_version)
 	properties.put("create_version", create_version)
 	properties.put("minecraft_version", minecraft_version)
