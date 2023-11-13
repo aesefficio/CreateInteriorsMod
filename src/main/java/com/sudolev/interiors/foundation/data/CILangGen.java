@@ -6,7 +6,6 @@ import com.simibubi.create.foundation.utility.FilesHelper;
 import com.sudolev.interiors.CreateInteriors;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 public class CILangGen extends FabricLanguageProvider {
 	protected CILangGen(FabricDataGenerator dataGenerator) {

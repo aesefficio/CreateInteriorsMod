@@ -18,7 +18,6 @@ group = project.maven_group
 // example: 1.0.0+1.18.2-100
 String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
 version = "${mod_version}+${minecraft_version}" + (buildNumber != null ? "-${buildNumber}" : "")
-def dataOutput = 'src/main/generated'
 
 repositories {
 	maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
@@ -71,8 +70,6 @@ dependencies {
 //    modCompileOnly("dev.emi:emi:${emi_version}")
 }
 
-
-sourceSets { main { resources { srcDirs += dataOutput } } }
 processResources {
 	// require dependencies to be the version compiled against or newer
 	Map<String, String> properties = new HashMap<>()
@@ -93,22 +90,6 @@ machete {
 	// disable machete locally for faster builds
 	enabled = buildNumber != null
 }
-
-loom {
-	runs {
-		datagen {
-			server()
-
-			name "Data Generation"
-			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file(dataOutput)}"
-
-			runDir "build/datagen"
-		}
-	}
-}
-
-sourceSets { main { resources { srcDirs += dataOutput } } }
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.release = Integer.parseInt(sourceCompatibility)
