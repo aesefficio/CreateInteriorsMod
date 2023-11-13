@@ -18,12 +18,12 @@ public final class CITab {
 
     public static final AllCreativeModeTabs.TabInfo INTERIORS_TAB = register("base",
             () -> FabricItemGroup.builder()
-                    .title(Component.translatable("itemGroup.create.base"))
+                    .title(Component.translatable("itemGroup.interiors"))
                     .icon(() -> CIBlocks.CHAIRS.get(DyeColor.RED).asStack())
                     .build());
 
     private static AllCreativeModeTabs.TabInfo register(String name, Supplier<CreativeModeTab> supplier) {
-        ResourceLocation id = Create.asResource(name);
+        ResourceLocation id = new ResourceLocation(CreateInteriors.ID);
         ResourceKey<CreativeModeTab> key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, id);
         CreativeModeTab tab = supplier.get();
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, key, tab);
