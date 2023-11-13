@@ -41,5 +41,6 @@
   "block.interiors.chair.tooltip.condition1": "우클릭",
   "block.interiors.chair.tooltip.behaviour1": "_의자_에 앉습니다. 왼쪽 Shift를 눌러 일어섭니다.",
   "block.interiors.chair.tooltip.condition2": "렌치로 우클릭",
-  "block.interiors.chair.tooltip.behaviour2": "_의자_의 팔걸이 형태를 바꿉니다."
+  "block.interiors.chair.tooltip.behaviour2": "_의자_의 팔걸이 형태를 바꿉니다.",
+  "itemGroup.interiors": "Create: Interiors"
 }

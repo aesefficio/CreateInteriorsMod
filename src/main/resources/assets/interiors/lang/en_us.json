@@ -44,5 +44,6 @@
   "block.interiors.white_floor_chair": "White Floor Chair",
   "block.interiors.yellow_chair": "Yellow Chair",
   "block.interiors.yellow_floor_chair": "Yellow Floor Chair",
-  "entity.interiors.big_seat": "Big Seat"
+  "entity.interiors.big_seat": "Big Seat",
+  "itemGroup.interiors": "Create: Interiors"
 }
