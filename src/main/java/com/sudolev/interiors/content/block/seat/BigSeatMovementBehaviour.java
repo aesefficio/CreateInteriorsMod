@@ -1,19 +1,18 @@
 package com.sudolev.interiors.content.block.seat;
 
-import java.util.Map;
-import java.util.UUID;
-
 import com.simibubi.create.content.contraptions.AbstractContraptionEntity;
 import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovementContext;
 import com.simibubi.create.foundation.utility.VecHelper;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.phys.Vec3;
+
+import java.util.Map;
+import java.util.UUID;
 
 public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
 	@Override
@@ -42,6 +41,6 @@ public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
 		toDismount.stopRiding();
 		Vec3 position = VecHelper.getCenterOf(pos).add(0, 1f, 0);
 		toDismount.teleportTo(position.x, position.y, position.z);
-		toDismount.getPersistentData().remove("ContraptionDismountLocation");
+        toDismount.getCustomData().remove("ContraptionDismountLocation");
 	}
 }

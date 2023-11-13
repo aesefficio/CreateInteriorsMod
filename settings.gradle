@@ -1,11 +1,12 @@
 pluginManagement {
     repositories {
-        maven { url 'https://maven.fabricmc.net/' }
-        maven { url 'https://maven.architectury.dev/' }
-        maven { url 'https://maven.neoforged.net/releases/' }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven { url = "https://server.bbkr.space/artifactory/libs-release/" }
+        maven { url = "https://maven.quiltmc.org/repository/release" }
+        mavenCentral()
         gradlePluginPortal()
     }
 }
-
-// no colon because gradle
-rootProject.name = "Create Interiors"

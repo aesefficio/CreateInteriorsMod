@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "interiors",
+  "version": "${version}",
+  "name": "Create: Interiors",
+  "description": "Extend Create's furnishing possibilities.",
+  "authors": [
+    "sudolev"
+  ],
+  "contributors": [
+    "rdh"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/interiors",
+    "issues": "https://github.com/sudolev/CreateInteriorsMod/issues",
+    "email": "i@sudolev.com",
+    "sources": "https://github.com/sudolev/CreateInteriorsMod"
+  },
+  "license": "GPL-3.0",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.sudolev.interiors.CreateInteriors"
+    ]
+  },
+  "mixins": [
+    "interiors.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "create": "${create_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}

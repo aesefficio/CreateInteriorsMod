@@ -1,132 +1,105 @@
-//file:noinspection GroovyAssignabilityCheck
 plugins {
-    id 'dev.architectury.loom' version "${loom_version}"
-    id 'io.github.juuxel.loom-vineflower' version "${vineflower_version}"
-    id 'io.github.p03w.machete' version '2.0.1'
-    id 'maven-publish'
+	id 'fabric-loom' version '1.4-SNAPSHOT'
+	id 'maven-publish'
+	id "io.github.p03w.machete" version "1.+" // automatic jar compressing on build
 }
 
-sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
-
+version = project.mod_version
 group = project.maven_group
-archivesBaseName = project.archives_base_name
-String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
-version = "${mod_version}${ buildNumber != null ? "-${buildNumber}" : ''}+mc${minecraft_version}"
 
-def generatedResources = file('src/generated/resources')
-
-sourceSets.main.resources {
-    srcDir(generatedResources)
-    exclude '.cache/'
-}
-
-loom {
-    silentMojangMappingsLicense()
-
-    forge {
-        mixinConfig "interiors.mixins.json"
-    }
-
-    runs {
-        data {
-            data()
-            programArgs '--mod', 'interiors'
-            programArg '--all'
-            programArgs '--output', generatedResources.absolutePath
-            programArgs '--existing', file('src/main/resources/').absolutePath
-            programArgs '--existing-mod', 'create'
-        }
-    }
+base {
+	archivesName = project.archives_base_name
 }
 
 repositories {
-    mavenCentral()
-    mavenLocal()
-    maven { url 'https://maven.parchmentmc.org' }
-    maven { url 'https://maven.quiltmc.org/repository/release' }
-    maven { url 'https://maven.blamejared.com/' }
-    maven { url 'https://maven.neoforged.net/releases/' }
-
-    maven {
-        url 'https://maven.tterrag.com/'
-        content {
-            includeGroup 'com.jozufozu.flywheel'
-            includeGroup 'com.tterrag.registrate'
-            includeGroup 'com.simibubi.create'
-        }
-    }
-    maven {
-        url 'https://api.modrinth.com/maven'
-        content { includeGroup 'maven.modrinth' }
-    }
-    maven {
-        url 'https://www.cursemaven.com'
-        content { includeGroup 'curse.maven' }
-    }
-}
-
-configurations {
-    jarJar
-
-    modImplementation.extendsFrom jarJar
-    include.extendsFrom jarJar
+	maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
+	maven { url = "https://dvs1.progwml6.com/files/maven/" } // JEI
+	maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
+	maven { url = "https://maven.quiltmc.org/repository/release" } // Quilt Mappings
+	maven { url = "https://api.modrinth.com/maven" } // LazyDFU
+	maven { url = "https://maven.terraformersmc.com/releases/" } // Mod Menu
+	maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
+	maven { url = "https://cursemaven.com" } // Forge Config API Port
+	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
+	maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
+	maven { url = "https://maven.tterrag.com/" } // Flywheel
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:${minecraft_version}"
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings(loom.layered {
+		it.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${qm_version}:intermediary-v2")
+		it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+		it.officialMojangMappings { nameSyntheticMembers = false }
+	})
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    mappings(loom.layered {
-        it.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${quilt_mappings}:intermediary-v2")
-        it.parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
-        it.officialMojangMappings { nameSyntheticMembers = false }
-    })
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    forge "net.neoforged:forge:${minecraft_version}-${neo_version}"
+	modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
 
-    // Create and Co.
-    modImplementation "com.tterrag.registrate:Registrate:${registrate_version}"
-    modImplementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
-    modImplementation "com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}"
-
-    // JEI
-    modCompileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-    modCompileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
-    modLocalRuntime("mezz.jei:jei-${minecraft_version}-forge:${jei_version}") { transitive = false }
-
-    // Dev QOL
-    modLocalRuntime 'curse.maven:better-mods-button-541584:4665757'
-    modLocalRuntime 'curse.maven:ferritecore-429235:4574361'
-    modLocalRuntime "curse.maven:catalogue-459701:4766090"
+	// Development QOL
+	modLocalRuntime("maven.modrinth:lazydfu:${lazydfu_version}")
+	modLocalRuntime("com.terraformersmc:modmenu:${modmenu_version}")
 }
 
 processResources {
-    def props = [
-            version: mod_version,
-            neo_version: neo_version.split("\\.")[0], // only specify major version of forge
-            minecraft_version: minecraft_version,
-            create_version: create_version.split("-")[0] // cut off build number
-    ]
-    inputs.properties props
+	// require dependencies to be the version compiled against or newer
+	Map<String, String> properties = new HashMap<>()
+	properties.put("version", version)
+	properties.put("loader_version", loader_version)
+	properties.put("fabric_version", fabric_version)
+	properties.put("create_version", create_version)
+	properties.put("minecraft_version", minecraft_version)
 
-    filesMatching('META-INF/mods.toml') {
-        expand props
-    }
+	properties.forEach((k, v) -> inputs.property(k, v))
 
-    //don't include create's stuff in the jar in case they are there
-    exclude 'assets/create.zip'
-    exclude 'assets/create'
+	filesMatching("fabric.mod.json") {
+		expand properties
+	}
 }
 
-// disable machete locally for faster builds
-machete { enabled = buildNumber != null }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.encoding = 'UTF-8'
-    it.options.release.set 17
+	it.options.release = 17
 }
 
-java { withSourcesJar() }
+java {
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
 
-remapJar {
-    archiveClassifier.set('dev')
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}" }
+	}
+}
+
+machete {
+	// disable machete locally for faster builds
+	enabled != null
+}
+
+// configure the maven publication
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+	repositories {
+		// Add repositories to publish to here.
+		// Notice: This block does NOT have the same function as the block in the top level.
+		// The repositories here will be used for publishing your artifact, not for
+		// retrieving dependencies.
+	}
 }
