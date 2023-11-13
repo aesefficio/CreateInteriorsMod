@@ -40,5 +40,6 @@
   "block.interiors.chair.tooltip.condition1": "ПКМ по креслу",
   "block.interiors.chair.tooltip.behaviour1": "Сажает игрока на _кресло_. Нажмите _кнопку_ _присесть_, чтобы слезть (Shift по умолчанию).",
   "block.interiors.chair.tooltip.condition2": "Используйте гаечный ключ на кресле",
-  "block.interiors.chair.tooltip.behaviour2": "Выберите конфигурацию подлокотников кресла."
+  "block.interiors.chair.tooltip.behaviour2": "Выберите конфигурацию подлокотников кресла.",
+  "itemGroup.interiors": "Create: Interiors"
 }

@@ -26,5 +26,6 @@
   "block.interiors.chair.tooltip.condition2": "When back face is R-Clicked with Wrench",
   "block.interiors.chair.tooltip.behaviour2": "Toggles Back Size",
   "block.interiors.chair.tooltip.condition3": "When other faces are R-Clicked with Wrench",
-  "block.interiors.chair.tooltip.behaviour3": "Toggles Individual _Chair_ Armrests. Shift R-Click to toggle both at once!"
+  "block.interiors.chair.tooltip.behaviour3": "Toggles Individual _Chair_ Armrests. Shift R-Click to toggle both at once!",
+  "itemGroup.interiors": "Create: Interiors"
 }
