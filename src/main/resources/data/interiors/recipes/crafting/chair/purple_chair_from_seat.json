@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    },
+    {
+      "item": "create:purple_seat"
+    }
+  ],
+  "result": {
+    "item": "interiors:purple_chair"
+  }
+}

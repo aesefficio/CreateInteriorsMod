@@ -1,0 +1,9 @@
+{
+  "parent": "interiors:block/chair/none",
+  "textures": {
+    "side": "create:block/seat/side_green",
+    "side_front": "create:block/seat/side_green",
+    "side_top": "interiors:block/chair/side_top_green",
+    "top": "create:block/seat/top_green"
+  }
+}
