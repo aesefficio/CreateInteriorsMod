@@ -30,7 +30,7 @@
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
-    "create": "${create_version}",
+    "create": ">=0.5.1-d-build.1161+mc1.20.1",
     "minecraft": "${minecraft_version}"
   }
 }
