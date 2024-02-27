@@ -14,7 +14,8 @@ dependencies {
 	modImplementation "com.tterrag.registrate:Registrate:${registrate}"
 	modImplementation "com.jozufozu.flywheel:flywheel-forge-${flywheel_mc}:${flywheel}"
 
-	//include "com.github.LlamaLad7:MixinExtras:${rootProject.mixin_extras}"
+	compileOnly("io.github.llamalad7:mixinextras-common:${rootProject.mixin_extras}")
+	annotationProcessor(implementation(include("io.github.llamalad7:mixinextras-forge:${rootProject.mixin_extras}")))
 
 	// Dev Env Optimizations
 	if (rootProject.hasProperty("bmb")) {

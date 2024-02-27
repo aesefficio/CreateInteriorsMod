@@ -20,7 +20,7 @@ import com.sudolev.interiors.content.registry.CIBlocks;
 
 public class CITabImpl {
 	public static final TabInfo TAB = register("main", FabricItemGroup.builder()
-		.title(Component.translatable("itemGroup.create.base"))
+		.title(Component.translatable("itemGroup.interiors"))
 		.icon(() -> CIBlocks.CHAIRS.get(DyeColor.RED).asItem().getDefaultInstance())
 		.displayItems((parameters, output) -> CreateInteriors.REGISTRATE
 			.getAll(Registries.BLOCK).stream()
@@ -29,7 +29,7 @@ public class CITabImpl {
 		::build);
 
 
-	public static ResourceKey<CreativeModeTab> getTab() {
+	public static ResourceKey<CreativeModeTab> getKey() {
 		return TAB.key();
 	}
 
@@ -39,5 +39,9 @@ public class CITabImpl {
 		CreativeModeTab tab = supplier.get();
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, key, tab);
 		return new TabInfo(key, tab);
+	}
+
+	public static CreativeModeTab get() {
+		return TAB.tab();
 	}
 }

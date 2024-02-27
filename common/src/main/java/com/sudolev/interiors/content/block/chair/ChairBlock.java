@@ -1,5 +1,7 @@
 package com.sudolev.interiors.content.block.chair;
 
+import com.sudolev.interiors.Utils;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
@@ -21,7 +23,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
@@ -39,20 +40,6 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		super(properties, color);
 		this.color = color;
 		registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false).setValue(ARMRESTS, DEFAULT).setValue(CROPPED_BACK, false));
-	}
-
-	public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
-		VoxelShape[] buffer = new VoxelShape[]{ shape, Shapes.empty() };
-
-		int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
-		for(int i = 0; i < times; i++) {
-			buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) ->
-				buffer[1] = Shapes.or(buffer[1], Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
-			buffer[0] = buffer[1];
-			buffer[1] = Shapes.empty();
-		}
-
-		return buffer[0];
 	}
 
 	@Override
@@ -149,9 +136,9 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return switch(state.getValue(FACING)) {
 			case NORTH -> shape();
-			case SOUTH -> rotateShape(Direction.NORTH, Direction.WEST, shape());
-			case WEST -> rotateShape(Direction.NORTH, Direction.EAST, shape());
-			default -> rotateShape(Direction.NORTH, Direction.SOUTH, shape());
+			case SOUTH -> Utils.rotateShape(Direction.NORTH, Direction.WEST, shape());
+			case WEST -> Utils.rotateShape(Direction.NORTH, Direction.EAST, shape());
+			default -> Utils.rotateShape(Direction.NORTH, Direction.SOUTH, shape());
 		};
 	}
 

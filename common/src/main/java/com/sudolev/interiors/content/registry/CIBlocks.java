@@ -1,6 +1,5 @@
 package com.sudolev.interiors.content.registry;
 
-import io.github.fabricators_of_create.porting_lib.models.generators.ConfiguredModel;
 
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags.AllItemTags;
@@ -35,6 +34,10 @@ import com.sudolev.interiors.content.block.chair.FloorChairBlock;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
+import org.jetbrains.annotations.ApiStatus;
+
+import dev.architectury.injectables.annotations.ExpectPlatform;
+
 import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
 import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
 import static com.simibubi.create.content.redstone.displayLink.AllDisplayBehaviours.assignDataBehaviour;
@@ -46,7 +49,7 @@ import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 public final class CIBlocks {
 
 	static {
-		REGISTRATE.useCreativeTab(CITab.getTab());
+		setupCreativeTab();
 	}
 
 	public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
@@ -63,17 +66,13 @@ public final class CIBlocks {
 		.initialProperties(SharedProperties::wooden)
 		.properties(p -> p.mapColor(DyeColor.ORANGE))
 		.transform(axeOnly())
-		.blockstate((context, provider) -> provider.getVariantBuilder(context.get())
-												   .forAllStatesExcept(state -> {
-													   String facing = state.getValue(ChairBlock.FACING).getSerializedName();
-													   int rotation = facing(state);
+		.blockstate((c, p) -> p.getVariantBuilder(c.get())
+			.forAllStatesExcept(state -> {
+				String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+				int rotation = facing(state);
 
-													   return ConfiguredModel.builder()
-														   .modelFile(provider.models().getExistingFile(
-															   provider.modLoc("block/wall_mounted_table")))
-														   .rotationY(rotation)
-														   .build();
-												   }, WATERLOGGED))
+				return modelWithRotation(getExistingModelFile(p, "block/wall_mounted_table"), rotation);
+			}, WATERLOGGED))
 		.simpleItem()
 		.register();
 
@@ -84,45 +83,40 @@ public final class CIBlocks {
 			.properties(p -> p.mapColor(color))
 			.transform(axeOnly())
 			.blockstate((c, p) -> p.getVariantBuilder(c.get())
-								   .forAllStatesExcept(state -> {
-									   String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
-									   String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+				.forAllStatesExcept(state -> {
+					String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+					String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-									   int rotation = facing(state);
+					int rotation = facing(state);
 
-									   ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
-									   ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
-									   ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
+					ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
+					ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
+					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
-									   return ConfiguredModel.builder().modelFile(p.models()
-																				   .withExistingParent("block/floor_chair/" + colorName + "_floor_chair_" + armrest + cropped_state,
-																					   p.modLoc("block/floor_chair/" + armrest + cropped_state))
-																				   .texture("top", top)
-																				   .texture("side", side)
-																				   .texture("side_front", side)
-																				   .texture("side_top", sideTop))
-																	   .rotationY(rotation)
-																	   .build();
-								   }, WATERLOGGED))
+					Object model = customChairModelFile(p, "block/floor_chair/" + armrest + cropped_state,
+						"block/floor_chair/" + colorName + "_floor_chair_" + armrest + cropped_state,
+						top, side, sideTop, side);
+					return modelWithRotation(model, rotation);
+				}, WATERLOGGED))
 			.recipe((c, p) -> {
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires(DyeHelper.getWoolOfDye(color))
-									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName()));
+					.requires(ItemTags.WOODEN_SLABS)
+					.requires(ItemTags.WOODEN_SLABS)
+					.requires(DyeHelper.getWoolOfDye(color))
+					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
+					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName()));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires(AllBlocks.SEATS.get(color))
-									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_seat"));
+					.requires(ItemTags.WOODEN_SLABS)
+					.requires(AllBlocks.SEATS.get(color))
+					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
+					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_seat"));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(CITags.Items.FLOOR_CHAIRS)
-									  .requires(Utils.tagFromColor(color))
-									  .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
-									  .save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
+					.requires(CITags.Items.FLOOR_CHAIRS)
+					.requires(Utils.tagFromColor(color))
+					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
+					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
 			})
 			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -130,8 +124,9 @@ public final class CIBlocks {
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
 			.tag(CITags.Blocks.FLOOR_CHAIRS)
 			.item().tag(CITags.Items.FLOOR_CHAIRS)
-				   .model(AssetLookup.customBlockItemModel("floor_chair", colorName + "_floor_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
-				   .build().register();
+			.model(AssetLookup.customBlockItemModel("floor_chair",
+				colorName + "_floor_chair_" + ChairBlock.ArmrestConfiguration.DEFAULT.getSerializedName()))
+			.build().register();
 	});
 
 	public static final DyedBlockList<BigChairBlock> CHAIRS = new DyedBlockList<>(color -> {
@@ -142,47 +137,45 @@ public final class CIBlocks {
 			.properties(p -> p.mapColor(color))
 			.transform(axeOnly())
 			.blockstate((c, p) -> p.getVariantBuilder(c.get())
-								   .forAllStatesExcept(state -> {
-									   String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
-									   String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+				.forAllStatesExcept(state -> {
+					String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+					String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-									   int rotation = facing(state);
+					int rotation = facing(state);
 
-									   ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
-									   ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
-									   ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
+					ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
+					ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
+					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
-									   return ConfiguredModel.builder().modelFile(p.models()
-																				   .withExistingParent("block/chair/" + colorName + "_chair_" + armrest + cropped_state,
-																					   p.modLoc("block/chair/" + armrest + cropped_state))
-																				   .texture("top", top).texture("side_top", sideTop)
-																				   .texture("side_front", side).texture("side", side))
-																	   .rotationY(rotation).build();
-								   }, WATERLOGGED))
+					Object model = customChairModelFile(p, "block/chair/" + armrest + cropped_state,
+						"block/chair/" + colorName + "_chair_" + armrest + cropped_state,
+						top, side, sideTop, side);
+					return modelWithRotation(model, rotation);
+				}, WATERLOGGED))
 			.recipe((c, p) -> {
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires(ItemTags.PLANKS)
-									  .requires(DyeHelper.getWoolOfDye(color))
-									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName()));
+					.requires(ItemTags.WOODEN_SLABS)
+					.requires(ItemTags.PLANKS)
+					.requires(DyeHelper.getWoolOfDye(color))
+					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
+					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName()));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(ItemTags.PLANKS)
-									  .requires(AllBlocks.SEATS.get(color))
-									  .unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
+					.requires(ItemTags.PLANKS)
+					.requires(AllBlocks.SEATS.get(color))
+					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
+					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(ItemTags.WOODEN_SLABS)
-									  .requires(FLOOR_CHAIRS.get(color))
-									  .unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
-									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
+					.requires(ItemTags.WOODEN_SLABS)
+					.requires(FLOOR_CHAIRS.get(color))
+					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
+					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
-									  .requires(CITags.Items.CHAIRS)
-									  .requires(Utils.tagFromColor(color))
-									  .unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
-									  .save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
+					.requires(CITags.Items.CHAIRS)
+					.requires(Utils.tagFromColor(color))
+					.unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
+					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
 			})
 			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -201,18 +194,16 @@ public final class CIBlocks {
 		.properties(p -> p.mapColor(DyeColor.BLACK))
 		.transform(axeOnly())
 		.blockstate((c, p) -> p.getVariantBuilder(c.get())
-							   .forAllStatesExcept(state -> {
-								   String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
-								   String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+			.forAllStatesExcept(state -> {
+				String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-								   int rotation = facing(state);
+				int rotation = facing(state);
 
-								   return ConfiguredModel.builder().modelFile(p.models()
-																			   .withExistingParent("block/chair/kelp_chair_" + armrest + cropped_state,
-																				   p.modLoc("block/chair/" + armrest + cropped_state)))
-																   .rotationY(rotation)
-																   .build();
-							   }, WATERLOGGED))
+				return modelWithRotation(createModelFileWithExistingParent(p,
+					"block/chair/" + armrest + cropped_state,
+					"block/chair/kelp_chair_" + armrest + cropped_state), rotation);
+			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 		.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
@@ -226,18 +217,15 @@ public final class CIBlocks {
 		.properties(p -> p.mapColor(DyeColor.BLACK))
 		.transform(axeOnly())
 		.blockstate((c, p) -> p.getVariantBuilder(c.get())
-							   .forAllStatesExcept(state -> {
-								   String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
-								   String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
+			.forAllStatesExcept(state -> {
+				String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
+				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-								   int rotation = facing(state);
-
-								   return ConfiguredModel.builder().modelFile(p.models()
-																			   .withExistingParent("block/chair/kelp_floor_chair_" + armrest + cropped_state,
-																				   p.modLoc("block/floor_chair/" + armrest + cropped_state)))
-																   .rotationY(rotation)
-																   .build();
-							   }, WATERLOGGED))
+				int rotation = facing(state);
+				return modelWithRotation(createModelFileWithExistingParent(p,
+					"block/floor_chair/" + armrest + cropped_state,
+					"block/chair/kelp_floor_chair_" + armrest + cropped_state), rotation);
+			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 		.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
@@ -250,15 +238,12 @@ public final class CIBlocks {
 		.initialProperties(SharedProperties::wooden)
 		.properties(p -> p.mapColor(DyeColor.BLACK))
 		.transform(axeOnly())
-		.blockstate((context, provider) -> provider.getVariantBuilder(context.get())
-												   .forAllStatesExcept(state -> {
-													   String facing = state.getValue(ChairBlock.FACING).getSerializedName();
-													   int rotation = facing(state);
-
-													   return ConfiguredModel.builder()
-														   .modelFile(provider.models().getExistingFile(provider.modLoc("block/kelp_seat"))).rotationY(rotation)
-														   .build();
-												   }, WATERLOGGED))
+		.blockstate((c, p) -> p.getVariantBuilder(c.get())
+			.forAllStatesExcept(state -> {
+				String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+				int rotation = facing(state);
+				return modelWithRotation(getExistingModelFile(p, "block/kelp_seat"), rotation);
+			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 		.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
@@ -267,16 +252,46 @@ public final class CIBlocks {
 		.register();
 
 	public static void register() {
-		CreateInteriors.LOGGER.info("Registering blocks!");
+		// load class
 	}
 
 	private static int facing(BlockState state) {
 		return switch(state.getValue(ChairBlock.FACING)) {
-			case NORTH -> 0;
+			case NORTH, UP, DOWN -> 0;
 			case EAST -> 90;
 			case SOUTH -> 180;
 			case WEST -> 270;
-			default -> 0;
 		};
+	}
+
+	@ExpectPlatform
+	@ApiStatus.Internal
+	public static void setupCreativeTab() {
+		throw new AssertionError();
+	}
+
+	@ExpectPlatform
+	@ApiStatus.Internal
+	public static <ModelFile> ModelFile createModelFileWithExistingParent(Object /* BlockStateProvider */ p, String parent, String name) {
+		throw new AssertionError();
+	}
+
+	@ExpectPlatform
+	@ApiStatus.Internal
+	public static <ModelFile> ModelFile getExistingModelFile(Object /* BlockStateProvider */ p, String name) {
+		throw new AssertionError();
+	}
+
+	@ExpectPlatform
+	@ApiStatus.Internal
+	public static <ModelFile> ModelFile customChairModelFile(Object /* BlockStateProvider */ p, String parent, String name,
+															  ResourceLocation top, ResourceLocation side, ResourceLocation sideTop, ResourceLocation sideFront) {
+		throw new AssertionError();
+	}
+
+	@ExpectPlatform
+	@ApiStatus.Internal
+	public static <ConfiguredModel> ConfiguredModel modelWithRotation(Object /* ModelFile */ model, int rotation) {
+		throw new AssertionError();
 	}
 }

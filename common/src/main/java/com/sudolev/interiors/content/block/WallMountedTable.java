@@ -1,5 +1,7 @@
 package com.sudolev.interiors.content.block;
 
+import com.sudolev.interiors.Utils;
+
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 
 import net.minecraft.core.BlockPos;
@@ -14,7 +16,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WallMountedTable extends Block implements ProperWaterloggedBlock {
@@ -30,10 +31,8 @@ public class WallMountedTable extends Block implements ProperWaterloggedBlock {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		return switch(state.getValue(FACING)) {
-			case NORTH -> SHAPE;
-			case SOUTH -> SHAPE;
-			case WEST -> rotateShape(Direction.NORTH, Direction.EAST, SHAPE);
-			default -> rotateShape(Direction.NORTH, Direction.EAST, SHAPE);
+			case NORTH, SOUTH -> SHAPE;
+			default -> Utils.rotateShape(Direction.NORTH, Direction.EAST, SHAPE);
 		};
 	}
 
@@ -46,19 +45,6 @@ public class WallMountedTable extends Block implements ProperWaterloggedBlock {
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING).add(WATERLOGGED);
-	}
-
-	public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
-		VoxelShape[] buffer = new VoxelShape[]{ shape, Shapes.empty() };
-
-		int times = (to.ordinal() - from.get2DDataValue() + 4) % 4;
-		for(int i = 0; i < times; i++) {
-			buffer[0].forAllBoxes((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = Shapes.or(buffer[1], Shapes.create(1 - maxZ, minY, minX, 1 - minZ, maxY, maxX)));
-			buffer[0] = buffer[1];
-			buffer[1] = Shapes.empty();
-		}
-
-		return buffer[0];
 	}
 
 

@@ -2,18 +2,10 @@ plugins {
 	id 'architectury-plugin' version "${arch_plugin_version}" apply false
 	id 'dev.architectury.loom' version "${loom_version}" apply false
 	id 'com.github.johnrengelman.shadow' version "${shadow_version}" apply false
-
-	id 'io.github.pacifistmc.forgix' version "${forgix_version}"
 }
 setup()
 
 ext.modVersion = mod_version + (build_number != null ? "-build.${build_number}" : '')
-
-forgix {
-	group = maven_group
-	mergedJarName = "interiors-${modVersion}+mc${minecraft_version}.jar"
-	outputDir = 'build/libs/merged'
-}
 
 architectury {
 	minecraft = minecraft_version
@@ -21,7 +13,6 @@ architectury {
 
 subprojects {
 	apply from: rootProject.file('gradle/subprojects.gradle')
-	remapJar.finalizedBy(mergeJars)
 }
 
 allprojects {
@@ -68,10 +59,16 @@ def setup() {
 	} else ext.build_number = null
 	println()
 
-	apply from: 'gradle/preprocessor.gradle'
-
 	println '\nPlugin versions:'
 	apply plugin: 'architectury-plugin'
 
 	defineMixins()
+
+	tasks.register("nukeGradleCaches") {
+		doLast {
+			allprojects.each {
+				it.file('.gradle').deleteDir()
+			}
+		}
+	}
 }

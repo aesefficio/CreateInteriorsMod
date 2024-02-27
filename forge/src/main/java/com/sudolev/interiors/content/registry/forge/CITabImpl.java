@@ -1,6 +1,7 @@
 package com.sudolev.interiors.content.registry.forge;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 
@@ -30,7 +31,11 @@ public class CITabImpl {
 		REGISTER.register(modEventBus);
 	}
 
-	public static CreativeModeTab getTab() {
+	public static ResourceKey<CreativeModeTab> getKey() {
+		return TAB.getKey();
+	}
+
+	public static CreativeModeTab get() {
 		return TAB.get();
 	}
 }
