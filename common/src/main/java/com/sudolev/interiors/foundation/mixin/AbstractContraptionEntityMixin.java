@@ -20,7 +20,7 @@ import com.sudolev.interiors.content.block.chair.BigChairBlock;
 @Mixin(AbstractContraptionEntity.class)
 public abstract class AbstractContraptionEntityMixin {
 
-	@Shadow
+	@Shadow(remap = false)
 	protected Contraption contraption;
 
 	@Inject(method = "getPassengerPosition", at = @At("TAIL"), cancellable = true)
