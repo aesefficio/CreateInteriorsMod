@@ -54,7 +54,7 @@ public class BigChairBlock extends ChairBlock {
 		ItemStack heldItem = player.getItemInHand(hand);
 
 		if(heldItem == AllItems.WRENCH.asStack(1)
-		   || heldItem.is(AllItems.WRENCH.asItem())) {
+		   || heldItem.is(AllItems.WRENCH.get())) {
 			return InteractionResult.PASS;
 		}
 

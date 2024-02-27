@@ -25,7 +25,7 @@ public abstract class AbstractContraptionEntityMixin {
 
 	@Inject(method = "getPassengerPosition", at = @At("TAIL"), cancellable = true)
 	private void raiseSeatEntity(Entity passenger, float partialTicks, CallbackInfoReturnable<Vec3> cir, @Local BlockPos seat) {
-		if(contraption.getBlocks().get(seat).state().getBlock() instanceof BigChairBlock) {
+		if(contraption.getBlocks().get(seat).state.getBlock() instanceof BigChairBlock) {
 			cir.setReturnValue(cir.getReturnValue().add(0, 0.34, 0));
 		}
 	}

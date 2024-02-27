@@ -1,11 +1,14 @@
 package com.sudolev.interiors.content.registry.fabric;
 
 import com.sudolev.interiors.CreateInteriors;
-import io.github.fabricators_of_create.porting_lib.models.generators.ConfiguredModel;
-import io.github.fabricators_of_create.porting_lib.models.generators.ModelFile;
-import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockStateProvider;
+
+import com.sudolev.interiors.content.registry.CITab;
 
 import org.jetbrains.annotations.ApiStatus;
+
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 
 import net.minecraft.resources.ResourceLocation;
 
@@ -43,10 +46,5 @@ public class CIBlocksImpl {
 			.modelFile((ModelFile) model)
 			.rotationY(rotation)
 			.build();
-	}
-
-	@ApiStatus.Internal
-	public static void setupCreativeTab() {
-		CreateInteriors.REGISTRATE.setCreativeTab(CITabImpl.getKey());
 	}
 }

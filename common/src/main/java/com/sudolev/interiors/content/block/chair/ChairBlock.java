@@ -27,6 +27,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.simibubi.create.foundation.block.ProperWaterloggedBlock;
 import com.simibubi.create.foundation.utility.Lang;
+import com.simibubi.create.foundation.utility.VecHelper;
 
 import static com.sudolev.interiors.content.block.chair.ChairBlock.ArmrestConfiguration.*;
 
@@ -57,7 +58,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 	@Override
 	public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
 		BlockPos pos = entity.blockPosition();
-		if(entity instanceof Player || !(entity instanceof LivingEntity) || !canBePickedUp(entity) || isSeatOccupied(entity.level(), pos)) {
+		if(entity instanceof Player || !(entity instanceof LivingEntity) || !canBePickedUp(entity) || isSeatOccupied(entity.level, pos)) {
 			if(entity.isSuppressingBounce()) {
 				super.updateEntityAfterFallOn(reader, entity);
 				return;
@@ -72,7 +73,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 			return;
 		}
 		if(reader.getBlockState(pos).getBlock() != this) return;
-		sitDown(entity.level(), pos, entity);
+		sitDown(entity.level, pos, entity);
 	}
 
 	@Override
@@ -80,7 +81,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		Level world = context.getLevel();
 		BlockPos pos = context.getClickedPos();
 
-		Vec3 clickPos = pos.getCenter().subtract(context.getClickLocation());
+		Vec3 clickPos = VecHelper.getCenterOf(pos).subtract(context.getClickLocation());
 
 		state = switch(state.getValue(FACING)) {
 			case NORTH -> clickPos.x > 0 ? toggleLeft(state) : toggleRight(state);

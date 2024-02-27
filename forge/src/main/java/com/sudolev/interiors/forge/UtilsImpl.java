@@ -42,10 +42,6 @@ public abstract class UtilsImpl {
 		return "Forge";
 	}
 
-	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
-		ModLoadingContext.get().registerConfig(type, spec);
-	}
-
 	public static CompoundTag getCustomData(Entity entity) {
 		return entity.getPersistentData();
 	}

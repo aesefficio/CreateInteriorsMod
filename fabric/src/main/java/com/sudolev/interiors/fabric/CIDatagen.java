@@ -1,7 +1,5 @@
 package com.sudolev.interiors.fabric;
 
-import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
-
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -17,6 +15,8 @@ import com.simibubi.create.foundation.utility.FilesHelper;
 
 import com.sudolev.interiors.CreateInteriors;
 
+import net.minecraftforge.common.data.ExistingFileHelper;
+
 public class CIDatagen implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator gen) {
@@ -27,7 +27,7 @@ public class CIDatagen implements DataGeneratorEntrypoint {
 			Set.of(resources), Set.of("create"), false, null, null
 		);
 
-		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), helper);
+		CreateInteriors.REGISTRATE.setupDatagen(gen, helper);
 
 		provideDefaultLang("tooltips");
 	}

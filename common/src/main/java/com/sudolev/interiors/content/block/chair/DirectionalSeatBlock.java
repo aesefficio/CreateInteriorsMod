@@ -27,7 +27,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public DirectionalSeatBlock(Properties properties, DyeColor color) {
-		super(properties, color);
+		super(properties, color, false);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
 		ItemStack heldItem = player.getItemInHand(hand);
 
-		if(heldItem == AllItems.WRENCH.asStack(1) || heldItem.is(AllItems.WRENCH.asItem())) {
+		if(heldItem == AllItems.WRENCH.asStack(1) || heldItem.is(AllItems.WRENCH.get())) {
 			return InteractionResult.PASS;
 		}
 

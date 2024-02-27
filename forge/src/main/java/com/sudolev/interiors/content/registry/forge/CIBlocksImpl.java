@@ -2,6 +2,8 @@ package com.sudolev.interiors.content.registry.forge;
 
 import com.sudolev.interiors.CreateInteriors;
 
+import com.sudolev.interiors.content.registry.CITab;
+
 import org.jetbrains.annotations.ApiStatus;
 
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -44,10 +46,5 @@ public class CIBlocksImpl {
 			.modelFile((ModelFile) model)
 			.rotationY(rotation)
 			.build();
-	}
-
-	@ApiStatus.Internal
-	public static void setupCreativeTab() {
-		CreateInteriors.REGISTRATE.setCreativeTab(CITabImpl.TAB);
 	}
 }

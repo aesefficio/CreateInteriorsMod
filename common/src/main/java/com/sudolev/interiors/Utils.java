@@ -33,11 +33,6 @@ public abstract class Utils {
 	}
 
 	@ExpectPlatform
-	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
-		throw new AssertionError();
-	}
-
-	@ExpectPlatform
 	public static CompoundTag getCustomData(Entity entity) {
 		throw new AssertionError();
 	}
