@@ -1,13 +1,11 @@
 package com.sudolev.interiors.content.registry;
 
-import com.sudolev.interiors.CreateInteriors;
-
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
+import com.sudolev.interiors.CreateInteriors;
+import com.sudolev.interiors.Utils;
 
 public final class CITab extends CreativeModeTab {
 	private static final CITab INSTANCE = new CITab();
@@ -17,7 +15,7 @@ public final class CITab extends CreativeModeTab {
 	}
 
 	public CITab() {
-		super(CreativeModeTab.TABS.length - 1, CreateInteriors.ID);
+		super(Utils.newCreativeTabIndex(), CreateInteriors.ID);
 	}
 
 	public static void register() {

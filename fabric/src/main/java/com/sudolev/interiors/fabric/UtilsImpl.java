@@ -1,5 +1,6 @@
 package com.sudolev.interiors.fabric;
 
+import io.github.fabricators_of_create.porting_lib.util.ItemGroupUtil;
 import net.fabricmc.loader.api.FabricLoader;
 
 import net.minecraft.nbt.CompoundTag;
@@ -32,5 +33,9 @@ public abstract class UtilsImpl {
 
 	public static TagKey<Item> tagFromColor(DyeColor color) {
 		return color.getTag();
+	}
+
+	public static int newCreativeTabIndex() {
+		return ItemGroupUtil.expandArrayAndGetId();
 	}
 }

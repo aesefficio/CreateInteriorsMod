@@ -1,7 +1,5 @@
 package com.sudolev.interiors;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
-
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.TagKey;
@@ -13,8 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.minecraftforge.fml.config.IConfigSpec;
-import net.minecraftforge.fml.config.ModConfig;
+import dev.architectury.injectables.annotations.ExpectPlatform;
 
 public abstract class Utils {
 	@ExpectPlatform
@@ -39,6 +36,11 @@ public abstract class Utils {
 
 	@ExpectPlatform
 	public static TagKey<Item> tagFromColor(DyeColor color) {
+		throw new AssertionError();
+	}
+
+	@ExpectPlatform
+	public static int newCreativeTabIndex() {
 		throw new AssertionError();
 	}
 
