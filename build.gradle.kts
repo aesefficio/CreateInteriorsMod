@@ -137,14 +137,11 @@ subprojects {
 	}
 
 	tasks.processResources {
-		// include packs
-		from(project(":common").file("src/main/resources")) {
-			include("resourcepacks/")
-		}
+		val build = buildNumber?.let { "-build.${it}" } ?: ""
 
 		// set up properties for filling into metadata
 		val properties = mapOf(
-			"version" to version,
+			"version" to "mod_version"() + (if (isRelease) "" else build),
 			"minecraft_version" to "minecraft_version"(),
 			"fabric_api_version" to "fabric_api_version"(),
 			"fabric_loader_version" to "fabric_loader_version"(),
@@ -200,7 +197,7 @@ fun squishJar(jar: File) {
 	JarOutputStream(jar.outputStream()).use { out ->
 		out.setLevel(Deflater.BEST_COMPRESSION)
 		contents.forEach { var (name, data) = it
-			if(name.startsWith("architectury_inject_${project.name}_common"))
+			if(name.startsWith("architectury_inject_"))
 				return@forEach
 
 			if (name.endsWith(".json") || name.endsWith(".mcmeta")) {
