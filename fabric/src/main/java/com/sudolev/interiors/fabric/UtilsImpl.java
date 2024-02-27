@@ -32,11 +32,7 @@ public abstract class UtilsImpl {
 	}
 
 	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
-		#if PRE_CURRENT_MC_1_19_2
-		ModLoadingContext.registerConfig(CreateInteriors.ID, type, spec);
-		#elif POST_CURRENT_MC_1_20_1
 		ForgeConfigRegistry.INSTANCE.register(CreateInteriors.ID, type, spec);
-		#endif
 	}
 
 	public static CompoundTag getCustomData(Entity entity) {

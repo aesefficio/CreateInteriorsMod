@@ -19,6 +19,7 @@
     "fabric-datagen": [ "com.sudolev.interiors.fabric.CIDatagen" ]
   },
   "mixins": [
+    "interiors-common.mixins.json",
     "interiors.mixins.json"
   ],
   "depends": {

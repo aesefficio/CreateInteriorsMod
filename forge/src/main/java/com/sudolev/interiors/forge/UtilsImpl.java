@@ -17,9 +17,6 @@ import net.minecraftforge.forgespi.language.IModInfo;
 
 import com.sudolev.interiors.CreateInteriors;
 
-#if MC_1_19_2
-@SuppressWarnings("UnstableApiUsage")
-#endif
 public abstract class UtilsImpl {
 	public static String getVersion(String modid) {
 		String versionString = "UNKNOWN";
