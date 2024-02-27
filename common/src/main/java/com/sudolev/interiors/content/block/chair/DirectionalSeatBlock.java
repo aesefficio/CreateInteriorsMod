@@ -27,7 +27,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public DirectionalSeatBlock(Properties properties, DyeColor color) {
-		super(properties, color, false);
+		super(properties, color, true);
 	}
 
 	@Override

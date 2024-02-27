@@ -36,7 +36,9 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 
 import org.jetbrains.annotations.ApiStatus;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 
 import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
 import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
@@ -49,7 +51,7 @@ import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 public final class CIBlocks {
 
 	static {
-		REGISTRATE.creativeModeTab(CITab::getInstance);
+		REGISTRATE.creativeModeTab(CITab::getInstance, CreateInteriors.NAME);
 	}
 
 	public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
@@ -93,7 +95,7 @@ public final class CIBlocks {
 					ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
 					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
-					Object model = customChairModelFile(p, "block/floor_chair/" + armrest + cropped_state,
+					ModelFile model = customChairModelFile(p, "block/floor_chair/" + armrest + cropped_state,
 						"block/floor_chair/" + colorName + "_floor_chair_" + armrest + cropped_state,
 						top, side, sideTop, side);
 					return modelWithRotation(model, rotation);
@@ -147,7 +149,7 @@ public final class CIBlocks {
 					ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
 					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
-					Object model = customChairModelFile(p, "block/chair/" + armrest + cropped_state,
+					ModelFile model = customChairModelFile(p, "block/chair/" + armrest + cropped_state,
 						"block/chair/" + colorName + "_chair_" + armrest + cropped_state,
 						top, side, sideTop, side);
 					return modelWithRotation(model, rotation);
@@ -177,7 +179,7 @@ public final class CIBlocks {
 					.unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
 					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
 			})
-			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
+			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 			.onRegisterAfter(Registry.ITEM.key(), v -> ItemDescription.useKey(v, "block.interiors.chair"))
@@ -204,7 +206,7 @@ public final class CIBlocks {
 					"block/chair/" + armrest + cropped_state,
 					"block/chair/kelp_chair_" + armrest + cropped_state), rotation);
 			}, WATERLOGGED))
-		.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
+		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 		.onRegisterAfter(Registry.ITEM.key(), v -> ItemDescription.useKey(v, "block.interiors.chair"))
 		.item()
@@ -264,28 +266,32 @@ public final class CIBlocks {
 		};
 	}
 
-	@ExpectPlatform
 	@ApiStatus.Internal
-	public static <ModelFile> ModelFile createModelFileWithExistingParent(Object /* BlockStateProvider */ p, String parent, String name) {
-		throw new AssertionError();
+	public static ModelFile createModelFileWithExistingParent(BlockStateProvider p, String parent, String name) {
+		return p.models().withExistingParent(name, p.modLoc(parent));
 	}
 
-	@ExpectPlatform
 	@ApiStatus.Internal
-	public static <ModelFile> ModelFile getExistingModelFile(Object /* BlockStateProvider */ p, String name) {
-		throw new AssertionError();
+	public static ModelFile getExistingModelFile(BlockStateProvider p, String name) {
+		return p.models().getExistingFile(p.modLoc(name));
 	}
 
-	@ExpectPlatform
 	@ApiStatus.Internal
-	public static <ModelFile> ModelFile customChairModelFile(Object /* BlockStateProvider */ p, String parent, String name,
+	public static ModelFile customChairModelFile(BlockStateProvider p, String parent, String name,
 															  ResourceLocation top, ResourceLocation side, ResourceLocation sideTop, ResourceLocation sideFront) {
-		throw new AssertionError();
+		return p.models()
+			.withExistingParent(name, p.modLoc(parent))
+			.texture("top", top)
+			.texture("side_top", sideTop)
+			.texture("side_front", sideFront)
+			.texture("side", side);
 	}
 
-	@ExpectPlatform
 	@ApiStatus.Internal
-	public static <ConfiguredModel> ConfiguredModel modelWithRotation(Object /* ModelFile */ model, int rotation) {
-		throw new AssertionError();
+	public static ConfiguredModel[] modelWithRotation(ModelFile model, int rotation) {
+		return ConfiguredModel.builder()
+			.modelFile(model)
+			.rotationY(rotation)
+			.build();
 	}
 }

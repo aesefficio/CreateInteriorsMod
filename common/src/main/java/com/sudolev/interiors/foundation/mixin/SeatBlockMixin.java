@@ -15,6 +15,7 @@ import com.sudolev.interiors.content.entity.BigSeatEntity;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.At.Shift;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -36,7 +37,7 @@ public abstract class SeatBlockMixin {
 			   : new SeatEntity(world, pos);
 	}
 
-	@Inject(method = "sitDown", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;addFreshEntity(Lnet/minecraft/world/entity/Entity;)Z"))
+	@Inject(method = "sitDown", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;addFreshEntity(Lnet/minecraft/world/entity/Entity;)Z", shift = Shift.BEFORE))
 	private static void getFixedY(Level world, BlockPos pos, Entity entity, CallbackInfo ci, @Local SeatEntity seat) {
 		if(seat instanceof BigSeatEntity) {
 			seat.setPos(seat.getX(), seat.getY() + .34f, seat.getZ());

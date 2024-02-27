@@ -6,7 +6,6 @@ import java.util.UUID;
 import com.simibubi.create.content.contraptions.AbstractContraptionEntity;
 import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovementContext;
-import com.simibubi.create.foundation.utility.VecHelper;
 
 import com.sudolev.interiors.Utils;
 
@@ -17,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.phys.Vec3;
 
+// is this class necessary?
 public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
 	@Override
 	public void visitNewPosition(MovementContext context, BlockPos pos) {
@@ -42,7 +42,7 @@ public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
 		}
 		if(toDismount == null) return;
 		toDismount.stopRiding();
-		Vec3 position = VecHelper.getCenterOf(pos).add(0, 1f, 0);
+		Vec3 position = Vec3.atCenterOf(pos).add(0, 1f, 0);
 		toDismount.teleportTo(position.x, position.y, position.z);
 
 		Utils.getCustomData(toDismount).remove("ContraptionDismountLocation");
