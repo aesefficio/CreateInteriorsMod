@@ -13,8 +13,8 @@ import java.util.zip.Deflater
 
 plugins {
 	java
-	id("architectury-plugin") version "3.4-SNAPSHOT" apply false
-	id("dev.architectury.loom") version "1.4.+" apply false
+	id("architectury-plugin") version "3.4.155" apply false
+	id("dev.architectury.loom") version "1.4.380" apply false
 	id("com.github.johnrengelman.shadow") version "8.1.1" apply false
 }
 
@@ -29,9 +29,7 @@ val isRelease = System.getenv("RELEASE_BUILD")?.toBoolean() ?: false
 val buildNumber = System.getenv("GITHUB_RUN_NUMBER")?.toInt()
 val gitHash = "\"${calculateGitHash() + (if (hasUnstaged()) "-modified" else "")}\""
 
-tasks.jar {
-	enabled = false
-}
+tasks.jar { enabled = false }
 
 allprojects {
 	apply(plugin = "java")
@@ -44,14 +42,17 @@ allprojects {
 	// example: 1.0.0+fabric-1.19.2-build.100 (or -local)
 	val build = buildNumber?.let { "-build.${it}" } ?: "-local"
 
-	version = "${"mod_version"()}+${project.name}-mc${"minecraft_version"() + if (isRelease) "" else build}"
+	version = "${"mod_version"()}+${project.name}-mc${"minecraft_version"()}${if (isRelease) "" else build}"
 
 	tasks.withType<JavaCompile>().configureEach {
+		options.release = 17
 		options.encoding = "UTF-8"
 	}
 
 	java {
 		withSourcesJar()
+		targetCompatibility = JavaVersion.VERSION_17
+		sourceCompatibility = JavaVersion.VERSION_17
 	}
 }
 
@@ -110,7 +111,7 @@ subprojects {
 		dependsOn(shadowJar)
 		archiveClassifier = null
 		doLast {
-			squishJar(outputs.files.singleFile)
+			squishJar(archiveFile.get().asFile)
 		}
 	}
 
@@ -145,9 +146,9 @@ subprojects {
 			"minecraft_version" to "minecraft_version"(),
 			"fabric_api_version" to "fabric_api_version"(),
 			"fabric_loader_version" to "fabric_loader_version"(),
-			"forge_version" to "forge_version"().split(".")[0], // only specify major version of forge
-			"create_forge_version" to "create_forge_version"().split("-")[0], // cut off build number
-			"create_fabric_version" to "create_fabric_version"().split("+")[0] // Trim +mcX.XX.X from version string
+			"forge_version" to "forge_version"().substringBefore("."), // only specify major version of forge
+			"create_forge_version" to "create_forge_version"().substringBefore("-"), // cut off build number
+			"create_fabric_version" to "create_fabric_version"().substringBefore("+") // Trim +mcX.XX.X from version string
 		)
 
 		inputs.properties(properties)
