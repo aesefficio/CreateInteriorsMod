@@ -27,6 +27,6 @@ jobs:
             -   name: upload artifacts
                 uses: actions/upload-artifact@v4
                 with:
-                    name: interiors-artifacts #-v${{ github.run_number }} <-- doesnt work with nightly.link
+                    name: interiors-artifacts-v${{ github.run_number }}
                     path: |
                         */build/libs/*.jar
