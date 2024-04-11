@@ -3,7 +3,7 @@
 
 <div align="center">
    <img src="https://img.shields.io/badge/available%20for-1.18.2‒1.20.1-992333" alt="available for 1.20-1.20.2">
-   <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged-992333" alt="modloaders forge/neoforged">
+   <img src="https://img.shields.io/badge/modloaders-Forge%20%26%20NeoForged%20%7C%20Fabric%20%26%20Quilt-992333" alt="Supported Modloaders are forge/neoforged/fabric/quilt">
    <img src="https://img.shields.io/badge/license-GPL‒3.0-992333" alt="license - GPL-3.0">
    <br>
    <a href="https://curseforge.com/minecraft/mc-mods/interiors"><img src="https://cf.way2muchnoise.eu/906239.svg" alt="curseforge"></a>
