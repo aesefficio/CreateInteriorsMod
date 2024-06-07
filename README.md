@@ -1,5 +1,6 @@
-<p align="center"><img src="https://github.com/alexandsr/ExtendedSeatingMod/assets/61996958/d6a4a7fd-f0e3-4f2a-9d6c-5ee3be5bf7df" alt="Create: Interiors Logo" width="141"></p>
+<p align="center"><img src="https://github.com/aesefficio/CreateInteriorsMod/assets/61996958/5c48bf0d-f0de-43b3-a3b6-4bdf15e3409c" alt="Create: Interiors Logo" width="141">
 <h1 align="center">Create: Interiors
+</p>
 
 <div align="center">
    <img src="https://img.shields.io/badge/available%20for-1.18.2‒1.20.1-992333" alt="available for 1.20-1.20.2">
@@ -79,7 +80,9 @@
 
 # Contributions
 
-### Massive thanks to [rdh](https://github.com/rhysdh540) for all his critical contributions to Create: Interiors.
+### Massive thanks to [rdh](https://github.com/rhysdh540) for all his critical contributions!
+
+### Thanks to [Luna](https://github.com/LopyLuna) for the wonderful logo :)
 
 ## Translating 🥳
 
