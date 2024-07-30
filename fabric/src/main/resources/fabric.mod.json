@@ -6,9 +6,9 @@
   "description": "Create: Interiors is a new take on furniture, adding functional blocks that mesh seamlessly with the aesthetic and principles of the Create mod.",
   "authors": [ "sudolev", "rdh" ],
   "contact": {
-    "homepage": "https://github.com/sudocooperativesystems/CreateInteriorsMod",
-    "sources": "https://github.com/sudocooperativesystems/CreateInteriorsMod",
-    "issues": "https://github.com/sudocooperativesystems/CreateInteriorsMod/issues"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/interiors",
+    "sources": "https://github.com/aesefficio/CreateInteriorsMod/",
+    "issues": "https://github.com/aesefficio/CreateInteriorsMod/issues"
   },
   "license": "GPL-3.0",
   "icon": "icon.png",
