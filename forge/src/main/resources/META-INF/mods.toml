@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[${forge_version},)"
 license = "GPL-3.0"
-issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+issueTrackerURL = "https://github.com/aesefficio/CreateInteriorsMod/issues"
 
 [[mods]]
 modId = "interiors"
@@ -9,8 +9,8 @@ version = "${version}"
 displayName = "Create: Interiors"
 # https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json"
-displayURL = "https://sudolev.github.io/CreateInteriorsMod/"
-issueTrackerURL = "https://github.com/sudolev/CreateInteriorsMod/issues"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/interiors"
+issueTrackerURL = "https://github.com/aesefficio/CreateInteriorsMod/issues"
 logoFile="icon.png"
 credits = "rdh"
 authors = "sudolev"
