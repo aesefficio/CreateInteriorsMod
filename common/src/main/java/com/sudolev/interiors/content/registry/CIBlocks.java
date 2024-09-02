@@ -24,7 +24,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MaterialColor;
 
 import com.sudolev.interiors.CreateInteriors;
-import com.sudolev.interiors.Utils;
 import com.sudolev.interiors.content.block.WallMountedTable;
 import com.sudolev.interiors.content.block.chair.BigChairBlock;
 import com.sudolev.interiors.content.block.chair.BigSeatMovementBehaviour;
@@ -116,11 +115,11 @@ public final class CIBlocks {
 
 				ShapelessRecipeBuilder.shapeless(c.get())
 					.requires(CITags.Items.FLOOR_CHAIRS)
-					.requires(Utils.tagFromColor(color))
+					.requires(CITags.DYES.get(color).tag)
 					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
 					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
 			})
-			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
+			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
 			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 			.onRegisterAfter(Registry.ITEM.key(), v -> ItemDescription.useKey(v, "block.interiors.chair"))
@@ -175,7 +174,7 @@ public final class CIBlocks {
 
 				ShapelessRecipeBuilder.shapeless(c.get())
 					.requires(CITags.Items.CHAIRS)
-					.requires(Utils.tagFromColor(color))
+					.requires(CITags.DYES.get(color).tag)
 					.unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
 					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
 			})

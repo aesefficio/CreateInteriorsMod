@@ -1,13 +1,13 @@
 package com.sudolev.interiors.fabric;
 
 import io.github.fabricators_of_create.porting_lib.util.ItemGroupUtil;
+import com.tterrag.registrate.providers.RegistrateTagsProvider;
 import net.fabricmc.loader.api.FabricLoader;
 
+import net.minecraft.data.tags.TagsProvider.TagAppender;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 
 public abstract class UtilsImpl {
 	public static String getVersion(String modid) {
@@ -31,8 +31,8 @@ public abstract class UtilsImpl {
 		return entity.getExtraCustomData();
 	}
 
-	public static TagKey<Item> tagFromColor(DyeColor color) {
-		return color.getTag();
+	public static <T> TagAppender<T> tagAppender(RegistrateTagsProvider<T> prov, TagKey<T> tag) {
+		return prov.tag(tag);
 	}
 
 	public static int newCreativeTabIndex() {

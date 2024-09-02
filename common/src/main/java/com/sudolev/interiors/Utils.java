@@ -1,12 +1,15 @@
 package com.sudolev.interiors;
 
+import com.sudolev.interiors.content.registry.CITags;
+import com.tterrag.registrate.providers.RegistrateTagsProvider;
+
 import net.minecraft.core.Direction;
+import net.minecraft.data.tags.TagsProvider.TagAppender;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -35,7 +38,7 @@ public abstract class Utils {
 	}
 
 	@ExpectPlatform
-	public static TagKey<Item> tagFromColor(DyeColor color) {
+	public static <T> TagAppender<T> tagAppender(RegistrateTagsProvider<T> prov, TagKey<T> tag) {
 		throw new AssertionError();
 	}
 
@@ -50,7 +53,7 @@ public abstract class Utils {
 		} else {
 			for (int x = 0; x < DyeColor.BLACK.getId(); ++x) {
 				DyeColor color = DyeColor.byId(x);
-				if (stack.is(tagFromColor(color))) {
+				if (stack.is(CITags.DYES.get(color).tag)) {
 					return color;
 				}
 			}
