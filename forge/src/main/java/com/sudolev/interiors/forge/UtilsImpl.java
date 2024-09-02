@@ -9,9 +9,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.util.MavenVersionStringHelper;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.IConfigSpec;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.forgespi.language.IModInfo;
 
@@ -40,10 +37,6 @@ public abstract class UtilsImpl {
 
 	public static String platformName() {
 		return "Forge";
-	}
-
-	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
-		ModLoadingContext.get().registerConfig(type, spec);
 	}
 
 	public static CompoundTag getCustomData(Entity entity) {

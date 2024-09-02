@@ -14,9 +14,6 @@ public class CreateInteriorsForge {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
 
-		forgeEventBus.register(Events.ClientModBusEvents.class);
-		modEventBus.addListener(Events.ClientModBusEvents::onLoadComplete);
-
 		CreateInteriors.init();
 		CITabImpl.register(modEventBus);
 		CreateInteriors.REGISTRATE.registerEventListeners(modEventBus);

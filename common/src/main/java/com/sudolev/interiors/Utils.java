@@ -13,9 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.minecraftforge.fml.config.IConfigSpec;
-import net.minecraftforge.fml.config.ModConfig;
-
 public abstract class Utils {
 	@ExpectPlatform
 	public static String getVersion(String modid) {
@@ -29,11 +26,6 @@ public abstract class Utils {
 
 	@ExpectPlatform
 	public static String platformName() {
-		throw new AssertionError();
-	}
-
-	@ExpectPlatform
-	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
 		throw new AssertionError();
 	}
 
