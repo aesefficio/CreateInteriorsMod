@@ -1,5 +1,7 @@
 package com.sudolev.interiors.fabric;
 
+import com.sudolev.interiors.content.registry.CITags;
+import com.tterrag.registrate.providers.ProviderType;
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 
 import java.nio.file.Path;
@@ -26,6 +28,9 @@ public class CIDatagen implements DataGeneratorEntrypoint {
 		ExistingFileHelper helper = new ExistingFileHelper(
 			Set.of(resources), Set.of("create"), false, null, null
 		);
+
+		CreateInteriors.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
+			CITags.DYES.values().forEach(tag -> tag.generateCommon(prov)));
 
 		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), helper);
 
