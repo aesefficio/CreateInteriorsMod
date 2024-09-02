@@ -1,5 +1,7 @@
 package com.sudolev.interiors;
 
+import dev.architectury.injectables.annotations.ExpectPlatform;
+
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.TagKey;
@@ -10,8 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import dev.architectury.injectables.annotations.ExpectPlatform;
 
 public abstract class Utils {
 	@ExpectPlatform
