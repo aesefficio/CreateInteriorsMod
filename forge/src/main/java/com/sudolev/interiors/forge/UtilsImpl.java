@@ -2,12 +2,11 @@ package com.sudolev.interiors.forge;
 
 import java.util.List;
 
+import net.minecraft.data.tags.TagsProvider.TagAppender;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 
 import net.minecraftforge.common.util.MavenVersionStringHelper;
 import net.minecraftforge.fml.ModList;
@@ -15,6 +14,7 @@ import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.forgespi.language.IModInfo;
 
 import com.sudolev.interiors.CreateInteriors;
+import com.tterrag.registrate.providers.RegistrateTagsProvider;
 
 public abstract class UtilsImpl {
 	public static String getVersion(String modid) {
@@ -45,8 +45,8 @@ public abstract class UtilsImpl {
 		return entity.getPersistentData();
 	}
 
-	public static TagKey<Item> tagFromColor(DyeColor color) {
-		return color.getTag();
+	public static <T> TagAppender<T> tagAppender(RegistrateTagsProvider<T> prov, TagKey<T> tag) {
+		return prov.tag(tag);
 	}
 
 	public static int newCreativeTabIndex() {

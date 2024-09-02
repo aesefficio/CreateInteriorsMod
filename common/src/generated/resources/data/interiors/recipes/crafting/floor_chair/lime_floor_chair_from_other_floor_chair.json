@@ -6,7 +6,7 @@
       "tag": "interiors:floor_chairs"
     },
     {
-      "tag": "c:lime_dyes"
+      "tag": "interiors:internal/dyes/lime_dyes"
     }
   ],
   "result": {

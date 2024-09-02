@@ -6,7 +6,7 @@
       "tag": "interiors:floor_chairs"
     },
     {
-      "tag": "c:yellow_dyes"
+      "tag": "interiors:internal/dyes/yellow_dyes"
     }
   ],
   "result": {

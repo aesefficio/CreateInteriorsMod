@@ -6,7 +6,7 @@
       "tag": "interiors:chairs"
     },
     {
-      "tag": "c:pink_dyes"
+      "tag": "interiors:internal/dyes/pink_dyes"
     }
   ],
   "result": {
