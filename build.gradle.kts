@@ -51,8 +51,9 @@ allprojects {
 
 	java {
 		withSourcesJar()
-		targetCompatibility = JavaVersion.VERSION_17
-		sourceCompatibility = JavaVersion.VERSION_17
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(17)
+		}
 	}
 }
 

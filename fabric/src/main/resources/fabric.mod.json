@@ -11,7 +11,7 @@
     "issues": "https://github.com/aesefficio/CreateInteriorsMod/issues"
   },
   "license": "GPL-3.0",
-  "icon": "icon.png",
+  "icon": "assets/interiors/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [ "com.sudolev.interiors.fabric.CreateInteriorsFabric" ],
