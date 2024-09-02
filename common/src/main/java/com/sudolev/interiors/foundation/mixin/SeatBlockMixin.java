@@ -1,7 +1,6 @@
 package com.sudolev.interiors.foundation.mixin;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,9 +22,8 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.At.Shift;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SeatBlock.class)
@@ -44,11 +42,9 @@ public abstract class SeatBlockMixin {
 			   : new SeatEntity(level, pos);
 	}
 
-	@Inject(method = "sitDown", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;addFreshEntity(Lnet/minecraft/world/entity/Entity;)Z", shift = Shift.BEFORE))
-	private static void getFixedY(Level world, BlockPos pos, Entity entity, CallbackInfo ci, @Local SeatEntity seat) {
-		if(seat instanceof BigSeatEntity) {
-			seat.setPos(seat.getX(), seat.getY() + .34f, seat.getZ());
-		}
+	@ModifyArg(method = "sitDown", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/content/contraptions/actors/seat/SeatEntity;setPos(DDD)V"), index = 1)
+	private static double getFixedY(double y, @Local SeatEntity seat) {
+		return seat instanceof BigSeatEntity ? y + 0.34f : y;
 	}
 
 	@ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/block/DyedBlockList;get(Lnet/minecraft/world/item/DyeColor;)Lcom/tterrag/registrate/util/entry/BlockEntry;"))
