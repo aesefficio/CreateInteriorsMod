@@ -1,16 +1,30 @@
 pluginManagement {
 	repositories {
-		maven { url = uri("https://maven.fabricmc.net/") }
-		maven { url = uri("https://maven.architectury.dev/") }
-		maven { url = uri("https://maven.minecraftforge.net/") }
-		maven { url = uri("https://maven.quiltmc.org/repository/release") }
-		gradlePluginPortal()
+		mavenCentral()
+		maven("https://maven.fabricmc.net")
+		maven("https://maven.architectury.dev")
+		maven("https://maven.minecraftforge.net")
+		maven("https://maven.kikugie.dev/releases")
 	}
 }
 
-include("common")
-include("fabric")
-include("forge")
+@Suppress("DSL_SCOPE_VIOLATION")
+plugins {
+	id("dev.kikugie.stonecutter") version(extra.properties["stonecutter_version"].toString())
+	id("dev.architectury.loom") version(extra.properties["loom_version"].toString()) apply(false)
+}
 
-// no colon because gradle
+stonecutter {
+	kotlinController = true
+	centralScript = "build.gradle.kts"
+	shared {
+		for(version in extra.properties["mc_versions"].toString().split("|")) {
+			vers("$version-fabric", "1.$version")
+			vers("$version-forge", "1.$version")
+		}
+	}
+	create(rootProject)
+}
+
 rootProject.name = "Create Interiors"
+println("----- ${rootProject.name} v${extra.properties["mod_version"]} -----")

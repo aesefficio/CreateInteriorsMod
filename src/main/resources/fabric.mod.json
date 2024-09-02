@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "interiors",
+  "version": "${version}",
+  "name": "Create: Interiors",
+  "description": "Create: Interiors is a new take on furniture, adding functional blocks that mesh seamlessly with the aesthetic and principles of the Create mod.",
+  "authors": [ "sudolev", "rdh" ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/interiors",
+    "sources": "https://github.com/aesefficio/CreateInteriorsMod/",
+    "issues": "https://github.com/aesefficio/CreateInteriorsMod/issues"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/interiors/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [ "com.sudolev.interiors.CreateInteriors::init" ],
+    "fabric-datagen": ["com.sudolev.interiors.foundation.data.CIDatagen"]
+  },
+  "mixins": [
+    "interiors.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${minecraft_version}",
+    "fabricloader": ">=${fabric_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "create": ">=${create_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": {
+        "id": "create"
+      },
+      "links": {
+        "Modrinth": "https://modrinth.com/mod/interiors",
+        "CurseForge": "https://curseforge.com/minecraft/mc-mods/interiors"
+      }
+    }
+  }
+}
