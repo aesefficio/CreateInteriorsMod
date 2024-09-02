@@ -1,6 +1,8 @@
-.idea
-build
-.gradle
-run
+.idea/
+!.idea/icon.png
+build/
+.gradle/
+run/
 .DS_Store
-src/main/resources/assets/create
+src/main/resources/assets/create/
+.architectury-transformer/
