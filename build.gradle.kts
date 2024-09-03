@@ -4,7 +4,6 @@ import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import net.fabricmc.loom.api.LoomGradleExtensionAPI
 import net.fabricmc.loom.task.RemapJarTask
-import org.gradle.configurationcache.extensions.capitalized
 import java.io.ByteArrayOutputStream
 import java.util.jar.JarEntry
 import java.util.jar.JarFile
@@ -14,7 +13,7 @@ import java.util.zip.Deflater
 plugins {
 	java
 	id("architectury-plugin") version "3.4.155" apply false
-	id("dev.architectury.loom") version "1.4.380" apply false
+	id("dev.architectury.loom") version "1.7.412" apply false
 	id("com.github.johnrengelman.shadow") version "8.1.1" apply false
 }
 
@@ -62,9 +61,9 @@ subprojects {
 
 	setupRepositories()
 
-	val capitalizedName = project.name.capitalized()
+	val capitalizedName = project.name.replaceFirstChar(Char::uppercase)
 
-	val loom = project.extensions.getByType<LoomGradleExtensionAPI>()
+	val loom = project.the<LoomGradleExtensionAPI>()
 	loom.silentMojangMappingsLicense()
 
 	configurations.configureEach {
@@ -265,7 +264,7 @@ fun hasUnstaged(): Boolean {
 		commandLine("git", "status", "--porcelain")
 		standardOutput = stdout
 	}
-	val result = stdout.toString().replace("M gradlew", "").trimEnd()
+	val result = stdout.toString().replace(Regex("M gradlew(\\.bat)?"), "").trimEnd()
 	if (result.isNotEmpty())
 		println("Found stageable results:\n${result}\n")
 	return result.isNotEmpty()

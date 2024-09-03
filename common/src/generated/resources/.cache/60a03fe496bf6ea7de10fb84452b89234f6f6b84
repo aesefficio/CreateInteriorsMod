@@ -1,4 +1,4 @@
-// 1.19.2	2024-09-01T23:48:54.284685	Registrate Provider for interiors [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.19.2	2024-09-03T20:07:54.348313	Registrate Provider for interiors [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 c25c83c809240257d0c27919672142d9ff2268f2 data/interiors/advancements/recipes/interiors/crafting/floor_chair/cyan_floor_chair_from_seat.json
 c019ad63d14d017d5226a88cfbf6124c8b1d99c1 assets/interiors/models/block/floor_chair/green_floor_chair_right.json
 d4f0830fbe4e1027517569b504d8281ed9e4be11 assets/interiors/models/block/floor_chair/purple_floor_chair_left_cropped.json
