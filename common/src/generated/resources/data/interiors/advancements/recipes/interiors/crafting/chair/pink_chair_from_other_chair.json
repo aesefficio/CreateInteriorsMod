@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "interiors:crafting/chair/pink_chair_from_other_chair"
+    ]
+  },
+  "criteria": {
+    "has_chair": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "interiors:chairs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "interiors:crafting/chair/pink_chair_from_other_chair"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chair",
+      "has_the_recipe"
+    ]
+  ]
+}

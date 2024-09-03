@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "interiors:crafting/floor_chair/magenta_floor_chair_from_other_floor_chair"
+    ]
+  },
+  "criteria": {
+    "has_floor_chair": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "interiors:floor_chairs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "interiors:crafting/floor_chair/magenta_floor_chair_from_other_floor_chair"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_floor_chair",
+      "has_the_recipe"
+    ]
+  ]
+}
