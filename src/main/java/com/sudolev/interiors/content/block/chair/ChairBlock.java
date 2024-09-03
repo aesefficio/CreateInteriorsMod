@@ -45,7 +45,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(WATERLOGGED).add(FACING).add(ARMRESTS).add(CROPPED_BACK);
+		super.createBlockStateDefinition(builder.add(ARMRESTS).add(CROPPED_BACK));
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 
 	@Override
 	public void updateEntityAfterFallOn(BlockGetter reader, Entity entity) {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		Level level = entity.level;
 		#else
 		Level level = entity.level();
@@ -87,7 +87,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 		Level world = context.getLevel();
 		BlockPos pos = context.getClickedPos();
 
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		Vec3 clickPos = VecHelper.getCenterOf(pos)
 		#else
 		Vec3 clickPos = pos.getCenter()

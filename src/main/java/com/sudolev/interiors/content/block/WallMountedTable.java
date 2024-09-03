@@ -44,13 +44,14 @@ public class WallMountedTable extends Block implements ProperWaterloggedBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(FACING).add(WATERLOGGED);
+		super.createBlockStateDefinition(builder.add(FACING).add(WATERLOGGED));
 	}
 
 
 	@Override
 	public BlockState rotate(BlockState state, Rotation rotation) {
-		return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+//		return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+		return state.rotate(rotation);
 	}
 
 	@Override

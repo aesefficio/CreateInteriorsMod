@@ -5,7 +5,7 @@ import net.minecraft.world.item.DyeColor;
 
 import com.sudolev.interiors.CreateInteriors;
 
-#if PRE_CURRENT_MC_19_2
+#if MC <= "19.2"
 	import net.minecraft.world.item.ItemStack;
 
 	#if FABRIC
@@ -31,8 +31,8 @@ import com.sudolev.interiors.CreateInteriors;
 	#endif
 #endif
 
-public final class CITab #if PRE_CURRENT_MC_19_2 extends CreativeModeTab #endif {
-	#if POST_MC_19_2
+public final class CITab #if MC <= "19.2" extends CreativeModeTab #endif {
+	#if MC > "19.2"
 	private static CreativeModeTab configure(CreativeModeTab.Builder builder) {
 		return builder
 			.title(Component.translatable("itemGroup.interiors"))

@@ -27,7 +27,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public DirectionalSeatBlock(Properties properties, DyeColor color) {
-		super(properties, color #if PRE_CURRENT_MC_19_2, true #endif);
+		super(properties, color #if MC <= "19.2", true #endif);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(FACING).add(WATERLOGGED);
+		super.createBlockStateDefinition(builder.add(FACING).add(WATERLOGGED));
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 		ItemStack heldItem = player.getItemInHand(hand);
 
 		if(heldItem == AllItems.WRENCH.asStack(1) || heldItem.is(
-			#if PRE_CURRENT_MC_19_2
+			#if MC <= "19.2"
 			AllItems.WRENCH.get()
 			#else
 			AllItems.WRENCH.asItem()

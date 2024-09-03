@@ -101,7 +101,7 @@ tasks.compileJava {
 }
 
 sourceSets.main {
-	resources.srcDir("src/generated/resources")
+	resources.srcDir(rootProject.file("src/generated-${"minecraft_version"()}/resources"))
 }
 
 configurations.configureEach {
@@ -144,7 +144,7 @@ loom {
 
 			name = "Minecraft Data"
 			vmArg("-Dfabric-api.datagen")
-			vmArg("-Dfabric-api.datagen.output-dir=${rootProject.file("src/generated-${"minecraft_version"}/resources")}")
+			vmArg("-Dfabric-api.datagen.output-dir=${rootProject.file("src/generated-${"minecraft_version"()}/resources")}")
 			vmArg("-Dfabric-api.datagen.modid=interiors")
 			vmArg("-Dporting_lib.datagen.existing_resources=${rootProject.file("src/main/resources")}")
 

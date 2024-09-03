@@ -36,7 +36,7 @@ import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 
-#if FABRIC && POST_CURRENT_MC_20_1
+#if FABRIC && MC >= "20.1"
 import io.github.fabricators_of_create.porting_lib.models.generators.ConfiguredModel;
 import io.github.fabricators_of_create.porting_lib.models.generators.ModelFile;
 import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockStateProvider;
@@ -57,7 +57,7 @@ import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 public final class CIBlocks {
 
 	static {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		REGISTRATE.creativeModeTab(CITab::getInstance);
 		#else
 			#if FABRIC
@@ -68,7 +68,7 @@ public final class CIBlocks {
 		#endif
 	}
 
-	#if PRE_CURRENT_MC_19_2
+	#if MC <= "19.2"
 	private static final ResourceKey<Registry<Item>> ITEM_REGISTRY = Registry.ITEM_REGISTRY;
 	private static final Object RECIPE_CATEGORY_BUILDING_BLOCKS = null;
 	#else
@@ -92,10 +92,14 @@ public final class CIBlocks {
 		.transform(axeOnly())
 		.blockstate((c, p) -> p.getVariantBuilder(c.get())
 			.forAllStatesExcept(state -> {
-				String facing = state.getValue(ChairBlock.FACING).getSerializedName();
+				String facing = state.getValue(WallMountedTable.FACING).getSerializedName();
 				int rotation = facing(state);
 
-				return modelWithRotation(p.models().getExistingFile(p.modLoc("block/wall_mounted_table")), rotation);
+				ModelFile model = p.models().getExistingFile(p.modLoc("block/wall_mounted_table"));
+				return ConfiguredModel.builder()
+					.modelFile(model)
+					.rotationY(rotation)
+					.build();
 			}, WATERLOGGED))
 		.simpleItem()
 		.register();
@@ -120,7 +124,10 @@ public final class CIBlocks {
 					ModelFile model = customChairModelFile(p, "block/floor_chair/" + armrest + cropped_state,
 						"block/floor_chair/" + colorName + "_floor_chair_" + armrest + cropped_state,
 						top, side, sideTop, side);
-					return modelWithRotation(model, rotation);
+					return ConfiguredModel.builder()
+						.modelFile(model)
+						.rotationY(rotation)
+						.build();
 				}, WATERLOGGED))
 			.recipe((c, p) -> {
 				shapeless(RECIPE_CATEGORY_BUILDING_BLOCKS, c.get())
@@ -132,7 +139,7 @@ public final class CIBlocks {
 
 				shapeless(RECIPE_CATEGORY_BUILDING_BLOCKS, c.get())
 					.requires(ItemTags.WOODEN_SLABS)
-					.requires(AllBlocks.SEATS.get(color) #if PRE_CURRENT_MC_19_2 .get() #endif)
+					.requires(AllBlocks.SEATS.get(color) #if MC <= "19.2" .get() #endif)
 					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
 					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_seat"));
 
@@ -174,7 +181,10 @@ public final class CIBlocks {
 					ModelFile model = customChairModelFile(p, "block/chair/" + armrest + cropped_state,
 						"block/chair/" + colorName + "_chair_" + armrest + cropped_state,
 						top, side, sideTop, side);
-					return modelWithRotation(model, rotation);
+					return ConfiguredModel.builder()
+						.modelFile(model)
+						.rotationY(rotation)
+						.build();
 				}, WATERLOGGED))
 			.recipe((c, p) -> {
 				shapeless(RECIPE_CATEGORY_BUILDING_BLOCKS, c.get())
@@ -186,12 +196,12 @@ public final class CIBlocks {
 
 				shapeless(RECIPE_CATEGORY_BUILDING_BLOCKS, c.get())
 					.requires(ItemTags.PLANKS)
-					.requires(AllBlocks.SEATS.get(color) #if PRE_CURRENT_MC_19_2 .get() #endif)
+					.requires(AllBlocks.SEATS.get(color) #if MC <= "19.2" .get() #endif)
 					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
 					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
 				shapeless(RECIPE_CATEGORY_BUILDING_BLOCKS, c.get())
 					.requires(ItemTags.WOODEN_SLABS)
-					.requires(FLOOR_CHAIRS.get(color) #if PRE_CURRENT_MC_19_2 .get() #endif)
+					.requires(FLOOR_CHAIRS.get(color) #if MC <= "19.2" .get() #endif)
 					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
 					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
 
@@ -224,10 +234,14 @@ public final class CIBlocks {
 
 				int rotation = facing(state);
 
-				return modelWithRotation(p.models().withExistingParent(
+				ModelFile model = p.models().withExistingParent(
 					"block/chair/" + armrest + cropped_state,
 						"block/chair/kelp_chair_" + armrest + cropped_state
-					), rotation);
+					);
+				return ConfiguredModel.builder()
+					.modelFile(model)
+					.rotationY(rotation)
+					.build();
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -247,10 +261,14 @@ public final class CIBlocks {
 				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
 				int rotation = facing(state);
-				return modelWithRotation(p.models().withExistingParent(
+				ModelFile model = p.models().withExistingParent(
 					"block/floor_chair/" + armrest + cropped_state,
 						"block/chair/kelp_floor_chair_" + armrest + cropped_state
-					), rotation);
+					);
+				return ConfiguredModel.builder()
+					.modelFile(model)
+					.rotationY(rotation)
+					.build();
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -268,7 +286,11 @@ public final class CIBlocks {
 			.forAllStatesExcept(state -> {
 				String facing = state.getValue(ChairBlock.FACING).getSerializedName();
 				int rotation = facing(state);
-				return modelWithRotation(p.models().getExistingFile(p.modLoc("block/kelp_seat")), rotation);
+				ModelFile model = p.models().getExistingFile(p.modLoc("block/kelp_seat"));
+				return ConfiguredModel.builder()
+					.modelFile(model)
+					.rotationY(rotation)
+					.build();
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -301,15 +323,8 @@ public final class CIBlocks {
 			.texture("side", side);
 	}
 
-	private static ConfiguredModel[] modelWithRotation(ModelFile model, int rotation) {
-		return ConfiguredModel.builder()
-			.modelFile(model)
-			.rotationY(rotation)
-			.build();
-	}
-
 	private static NonNullUnaryOperator<Properties> color(DyeColor color) {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		return p -> p.color(color.getMaterialColor());
 		#else
 		return p -> p.mapColor(color);
@@ -317,7 +332,7 @@ public final class CIBlocks {
 	}
 
 	private static ShapelessRecipeBuilder shapeless(Object category, Block block) {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		return ShapelessRecipeBuilder.shapeless(block);
 		#else
 		return ShapelessRecipeBuilder.shapeless((net.minecraft.data.recipes.RecipeCategory) java.util.Objects.requireNonNull(category), block);

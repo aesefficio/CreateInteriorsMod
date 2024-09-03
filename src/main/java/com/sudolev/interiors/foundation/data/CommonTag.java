@@ -39,7 +39,7 @@ public class CommonTag<T> {
 	}
 
 	public CommonTag<T> generateBoth(RegistrateTagsProvider<T> tags, Consumer<TagAppender<T>> consumer) {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		consumer.accept(tags.tag(fabric));
 		consumer.accept(tags.tag(forge));
 		#else
@@ -50,7 +50,7 @@ public class CommonTag<T> {
 	}
 
 	public CommonTag<T> generateCommon(RegistrateTagsProvider<T> tags) {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		tags.tag(tag)
 		#else
 		tags.addTag(tag)

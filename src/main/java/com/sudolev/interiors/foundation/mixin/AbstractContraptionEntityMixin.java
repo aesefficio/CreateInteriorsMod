@@ -27,7 +27,7 @@ public abstract class AbstractContraptionEntityMixin {
 
 	@Inject(method = "getPassengerPosition", at = @At("TAIL"), cancellable = true, remap = false)
 	private void raiseSeatEntity(Entity passenger, float partialTicks, CallbackInfoReturnable<Vec3> cir, @Local BlockPos seat) {
-		#if PRE_CURRENT_MC_19_2
+		#if MC <= "19.2"
 		BlockState state = contraption.getBlocks().get(seat).state;
 		#else
 		BlockState state = contraption.getBlocks().get(seat).state();

@@ -5,7 +5,7 @@ import com.sudolev.interiors.CreateInteriors;
 import com.sudolev.interiors.content.registry.CITags;
 import com.tterrag.registrate.providers.ProviderType;
 
-#if POST_MC_19_2
+#if MC >= "20.1"
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 #else
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -38,7 +38,7 @@ public class CIDatagen implements DataGeneratorEntrypoint {
 			CITags.DYES.values().forEach(tag -> tag.generateCommon(prov)));
 
 		CreateInteriors.REGISTRATE.setupDatagen(gen
-			#if POST_MC_19_2
+			#if MC > "19.2"
 				.createPack()
 			#endif
 			, helper);

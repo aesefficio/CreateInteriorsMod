@@ -70,7 +70,7 @@ public abstract class Utils {
 		#if FORGE
 			return entity.getPersistentData();
 		#elif FABRIC
-			#if PRE_CURRENT_MC_19_2
+			#if MC <= "19.2"
 			return entity.getExtraCustomData();
 			#else
 			return entity.getCustomData();

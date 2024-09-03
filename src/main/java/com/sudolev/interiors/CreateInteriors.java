@@ -40,7 +40,7 @@ public final class CreateInteriors {
 
 		CITags.register();
 		CITab.register(
-		#if FORGE && POST_CURRENT_MC_20_1
+		#if FORGE && MC >= "20.1"
 			net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus()
 		#endif);
 		CIEntities.register();
