@@ -37,11 +37,11 @@ dependencies {
 	}
 
 	// Development QOL
-	modLocalRuntime("maven.modrinth:lazydfu:${"lazydfu_version"()}")
+	//modLocalRuntime("maven.modrinth:lazydfu:${"lazydfu_version"()}")
 	modLocalRuntime("com.terraformersmc:modmenu:${"modmenu_version"()}")
 
 	// because create fabric is a bit broken I think
-	modImplementation("net.minecraftforge:forgeconfigapiport-fabric:4.2.9")
+	modImplementation("net.minecraftforge:forgeconfigapiport-fabric:3.2.4")
 }
 
 operator fun String.invoke(): String {

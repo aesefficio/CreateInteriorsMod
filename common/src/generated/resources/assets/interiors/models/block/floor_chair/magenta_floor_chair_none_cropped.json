@@ -1,9 +1,9 @@
 {
   "parent": "interiors:block/floor_chair/none_cropped",
   "textures": {
-    "side": "create:block/seat/side_magenta",
-    "side_front": "create:block/seat/side_magenta",
+    "top": "create:block/seat/top_magenta",
     "side_top": "interiors:block/chair/side_top_magenta",
-    "top": "create:block/seat/top_magenta"
+    "side_front": "create:block/seat/side_magenta",
+    "side": "create:block/seat/side_magenta"
   }
 }
