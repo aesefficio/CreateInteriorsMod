@@ -1,7 +1,6 @@
 architectury.forge()
 
 loom {
-	silentMojangMappingsLicense()
 	runs.configureEach {
 		vmArg("-Dmixin.debug.export=true")
 		vmArg("-Dmixin.env.remapRefMap=true")
