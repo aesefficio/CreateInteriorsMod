@@ -44,7 +44,7 @@ public abstract class ChairBlock extends DirectionalSeatBlock implements ProperW
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(WATERLOGGED).add(FACING).add(ARMRESTS).add(CROPPED_BACK);
+		super.createBlockStateDefinition(builder.add(ARMRESTS).add(CROPPED_BACK));
 	}
 
 	@Override

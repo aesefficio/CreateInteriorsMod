@@ -48,7 +48,7 @@ public abstract class SeatBlockMixin {
 	}
 
 	@ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/block/DyedBlockList;get(Lnet/minecraft/world/item/DyeColor;)Lcom/tterrag/registrate/util/entry/BlockEntry;"))
-	private BlockEntry<?> useBigChairSeats(BlockEntry<?> original, @Local(argsOnly = true) BlockState state, @Local DyeColor color) {
+	private BlockEntry<? extends SeatBlock> useBigChairSeats(BlockEntry<SeatBlock> original, @Local(argsOnly = true) BlockState state, @Local DyeColor color) {
 		SeatBlock thiz = (SeatBlock) (Object) this;
 
 		if(thiz instanceof BigChairBlock) {

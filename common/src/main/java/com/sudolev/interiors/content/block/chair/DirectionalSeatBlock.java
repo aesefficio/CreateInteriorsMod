@@ -1,5 +1,7 @@
 package com.sudolev.interiors.content.block.chair;
 
+import com.sudolev.interiors.CreateInteriors;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -47,7 +49,7 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(FACING).add(WATERLOGGED);
+		super.createBlockStateDefinition(builder.add(FACING));
 	}
 
 	@Override

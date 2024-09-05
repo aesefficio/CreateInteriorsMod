@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-03T20:28:23.511362	Create: Interiors/Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+// 1.20.1	2024-09-04T20:55:45.340839	Create: Interiors/Registrate Provider for interiors [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
 14aff3c9d61a7542b08a2b7a37385a5aaca94952 data/interiors/advancements/recipes/building_blocks/crafting/floor_chair/black_floor_chair.json
 4f547294cbced34ab6930f8c959efde9183a97ac data/interiors/advancements/recipes/building_blocks/crafting/chair/magenta_chair_from_floor_chair.json
 f1c40fb2d701527a66f4e026c7f95239681e2352 data/interiors/advancements/recipes/building_blocks/crafting/chair/yellow_chair.json
@@ -91,16 +91,16 @@ aca9d67c4cd107248024656ee4c15aa951229339 assets/interiors/models/block/floor_cha
 6a6c2a1e08c28507b0c43e149b7927a7b9dbadde data/interiors/advancements/recipes/building_blocks/crafting/floor_chair/red_floor_chair_from_seat.json
 790ff3c5da6a67a5de1ceb7138fa3e1c0fe97f80 data/interiors/tags/items/internal/dyes/lime_dyes.json
 b327c2d93f1ee4845d21bf04db492345d7810f90 data/interiors/advancements/recipes/building_blocks/crafting/chair/gray_chair_from_seat.json
-1a256ea134dafc1b13980af5471c0685c6202756 assets/interiors/models/block/floor_chair/lime_floor_chair_none.json
 d0829a63f3d040308aced5c65d57161b09a2c618 assets/interiors/models/block/chair/orange_chair_right.json
+1a256ea134dafc1b13980af5471c0685c6202756 assets/interiors/models/block/floor_chair/lime_floor_chair_none.json
 060e0b62ca8d96ba0c41791c697ccf578153ebb2 assets/interiors/models/item/light_blue_floor_chair.json
 d98ff59cc85da2c53ca0d225e07b771599cc04a0 assets/interiors/models/item/green_floor_chair.json
 73b20e5939b61f5128b2d334c4f9003df8ff83cc data/interiors/advancements/recipes/building_blocks/crafting/floor_chair/white_floor_chair.json
 773d03444b7f37386b09836d57c35f66e7f45da8 data/interiors/tags/blocks/chairs.json
 79edbf1056c3b969e4d34e76fb6935e8147691ac data/interiors/loot_tables/blocks/orange_floor_chair.json
 2d593b8894b4370c39c17a76bc7f7a2465bd3594 assets/interiors/models/block/chair/brown_chair_both.json
-7e50900990bbf31a02fe968dbb463930332ede3b data/interiors/recipes/crafting/chair/purple_chair_from_other_chair.json
 ac19c2dbf73f5b6835529a70e8bbb033f5c5bb35 data/interiors/advancements/recipes/building_blocks/crafting/chair/purple_chair_from_seat.json
+7e50900990bbf31a02fe968dbb463930332ede3b data/interiors/recipes/crafting/chair/purple_chair_from_other_chair.json
 c9fee6f087e7dc8dbd390562d6b9b1a63f7a8197 assets/interiors/models/block/floor_chair/green_floor_chair_left.json
 8a4b18e26e615bb3b635f2e35cbaf0715c4216f5 assets/interiors/models/block/floor_chair/purple_floor_chair_none_cropped.json
 2a352db3525767361b2644778063239e934e915a assets/interiors/models/item/kelp_floor_chair.json
@@ -351,8 +351,8 @@ dac4dc6c457ea01bd692bf04a477e10b86e9d1fd assets/interiors/blockstates/black_chai
 59daf1b84c55f35fb4548af06d37318af63e9183 assets/interiors/models/block/chair/light_gray_chair_right_cropped.json
 9e05272acf05d08cf53594a30c103d86f6f2e85c assets/interiors/models/block/chair/lime_chair_right.json
 d5805f3656a060b6366999e4bde885fd27959b9d data/interiors/advancements/recipes/building_blocks/crafting/chair/yellow_chair_from_floor_chair.json
-a3d1e4c30bf30d1f9c7b26c6c043efe5a05502b1 data/interiors/advancements/recipes/building_blocks/crafting/chair/pink_chair.json
 d1629b144f7bb21fdac6d84982720c8195f77b8e data/interiors/recipes/crafting/floor_chair/purple_floor_chair_from_other_floor_chair.json
+a3d1e4c30bf30d1f9c7b26c6c043efe5a05502b1 data/interiors/advancements/recipes/building_blocks/crafting/chair/pink_chair.json
 fa0fa535b7190d9963a822cf79e3fe5086ed7cff data/interiors/recipes/crafting/floor_chair/blue_floor_chair.json
 4a34c30999dd6653e1081c30fa7fdbba1dfbe6a6 assets/interiors/models/block/chair/gray_chair_both.json
 54524072bcc8a277a004147eee971c0ee06c3bad data/interiors/recipes/crafting/chair/green_chair_from_floor_chair.json
