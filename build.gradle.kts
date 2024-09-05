@@ -12,8 +12,8 @@ import java.util.zip.Deflater
 
 plugins {
 	java
-	id("architectury-plugin") version "3.4.155" apply false
-	id("dev.architectury.loom") version "1.7.412" apply false
+	id("architectury-plugin") version "3.4.159" apply false
+	id("dev.architectury.loom") version "1.6.411" apply false
 	id("com.github.johnrengelman.shadow") version "8.1.1" apply false
 }
 
@@ -145,7 +145,7 @@ subprojects {
 
 		// set up properties for filling into metadata
 		val properties = mapOf(
-			"version" to version,
+			"version" to "mod_version"(),
 			"minecraft_version" to "minecraft_version"(),
 			"fabric_api_version" to "fabric_api_version"(),
 			"fabric_loader_version" to "fabric_loader_version"(),
