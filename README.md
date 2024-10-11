@@ -103,7 +103,7 @@ Bug reports, suggestions and ideas are incredibly useful and much appreciated. A
 
 Report Issues <a href="https://github.com/sudolev/CreateInteriorsMod/issues">here</a></h3>
 
-<b>This project is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank">GPL-3.0</a>
-
-© 2023 Sudolev</b>
+<b>This project is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank">GPL-3.0</a></b>
 </div>
+
+[![Interiors Banner](https://i.ibb.co/VpBf0xs/interiors.png)](https://url-shortener.curseforge.com/Q8SRA)
