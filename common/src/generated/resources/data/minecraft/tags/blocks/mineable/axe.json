@@ -37,6 +37,22 @@
     "interiors:black_chair",
     "interiors:kelp_chair",
     "interiors:kelp_floor_chair",
-    "interiors:kelp_seat"
+    "interiors:kelp_seat",
+    "interiors:white_cushion",
+    "interiors:orange_cushion",
+    "interiors:magenta_cushion",
+    "interiors:light_blue_cushion",
+    "interiors:yellow_cushion",
+    "interiors:lime_cushion",
+    "interiors:pink_cushion",
+    "interiors:gray_cushion",
+    "interiors:light_gray_cushion",
+    "interiors:cyan_cushion",
+    "interiors:purple_cushion",
+    "interiors:blue_cushion",
+    "interiors:brown_cushion",
+    "interiors:green_cushion",
+    "interiors:red_cushion",
+    "interiors:black_cushion"
   ]
 }

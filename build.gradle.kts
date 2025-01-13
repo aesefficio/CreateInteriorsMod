@@ -44,7 +44,6 @@ allprojects {
 	version = "${"mod_version"()}+${project.name}-mc${"minecraft_version"()}${if (isRelease) "" else build}"
 
 	tasks.withType<JavaCompile>().configureEach {
-		options.release = 17
 		options.encoding = "UTF-8"
 	}
 

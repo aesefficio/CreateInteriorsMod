@@ -2,6 +2,9 @@ package com.sudolev.interiors.content.registry.forge;
 
 import com.sudolev.interiors.CreateInteriors;
 
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
+
 import org.jetbrains.annotations.ApiStatus;
 
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -9,6 +12,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 
 @SuppressWarnings("unchecked")
 public class CIBlocksImpl {
@@ -49,5 +53,10 @@ public class CIBlocksImpl {
 	@ApiStatus.Internal
 	public static void setupCreativeTab() {
 		CreateInteriors.REGISTRATE.setCreativeTab(CITabImpl.TAB);
+	}
+
+	@ApiStatus.Internal
+	public static void simpleBlock(DataGenContext<Block, ?> c, RegistrateBlockstateProvider p, ResourceLocation texture) {
+		p.simpleBlock(c.get(), p.models().cubeAll(c.getName(), texture));
 	}
 }

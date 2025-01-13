@@ -24,13 +24,15 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 import com.sudolev.interiors.CreateInteriors;
-import com.sudolev.interiors.Utils;
+import com.sudolev.interiors.content.block.CushionBlock;
 import com.sudolev.interiors.content.block.WallMountedTable;
 import com.sudolev.interiors.content.block.chair.BigChairBlock;
 import com.sudolev.interiors.content.block.chair.BigSeatMovementBehaviour;
 import com.sudolev.interiors.content.block.chair.ChairBlock;
 import com.sudolev.interiors.content.block.chair.DirectionalSeatBlock;
 import com.sudolev.interiors.content.block.chair.FloorChairBlock;
+import com.tterrag.registrate.providers.DataGenContext;
+import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
@@ -251,6 +253,27 @@ public final class CIBlocks {
 		.simpleItem()
 		.register();
 
+	public static final DyedBlockList<CushionBlock> CUSHION_BLOCKS = new DyedBlockList<>(color -> {
+		String colorName = color.getSerializedName();
+		return REGISTRATE.block(colorName + "_cushion", CushionBlock::new)
+			.initialProperties(SharedProperties::wooden)
+			.properties(p -> p.mapColor(color))
+			.transform(b -> b.tag(BlockTags.MINEABLE_WITH_AXE).tag(BlockTags.WOOL))
+			.blockstate((c, p) -> {
+				ResourceLocation texture = Create.asResource("block/seat/top_" + colorName);
+				simpleBlock(c, p, texture);
+			})
+			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.cushion"))
+			.recipe((c, p) ->
+				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get(), 2)
+					.requires(ItemTags.PLANKS)
+					.requires(DyeHelper.getWoolOfDye(color))
+					.unlockedBy("has_planks", RegistrateRecipeProvider.has(ItemTags.PLANKS))
+					.save(p, CreateInteriors.asResource("crafting/cushion/" + c.getName())))
+			.simpleItem()
+			.register();
+	});
+
 	public static void register() {
 		// load class
 	}
@@ -292,6 +315,12 @@ public final class CIBlocks {
 	@ExpectPlatform
 	@ApiStatus.Internal
 	public static <ConfiguredModel> ConfiguredModel modelWithRotation(Object /* ModelFile */ model, int rotation) {
+		throw new AssertionError();
+	}
+
+	@ExpectPlatform
+	@ApiStatus.Internal
+	public static void simpleBlock(DataGenContext<Block, ?> c, RegistrateBlockstateProvider p, ResourceLocation texture) {
 		throw new AssertionError();
 	}
 }

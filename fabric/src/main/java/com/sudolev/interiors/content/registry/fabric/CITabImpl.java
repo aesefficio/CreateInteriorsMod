@@ -2,6 +2,7 @@ package com.sudolev.interiors.content.registry.fabric;
 
 import java.util.function.Supplier;
 
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 
 import net.minecraft.core.Registry;
@@ -24,7 +25,7 @@ public class CITabImpl {
 		.icon(() -> CIBlocks.CHAIRS.get(DyeColor.RED).asItem().getDefaultInstance())
 		.displayItems((parameters, output) -> CreateInteriors.REGISTRATE
 			.getAll(Registries.BLOCK).stream()
-			.map(entry -> entry.get().asItem())
+			.map(RegistryEntry::get)
 			.forEach(output::accept))
 		::build);
 

@@ -7,5 +7,7 @@
   "block.interiors.chair.tooltip.behaviour2": "Toggles individual _Chair_ armrests.",
   "block.interiors.chair.tooltip.condition3": "When Sneak R-Clicked with Wrench",
   "block.interiors.chair.tooltip.behaviour3": "Toggles _Chair_ back size.",
+  "block.interiors.cushion.tooltip": "CUSHION",
+  "block.interiors.cushion.tooltip.summary": "A soft and comfortable _Cushion_. Bouncy!",
   "itemGroup.interiors": "Create: Interiors"
 }
