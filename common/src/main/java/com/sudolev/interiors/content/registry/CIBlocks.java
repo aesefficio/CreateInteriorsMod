@@ -6,7 +6,6 @@ import com.simibubi.create.AllTags.AllItemTags;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
 import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
-import com.simibubi.create.content.redstone.displayLink.source.EntityNameDisplaySource;
 import com.simibubi.create.foundation.block.DyedBlockList;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.SharedProperties;
@@ -40,13 +39,13 @@ import org.jetbrains.annotations.ApiStatus;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
-import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
-import static com.simibubi.create.content.redstone.displayLink.AllDisplayBehaviours.assignDataBehaviour;
+import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
+import static com.simibubi.create.api.behaviour.movement.MovementBehaviour.movementBehaviour;
 import static com.simibubi.create.foundation.block.ProperWaterloggedBlock.WATERLOGGED;
 import static com.simibubi.create.foundation.data.TagGen.axeOnly;
 import static com.sudolev.interiors.CreateInteriors.REGISTRATE;
 
+// TODO: is AllDisplayBehaviours.assignDataBehaviour necessary to replace?
 @SuppressWarnings("unused")
 public final class CIBlocks {
 
@@ -122,7 +121,7 @@ public final class CIBlocks {
 			})
 			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+//			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
 			.tag(CITags.Blocks.FLOOR_CHAIRS)
 			.item().tag(CITags.Items.FLOOR_CHAIRS)
@@ -181,7 +180,7 @@ public final class CIBlocks {
 			})
 			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-			.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+			//.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 			.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.interiors.chair"))
 			.tag(CITags.Blocks.CHAIRS)
 			.item()
@@ -248,7 +247,7 @@ public final class CIBlocks {
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
-		.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
+		//.onRegister(assignDataBehaviour(new EntityNameDisplaySource(), "entity_name"))
 		.onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "block.create.seat"))
 		.simpleItem()
 		.register();

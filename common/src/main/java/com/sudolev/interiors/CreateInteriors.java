@@ -2,10 +2,10 @@ package com.sudolev.interiors;
 
 import net.minecraft.resources.ResourceLocation;
 
-import com.simibubi.create.Create;
+import com.simibubi.create.CreateBuildInfo;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription.Modifier;
-import com.simibubi.create.foundation.item.TooltipHelper.Palette;
+import net.createmod.catnip.lang.FontHelper.Palette;
 
 import com.sudolev.interiors.content.registry.CIBlocks;
 import com.sudolev.interiors.content.registry.CIEntities;
@@ -29,7 +29,7 @@ public abstract class CreateInteriors {
 
 	public static void init() {
 		LOGGER.info("{} v{} initializing! Create version: {} on platform: {}",
-			NAME, VERSION, Create.VERSION, Utils.platformName());
+			NAME, VERSION, CreateBuildInfo.VERSION, Utils.platformName());
 
 		CITags.register();
 		CITab.register();
