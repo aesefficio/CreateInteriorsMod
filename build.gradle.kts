@@ -216,10 +216,7 @@ fun squishJar(jar: File) {
 	}
 }
 
-operator fun String.invoke(): String {
-	return rootProject.ext[this] as? String
-		?: throw IllegalStateException("Property $this is not defined")
-}
+operator fun String.invoke() = rootProject.ext[this] as? String ?: error("No property \"$this\"")
 
 fun Project.setupRepositories() {
 	repositories {
@@ -231,22 +228,32 @@ fun Project.setupRepositories() {
 		exclusiveMaven("https://api.modrinth.com/maven", "maven.modrinth") // LazyDFU, JourneyMap
 		exclusiveMaven("https://cursemaven.com", "curse.maven")
 		maven("https://maven.theillusivec4.top/") // Curios
-		maven("https://maven.tterrag.com/") { // Flywheel, Registrate, Create
+		maven("https://maven.tterrag.com/") { // Registrate
 			content {
-				includeGroup("com.simibubi.create")
 				includeGroup("com.tterrag.registrate")
-				includeGroup("com.jozufozu.flywheel")
 			}
 		}
-		exclusiveMaven("https://maven.jamieswhiteshirt.com/libs-release", "com.jameswhiteshirt.reach-entity-attributes")// Reach Entity Attributes
+		maven("https://maven.createmod.net") { // Create, Ponder, Flywheel
+			content {
+				includeGroup("com.simibubi.create")
+				includeGroup("net.createmod.ponder")
+				includeGroup("dev.engine-room.flywheel")
+			}
+		}
+		exclusiveMaven("https://maven.jamieswhiteshirt.com/libs-release", "com.jameswhiteshirt.reach-entity-attributes") // Reach Entity Attributes
 		maven("https://maven.terraformersmc.com/releases/") // Mod Menu, EMI
-		maven("https://mvn.devos.one/snapshots/") // Create Fabric, Porting Lib, Forge Tags, Milk Lib, Registrate Fabric
+		maven("https://mvn.devos.one/snapshots/") // Create Fabric, Forge Tags, Milk Lib, Registrate Fabric
+		maven("https://mvn.devos.one/releases/") // Porting Lib
 		maven("https://maven.cafeteria.dev/releases") // Fake Player API
 		maven("https://maven.jamieswhiteshirt.com/libs-release") // Reach Entity Attributes
 		maven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/") // forge config api port
 		exclusiveMaven("https://maven.blamejared.com", "at.petra-k", "vazkii.patchouli") // JEI, Hex Casting
 		exclusiveMaven("https://maven.ladysnake.org/releases", "dev.onyxstudios.cardinal-components-api") // Cardinal Components (Hex Casting dependency)
-		maven("https://jitpack.io") // MixinExtras and FabricASM
+		maven("https://jitpack.io") { // MixinExtras and FabricASM
+			content {
+				excludeGroup("io.github.fabricators_of_create.Porting-Lib") // porting lib makes jitpack angry for some reason
+			}
+		}
 	}
 }
 

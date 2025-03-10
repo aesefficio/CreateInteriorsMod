@@ -31,19 +31,11 @@ dependencies {
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${"fabric_api_version"()}+${"minecraft_version"()}")
 
 	// Create - dependencies are added transitively
-	modImplementation("com.simibubi.create:create-fabric-${"minecraft_version"()}:${"create_fabric_version"()}+mc${"minecraft_version"()}") {
-		exclude(group = "com.github.llamalad7.mixinextras", module = "mixinextras")
-	}
+	modImplementation("com.simibubi.create:create-fabric-${"minecraft_version"()}:${"create_fabric_version"().split("$$").joinToString("+mc${"minecraft_version"()}-build.")}")
 
 	// Development QOL
 	modLocalRuntime("maven.modrinth:lazydfu:${"lazydfu_version"()}")
 	modLocalRuntime("com.terraformersmc:modmenu:${"modmenu_version"()}")
-
-	// because create fabric is a bit broken I think
-	modImplementation("net.minecraftforge:forgeconfigapiport-fabric:4.2.9")
 }
 
-operator fun String.invoke(): String {
-	return rootProject.ext[this] as? String
-		?: throw IllegalStateException("Property $this is not defined")
-}
+operator fun String.invoke() = rootProject.ext[this] as? String ?: error("No property \"$this\"")

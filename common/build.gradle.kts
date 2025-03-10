@@ -17,9 +17,7 @@ dependencies {
 	// dependencies must also be pulled in to minimize problems, from remapping issues to compile errors.
 	// All dependencies except Flywheel and Registrate are NOT safe to use!
 	// Flywheel and Registrate must also be used carefully due to differences.
-	modCompileOnly("com.simibubi.create:create-fabric-${"minecraft_version"()}:${"create_fabric_version"()}+mc${"minecraft_version"()}") {
-		exclude(group = "com.github.llamalad7.mixinextras", module = "mixinextras")
-	}
+	modCompileOnly("com.simibubi.create:create-fabric-${"minecraft_version"()}:${"create_fabric_version"().split("$$").joinToString("+mc${"minecraft_version"()}-build.")}")
 
 	// required for proper remapping and compiling
 	modCompileOnly("net.fabricmc.fabric-api:fabric-api:${"fabric_api_version"()}+${"minecraft_version"()}")
