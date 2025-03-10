@@ -12,8 +12,8 @@ import java.util.zip.Deflater
 
 plugins {
 	java
-	id("architectury-plugin") version "3.4.159" apply false
-	id("dev.architectury.loom") version "1.6.411" apply false
+	id("architectury-plugin") version "3.4.161" apply false
+	id("dev.architectury.loom") version "1.9.428" apply false
 	id("com.github.johnrengelman.shadow") version "8.1.1" apply false
 }
 
@@ -223,7 +223,6 @@ operator fun String.invoke(): String {
 
 fun Project.setupRepositories() {
 	repositories {
-		mavenCentral()
 		maven("https://maven.shedaniel.me/") // Cloth Config, REI
 		maven("https://maven.blamejared.com/") // JEI, Hex Casting
 		exclusiveMaven("https://maven.parchmentmc.org", "org.parchmentmc.data") // Parchment mappings
