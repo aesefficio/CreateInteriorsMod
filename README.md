@@ -7,7 +7,7 @@
    <img src="https://img.shields.io/badge/license-GPL‒3.0-992333" alt="license - GPL-3.0">
    <br>
    <a href="https://curseforge.com/minecraft/mc-mods/interiors"><img src="https://cf.way2muchnoise.eu/906239.svg" alt="curseforge"></a>
-   <a href="https://modrinth.com/mod/interiors"><img src="https://img.shields.io/modrinth/dt/r4Knci2k?logo=modrinth&label=&suffix= &style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a>
+   <a href="https://modrinth.com/mod/interiors"><img src="https://img.shields.io/modrinth/dt/r4Knci2k?logo=modrinth&label=&suffix=&style=flat&color=242629&labelColor=5ca424&logoColor=1c1c1c" alt="modrinth"></a>
    <!--<img src="https://wakatime.com/badge/user/d3e71387-5f47-4f39-81e8-9b14b9457c4b/project/b9a80971-7eb4-4059-b3d4-9a2d202a06bb.svg" alt="wakatime">-->
 </div>
 <div align="center">
