@@ -1,16 +1,25 @@
-pluginManagement {
-	repositories {
-		maven { url = uri("https://maven.fabricmc.net/") }
-		maven { url = uri("https://maven.architectury.dev/") }
-		maven { url = uri("https://maven.minecraftforge.net/") }
-		maven { url = uri("https://maven.quiltmc.org/repository/release") }
-		gradlePluginPortal()
-	}
+import org.gradle.api.internal.FeaturePreviews.Feature
+
+enableFeaturePreview(Feature.STABLE_CONFIGURATION_CACHE.name)
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+    id("dev.kikugie.stonecutter") version "0.7.11"
 }
 
-include("common")
-include("fabric")
-include("forge")
+stonecutter {
+    kotlinController = true
+    centralScript = "build.gradle.kts"
 
-// no colon because gradle
+    create(rootProject) {
+        operator fun String.invoke(vararg loaders: String) = loaders.map { "$this-$it" to this }
+        operator fun List<Pair<String, String>>.unaryPlus() = forEach { (d, v) -> version(d, v) }
+
+        +"1.20.1"("fabric", "forge")
+        +"1.21.1"("neoforge")
+
+        vcsVersion = "1.20.1-forge"
+    }
+}
+
 rootProject.name = "Create Interiors"
