@@ -55,6 +55,10 @@ manifold.preprocessor {
     sourceSet("main")
 }
 
+sourceSets.main {
+    resources.srcDir(rootProject.file("src/generated/resources"))
+}
+
 tasks.withType<Sync>().configureEach {
     if (this.name.startsWith("stonecutterGenerate")) {
         exclude("**/build.properties")

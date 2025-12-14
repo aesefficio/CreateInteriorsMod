@@ -13,7 +13,7 @@ stonecutter {
 
     create(rootProject) {
         operator fun String.invoke(vararg loaders: String) = loaders.map { "$this-$it" to this }
-        operator fun List<Pair<String, String>>.unaryPlus() = forEach { (d, v) -> version(d, v) }
+        operator fun List<Pair<String, String>>.unaryPlus() = versions(this)
 
         +"1.20.1"("fabric", "forge")
         +"1.21.1"("neoforge")

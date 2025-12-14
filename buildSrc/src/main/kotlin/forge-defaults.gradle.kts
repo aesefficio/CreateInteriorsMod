@@ -9,7 +9,7 @@ legacyForge {
 }
 
 mixin {
-	config("${rootProject.name}.mixins.json")
+	config("interiors.mixins.json")
 }
 
 dependencies {
@@ -22,7 +22,7 @@ tasks.register<BetterRemapJar>("remapJar") {
 	input = tasks.jar.flatMap { it.archiveFile }
 
 	manifest.attributes(
-		"MixinConfigs" to "${rootProject.name}.mixins.json",
+		"MixinConfigs" to "interiors.mixins.json",
 	)
 }
 

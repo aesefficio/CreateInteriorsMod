@@ -57,7 +57,7 @@ gradle.taskGraph.whenReady {
 
 loom {
 	mods {
-		maybeRegister(rootProject.name) {
+		maybeRegister("interiors") {
 			modSourceSets.add(sourceSets.main.map { SourceSetReference(it, project) })
 		}
 	}

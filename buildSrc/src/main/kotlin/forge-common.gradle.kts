@@ -12,13 +12,24 @@ forge {
 		}
 	}
 
-	mods.maybeRegister(rootProject.name) {
+	mods.maybeRegister("interiors") {
 		modSourceSets.add(sourceSets.main)
 	}
 
 	runs {
 		maybeRegister("client") { client() }
 		maybeRegister("server") { server() }
+		maybeRegister("data") {
+			data()
+			programArguments.addAll(listOf(
+				"--mod", "interiors",
+				"--existing-mod", "create",
+				"--existing", file("build/generated/stonecutter/main/resources/").absolutePath,
+				"--all",
+				"--output", rootProject.file("src/generated/resources/").absolutePath
+			))
+			logLevel = org.slf4j.event.Level.DEBUG
+		}
 
 		configureEach {
 			ideName = "${"platform"().capitalized()} ${name.capitalized()}: ${"minecraft_version"()}"

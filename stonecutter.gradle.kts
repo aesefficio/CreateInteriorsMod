@@ -9,7 +9,7 @@ plugins {
 stonecutter active "1.20.1-forge"
 
 rootProject.group = "com.aesefficio"
-rootProject.base.archivesName = rootProject.name
+rootProject.base.archivesName = "interiors"
 rootProject.version = prop("mod_version")
 
 manifold {
