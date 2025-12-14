@@ -44,6 +44,9 @@ import net.neoforged.client.model.generators.BlockStateProvider;
 import net.neoforged.client.model.generators.ConfiguredModel;
 import net.neoforged.client.model.generators.ModelFile;
 #elif fabric
+import io.github.fabricators_of_create.porting_lib.models.generators.ModelBuilder;
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelBuilder;
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelProvider;
 import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockStateProvider;
 import io.github.fabricators_of_create.porting_lib.models.generators.ConfiguredModel;
 import io.github.fabricators_of_create.porting_lib.models.generators.ModelFile;
@@ -80,12 +83,11 @@ public final class CIBlocks {
 		.blockstate((c, p) -> p.getVariantBuilder(c.get())
 			.forAllStatesExcept(state -> {
 				String facing = state.getValue(ChairBlock.FACING).getSerializedName();
-				int rotation = facing(state);
 
 				ModelFile model = p.models().getExistingFile(p.modLoc("block/wall_mounted_table"));
 				return ConfiguredModel.builder()
 						.modelFile(model)
-						.rotationY(rotation)
+						.rotationY(facing(state))
 						.build();
 			}, WATERLOGGED))
 		.simpleItem()
@@ -102,19 +104,18 @@ public final class CIBlocks {
 					String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
 					String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-					int rotation = facing(state);
-
 					ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
 					ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
 					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
-					ModelFile model = customChairModelFile(p, "block/floor_chair/" + armrest + cropped_state,
-						"block/floor_chair/" + colorName + "_floor_chair_" + armrest + cropped_state,
-						top, side, sideTop, side);
-					return ConfiguredModel.builder()
-							.modelFile(model)
-							.rotationY(rotation)
-							.build();
+					return chairModels(
+							p,
+							"block/floor_chair/",
+							colorName + "_floor_chair_",
+							armrest + cropped_state,
+							top, side,  sideTop, side,
+							facing(state)
+					);
 				}, WATERLOGGED))
 			.recipe((c, p) -> {
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
@@ -158,19 +159,18 @@ public final class CIBlocks {
 					String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
 					String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-					int rotation = facing(state);
-
 					ResourceLocation top = Create.asResource("block/seat/top_" + colorName);
 					ResourceLocation side = Create.asResource("block/seat/side_" + colorName);
 					ResourceLocation sideTop = p.modLoc("block/chair/side_top_" + colorName);
 
-					ModelFile model = customChairModelFile(p, "block/chair/" + armrest + cropped_state,
-						"block/chair/" + colorName + "_chair_" + armrest + cropped_state,
-						top, side, sideTop, side);
-					return ConfiguredModel.builder()
-							.modelFile(model)
-							.rotationY(rotation)
-							.build();
+					return chairModels(
+							p,
+							"block/chair/",
+							colorName + "_chair_",
+							armrest + cropped_state,
+							top, side, sideTop, side,
+							facing(state)
+					);
 				}, WATERLOGGED))
 			.recipe((c, p) -> {
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
@@ -218,13 +218,14 @@ public final class CIBlocks {
 				String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
 				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-				int rotation = facing(state);
-
-				ModelFile model = p.models().withExistingParent("block/chair/kelp_chair_" + armrest + cropped_state, p.modLoc("block/chair/" + armrest + cropped_state));
-				return ConfiguredModel.builder()
-						.modelFile(model)
-						.rotationY(rotation)
-						.build();
+				return chairModels(
+						p,
+						"block/chair/",
+						"kelp_chair_",
+						armrest + cropped_state,
+						null, null, null, null,
+						facing(state)
+				);
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -243,12 +244,14 @@ public final class CIBlocks {
 				String armrest = state.getValue(ChairBlock.ARMRESTS).getSerializedName();
 				String cropped_state = state.getValue(ChairBlock.CROPPED_BACK) ? "_cropped" : "";
 
-				int rotation = facing(state);
-				ModelFile model = p.models().withExistingParent("block/floor_chair/kelp_floor_chair_" + armrest + cropped_state, p.modLoc("block/chair/" + armrest + cropped_state));
-				return ConfiguredModel.builder()
-						.modelFile(model)
-						.rotationY(rotation)
-						.build();
+				return chairModels(
+						p,
+						"block/floor_chair/",
+						"kelp_floor_chair_",
+						armrest + cropped_state,
+						null, null, null, null,
+						facing(state)
+				);
 			}, WATERLOGGED))
 		.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 		.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -313,13 +316,22 @@ public final class CIBlocks {
 		};
 	}
 
-	private static ModelFile customChairModelFile(BlockStateProvider p, String parent, String name,
-												  ResourceLocation top, ResourceLocation side,
-												  ResourceLocation sideTop, ResourceLocation sideFront) {
-		return p.models().withExistingParent(name, p.modLoc(parent))
-				.texture("top", top)
-				.texture("side_top", sideTop)
-				.texture("side_front", sideFront)
-				.texture("side", side);
+	private static ConfiguredModel[] chairModels(
+			BlockStateProvider p,
+			String path, String detailer, String specifier,
+			ResourceLocation top, ResourceLocation side,
+			ResourceLocation sideTop, ResourceLocation sideFront,
+			int rotation
+	) {
+		BlockModelBuilder model = p.models().withExistingParent(path + detailer + specifier,
+						p.modLoc(path + specifier));
+		if (top != null) model.texture("top", top);
+		if (side != null) model.texture("side", side);
+		if (sideTop != null) model.texture("side_top", sideTop);
+		if (sideFront != null) model.texture("side_front", sideFront);
+		return ConfiguredModel.builder()
+				.modelFile(model)
+				.rotationY(rotation)
+				.build();
 	}
 }

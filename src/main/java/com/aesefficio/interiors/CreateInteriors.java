@@ -10,12 +10,14 @@ import net.createmod.catnip.lang.FontHelper.Palette;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.simibubi.create.Create;
 import com.simibubi.create.CreateBuildInfo;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription.Modifier;
 import com.simibubi.create.foundation.utility.FilesHelper;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
 
 #if forge
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -93,7 +95,14 @@ public final class CreateInteriors
 		CreateInteriors.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
 			CITags.DYES.values().forEach(prov::addTag));
 
-		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), ExistingFileHelper.withResourcesFromArg());
+		//ExistingFileHelper efh = ExistingFileHelper.withResourcesFromArg();
+		ExistingFileHelper efh = ExistingFileHelper.withResources(Set.of("create"), Path.of(System.getProperty(ExistingFileHelper.EXISTING_RESOURCES)));
+
+		if (!efh.exists(Create.asResource("textures/block/seat/top_white.png"), PackType.CLIENT_RESOURCES)) {
+			throw new IllegalStateException("what?");
+		}
+
+		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), efh);
 		provideDefaultLang("tooltips");
 	}
 	#endif

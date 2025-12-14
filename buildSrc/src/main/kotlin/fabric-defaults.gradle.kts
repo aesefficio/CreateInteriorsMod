@@ -77,11 +77,11 @@ loom {
 			client()
 
 			name("Fabric Data: " + "minecraft_version"())
-			vmArg("-Dfabric-api.datagen")
-			vmArg("-Dfabric-api.datagen.output-dir=${file("build/generated/datagen")}")
-			vmArg("-Dfabric-api.datagen.modid=interiors")
-			vmArg("-Dporting_lib.datagen.existing_resources=${file("build/generated/stonecutter/main/resources")}")
-			vmArg("-Dporting_lib.datagen.existing-mod=create")
+			property("fabric-api.datagen")
+			property("fabric-api.datagen.output-dir", file("build/generated/datagen").absolutePath)
+			property("fabric-api.datagen.modid", "interiors")
+			property("porting_lib.datagen.existing_resources", file("build/generated/stonecutter/main/resources").absolutePath)
+			property("porting_lib.datagen.existing-mod", "create")
 
 			environmentVariable("DATAGEN", "TRUE")
 		}
