@@ -35,9 +35,19 @@ import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
+#if forge
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
+#elif neoforge
+import net.neoforged.client.model.generators.BlockStateProvider;
+import net.neoforged.client.model.generators.ConfiguredModel;
+import net.neoforged.client.model.generators.ModelFile;
+#elif fabric
+import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockStateProvider;
+import io.github.fabricators_of_create.porting_lib.models.generators.ConfiguredModel;
+import io.github.fabricators_of_create.porting_lib.models.generators.ModelFile;
+#endif
 
 import static com.simibubi.create.api.behaviour.display.DisplaySource.displaySource;
 import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
@@ -50,7 +60,7 @@ import static com.aesefficio.interiors.CreateInteriors.REGISTRATE;
 public final class CIBlocks {
 
 	static {
-		REGISTRATE.setCreativeTab(CITab.TAB);
+		REGISTRATE.setCreativeTab(CITab.get());
 	}
 
 	public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
@@ -112,19 +122,19 @@ public final class CIBlocks {
 					.requires(ItemTags.WOODEN_SLABS)
 					.requires(DyeHelper.getWoolOfDye(color))
 					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName()));
+					.save(p, CreateInteriors.id("crafting/floor_chair/" + c.getName()));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(ItemTags.WOODEN_SLABS)
 					.requires(AllBlocks.SEATS.get(color))
 					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_seat"));
+					.save(p, CreateInteriors.id("crafting/floor_chair/" + c.getName() + "_from_seat"));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(CITags.Items.FLOOR_CHAIRS)
 					.requires(CITags.DYES.get(color).tag)
 					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
-					.save(p, CreateInteriors.asResource("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
+					.save(p, CreateInteriors.id("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
 			})
 			.onRegister(movementBehaviour(new SeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -168,24 +178,24 @@ public final class CIBlocks {
 					.requires(ItemTags.PLANKS)
 					.requires(DyeHelper.getWoolOfDye(color))
 					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName()));
+					.save(p, CreateInteriors.id("crafting/chair/" + c.getName()));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(ItemTags.PLANKS)
 					.requires(AllBlocks.SEATS.get(color))
 					.unlockedBy("has_seat", RegistrateRecipeProvider.has(AllItemTags.SEATS.tag))
-					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_seat"));
+					.save(p, CreateInteriors.id("crafting/chair/" + c.getName() + "_from_seat"));
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(ItemTags.WOODEN_SLABS)
 					.requires(FLOOR_CHAIRS.get(color))
 					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
-					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_floor_chair"));
+					.save(p, CreateInteriors.id("crafting/chair/" + c.getName() + "_from_floor_chair"));
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(CITags.Items.CHAIRS)
 					.requires(CITags.DYES.get(color).tag)
 					.unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
-					.save(p, CreateInteriors.asResource("crafting/chair/" + c.getName() + "_from_other_chair"));
+					.save(p, CreateInteriors.id("crafting/chair/" + c.getName() + "_from_other_chair"));
 			})
 			.onRegister(movementBehaviour(new BigSeatMovementBehaviour()))
 			.onRegister(interactionBehaviour(new SeatInteractionBehaviour()))
@@ -285,7 +295,7 @@ public final class CIBlocks {
 					.requires(ItemTags.PLANKS)
 					.requires(DyeHelper.getWoolOfDye(color))
 					.unlockedBy("has_planks", RegistrateRecipeProvider.has(ItemTags.PLANKS))
-					.save(p, CreateInteriors.asResource("crafting/cushion/" + c.getName())))
+					.save(p, CreateInteriors.id("crafting/cushion/" + c.getName())))
 			.simpleItem()
 			.register();
 	});
@@ -304,8 +314,8 @@ public final class CIBlocks {
 	}
 
 	private static ModelFile customChairModelFile(BlockStateProvider p, String parent, String name,
-												 ResourceLocation top, ResourceLocation side,
-												 ResourceLocation sideTop, ResourceLocation sideFront) {
+												  ResourceLocation top, ResourceLocation side,
+												  ResourceLocation sideTop, ResourceLocation sideFront) {
 		return p.models().withExistingParent(name, p.modLoc(parent))
 				.texture("top", top)
 				.texture("side_top", sideTop)

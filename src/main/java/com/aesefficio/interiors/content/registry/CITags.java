@@ -15,13 +15,13 @@ import java.util.Map;
 
 public final class CITags {
 	public static final class Blocks {
-		public static final TagKey<Block> CHAIRS = TagKey.create(Registries.BLOCK, CreateInteriors.asResource("chairs"));
-		public static final TagKey<Block> FLOOR_CHAIRS = TagKey.create(Registries.BLOCK, CreateInteriors.asResource("floor_chairs"));
+		public static final TagKey<Block> CHAIRS = TagKey.create(Registries.BLOCK, CreateInteriors.id("chairs"));
+		public static final TagKey<Block> FLOOR_CHAIRS = TagKey.create(Registries.BLOCK, CreateInteriors.id("floor_chairs"));
 	}
 
 	public static final class Items {
-		public static final TagKey<Item> CHAIRS = TagKey.create(Registries.ITEM, CreateInteriors.asResource("chairs"));
-		public static final TagKey<Item> FLOOR_CHAIRS = TagKey.create(Registries.ITEM, CreateInteriors.asResource("floor_chairs"));
+		public static final TagKey<Item> CHAIRS = TagKey.create(Registries.ITEM, CreateInteriors.id("chairs"));
+		public static final TagKey<Item> FLOOR_CHAIRS = TagKey.create(Registries.ITEM, CreateInteriors.id("floor_chairs"));
 	}
 
 	public static final Map<DyeColor, CommonTag<Item>> DYES = Util.make(new EnumMap<>(DyeColor.class), dyes -> {

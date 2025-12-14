@@ -73,6 +73,19 @@ loom {
 			name("Fabric Server: " + "minecraft_version"())
 		}
 
+		maybeRegister("data") {
+			client()
+
+			name("Fabric Data: " + "minecraft_version"())
+			vmArg("-Dfabric-api.datagen")
+			vmArg("-Dfabric-api.datagen.output-dir=${file("build/generated/datagen")}")
+			vmArg("-Dfabric-api.datagen.modid=interiors")
+			vmArg("-Dporting_lib.datagen.existing_resources=${file("build/generated/stonecutter/main/resources")}")
+			vmArg("-Dporting_lib.datagen.existing-mod=create")
+
+			environmentVariable("DATAGEN", "TRUE")
+		}
+
 		configureEach {
 			ideConfigGenerated(true)
 			appendProjectPathToConfigName = false

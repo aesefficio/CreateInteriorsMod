@@ -56,7 +56,7 @@ manifold.preprocessor {
 }
 
 sourceSets.main {
-    resources.srcDir(rootProject.file("src/generated/resources"))
+    resources.srcDir(file("build/generated/datagen"))
 }
 
 tasks.withType<Sync>().configureEach {

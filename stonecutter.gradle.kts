@@ -6,7 +6,7 @@ plugins {
 	id("xyz.wagyourtail.manifold")
 }
 
-stonecutter active "1.20.1-forge"
+stonecutter active "1.20.1-fabric"
 
 rootProject.group = "com.aesefficio"
 rootProject.base.archivesName = "interiors"

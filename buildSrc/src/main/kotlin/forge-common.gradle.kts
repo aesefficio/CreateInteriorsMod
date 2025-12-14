@@ -24,9 +24,9 @@ forge {
 			programArguments.addAll(listOf(
 				"--mod", "interiors",
 				"--existing-mod", "create",
-				"--existing", file("build/generated/stonecutter/main/resources/").absolutePath,
+				"--existing", file("build/generated/stonecutter/main/resources").absolutePath,
 				"--all",
-				"--output", rootProject.file("src/generated/resources/").absolutePath
+				"--output", file("build/generated/datagen").absolutePath
 			))
 			logLevel = org.slf4j.event.Level.DEBUG
 		}

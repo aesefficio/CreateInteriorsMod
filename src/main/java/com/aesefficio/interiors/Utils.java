@@ -1,13 +1,9 @@
 package com.aesefficio.interiors;
 
 import com.aesefficio.interiors.content.registry.CITags;
-import com.tterrag.registrate.providers.RegistrateTagsProvider;
 
 import net.minecraft.core.Direction;
-import net.minecraft.data.tags.TagsProvider.TagAppender;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
@@ -64,12 +60,12 @@ public abstract class Utils {
 		#endif
 	}
 
-	public static CompoundTag getCustomData(Entity entity) {
-		return entity.getPersistentData();
-	}
-
-	public static <T> TagAppender<T> tagAppender(RegistrateTagsProvider<T> prov, TagKey<T> tag) {
-		return prov.addTag(tag);
+	public static ResourceLocation id(String ns, String path) {
+		#if forgelike || MC >= 21
+		return ResourceLocation.fromNamespaceAndPath(ns, path);
+		#else
+		return new ResourceLocation(ns, path);
+		#endif
 	}
 
 	public static DyeColor colorFromItem(ItemStack stack) {

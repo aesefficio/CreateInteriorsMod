@@ -45,6 +45,11 @@ public class BigSeatMovementBehaviour extends SeatMovementBehaviour {
 		Vec3 position = VecHelper.getCenterOf(pos).add(0, 1f, 0);
 		toDismount.teleportTo(position.x, position.y, position.z);
 
-		Utils.getCustomData(toDismount).remove("ContraptionDismountLocation");
+		#if forgelike
+		toDismount.getPersistentData()
+		#elif fabric
+		toDismount.getCustomData()
+		#endif
+				.remove("ContraptionDismountLocation");
 	}
 }
