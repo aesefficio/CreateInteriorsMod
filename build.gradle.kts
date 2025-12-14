@@ -228,6 +228,11 @@ fun Project.setupRepositories() {
 		exclusiveMaven("https://api.modrinth.com/maven", "maven.modrinth") // LazyDFU, JourneyMap
 		exclusiveMaven("https://cursemaven.com", "curse.maven")
 		maven("https://maven.theillusivec4.top/") // Curios
+		maven("https://maven.tterrag.com/") { // Registrate
+			content {
+				includeGroup("com.tterrag.registrate")
+			}
+		}
 		maven("https://maven.createmod.net") { // Create, Ponder, Flywheel
 			content {
 				includeGroup("com.simibubi.create")
