@@ -74,7 +74,7 @@ public abstract class Utils {
 		} else {
 			for (int x = 0; x < DyeColor.BLACK.getId(); ++x) {
 				DyeColor color = DyeColor.byId(x);
-				if (stack.is(CITags.DYES.get(color).tag)) {
+				if (stack.is(CITags.DYES.get(color))) {
 					return color;
 				}
 			}

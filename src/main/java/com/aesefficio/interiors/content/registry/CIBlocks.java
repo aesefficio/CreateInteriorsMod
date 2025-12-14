@@ -132,7 +132,7 @@ public final class CIBlocks {
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(CITags.Items.FLOOR_CHAIRS)
-					.requires(CITags.DYES.get(color).tag)
+					.requires(CITags.DYES.get(color))
 					.unlockedBy("has_floor_chair", RegistrateRecipeProvider.has(CITags.Items.FLOOR_CHAIRS))
 					.save(p, CreateInteriors.id("crafting/floor_chair/" + c.getName() + "_from_other_floor_chair"));
 			})
@@ -193,7 +193,7 @@ public final class CIBlocks {
 
 				ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 					.requires(CITags.Items.CHAIRS)
-					.requires(CITags.DYES.get(color).tag)
+					.requires(CITags.DYES.get(color))
 					.unlockedBy("has_chair", RegistrateRecipeProvider.has(CITags.Items.CHAIRS))
 					.save(p, CreateInteriors.id("crafting/chair/" + c.getName() + "_from_other_chair"));
 			})

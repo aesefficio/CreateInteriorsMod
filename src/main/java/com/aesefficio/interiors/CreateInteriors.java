@@ -91,7 +91,7 @@ public final class CreateInteriors
 		CreateInteriors.LOGGER.info("Initializing data generator");
 
 		CreateInteriors.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
-			CITags.DYES.values().forEach(tag -> tag.generateCommon(prov)));
+			CITags.DYES.values().forEach(prov::addTag));
 
 		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), ExistingFileHelper.withResourcesFromArg());
 		provideDefaultLang("tooltips");
