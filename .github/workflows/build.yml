@@ -21,7 +21,7 @@ jobs:
                     cache-encryption-key: ${{ SECRETS.GRADLE_ENCRYPTION_KEY }}
 
             -   name: do the build
-                run: ./gradlew assemble --stacktrace
+                run: ./gradlew runData assemble --stacktrace
 
             -   name: upload artifacts
                 uses: actions/upload-artifact@v5
