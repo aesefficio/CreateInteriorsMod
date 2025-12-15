@@ -1,7 +1,5 @@
 package com.aesefficio.interiors.content.block.chair;
 
-import com.aesefficio.interiors.CreateInteriors;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -53,15 +51,28 @@ public class DirectionalSeatBlock extends SeatBlock implements IWrenchable {
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
+	#if MC >= 21.0
+	protected net.minecraft.world.ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level,
+																  BlockPos pos, Player player, InteractionHand hand,
+																  BlockHitResult hitResult) {
+		if (stack.is(AllItems.WRENCH.asItem())) {
+			return net.minecraft.world.ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+		}
+
+		return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+	}
+	#else
+	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player,
+								 InteractionHand hand, BlockHitResult result) {
 		ItemStack heldItem = player.getItemInHand(hand);
 
-		if(heldItem == AllItems.WRENCH.asStack(1) || heldItem.is(AllItems.WRENCH.asItem())) {
+		if(heldItem.is(AllItems.WRENCH.asItem())) {
 			return InteractionResult.PASS;
 		}
 
 		return super.use(state, world, pos, player, hand, result);
 	}
+	#endif
 
 	@Override
 	public InteractionResult onSneakWrenched(BlockState state, UseOnContext context) {

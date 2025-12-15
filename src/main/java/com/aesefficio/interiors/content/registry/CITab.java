@@ -4,19 +4,23 @@ import com.aesefficio.interiors.CreateInteriors;
 
 #if forge
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+#elif neoforge
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 #elif fabric
 import com.simibubi.create.AllCreativeModeTabs.TabInfo;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import java.util.function.Supplier;
 #endif
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 
@@ -28,7 +32,10 @@ public final class CITab {
 		REGISTER.register(modEventBus);
 	}
 
-	public static RegistryObject<CreativeModeTab> get() {
+	public static
+	#if forge RegistryObject<CreativeModeTab>
+	#elif neoforge DeferredHolder<CreativeModeTab, CreativeModeTab>
+	#endif get() {
 		return TAB;
 	}
 	#else
@@ -49,7 +56,10 @@ public final class CITab {
 	#endif
 
 	#if forgelike
-	public static final RegistryObject<CreativeModeTab> TAB = REGISTER.register("main", CreativeModeTab.builder()
+	public static final
+			#if forge RegistryObject<CreativeModeTab>
+			#elif neoforge DeferredHolder<CreativeModeTab, CreativeModeTab>
+			#endif TAB = REGISTER.register("main", CreativeModeTab.builder()
 	#elif fabric
 	public static final TabInfo TAB = register("main", FabricItemGroup.builder()
 	#endif
@@ -58,6 +68,7 @@ public final class CITab {
 			.displayItems((parameters, output) -> CreateInteriors.REGISTRATE
 					.getAll(Registries.BLOCK).stream()
 					.map(entry -> entry.get().asItem())
+					.filter(i -> i.isEnabled(parameters.enabledFeatures()))
 					.forEach(output::accept))
 			::build);
 }

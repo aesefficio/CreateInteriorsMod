@@ -10,29 +10,23 @@ import net.createmod.catnip.lang.FontHelper.Palette;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.simibubi.create.Create;
 import com.simibubi.create.CreateBuildInfo;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription.Modifier;
 import com.simibubi.create.foundation.utility.FilesHelper;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.PackType;
 
 #if forge
-import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 #elif neoforge
-import net.neoforged.fml.data.event.GatherDataEvent;
-import net.neoforged.fml.eventbus.api.IEventBus;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 #elif fabric
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 import com.tterrag.registrate.providers.ProviderType;
-import java.nio.file.Path;
-import java.util.Set;
 #endif
 
 #if forgelike
@@ -61,6 +55,7 @@ public final class CreateInteriors
 		CITags.register();
 		CIEntities.register();
 		CIBlocks.register();
+		provideDefaultLang("tooltips");
 	}
 
 	#if forgelike
@@ -70,52 +65,42 @@ public final class CreateInteriors
 	public CreateInteriors(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext ctx) {
 		IEventBus modBus = ctx.getModEventBus();
 	#endif
+		REGISTRATE.registerEventListeners(modBus);
 		init();
 		CITab.register(modBus);
-		REGISTRATE.registerEventListeners(modBus);
-		modBus.addListener(this::gatherData);
-	}
-
-	void gatherData(GatherDataEvent e) {
-		provideDefaultLang("tooltips");
 	}
 
 	#elif fabric
 	@Override
 	public void onInitialize() {
-		init();
 		CITab.register();
+		init();
 		REGISTRATE.register();
 	}
 
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator gen) {
-		CreateInteriors.LOGGER.info("Initializing data generator");
+		LOGGER.info("Initializing data generator");
 
-		CreateInteriors.REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
+		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
 			CITags.DYES.values().forEach(prov::addTag));
 
 		//ExistingFileHelper efh = ExistingFileHelper.withResourcesFromArg();
-		ExistingFileHelper efh = ExistingFileHelper.withResources(Set.of("create"), Path.of(System.getProperty(ExistingFileHelper.EXISTING_RESOURCES)));
-
-		if (!efh.exists(Create.asResource("textures/block/seat/top_white.png"), PackType.CLIENT_RESOURCES)) {
-			throw new IllegalStateException("what?");
-		}
+		ExistingFileHelper efh = ExistingFileHelper.withResources(java.util.Set.of("create"), java.nio.file.Path.of(System.getProperty(ExistingFileHelper.EXISTING_RESOURCES)));
 
 		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), efh);
-		provideDefaultLang("tooltips");
 	}
 	#endif
 
 	@SuppressWarnings("SameParameterValue")
 	private static void provideDefaultLang(String fileName) {
-		String path = "assets/" + CreateInteriors.ID + "/lang/default/" + fileName + ".json";
+		String path = "assets/" + ID + "/lang/default/" + fileName + ".json";
 
 		JsonObject jsonObject = Preconditions.checkNotNull(FilesHelper.loadJsonResource(path),
 				"Could not find default lang file: %s", path).getAsJsonObject();
 
 		jsonObject.entrySet().forEach(entry ->
-				CreateInteriors.REGISTRATE.addRawLang(entry.getKey(), entry.getValue().getAsString())
+				REGISTRATE.addRawLang(entry.getKey(), entry.getValue().getAsString())
 		);
 	}
 

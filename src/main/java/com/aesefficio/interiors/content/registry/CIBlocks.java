@@ -36,13 +36,15 @@ import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
 #if forge
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 #elif neoforge
-import net.neoforged.client.model.generators.BlockStateProvider;
-import net.neoforged.client.model.generators.ConfiguredModel;
-import net.neoforged.client.model.generators.ModelFile;
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 #elif fabric
 import io.github.fabricators_of_create.porting_lib.models.generators.ModelBuilder;
 import io.github.fabricators_of_create.porting_lib.models.generators.block.BlockModelBuilder;

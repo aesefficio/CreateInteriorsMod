@@ -46,7 +46,7 @@ public abstract class SeatBlockMixin {
 		return seat instanceof BigSeatEntity ? y + 0.34f : y;
 	}
 
-	@ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/block/DyedBlockList;get(Lnet/minecraft/world/item/DyeColor;)Lcom/tterrag/registrate/util/entry/BlockEntry;"))
+	@ModifyExpressionValue(method = #if MC > 21.0 "useItemOn" #else "use" #endif, at = @At(value = "INVOKE", target = "Lcom/simibubi/create/foundation/block/DyedBlockList;get(Lnet/minecraft/world/item/DyeColor;)Lcom/tterrag/registrate/util/entry/BlockEntry;"))
 	private BlockEntry<? extends SeatBlock> useBigChairSeats(BlockEntry<SeatBlock> original, @Local(name = "color") DyeColor color) {
 		SeatBlock thiz = (SeatBlock) (Object) this;
 
