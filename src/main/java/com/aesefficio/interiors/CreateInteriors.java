@@ -52,7 +52,11 @@ public final class CreateInteriors
 	public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
 
 	static {
-		REGISTRATE.setTooltipModifierFactory(item -> new Modifier(item, Palette.STANDARD_CREATE));
+		REGISTRATE.setTooltipModifierFactory(item -> new Modifier(item, Palette.STANDARD_CREATE))
+				#if MC >= 21.0
+				.defaultCreativeTab((net.minecraft.resources.ResourceKey<net.minecraft.world.item.CreativeModeTab>) null)
+				#endif
+		;
 	}
 
 	public static void init() {
@@ -103,7 +107,7 @@ public final class CreateInteriors
 				false, config.location.assetIndex, config.location.assetDirectory
 		);
 
-		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), efh);
+		REGISTRATE.setupDatagen(gen.createPack(), efh);
 	}
 	#endif
 

@@ -64,10 +64,6 @@ import static com.aesefficio.interiors.CreateInteriors.REGISTRATE;
 @SuppressWarnings("unused")
 public final class CIBlocks {
 
-	static {
-		REGISTRATE.setCreativeTab(CITab.get());
-	}
-
 	public static final BlockEntry<Block> SEATWOOD_PLANKS = REGISTRATE.block("seatwood_planks", Block::new)
 		.initialProperties(SharedProperties::wooden)
 		.properties(p -> p.mapColor(DyeColor.ORANGE))
