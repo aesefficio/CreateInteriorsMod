@@ -26,7 +26,14 @@ import net.neoforged.fml.common.Mod;
 #elif fabric
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
+import io.github.fabricators_of_create.porting_lib.data.extensions.MinecraftExtension;
 import com.tterrag.registrate.providers.ProviderType;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.main.GameConfig;
+
+import java.nio.file.Path;
+import java.util.Set;
 #endif
 
 #if forgelike
@@ -85,8 +92,16 @@ public final class CreateInteriors
 		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
 			CITags.DYES.values().forEach(prov::addTag));
 
-		//ExistingFileHelper efh = ExistingFileHelper.withResourcesFromArg();
-		ExistingFileHelper efh = ExistingFileHelper.withResources(java.util.Set.of("create"), java.nio.file.Path.of(System.getProperty(ExistingFileHelper.EXISTING_RESOURCES)));
+		Path existingResources = Path.of(System.getProperty(ExistingFileHelper.EXISTING_RESOURCES));
+		String existingMods = System.getProperty(ExistingFileHelper.EXISTING_MODS);
+		@SuppressWarnings("UnstableApiUsage")
+		GameConfig config = ((MinecraftExtension) Minecraft.getInstance()).port_lib$getGameConfig();
+		ExistingFileHelper efh = new ExistingFileHelper(
+				Set.of(existingResources),
+				Set.of(existingMods.split(",")),
+				// false disables validation, which breaks things cause fabric datagen is weird
+				false, config.location.assetIndex, config.location.assetDirectory
+		);
 
 		CreateInteriors.REGISTRATE.setupDatagen(gen.createPack(), efh);
 	}
