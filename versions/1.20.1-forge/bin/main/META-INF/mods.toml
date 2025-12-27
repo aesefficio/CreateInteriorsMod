@@ -1,0 +1,31 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/aesefficio/CreateInteriorsMod/issues"
+
+[[mods]]
+modId = "interiors"
+version = "${mod_version}"
+displayName = "Create: Interiors"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/interiors"
+issueTrackerURL = "https://github.com/aesefficio/CreateInteriorsMod/issues"
+logoFile="assets/interiors/icon.png"
+authors = "sudolev, rdh"
+description = '''
+Create: Interiors is a new take on furniture, adding functional blocks that mesh seamlessly with the aesthetic and principles of the Create mod.
+'''
+
+[[dependencies.interiors]]
+modId = "create"
+mandatory = true
+versionRange = "[6,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[modproperties.interiors]
+catalogueImageIcon="assets/interiors/icon.png"
+catalogueBackground="mod_banner.png"
+configuredBackground="create:textures/block/seat/top_red.png"
+
+[[mixins]]
+config="interiors.mixins.json"

@@ -1,0 +1,143 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Forge Client: 1.20.1",
+      "presentation": {
+        "group": "Mod Development - 1.20.1-forge",
+        "order": 0
+      },
+      "projectName": "1.20.1-forge",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dinteriors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\versions\\1.20.1-forge\\run",
+      "env": {
+        "MOD_CLASSES": "interiors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\bin\\main"
+      },
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Forge Data: 1.20.1",
+      "presentation": {
+        "group": "Mod Development - 1.20.1-forge",
+        "order": 1
+      },
+      "projectName": "1.20.1-forge",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\build\\moddev\\dataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dinteriors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\versions\\1.20.1-forge\\run",
+      "env": {
+        "MOD_CLASSES": "interiors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\bin\\main"
+      },
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Forge Server: 1.20.1",
+      "presentation": {
+        "group": "Mod Development - 1.20.1-forge",
+        "order": 2
+      },
+      "projectName": "1.20.1-forge",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dinteriors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\versions\\1.20.1-forge\\run",
+      "env": {
+        "MOD_CLASSES": "interiors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.20.1-forge\\bin\\main"
+      },
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Neoforge Client: 1.21.1",
+      "presentation": {
+        "group": "Mod Development - 1.21.1-neoforge",
+        "order": 0
+      },
+      "projectName": "1.21.1-neoforge",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dinteriors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\versions\\1.21.1-neoforge\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Neoforge Data: 1.21.1",
+      "presentation": {
+        "group": "Mod Development - 1.21.1-neoforge",
+        "order": 1
+      },
+      "projectName": "1.21.1-neoforge",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\build\\moddev\\dataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dinteriors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\versions\\1.21.1-neoforge\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Neoforge Server: 1.21.1",
+      "presentation": {
+        "group": "Mod Development - 1.21.1-neoforge",
+        "order": 2
+      },
+      "projectName": "1.21.1-neoforge",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dinteriors%%C:\\Users\\Jehan\\Desktop\\tico\\CreateInteriorsMod\\versions\\1.21.1-neoforge\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\versions\\1.21.1-neoforge\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}
