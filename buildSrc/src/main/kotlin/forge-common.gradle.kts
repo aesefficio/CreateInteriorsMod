@@ -63,7 +63,11 @@ dependencies {
 	modImplementation("com.simibubi.create:create-${"minecraft_version"()}:${"create_version"()}:slim") {
 		isTransitive = false
 	}
-	modImplementation("net.createmod.ponder:Ponder-${platformCapitalized}-${"minecraft_version"()}:${"ponder_version"()}")
+	modImplementation(if ("minecraft_version"().startsWith("1.20")) {
+		"net.createmod.ponder:Ponder-${platformCapitalized}-${"minecraft_version"()}:${"ponder_version"()}"
+	} else {
+		"net.createmod.ponder:ponder-${"platform"()}:${"ponder_version"()}+mc${"minecraft_version"()}"
+	})
 	modImplementation("com.tterrag.registrate:Registrate:${"registrate_version"()}")
 	modCompileOnly("dev.engine-room.flywheel:flywheel-${"platform"()}-api-${"minecraft_version"()}:${"flywheel_version"()}")
 	modRuntimeOnly("dev.engine-room.flywheel:flywheel-${"platform"()}-${"minecraft_version"()}:${"flywheel_version"()}")

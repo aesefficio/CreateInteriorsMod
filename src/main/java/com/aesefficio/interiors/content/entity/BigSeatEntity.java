@@ -5,7 +5,6 @@ import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
@@ -19,9 +18,15 @@ public class BigSeatEntity extends SeatEntity {
 		super(type, world);
 	}
 
-	public BigSeatEntity(Level world, BlockPos pos) {
+	#if MC >= 21.0
+	public BigSeatEntity(Level world) {
+		super(world);
+	}
+	#else
+	public BigSeatEntity(Level world, net.minecraft.core.BlockPos pos) {
 		super(world, pos);
 	}
+	#endif
 
 	@Override
 	public Vec3 getDismountLocationForPassenger(LivingEntity entity) {

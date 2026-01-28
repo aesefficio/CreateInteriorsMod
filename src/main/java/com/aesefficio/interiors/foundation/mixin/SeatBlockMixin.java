@@ -34,11 +34,15 @@ public abstract class SeatBlockMixin {
 			cir.setReturnValue(true);
 	}
 
-	@ModifyExpressionValue(method = "sitDown", at = @At(value = "NEW", target = "(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lcom/simibubi/create/content/contraptions/actors/seat/SeatEntity;"))
+	private static final String DESC = "(Lnet/minecraft/world/level/Level;"
+			#if MC < 21.0 + "Lnet/minecraft/core/BlockPos;"
+			#endif + ")Lcom/simibubi/create/content/contraptions/actors/seat/SeatEntity;";
+
+	@ModifyExpressionValue(method = "sitDown", at = @At(value = "NEW", target = DESC))
 	private static SeatEntity createCorrectSeatEntity(SeatEntity original, @Local(argsOnly = true) Level level, @Local(argsOnly = true) BlockPos pos) {
 		return level.getBlockState(pos).getBlock() instanceof BigChairBlock
-			   ? new BigSeatEntity(level, pos)
-			   : new SeatEntity(level, pos);
+			   ? new BigSeatEntity(level #if MC < 21.0, pos #endif)
+			   : new SeatEntity(level #if MC < 21.0, pos #endif);
 	}
 
 	@ModifyArg(method = "sitDown", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/content/contraptions/actors/seat/SeatEntity;setPos(DDD)V"), index = 1)
