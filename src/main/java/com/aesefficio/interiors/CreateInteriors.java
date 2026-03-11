@@ -20,10 +20,12 @@ import net.minecraft.resources.ResourceLocation;
 #if forge
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.common.Mod;
 #elif neoforge
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.fml.common.Mod;
 #elif fabric
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -80,7 +82,7 @@ public final class CreateInteriors
 		REGISTRATE.registerEventListeners(modBus);
 		init();
 		CITab.register(modBus);
-		modBus.addListener(this::gatherData);
+		modBus.addListener(EventPriority.HIGH, this::gatherData);
 	}
 
 	public void gatherData(GatherDataEvent event) {
