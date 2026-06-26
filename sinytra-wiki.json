@@ -1,0 +1,13 @@
+{
+  "schema": "1",
+  "id": "bellsandwhistles",
+  "platforms": {
+    "curseforge": "bellsandwhistles",
+    "modrinth": "bellsandwhistles"
+  },
+  "modid": "bellsandwhistles",
+  "owners": [
+    "a0ax",
+    "aes efficio"
+  ]
+}
