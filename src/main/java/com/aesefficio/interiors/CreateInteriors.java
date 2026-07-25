@@ -29,7 +29,6 @@ import net.neoforged.fml.common.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import io.github.fabricators_of_create.porting_lib.data.ExistingFileHelper;
 import io.github.fabricators_of_create.porting_lib.data.extensions.MinecraftExtension;
-import com.tterrag.registrate.providers.ProviderType;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.main.GameConfig;
@@ -98,9 +97,6 @@ public final class CreateInteriors
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator gen) {
 		LOGGER.info("Initializing data generator");
-
-		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, prov ->
-			CITags.DYES.values().forEach(prov::addTag));
 
 		Path existingResources = Path.of(System.getProperty(ExistingFileHelper.EXISTING_RESOURCES));
 		String existingMods = System.getProperty(ExistingFileHelper.EXISTING_MODS);
