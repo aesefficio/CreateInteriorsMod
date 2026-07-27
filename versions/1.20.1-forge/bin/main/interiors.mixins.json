@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.aesefficio.interiors.foundation.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractContraptionEntityMixin", "SeatBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
