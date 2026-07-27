@@ -70,8 +70,7 @@ public abstract class Utils {
 		if (stack.getItem() instanceof DyeItem) {
 			return ((DyeItem)stack.getItem()).getDyeColor();
 		} else {
-			for (int x = 0; x < DyeColor.BLACK.getId(); ++x) {
-				DyeColor color = DyeColor.byId(x);
+			for (DyeColor color : DyeColor.values()) {
 				if (stack.is(CITags.DYES.get(color))) {
 					return color;
 				}

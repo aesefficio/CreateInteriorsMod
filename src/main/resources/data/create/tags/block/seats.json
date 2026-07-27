@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#interiors:chairs",
+    "#interiors:floor_chairs",
+    "interiors:kelp_chair",
+    "interiors:kelp_floor_chair",
+    "interiors:kelp_seat"
+  ]
+}

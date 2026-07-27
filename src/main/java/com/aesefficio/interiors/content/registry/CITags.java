@@ -29,6 +29,8 @@ public final class CITags {
 		for (DyeColor color : DyeColor.values()) {
 			#if forge
 			ResourceLocation rl = Utils.id("forge", "dyes/" + color.getName());
+			#elif neoforge
+			ResourceLocation rl = Utils.id("c", "dyes/" + color.getName());
 			#else
 			ResourceLocation rl = Utils.id("c", color.getName() + "_dyes");
 			#endif
